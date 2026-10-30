@@ -1,0 +1,177 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Source Sans 3', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: 'Rubik', ui-sans-serif, system-ui, sans-serif;
+
+  /* Palette sampled from braven.org: charcoal ink, navy, lime, coral, sky, warm grey */
+  --color-navy-50: #f1f3f7;
+  --color-navy-100: #dfe4ec;
+  --color-navy-200: #c3ccdb;
+  --color-navy-300: #98a6bd;
+  --color-navy-400: #6b7c99;
+  --color-navy-500: #4a5a77;
+  --color-navy-600: #34445f;
+  --color-navy-700: #22334f;
+  --color-navy-800: #142744;
+  /* 900/950 are Braven's charcoal text tones rather than true navy */
+  --color-navy-900: #2b2e34;
+  --color-navy-950: #1d1f23;
+
+  /* Accent scale is Braven lime (300 = #DEE465); 600+ are dark olive for text on light */
+  --color-teal-50: #fafbe6;
+  --color-teal-100: #f3f5c4;
+  --color-teal-200: #e9ed96;
+  --color-teal-300: #dee465;
+  --color-teal-400: #cdd448;
+  --color-teal-500: #b1b832;
+  --color-teal-600: #6b6f12;
+  --color-teal-700: #575a0e;
+  --color-teal-800: #44470c;
+  --color-teal-900: #33350a;
+
+  --color-coral-50: #fdeef0;
+  --color-coral-100: #fadadf;
+  --color-coral-400: #f27f8c;
+  --color-coral-500: #ec596a;
+  --color-coral-600: #eb3b45;
+  --color-coral-700: #c92d37;
+  --color-sky-100: #e3f0f7;
+  --color-sky-200: #c3dfee;
+  --color-sky-300: #8bc1de;
+  --color-sky-500: #5a9cc2;
+  --color-cream-100: #f4f4f4;
+  --color-cream-200: #ebe9df;
+
+  --color-slate-50: #f4f4f4;
+  --color-slate-100: #ebe9df;
+  --color-slate-200: #dddbd1;
+  --color-slate-300: #c6c4b9;
+  --color-slate-400: #8e8d86;
+  --color-slate-500: #6b6b67;
+  --color-slate-600: #4e4f4f;
+  --color-slate-700: #3a3c3f;
+
+  /* Surfaces and fixed-dark tones; surface/hero/ink swap in dark mode, deep and nav never do */
+  --color-surface: #ffffff;
+  --color-hero: #dee465;
+  --color-ink: #2b2e34;
+  --color-on-ink: #ffffff;
+  --color-deep: #142744;
+  --color-deep-2: #22334f;
+  --color-nav: #1d1f23;
+
+  /* Square corners like braven.org; pills (rounded-full) are unaffected */
+  --radius-md: 0.1875rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.25rem;
+  --radius-2xl: 0.3125rem;
+  --radius-3xl: 0.5rem;
+
+  /* Flat cards; hover drops a solid offset block instead of a blurred glow */
+  --shadow-card: 0 0 0 0 transparent;
+  --shadow-card-hover: 6px 6px 0 0 var(--color-sky-300);
+
+  --animate-rise: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface font-sans text-navy-900 antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  dd,
+  time {
+    font-variant-numeric: tabular-nums;
+  }
+
+  ::selection {
+    background: var(--color-teal-300);
+    color: var(--color-navy-950);
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-teal-500;
+  }
+}
+
+/* Dark mode: remap the same tokens so existing utilities flip without per-class dark: variants */
+:root.dark {
+  color-scheme: dark;
+
+  --color-navy-50: #0e1b31;
+  --color-navy-100: #15263f;
+  --color-navy-200: #20375a;
+  --color-navy-300: #3a5580;
+  --color-navy-400: #6a82ab;
+  --color-navy-500: #8fa3c5;
+  --color-navy-600: #aebcd6;
+  --color-navy-700: #c5d0e3;
+  --color-navy-800: #dbe3f0;
+  --color-navy-900: #eaeff7;
+  --color-navy-950: #f7f9fc;
+
+  --color-teal-50: #1a2108;
+  --color-teal-100: #252f0b;
+  --color-teal-200: #3a470f;
+  --color-teal-600: #cfe85a;
+  --color-teal-700: #d8ee7a;
+  --color-teal-800: #e4f5a0;
+  --color-teal-900: #eef9c4;
+
+  --color-slate-50: #0a1424;
+  --color-slate-100: #111d33;
+  --color-slate-200: #22304a;
+  --color-slate-300: #34455f;
+  --color-slate-400: #7c8aa3;
+  --color-slate-500: #9aa7bd;
+  --color-slate-600: #b5c0d2;
+  --color-slate-700: #cdd5e2;
+
+  --color-surface: #101f38;
+  --color-hero: #0b1a30;
+  --color-ink: #dee465;
+  --color-on-ink: #1d1f23;
+
+  --color-amber-50: #2b2208;
+  --color-amber-100: #3a2d0a;
+  --color-amber-200: #5c4710;
+  --color-amber-700: #f5c76a;
+  --color-amber-800: #f8d68a;
+  --color-amber-900: #fbe3ab;
+  --color-violet-50: #1f1a36;
+  --color-violet-100: #2a2349;
+  --color-violet-700: #c4b5fd;
+  --color-violet-800: #d8ccff;
+  --color-rose-50: #34131c;
+  --color-rose-100: #4a1a27;
+  --color-rose-800: #fda4b0;
+  --color-red-50: #34131c;
+  --color-red-200: #6b2331;
+  --color-red-700: #fca5a5;
+}

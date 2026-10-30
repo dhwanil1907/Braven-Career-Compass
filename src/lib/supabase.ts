@@ -1,0 +1,14 @@
+import { createClient } from '@supabase/supabase-js';
+import type { SupabaseClient } from '@supabase/supabase-js';
+
+const url = import.meta.env.VITE_SUPABASE_URL as string | undefined;
+const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+
+/**
+ * Null until a Supabase project is configured in .env. The anon key is public by design and is
+ * limited by row-level security; never put a service-role key in frontend code.
+ */
+export const supabase: SupabaseClient | null =
+  url && anonKey ? createClient(url, anonKey) : null;
+
+export const isAuthConfigured = supabase !== null;
