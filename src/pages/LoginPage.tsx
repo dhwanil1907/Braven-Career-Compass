@@ -182,14 +182,14 @@ export function LoginPage() {
                 continueAsGuest();
                 navigate('/', { replace: true });
               }}
-              className="w-full text-center text-sm font-semibold text-slate-600 underline
-                underline-offset-4 transition hover:text-navy-900"
+              className="inline-flex h-12 w-full items-center justify-center rounded-full border
+                border-navy-900 text-base font-semibold text-navy-900 transition hover:bg-navy-50"
             >
               Continue as a guest
             </button>
           </div>
           <p className="mt-6 text-xs text-slate-500">
-            Guests keep their plan in this browser only. Accounts are for signing back in later.
+            Guests keep their plan in this browser only. An account lets you pick up where you left off on another device.
           </p>
         </div>
       </section>

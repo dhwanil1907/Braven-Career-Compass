@@ -1,7 +1,6 @@
 import { DEFAULT_INTEREST_BY_MAJOR, SKILLS_BY_INTEREST } from '../data/skills';
 import type { Skill } from '../data/skills';
 import type { CareerInterest, ProfileSignals, Resource } from '../types';
-import { filterResources } from './filters';
 
 export interface SkillWithResources extends Skill {
   /** Number of catalog resources that mention this skill. */
@@ -21,12 +20,22 @@ export function getSkillFields(profile: ProfileSignals): CareerInterest[] {
   return profile.major ? [DEFAULT_INTEREST_BY_MAJOR[profile.major]] : [];
 }
 
+/** Counts resources that are actually about the skill: its word is in the title, summary or tags. */
+function countResourcesFor(term: string, resources: Resource[]): number {
+  const word = term.toLowerCase();
+  return resources.filter((resource) =>
+    [resource.title, resource.summary, ...resource.tags].some((text) =>
+      text.toLowerCase().includes(word),
+    ),
+  ).length;
+}
+
 export function getSkillGroups(profile: ProfileSignals, resources: Resource[]): SkillGroup[] {
   return getSkillFields(profile).map((interest) => ({
     interest,
     skills: SKILLS_BY_INTEREST[interest].map((skill) => ({
       ...skill,
-      resourceCount: filterResources(resources, skill.searchTerm, {}).length,
+      resourceCount: countResourcesFor(skill.searchTerm, resources),
     })),
   }));
 }

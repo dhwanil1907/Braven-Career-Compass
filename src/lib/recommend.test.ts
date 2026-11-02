@@ -1,8 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import type { CareerEvent, Resource, ProfileSignals } from '../types';
+import { MAJORS } from '../data/taxonomy';
+import type { AlumniProfile, CareerEvent, Resource, ProfileSignals } from '../types';
 import {
   getMatchReasons,
   hasProfile,
+  matchAlumni,
   recommendEvents,
   recommendResources,
   scoreResource,
@@ -73,9 +75,17 @@ describe('scoreResource', () => {
     expect(scoreResource(resource, csProfile)).toBe(3 + 2 + 2 + 1);
   });
 
-  it('scores interest-only matches', () => {
+  it('scores interest-only matches, plus 1 because a listing naming no major is open to all', () => {
     const resource = makeResource({ interests: ['Data Science'] });
-    expect(scoreResource(resource, csProfile)).toBe(2);
+    expect(scoreResource(resource, csProfile)).toBe(2 + 1);
+  });
+
+  it('does not treat an open-to-all listing as a major match', () => {
+    const everyone = makeResource({ majors: [] });
+    const everyMajor = makeResource({ majors: MAJORS });
+    expect(getMatchReasons(everyone, csProfile)).toEqual([]);
+    expect(getMatchReasons(everyMajor, csProfile)).toEqual([]);
+    expect(scoreResource(everyMajor, csProfile)).toBe(1);
   });
 
   it('returns 0 for a featured resource with no profile match', () => {
@@ -163,9 +173,9 @@ describe('recommendEvents', () => {
 
   it('excludes past and unmatched events, sorting by score then start', () => {
     expect(recommendEvents(events, csProfile, now).map((e) => e.id)).toEqual([
-      'major',
       'sooner-interest',
       'later-interest',
+      'major',
     ]);
   });
 
@@ -175,5 +185,56 @@ describe('recommendEvents', () => {
 
   it('respects the limit', () => {
     expect(recommendEvents(events, csProfile, now, 2)).toHaveLength(2);
+  });
+});
+
+function makeAlum(overrides: Partial<AlumniProfile>): AlumniProfile {
+  return {
+    id: 'a',
+    name: 'Alex',
+    role: 'Role',
+    major: 'Sociology',
+    gradYear: 2022,
+    interests: [],
+    helpsWith: [],
+    quote: 'q',
+    isSample: true,
+    consentGiven: false,
+    ...overrides,
+  };
+}
+
+describe('matchAlumni', () => {
+  const alumni = [
+    makeAlum({ id: 'major', name: 'Major match', major: 'English' }),
+    makeAlum({ id: 'field', name: 'Field match', major: 'Biology', interests: ['Healthcare'] }),
+    makeAlum({
+      id: 'both',
+      name: 'Both',
+      major: 'English',
+      interests: ['Writing and Content', 'Marketing'],
+    }),
+    makeAlum({ id: 'none', name: 'No match', major: 'History' }),
+  ];
+
+  it('returns nothing without a profile', () => {
+    expect(matchAlumni(alumni, { major: null, interests: [] })).toEqual([]);
+  });
+
+  it('scores major +3 and each shared field +2, drops non-matches, best first', () => {
+    const matches = matchAlumni(alumni, {
+      major: 'English',
+      interests: ['Writing and Content', 'Healthcare'],
+    });
+    expect(matches.map((match) => [match.alum.id, match.score])).toEqual([
+      ['both', 5],
+      ['major', 3],
+      ['field', 2],
+    ]);
+    expect(matches[0].reasons).toEqual(['Also studied English', 'Works in Writing and Content']);
+  });
+
+  it('respects the limit', () => {
+    expect(matchAlumni(alumni, { major: 'English', interests: [] }, 1)).toHaveLength(1);
   });
 });

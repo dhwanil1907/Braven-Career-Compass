@@ -84,6 +84,7 @@ export function EventCard({
           <div className="flex flex-wrap items-center gap-1.5">
             <Badge variant="teal">{event.eventType}</Badge>
             <Badge variant="outline">{event.format}</Badge>
+            {event.isFull && <Badge variant="amber">Full</Badge>}
             {event.isDemo && <DemoBadge />}
           </div>
           <h3 className="mt-2 font-semibold leading-snug text-navy-900">

@@ -333,7 +333,12 @@ const curatedResources: Resource[] = [
 ];
 
 /** Hand-written entries first, then the listings scraped from the SJSU Career Center site. */
-export const resources: Resource[] = [...curatedResources, ...sjsuResources];
+const curatedIds = new Set(curatedResources.map((resource) => resource.id));
+export const resources: Resource[] = [
+  ...curatedResources,
+  // A hand-written entry wins if a scraped listing has the same id.
+  ...sjsuResources.filter((resource) => !curatedIds.has(resource.id)),
+];
 
 export function getResourceById(id: string): Resource | undefined {
   return resources.find((resource) => resource.id === id);

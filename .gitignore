@@ -26,3 +26,26 @@ dist-ssr
 # Local secrets
 .env
 .env.local
+
+# Env variants
+.env.*
+!.env.example
+
+# Tooling / generated
+graphify-out
+.claude
+.vercel
+coverage
+*.tsbuildinfo
+.vite
+.cache
+.eslintcache
+
+# OS junk
+Thumbs.db
+
+.handoff.md 
+
+# Markdown notes (keep README only)
+*.md
+!README.md

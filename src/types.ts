@@ -86,6 +86,8 @@ export interface Resource {
   /** Editor flag: shown in the "Important" featured group. */
   featured: boolean;
   isDemo: boolean;
+  /** True for listings collected by the scraper; hand-picked entries leave it unset. */
+  scraped?: boolean;
   /** ISO 8601 date string */
   deadline?: string;
   /** ISO 8601 date the catalog entry was last checked against its source, set by staff. */
@@ -109,6 +111,10 @@ export interface CareerEvent {
   interests: CareerInterest[];
   tags: string[];
   isDemo: boolean;
+  /** True for events collected by the scraper. */
+  scraped?: boolean;
+  /** The source says the event is full, so there is nothing to register for. */
+  isFull?: boolean;
   /** ISO 8601 date string */
   registrationDeadline?: string;
 }
@@ -177,4 +183,33 @@ export interface ResourceFilters {
 export interface EventFilters {
   eventType: EventType | '';
   format: EventFormat | '';
+}
+
+/**
+ * An alumni profile. Real profiles need the person's written permission (`consentGiven`) and may
+ * carry their own LinkedIn and scheduling links. Sample profiles are invented for the prototype,
+ * must say so on screen, and must never have links, because an invented link could point at a
+ * real stranger.
+ */
+export interface AlumniProfile {
+  id: string;
+  name: string;
+  /** Current job title, as the person gave it. */
+  role: string;
+  employer?: string;
+  major: Major;
+  /** Year they graduated or finished the program. */
+  gradYear: number;
+  /** Fields they work in; used to match them with students. */
+  interests: CareerInterest[];
+  /** What they are happy to talk about on a call. */
+  helpsWith: string[];
+  /** Their own words, quoted exactly as approved. */
+  quote: string;
+  /** Their LinkedIn profile URL, given by them. */
+  linkedinUrl?: string;
+  /** A link where students can book a call with them (for example their Calendly). */
+  schedulingUrl?: string;
+  isSample: boolean;
+  consentGiven: boolean;
 }

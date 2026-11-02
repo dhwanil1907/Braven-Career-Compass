@@ -48,26 +48,39 @@ export const sjsuResources: Resource[] = resourcesSnapshot.resources.map((item) 
     tags: ['sjsu', 'career center'],
     featured: false,
     isDemo: false,
+    scraped: true,
     lastVerified: resourcesSnapshot.scrapedAt,
   };
 });
 
-export const sjsuEvents: CareerEvent[] = eventsSnapshot.events.map((item) => ({
-  id: `sjsu-${item.slug}`,
-  title: item.title,
-  description:
-    `Listed on the ${SOURCE} events page (${item.timeText}). Collected on ` +
-    `${eventsSnapshot.scrapedAt.slice(0, 10)}. Open the original page for the description and ` +
-    'registration, and confirm the time before you go.',
-  eventType: classifyEventType(item.title),
-  format: classifyEventFormat(item.title, item.location),
-  start: item.start,
-  end: item.end,
-  location: item.location,
-  host: SOURCE,
-  url: item.url,
-  majors: classifyMajors(item.title),
-  interests: classifyInterests(item.title),
-  tags: ['sjsu', 'career center'],
-  isDemo: false,
-}));
+const COMMUNITY_PREFIX = /^COMMUNITY EVENT:\s*/i;
+const FULL_SUFFIX = /\s*\(event full\)\s*$/i;
+
+export const sjsuEvents: CareerEvent[] = eventsSnapshot.events.map((item) => {
+  const isCommunity = COMMUNITY_PREFIX.test(item.title);
+  const title = item.title.replace(COMMUNITY_PREFIX, '').replace(FULL_SUFFIX, '');
+  return {
+    id: `sjsu-${item.slug}`,
+    title,
+    description:
+      (isCommunity
+        ? 'Hosted by an outside organization and listed by the SJSU Career Center. '
+        : '') +
+      `Listed on the ${SOURCE} events page (${item.timeText}). Collected on ` +
+      `${eventsSnapshot.scrapedAt.slice(0, 10)}. Open the original page for the description and ` +
+      'registration, and confirm the time before you go.',
+    eventType: classifyEventType(title),
+    format: classifyEventFormat(title, item.location),
+    start: item.start,
+    end: item.end,
+    location: item.location,
+    host: SOURCE,
+    url: item.url,
+    majors: classifyMajors(title),
+    interests: classifyInterests(title),
+    tags: isCommunity ? ['sjsu', 'career center', 'community'] : ['sjsu', 'career center'],
+    isDemo: false,
+    scraped: true,
+    isFull: FULL_SUFFIX.test(item.title),
+  };
+});

@@ -5,6 +5,7 @@ const FOOTER_LINKS = [
   { label: 'My Journey', to: '/' },
   { label: 'Resources', to: '/resources' },
   { label: 'Events', to: '/events' },
+  { label: 'Alumni', to: '/alumni' },
   { label: 'My Progress', to: '/progress' },
 ];
 

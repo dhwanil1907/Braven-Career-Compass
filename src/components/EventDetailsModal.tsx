@@ -102,6 +102,7 @@ export function EventDetailsModal({
         <div className="flex flex-wrap items-center gap-1.5 pr-10">
           <Badge variant="teal">{event.eventType}</Badge>
           <Badge variant="outline">{event.format}</Badge>
+          {event.isFull && <Badge variant="amber">Full</Badge>}
           {event.isDemo && <DemoBadge />}
         </div>
         <h2 id={titleId} className="mt-3 pr-8 text-xl font-bold leading-snug text-navy-900">

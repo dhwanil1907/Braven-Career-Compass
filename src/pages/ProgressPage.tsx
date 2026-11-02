@@ -280,7 +280,7 @@ export function ProgressPage() {
       <PageHeader
         eyebrow="My Progress"
         title="Track what you have done and what is next"
-        description={`${greetingForHour(now.getHours())}! Here's a snapshot of your saved opportunities, upcoming deadlines, and picks tailored to your goals.`}
+        description={`${greetingForHour(now.getHours())}! Everything you save with the bookmark, mark done on your plan, or tick as attended or applied shows up here.`}
       >
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <StatCard

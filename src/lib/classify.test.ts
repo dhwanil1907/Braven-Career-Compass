@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
+import { events } from '../data/events';
+import { resources } from '../data/resources';
 import { sjsuEvents, sjsuResources } from '../data/sjsuCatalog';
+import { alumni } from '../data/stories';
 import { MAJORS } from '../data/taxonomy';
 import {
   classifyEventFormat,
@@ -27,7 +30,7 @@ describe('classify', () => {
 
   it('limits majors only when the title names one', () => {
     expect(classifyMajors('Biology Students Association')).toEqual(['Biology']);
-    expect(classifyMajors('Resume Review')).toEqual(MAJORS);
+    expect(classifyMajors('Resume Review')).toEqual([]);
   });
 
   it('finds interests and caps them at four', () => {
@@ -48,5 +51,39 @@ describe('scraped SJSU catalog', () => {
     expect(
       sjsuEvents.every((item) => new Date(item.start).getTime() < new Date(item.end).getTime()),
     ).toBe(true);
+  });
+});
+
+describe('alumni profiles', () => {
+  it('has unique ids and a real quote', () => {
+    expect(new Set(alumni.map((alum) => alum.id)).size).toBe(alumni.length);
+    for (const alum of alumni) expect(alum.quote.trim().length).toBeGreaterThan(0);
+  });
+
+  it('has at least 3 alumni for every major', () => {
+    for (const major of MAJORS) {
+      expect(alumni.filter((alum) => alum.major === major).length, major).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it('requires written consent for real people and no links for sample people', () => {
+    for (const alum of alumni) {
+      if (alum.isSample) {
+        expect(alum.linkedinUrl).toBeUndefined();
+        expect(alum.schedulingUrl).toBeUndefined();
+      } else {
+        expect(alum.consentGiven).toBe(true);
+      }
+      for (const link of [alum.linkedinUrl, alum.schedulingUrl]) {
+        if (link) expect(link.startsWith('https://')).toBe(true);
+      }
+    }
+  });
+});
+
+describe('catalog ids', () => {
+  it('are unique across resources and across events', () => {
+    expect(new Set(resources.map((item) => item.id)).size).toBe(resources.length);
+    expect(new Set(events.map((item) => item.id)).size).toBe(events.length);
   });
 });

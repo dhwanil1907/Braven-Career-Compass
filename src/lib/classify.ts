@@ -14,12 +14,10 @@ import type {
  */
 
 const RESOURCE_TYPE_RULES: [RegExp, ResourceType][] = [
-  [/\binternships?\b/i, 'Internship'],
-  [/\bresum[eé]s?\b|cover letter|\blinkedin\b|portfolio/i, 'Resume Help'],
+  [/\bresum[eé]s?\b|cover letter|\bcv\b/i, 'Resume Help'],
   [/\binterview|mock interview/i, 'Interview Prep'],
   [/\bmentor|\bcoach/i, 'Mentorship'],
   [/\bnetwork|\bclubs?\b|student organizations?|\bassociation\b|\bsociety\b|\bfraternity/i, 'Networking'],
-  [/\bjob board|job search|find(ing)? a job|job postings?|\bjobs\b|employment|hiring/i, 'Job'],
   [/\bworkshops?\b|\bacademy\b|\btraining\b|\bseminar|\bcourse\b/i, 'Workshop'],
 ];
 
@@ -85,15 +83,15 @@ const MAJOR_RULES: [RegExp, Major[]][] = [
 ];
 
 /**
- * Majors a listing names explicitly (for example a department's student clubs). A listing that
- * names no major is offered to every major, because the source does not restrict it.
+ * Majors a listing names explicitly (for example a department's student clubs). An empty list
+ * means the listing is open to every major, because the source does not restrict it.
  */
 export function classifyMajors(title: string): Major[] {
   const matches = new Set<Major>();
   for (const [pattern, majors] of MAJOR_RULES) {
     if (pattern.test(title)) majors.forEach((major) => matches.add(major));
   }
-  return matches.size > 0 ? MAJORS.filter((major) => matches.has(major)) : MAJORS;
+  return MAJORS.filter((major) => matches.has(major));
 }
 
 export function classifyResourceLocation(text: string, isExternalSite: boolean): LocationFormat {

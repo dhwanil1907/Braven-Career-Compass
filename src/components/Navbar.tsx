@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { label: 'My Journey', to: '/' },
   { label: 'Resources', to: '/resources' },
   { label: 'Events', to: '/events' },
+  { label: 'Alumni', to: '/alumni' },
   { label: 'My Progress', to: '/progress' },
 ];
 
@@ -23,8 +24,12 @@ function navLinkClasses({ isActive }: { isActive: boolean }): string {
 
 export function Navbar() {
   const { pathname } = useLocation();
-  const { savedResourceIds, savedEventIds } = useApp();
+  const { savedResourceIds, savedEventIds, profile } = useApp();
   const { user, signOut } = useAuth();
+  // Until a student has a plan, "/" is the landing page, so call it Home.
+  const navLinks = NAV_LINKS.map((link) =>
+    link.to === '/' && !profile.onboarded ? { ...link, label: 'Home' } : link,
+  );
   const [menuOpenForPath, setMenuOpenForPath] = useState<string | null>(null);
   const menuOpen = menuOpenForPath === pathname;
   // Ignore stale IDs (e.g. items removed from the catalog) so the badge matches the dashboard.
@@ -50,7 +55,7 @@ export function Navbar() {
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <li key={link.to}>
               <NavLink to={link.to} end={link.to === '/'} className={navLinkClasses}>
                 {link.label}
@@ -101,7 +106,7 @@ export function Navbar() {
       {menuOpen && (
         <div id="mobile-nav" className="border-t border-white/10 bg-nav md:hidden">
           <ul className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3 sm:px-6">
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <li key={link.to}>
                 <NavLink
                   to={link.to}

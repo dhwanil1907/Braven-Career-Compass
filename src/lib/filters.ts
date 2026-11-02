@@ -1,3 +1,4 @@
+import { isOpenToAllMajors } from '../data/taxonomy';
 import type { CareerEvent, EventFilters, Resource, ResourceFilters } from '../types';
 
 export function matchesQuery(text: string[], query: string): boolean {
@@ -18,7 +19,9 @@ export function filterResources(
 ): Resource[] {
   const { major, interest, resourceType, location } = filters;
   return resources.filter((resource) => {
-    if (major && !resource.majors.includes(major)) return false;
+    if (major && !isOpenToAllMajors(resource.majors) && !resource.majors.includes(major)) {
+      return false;
+    }
     if (interest && !resource.interests.includes(interest)) return false;
     if (resourceType && resource.resourceType !== resourceType) return false;
     if (location && resource.location !== location) return false;
@@ -30,7 +33,7 @@ export function filterResources(
         resource.source,
         resource.resourceType,
         ...resource.tags,
-        ...resource.majors,
+        ...(isOpenToAllMajors(resource.majors) ? [] : resource.majors),
         ...resource.interests,
       ],
       query,

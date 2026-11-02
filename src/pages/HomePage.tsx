@@ -20,7 +20,7 @@ import { getUpcomingEvents } from '../lib/filters';
 import { getMatchReasons, hasProfile, recommendResources } from '../lib/recommend';
 import type { CareerEvent } from '../types';
 
-const POPULAR_SEARCHES = ['Internships', 'Resume', 'Data Science', 'Networking'];
+const POPULAR_SEARCHES = ['Resume', 'Interview', 'Networking', 'Career fair'];
 
 type FeaturedGroupKey = keyof FeaturedGroups;
 
@@ -56,27 +56,27 @@ const FEATURED_TABS: {
 
 const QUICK_LINKS = [
   {
-    title: 'Jobs & Internships',
-    description: 'Paid roles and internships matched to your major.',
-    to: '/resources?type=Internship',
+    title: 'Job search help',
+    description: 'Guides and tools for finding jobs and internships.',
+    to: '/resources?q=job%20search',
     tone: 'bg-coral-500 text-white',
   },
   {
-    title: 'Career Events',
-    description: 'Workshops, panels, and career fairs coming up.',
+    title: 'Career events',
+    description: 'Workshops, panels, and career fairs you can add to your calendar.',
     to: '/events',
     tone: 'bg-sky-300 text-navy-950',
   },
   {
-    title: 'Resume & Interviews',
-    description: 'Templates, reviews, and mock interview prep.',
-    to: '/resources?type=Resume%20Help',
+    title: 'Resume & interviews',
+    description: 'Resume reviews, templates, and interview practice.',
+    to: '/resources?q=resume',
     tone: 'bg-deep text-white',
   },
   {
-    title: 'Mentorship',
-    description: "Connect with professionals who've been there.",
-    to: '/resources?type=Mentorship',
+    title: 'Talk to alumni',
+    description: 'Find someone who studied what you study, and book a call.',
+    to: '/alumni',
     tone: 'bg-cream-200 text-navy-950',
   },
 ];
@@ -147,8 +147,8 @@ export function HomePage() {
             </h1>
             <span className="mt-6 block h-1 w-16 bg-sky-300" aria-hidden="true" />
             <p className="mt-6 max-w-xl text-lg text-navy-900">
-              Internships, workshops, mentorship, and events from Braven, the SJSU Career Center,
-              and Handshake, gathered in one place and sorted by what fits your goals.
+              Career resources and events from Braven and the SJSU Career Center, in one place,
+              with a plan built around your major and goals.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -277,6 +277,45 @@ export function HomePage() {
           ))}
         </dl>
       </div>
+
+      <section
+        aria-labelledby="how-heading"
+        className="mx-auto max-w-7xl px-4 pt-20 sm:px-6 lg:px-8"
+      >
+        <h2 id="how-heading" className="font-display text-3xl text-navy-900">
+          How it works
+        </h2>
+        <span className="mt-3 block h-1 w-12 bg-sky-300" aria-hidden="true" />
+        <ol className="mt-8 grid gap-6 md:grid-cols-3">
+          {[
+            ['1', 'Tell us about you', 'Pick your major, year and goal. It takes about a minute.'],
+            [
+              '2',
+              'Get your plan',
+              'A 5-step roadmap with a real resource or event linked to every step.',
+            ],
+            [
+              '3',
+              'Take the next step',
+              'Save events to your calendar, track what you did, and talk to alumni.',
+            ],
+          ].map(([number, title, text]) => (
+            <li key={number} className="flex gap-4">
+              <span
+                className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full
+                  bg-coral-600 font-display text-lg text-white"
+                aria-hidden="true"
+              >
+                {number}
+              </span>
+              <span>
+                <span className="block font-semibold text-navy-900">{title}</span>
+                <span className="mt-1 block text-slate-600">{text}</span>
+              </span>
+            </li>
+          ))}
+        </ol>
+      </section>
 
       <section
         aria-labelledby="quick-access-heading"
@@ -420,8 +459,8 @@ export function HomePage() {
                         <Link
                           to="/start"
                           className="mt-5 inline-flex h-10 items-center gap-2 rounded-full
-                            bg-navy-950 px-5 text-sm font-semibold text-white transition
-                            hover:bg-coral-600"
+                            bg-ink px-5 text-sm font-semibold text-on-ink transition
+                            hover:bg-coral-600 hover:text-white"
                         >
                           Personalize my feed
                           <ArrowRight className="h-4 w-4" aria-hidden="true" />

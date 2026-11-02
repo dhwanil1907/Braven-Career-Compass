@@ -1,4 +1,12 @@
-import type { CareerEvent, CareerInterest, Major, ProfileSignals, Resource } from '../types';
+import { isOpenToAllMajors } from '../data/taxonomy';
+import type {
+  AlumniProfile,
+  CareerEvent,
+  CareerInterest,
+  Major,
+  ProfileSignals,
+  Resource,
+} from '../types';
 
 interface Taggable {
   majors: Major[];
@@ -9,13 +17,18 @@ export function hasProfile(profile: ProfileSignals): boolean {
   return profile.major !== null || profile.interests.length > 0;
 }
 
-/** Major match +3, each interest match +2; 0 when nothing in the profile matches. */
+/**
+ * Major named by the listing +3, each interest match +2. A listing that is open to every major gets
+ * a small +1 so general resources still appear, below real matches.
+ */
 function baseScore(item: Taggable, profile: ProfileSignals): number {
-  const majorScore = profile.major !== null && item.majors.includes(profile.major) ? 3 : 0;
+  const openToAll = isOpenToAllMajors(item.majors);
+  const majorScore =
+    profile.major !== null && !openToAll && item.majors.includes(profile.major) ? 3 : 0;
   const interestMatches = profile.interests.filter((interest) =>
     item.interests.includes(interest),
   ).length;
-  return majorScore + interestMatches * 2;
+  return majorScore + interestMatches * 2 + (openToAll ? 1 : 0);
 }
 
 export function scoreResource(resource: Resource, profile: ProfileSignals): number {
@@ -26,7 +39,11 @@ export function scoreResource(resource: Resource, profile: ProfileSignals): numb
 
 export function getMatchReasons(resource: Resource, profile: ProfileSignals): string[] {
   const reasons: string[] = [];
-  if (profile.major !== null && resource.majors.includes(profile.major)) {
+  if (
+    profile.major !== null &&
+    !isOpenToAllMajors(resource.majors) &&
+    resource.majors.includes(profile.major)
+  ) {
     reasons.push(`${profile.major} major`);
   }
   for (const interest of profile.interests) {
@@ -71,4 +88,34 @@ export function recommendEvents(
     )
     .map(({ event }) => event);
   return limit === undefined ? ranked : ranked.slice(0, limit);
+}
+
+export interface AlumniMatch {
+  alum: AlumniProfile;
+  score: number;
+  reasons: string[];
+}
+
+/**
+ * Alumni ranked for a student: same major +3, each shared field +2. Only people with at least one
+ * match are returned, best first (ties by name).
+ */
+export function matchAlumni(
+  alumni: AlumniProfile[],
+  profile: ProfileSignals,
+  limit?: number,
+): AlumniMatch[] {
+  if (!hasProfile(profile)) return [];
+  const matches = alumni
+    .map((alum) => {
+      const reasons: string[] = [];
+      const sameMajor = profile.major !== null && alum.major === profile.major;
+      if (sameMajor) reasons.push(`Also studied ${alum.major}`);
+      const sharedFields = profile.interests.filter((interest) => alum.interests.includes(interest));
+      for (const interest of sharedFields) reasons.push(`Works in ${interest}`);
+      return { alum, score: (sameMajor ? 3 : 0) + sharedFields.length * 2, reasons };
+    })
+    .filter((match) => match.score > 0)
+    .sort((a, b) => b.score - a.score || a.alum.name.localeCompare(b.alum.name));
+  return limit === undefined ? matches : matches.slice(0, limit);
 }

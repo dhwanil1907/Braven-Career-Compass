@@ -113,12 +113,17 @@ function bestResource(
       (first, second) =>
         // Types are listed in order of preference, so the first-listed type always wins.
         types.indexOf(first.resource.resourceType) - types.indexOf(second.resource.resourceType) ||
-        // Real catalog entries beat fictional demo listings of the same type.
-        Number(first.resource.isDemo) - Number(second.resource.isDemo) ||
+        // Hand-picked entries beat scraped ones of the same type.
+        Number(Boolean(first.resource.scraped)) - Number(Boolean(second.resource.scraped)) ||
         second.score - first.score ||
         Number(second.resource.featured) - Number(first.resource.featured) ||
         first.resource.title.localeCompare(second.resource.title),
     )[0]?.resource;
+}
+
+/** True for events a student can easily get to: online, or in San José / on campus. */
+function isEasyToAttend(event: CareerEvent): boolean {
+  return event.format !== 'In-Person' || /san jos[eé]|sjsu|campus/i.test(event.location);
 }
 
 function bestEvent(
@@ -128,8 +133,15 @@ function bestEvent(
   used: Set<string>,
   now: Date,
 ): CareerEvent | undefined {
-  return recommendEvents(events, profile, now).find(
-    (event) => types.includes(event.eventType) && !used.has(event.id),
+  const usable = (event: CareerEvent) =>
+    types.includes(event.eventType) && !used.has(event.id) && !event.isFull;
+  const matched = recommendEvents(events, profile, now).filter(usable);
+  const upcoming = events
+    .filter((event) => new Date(event.end).getTime() >= now.getTime() && usable(event))
+    .sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime());
+  // Prefer events that fit the student, then any upcoming event; both favor easy-to-reach ones.
+  return (
+    matched.find(isEasyToAttend) ?? upcoming.find(isEasyToAttend) ?? matched[0] ?? upcoming[0]
   );
 }
 

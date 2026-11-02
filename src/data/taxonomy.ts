@@ -147,3 +147,8 @@ export const REFERRAL_SOURCES: ReferralSource[] = [
   'Search engine',
   'Other',
 ];
+
+/** True when a listing names no major, or lists every major: it is open to everyone. */
+export function isOpenToAllMajors(majors: readonly Major[]): boolean {
+  return majors.length === 0 || majors.length >= MAJORS.length;
+}

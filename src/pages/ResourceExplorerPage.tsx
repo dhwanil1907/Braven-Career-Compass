@@ -72,7 +72,7 @@ export function ResourceExplorerPage() {
       <PageHeader
         eyebrow="Resources"
         title="Career Resources"
-        description="Search internships, jobs, workshops, mentorship, and more from Braven, the SJSU Career Center, and Handshake. Narrow results by your major, interests, and preferred format."
+        description="Search guides, tools, workshops, mentorship, and more from Braven and the SJSU Career Center. Narrow results by your major, interests, and type."
       />
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
 

@@ -203,7 +203,7 @@ export function EventsPage() {
               className={`inline-flex h-9 items-center rounded-full border px-4 text-sm font-semibold
                 transition ${
                   showPast
-                    ? 'border-navy-900 bg-navy-900 text-white'
+                    ? 'border-ink bg-ink text-on-ink'
                     : 'border-slate-300 bg-surface text-navy-900 hover:bg-navy-50'
                 }`}
             >
@@ -278,7 +278,7 @@ export function EventsPage() {
                       {group.items.length} {group.items.length === 1 ? 'event' : 'events'}
                     </span>
                   </h2>
-                  <div className="grid gap-4 md:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
                     {group.items.map((event) => (
                       <EventCard key={event.id} event={event} onSelect={setSelectedEvent} />
                     ))}

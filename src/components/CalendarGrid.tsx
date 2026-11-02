@@ -154,7 +154,7 @@ export function CalendarGrid({
 
   const modeButtonClass = (value: CalendarMode) =>
     `inline-flex h-9 items-center px-3.5 text-sm font-medium transition ${
-      mode === value ? 'bg-navy-900 text-white' : 'bg-surface text-navy-800 hover:bg-navy-50'
+      mode === value ? 'bg-ink text-on-ink' : 'bg-surface text-navy-800 hover:bg-navy-50'
     }`;
 
   const navButtonClasses = `inline-flex h-9 w-9 items-center justify-center rounded-full border

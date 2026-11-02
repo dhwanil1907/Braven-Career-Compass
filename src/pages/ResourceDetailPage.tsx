@@ -21,7 +21,8 @@ import { SectionHeader } from '../components/SectionHeader';
 import { getResourceById, resources } from '../data/resources';
 import { useApp } from '../context/useApp';
 import { formatDate, relativeDayLabel } from '../lib/dates';
-import { getMatchReasons } from '../lib/recommend';
+import { isOpenToAllMajors } from '../data/taxonomy';
+import { getMatchReasons, hasProfile } from '../lib/recommend';
 import type { Resource } from '../types';
 
 const CARD_CLASS = 'rounded-2xl border border-slate-200/70 bg-surface p-6 shadow-card sm:p-8';
@@ -168,12 +169,14 @@ export function ResourceDetailPage() {
             <p className="mt-3 text-slate-700">
               {reasons.length > 0
                 ? `Matches your profile: ${reasons.join(', ')}.`
-                : 'Complete your profile on My Journey to see how this fits your goals.'}
+                : hasProfile(profile)
+                  ? 'It does not specifically match your major or fields, but it may still be useful.'
+                  : 'Build your plan to see how this fits your goals.'}
             </p>
             <p className="mt-3 text-sm text-slate-500">
               Source: {resource.source}.{' '}
               {resource.lastVerified
-                ? `Last verified ${formatDate(resource.lastVerified)}.`
+                ? `Last checked ${formatDate(resource.lastVerified)}.`
                 : resource.isDemo
                   ? 'Demo listing: not a real opening.'
                   : 'Not yet verified by staff. Please confirm details on the source site.'}
@@ -197,25 +200,33 @@ export function ResourceDetailPage() {
               <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
                 Relevant majors
               </h2>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {resource.majors.map((major) => (
-                  <Badge key={major} variant="navy">
-                    {major}
-                  </Badge>
-                ))}
-              </div>
+              {isOpenToAllMajors(resource.majors) ? (
+                <p className="mt-3 text-slate-700">Open to all majors</p>
+              ) : (
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {resource.majors.map((major) => (
+                    <Badge key={major} variant="navy">
+                      {major}
+                    </Badge>
+                  ))}
+                </div>
+              )}
             </div>
             <div>
               <h2 className="text-sm font-semibold uppercase tracking-wider text-slate-500">
                 Career interests
               </h2>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {resource.interests.map((interest) => (
-                  <Badge key={interest} variant="teal">
-                    {interest}
-                  </Badge>
-                ))}
-              </div>
+              {resource.interests.length === 0 ? (
+                <p className="mt-3 text-slate-700">Not tied to one field</p>
+              ) : (
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {resource.interests.map((interest) => (
+                    <Badge key={interest} variant="teal">
+                      {interest}
+                    </Badge>
+                  ))}
+                </div>
+              )}
             </div>
             {resource.tags.length > 0 && (
               <div className="sm:col-span-2">
@@ -240,7 +251,7 @@ export function ResourceDetailPage() {
             <div>
               <h2 className="text-lg font-semibold text-navy-950">Ready to take the next step?</h2>
               <p className="mt-1 text-sm text-slate-600">
-                Apply or learn more on the original provider&apos;s website.
+                See the full details on the original page.
               </p>
             </div>
             <a
@@ -249,7 +260,7 @@ export function ResourceDetailPage() {
               rel="noopener noreferrer"
               className="flex w-full items-center justify-center gap-2 rounded-full bg-coral-600 px-4 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
             >
-              Visit original website
+              Open original page
               <ExternalLink className="h-4 w-4" aria-hidden="true" />
               <span className="sr-only">(opens in a new tab)</span>
             </a>

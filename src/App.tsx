@@ -7,6 +7,7 @@ import { useAuth } from './context/useAuth';
 import { AccountSync } from './components/AccountSync';
 import { LoginPage } from './pages/LoginPage';
 import { ProgressPage } from './pages/ProgressPage';
+import { AlumniPage } from './pages/AlumniPage';
 import { EventsPage } from './pages/EventsPage';
 import { HomePage } from './pages/HomePage';
 import { JourneyPage } from './pages/JourneyPage';
@@ -49,6 +50,7 @@ export default function App() {
             <Route path="resources" element={<ResourceExplorerPage />} />
             <Route path="resources/:id" element={<ResourceDetailPage />} />
             <Route path="events" element={<EventsPage />} />
+            <Route path="alumni" element={<AlumniPage />} />
             <Route path="progress" element={<ProgressPage />} />
             <Route path="dashboard" element={<Navigate to="/progress" replace />} />
             <Route path="*" element={<NotFoundPage />} />
