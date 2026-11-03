@@ -16,7 +16,7 @@ function Stat({
 }) {
   return (
     <div className="flex items-center gap-3 rounded-xl border border-slate-200/70 bg-surface p-4">
-      <Icon className="h-5 w-5 text-coral-600" aria-hidden="true" />
+      <Icon className="h-5 w-5 text-coral-ink" aria-hidden="true" />
       <div>
         <p className="font-display text-2xl leading-none text-navy-900">{value}</p>
         <p className="mt-1 text-sm text-slate-600">{label}</p>
@@ -64,7 +64,7 @@ export function MomentumSection() {
       </div>
 
       <h3 className="mt-6 flex items-center gap-2 text-sm font-semibold text-navy-900">
-        <Award className="h-4 w-4 text-coral-600" aria-hidden="true" />
+        <Award className="h-4 w-4 text-coral-ink" aria-hidden="true" />
         Badges ({earnedCount} of {badges.length})
       </h3>
       <ul className="mt-3 flex flex-wrap gap-2">

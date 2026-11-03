@@ -23,7 +23,7 @@ export function SectionHeader({
         <Link
           to={action.to}
           className="group inline-flex items-center gap-1.5 text-sm font-semibold
-            text-coral-600 underline decoration-2 underline-offset-4 transition
+            text-coral-ink underline decoration-2 underline-offset-4 transition
             hover:text-navy-900"
         >
           {action.label}

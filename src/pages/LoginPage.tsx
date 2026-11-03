@@ -60,7 +60,7 @@ export function LoginPage() {
       <section className="relative flex flex-col justify-between bg-hero p-8 text-navy-950 sm:p-12">
         <div className="flex items-center justify-between">
           <p className="text-sm font-semibold tracking-[0.3em]">
-            BRAVEN <span className="ml-1 tracking-normal text-coral-600">Career Compass</span>
+            BRAVEN <span className="ml-1 tracking-normal text-coral-ink">Career Compass</span>
           </p>
         </div>
         <div className="py-16">

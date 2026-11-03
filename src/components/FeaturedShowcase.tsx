@@ -11,7 +11,7 @@ type FeaturedGroupKey = keyof FeaturedGroups;
 
 function Eyebrow({ resource }: { resource: Resource }) {
   return (
-    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-coral-600">
+    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-coral-ink">
       {resource.resourceType}
       <span className="mx-1.5 text-slate-400">/</span>
       <span className="text-slate-500">{resource.source}</span>
@@ -21,7 +21,7 @@ function Eyebrow({ resource }: { resource: Resource }) {
 
 function ResourceTitleLink({ resource }: { resource: Resource }) {
   return (
-    <Link to={`/resources/${resource.id}`} className="transition hover:text-coral-600">
+    <Link to={`/resources/${resource.id}`} className="transition hover:text-coral-ink">
       {resource.title}
     </Link>
   );
@@ -49,7 +49,7 @@ function ClosingSoonList({ resources }: { resources: Resource[] }) {
               <h3 className="mt-1 font-display text-xl text-navy-900">
                 <ResourceTitleLink resource={resource} />
               </h3>
-              <p className="mt-1 text-sm font-medium text-coral-600">
+              <p className="mt-1 text-sm font-medium text-coral-ink">
                 {days === 0 ? 'Closes today' : `Closes in ${days} day${days === 1 ? '' : 's'}`}
               </p>
             </div>

@@ -55,13 +55,13 @@ const QUICK_LINKS = [
     title: 'Job search help',
     description: 'Guides and tools for finding jobs and internships.',
     to: '/resources?q=job%20search',
-    tone: 'bg-coral-500 text-white',
+    tone: 'bg-coral-600 text-white',
   },
   {
     title: 'Career events',
     description: 'Workshops, panels, and career fairs you can add to your calendar.',
     to: '/events',
-    tone: 'bg-sky-300 text-navy-950',
+    tone: 'bg-sky-300 text-(--color-sky-ink)',
   },
   {
     title: 'Resume & interviews',
@@ -164,7 +164,7 @@ export function HomePage() {
                     key={term}
                     to={`/resources?q=${encodeURIComponent(term)}`}
                     className="font-medium underline decoration-navy-950/30 decoration-2
-                      underline-offset-4 transition hover:decoration-coral-600"
+                      underline-offset-4 transition hover:decoration-coral-ink"
                   >
                     {term}
                   </Link>
@@ -184,7 +184,7 @@ export function HomePage() {
                 aria-hidden="true"
               />
               <div className="relative bg-surface p-7 text-navy-900">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-coral-600">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-coral-ink">
                   On your radar
                 </p>
                 <h2 className="mt-2 font-display text-2xl">Coming up next</h2>
@@ -212,7 +212,7 @@ export function HomePage() {
                           <span className="min-w-0 flex-1">
                             <span
                               className="block truncate font-semibold transition
-                                group-hover:text-coral-600"
+                                group-hover:text-coral-ink"
                             >
                               {event.title}
                             </span>
@@ -222,7 +222,7 @@ export function HomePage() {
                           </span>
                           <ArrowUpRight
                             className="h-4 w-4 shrink-0 text-slate-400 transition
-                              group-hover:text-coral-600"
+                              group-hover:text-coral-ink"
                             aria-hidden="true"
                           />
                         </button>
@@ -233,7 +233,7 @@ export function HomePage() {
                 <Link
                   to="/events"
                   className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold
-                    text-coral-600 underline decoration-2 underline-offset-4"
+                    text-coral-ink underline decoration-2 underline-offset-4"
                 >
                   Full calendar
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -316,13 +316,13 @@ export function HomePage() {
                 to={link.to}
                 className={`group flex h-full min-h-56 flex-col p-7 transition ${link.tone}`}
               >
-                <span className="text-xs font-semibold tracking-[0.2em] opacity-70">
+                <span className="text-xs font-semibold tracking-[0.2em] opacity-90">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <span className="mt-auto font-display text-2xl leading-tight">
                   {link.title}
                 </span>
-                <span className="mt-2 text-sm opacity-80">{link.description}</span>
+                <span className="mt-2 text-sm opacity-90">{link.description}</span>
                 <ArrowRight
                   className="mt-5 h-5 w-5 transition group-hover:translate-x-1.5"
                   aria-hidden="true"
@@ -395,7 +395,7 @@ export function HomePage() {
           className="flex items-start gap-3 border-l-4 border-coral-500 bg-slate-50 px-5 py-4
             text-sm text-navy-900"
         >
-          <Info className="mt-0.5 h-4 w-4 shrink-0 text-coral-600" aria-hidden="true" />
+          <Info className="mt-0.5 h-4 w-4 shrink-0 text-coral-ink" aria-hidden="true" />
           <p>
             Listings come from the SJSU Career Center website and a short list chosen by the
             team. They can change, so always verify details on the original source before

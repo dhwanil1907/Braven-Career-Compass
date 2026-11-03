@@ -36,8 +36,9 @@
   --color-coral-100: #fadadf;
   --color-coral-400: #f27f8c;
   --color-coral-500: #ec596a;
-  --color-coral-600: #eb3b45;
-  --color-coral-700: #c92d37;
+  --color-coral-600: #c92d37; /* fill: white text 5.4:1 */
+  --color-coral-700: #a82430; /* hover fill */
+  --color-coral-ink: #bf2a34; /* coral as text on light surfaces: 4.8:1 on #ebe9df */
   --color-sky-100: #e3f0f7;
   --color-sky-200: #c3dfee;
   --color-sky-300: #8bc1de;
@@ -59,6 +60,7 @@
   --color-hero: #dee465;
   --color-ink: #2b2e34;
   --color-on-ink: #ffffff;
+  --color-sky-ink: #1d1f23;
   --color-deep: #142744;
   --color-deep-2: #22334f;
   --color-nav: #1d1f23;
@@ -163,9 +165,13 @@
   --color-slate-600: #b5c0d2;
   --color-slate-700: #cdd5e2;
 
+  --color-cream-100: #111d33;
+  --color-cream-200: #1b3050;
+
   --color-surface: #101f38;
   --color-hero: #0b1a30;
   --color-ink: #dee465;
+  --color-coral-ink: #f27f8c;
   --color-on-ink: #1d1f23;
 
   --color-amber-50: #2b2208;

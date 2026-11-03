@@ -29,7 +29,7 @@ export function DueSoonBanner() {
       className="rounded-xl border border-coral-600 bg-surface p-4 shadow-card"
     >
       <h2 className="flex items-center gap-2 text-sm font-semibold text-navy-900">
-        <BellRing className="h-4 w-4 text-coral-600" aria-hidden="true" />
+        <BellRing className="h-4 w-4 text-coral-ink" aria-hidden="true" />
         Due in the next 7 days ({items.length})
       </h2>
       <ul className="mt-3 space-y-2">

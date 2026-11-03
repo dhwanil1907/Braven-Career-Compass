@@ -42,7 +42,7 @@ export function ResourceCard({ resource, reasons }: { resource: Resource; reason
       <div className="flex flex-wrap items-center gap-2">
         <span
           className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase
-            tracking-[0.14em] text-coral-600"
+            tracking-[0.14em] text-coral-ink"
         >
           <TypeIcon className="h-3.5 w-3.5" aria-hidden="true" />
           {resource.resourceType}
@@ -53,7 +53,7 @@ export function ResourceCard({ resource, reasons }: { resource: Resource; reason
       <h3 className="mt-3 font-display text-xl leading-snug text-navy-900">
         <Link
           to={`/resources/${resource.id}`}
-          className="transition hover:text-coral-600"
+          className="transition hover:text-coral-ink"
         >
           {resource.title}
         </Link>

@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { SearchX, SlidersHorizontal, X } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import { EmptyState } from '../components/EmptyState';
@@ -17,6 +17,8 @@ import {
 } from '../data/taxonomy';
 import { filterResources, hasActiveFilters } from '../lib/filters';
 import type { ResourceFilters } from '../types';
+
+const PAGE_SIZE = 24;
 
 type FilterParam = 'major' | 'interest' | 'type' | 'location';
 
@@ -39,6 +41,14 @@ export function ResourceExplorerPage() {
   );
 
   const filtered = useMemo(() => filterResources(resources, query, filters), [query, filters]);
+
+  // Visible count resets whenever the query or filters change (keyed on the URL params).
+  const filterKey = searchParams.toString();
+  const [loaded, setLoaded] = useState({ key: filterKey, count: PAGE_SIZE });
+  const visibleCount = loaded.key === filterKey ? loaded.count : PAGE_SIZE;
+  const visible = filtered.slice(0, visibleCount);
+  const loadMore = () => setLoaded({ key: filterKey, count: visibleCount + PAGE_SIZE });
+
   const filtersActive = hasActiveFilters(filters);
   const anyActive = filtersActive || query.trim() !== '';
 
@@ -140,8 +150,8 @@ export function ResourceExplorerPage() {
 
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-slate-600" aria-live="polite">
-          Showing <span className="font-semibold text-navy-900">{filtered.length}</span> of{' '}
-          <span className="font-semibold text-navy-900">{resources.length}</span> resources
+          Showing <span className="font-semibold text-navy-900">{visible.length}</span> of{' '}
+          <span className="font-semibold text-navy-900">{filtered.length}</span> resources
         </p>
         {activeChips.length > 0 && (
           <ul className="flex flex-wrap gap-2" aria-label="Active filters">
@@ -165,7 +175,7 @@ export function ResourceExplorerPage() {
 
       {filtered.length > 0 ? (
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((resource) => (
+          {visible.map((resource) => (
             <ResourceCard key={resource.id} resource={resource} />
           ))}
         </div>
@@ -187,6 +197,18 @@ export function ResourceExplorerPage() {
               ) : undefined
             }
           />
+        </div>
+      )}
+
+      {visible.length < filtered.length && (
+        <div className="mt-8 flex justify-center">
+          <button
+            type="button"
+            onClick={loadMore}
+            className="inline-flex min-h-11 items-center justify-center rounded-full border border-teal-200 bg-teal-50 px-6 py-2 text-sm font-semibold text-teal-800 transition hover:border-teal-300 hover:bg-teal-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+          >
+            Load more ({Math.min(PAGE_SIZE, filtered.length - visible.length)} more)
+          </button>
         </div>
       )}
       </div>

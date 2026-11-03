@@ -1,3 +1,4 @@
+import { Suspense, lazy, type ReactNode } from 'react';
 import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { AppProvider } from './context/AppContext';
@@ -5,16 +6,26 @@ import { AuthProvider } from './context/AuthContext';
 import { useAuth } from './context/useAuth';
 import { AccountSync } from './components/AccountSync';
 import { LoginPage } from './pages/LoginPage';
-import { ProgressPage } from './pages/ProgressPage';
-import { AlumniPage } from './pages/AlumniPage';
-import { EventsPage } from './pages/EventsPage';
-import { HomePage } from './pages/HomePage';
-import { JourneyPage } from './pages/JourneyPage';
-import { OnboardingPage } from './pages/OnboardingPage';
 import { useApp } from './context/useApp';
-import { NotFoundPage } from './pages/NotFoundPage';
-import { ResourceDetailPage } from './pages/ResourceDetailPage';
-import { ResourceExplorerPage } from './pages/ResourceExplorerPage';
+
+const ProgressPage = lazy(() => import('./pages/ProgressPage').then((m) => ({ default: m.ProgressPage })));
+const AlumniPage = lazy(() => import('./pages/AlumniPage').then((m) => ({ default: m.AlumniPage })));
+const EventsPage = lazy(() => import('./pages/EventsPage').then((m) => ({ default: m.EventsPage })));
+const HomePage = lazy(() => import('./pages/HomePage').then((m) => ({ default: m.HomePage })));
+const JourneyPage = lazy(() => import('./pages/JourneyPage').then((m) => ({ default: m.JourneyPage })));
+const OnboardingPage = lazy(() => import('./pages/OnboardingPage').then((m) => ({ default: m.OnboardingPage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
+const ResourceDetailPage = lazy(() => import('./pages/ResourceDetailPage').then((m) => ({ default: m.ResourceDetailPage })));
+const ResourceExplorerPage = lazy(() => import('./pages/ResourceExplorerPage').then((m) => ({ default: m.ResourceExplorerPage })));
+
+/** Quiet placeholder that keeps the navbar/footer in place while a route chunk loads. */
+function Page({ children }: { children: ReactNode }) {
+  return (
+    <Suspense fallback={<div className="min-h-[60vh]" role="status" aria-label="Loading page" />}>
+      {children}
+    </Suspense>
+  );
+}
 
 /** The landing page is public; every other page needs an account or guest choice. */
 function RequireAccess() {
@@ -38,16 +49,16 @@ export default function App() {
         <Routes>
           <Route path="login" element={<LoginPage />} />
           <Route element={<Layout />}>
-            <Route index element={<HomeRoute />} />
+            <Route index element={<Page><HomeRoute /></Page>} />
             <Route element={<RequireAccess />}>
-              <Route path="start" element={<OnboardingPage />} />
-              <Route path="resources" element={<ResourceExplorerPage />} />
-              <Route path="resources/:id" element={<ResourceDetailPage />} />
-              <Route path="events" element={<EventsPage />} />
-              <Route path="alumni" element={<AlumniPage />} />
-              <Route path="progress" element={<ProgressPage />} />
+              <Route path="start" element={<Page><OnboardingPage /></Page>} />
+              <Route path="resources" element={<Page><ResourceExplorerPage /></Page>} />
+              <Route path="resources/:id" element={<Page><ResourceDetailPage /></Page>} />
+              <Route path="events" element={<Page><EventsPage /></Page>} />
+              <Route path="alumni" element={<Page><AlumniPage /></Page>} />
+              <Route path="progress" element={<Page><ProgressPage /></Page>} />
               <Route path="dashboard" element={<Navigate to="/progress" replace />} />
-              <Route path="*" element={<NotFoundPage />} />
+              <Route path="*" element={<Page><NotFoundPage /></Page>} />
             </Route>
           </Route>
         </Routes>
