@@ -183,6 +183,8 @@ export interface ResourceFilters {
 export interface EventFilters {
   eventType: EventType | '';
   format: EventFormat | '';
+  /** Host names to include (any match); `ALL_CLUBS_HOST` stands for every student club. */
+  hosts: string[];
 }
 
 /**

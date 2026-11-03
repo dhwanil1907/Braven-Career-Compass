@@ -17,6 +17,7 @@ import { formatDate, formatTimeRange, relativeDayLabel } from '../lib/dates';
 import { downloadIcs, googleCalendarUrl, prepTipsFor } from '../lib/calendar';
 import { Badge, DemoBadge } from './Badge';
 import { BookmarkButton } from './BookmarkButton';
+import { ReminderCheckbox } from './ReminderCheckbox';
 import { ProgressToggle } from './ProgressToggle';
 
 export function EventDetailsModal({
@@ -190,6 +191,7 @@ export function EventDetailsModal({
             Download .ics
           </button>
           <BookmarkButton kind="event" id={event.id} withLabel />
+          <ReminderCheckbox event={event} />
           {new Date(event.start).getTime() <= Date.now() && (
             <ProgressToggle kind="attended" id={event.id} />
           )}

@@ -6,6 +6,8 @@ import {
   classifyMajors,
   classifyResourceLocation,
   classifyResourceType,
+  isGuessedResourceType,
+  TYPE_GUESS_TAG,
 } from '../lib/classify';
 import eventsSnapshot from './scraped/sjsu-events.json';
 import resourcesSnapshot from './scraped/sjsu-resources.json';
@@ -45,7 +47,9 @@ export const sjsuResources: Resource[] = resourcesSnapshot.resources.map((item) 
     majors: classifyMajors(item.title),
     interests: classifyInterests(text),
     location: classifyResourceLocation(text, isExternal(item.url)),
-    tags: ['sjsu', 'career center'],
+    tags: isGuessedResourceType(text)
+      ? ['sjsu', 'career center', TYPE_GUESS_TAG]
+      : ['sjsu', 'career center'],
     featured: false,
     isDemo: false,
     scraped: true,

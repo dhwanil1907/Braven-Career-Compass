@@ -21,32 +21,45 @@ const RESOURCE_TYPE_RULES: [RegExp, ResourceType][] = [
   [/\bworkshops?\b|\bacademy\b|\btraining\b|\bseminar|\bcourse\b/i, 'Workshop'],
 ];
 
+/** Tag put on a resource whose type is the fallback, not a keyword match. */
+export const TYPE_GUESS_TAG = 'type-guess';
+
+/** True when no type keyword matched, so the type is only the fallback. */
+export function isGuessedResourceType(text: string): boolean {
+  return !RESOURCE_TYPE_RULES.some(([pattern]) => pattern.test(text));
+}
+
 export function classifyResourceType(text: string): ResourceType {
   return RESOURCE_TYPE_RULES.find(([pattern]) => pattern.test(text))?.[1] ?? 'Career Exploration';
 }
 
 const INTEREST_RULES: [RegExp, CareerInterest][] = [
-  [/software|computer science|coding|programming|\bit\b|cyber/i, 'Software Engineering'],
-  [/data|analytics|statistics/i, 'Data Science'],
+  // Patterns use word boundaries and specific phrases: bare words such as "it", "data", "design",
+  // "community", "education" or "research" appear in ordinary sentences and tagged half the catalog.
+  [/\bsoftware\b|computer science|\bcoding\b|\bprogramming\b|\bcyber|information technology/i, 'Software Engineering'],
+  [/\bIT\b/, 'Software Engineering'],
+  [/data science|data scientist|data analy|\banalytics\b|\bstatistics\b|machine learning/i, 'Data Science'],
   [/product management|product manager/i, 'Product Management'],
-  [/marketing|advertising|brand/i, 'Marketing'],
-  [/finance|banking|investment|accounting|\bcpa\b/i, 'Finance'],
-  [/consult/i, 'Consulting'],
-  [/\bux\b|user experience|\bdesign/i, 'UX Design'],
-  [/health|medical|nursing|clinical|wellness|kinesiology|nutrition/i, 'Healthcare'],
-  [/human resources|\bhr\b|recruit/i, 'Human Resources'],
+  [/\bmarketing\b|advertising/i, 'Marketing'],
+  [/\bfinance\b|\bfinancial services\b|\bbanking\b|investment|accounting|\bcpa\b/i, 'Finance'],
+  [/\bconsulting\b|\bconsultant/i, 'Consulting'],
+  [/\bux\b|user experience|graphic design|product design|interaction design/i, 'UX Design'],
+  [/\bhealth ?care\b|\bhealth\b|medical|nursing|clinical|kinesiology|nutrition/i, 'Healthcare'],
+  [/human resources|\bhr\b|talent acquisition|\brecruiter/i, 'Human Resources'],
   [/nonprofit|non-profit|social impact|public service|volunteer/i, 'Social Impact'],
-  [/educat|teach|school|tutor/i, 'Education and Teaching'],
-  [/policy|government|public administration|political|civic|federal/i, 'Public Policy and Government'],
-  [/\blaw\b|legal|pre-law|attorney/i, 'Law and Legal'],
-  [/journalism|media|news|broadcast/i, 'Journalism and Media'],
-  [/nonprofit management|fundrais|grant/i, 'Nonprofit Management'],
-  [/research|academia|graduate school|grad school|scholar/i, 'Research and Academia'],
-  [/\barts?\b|museum|theat|music|creative/i, 'Arts and Culture'],
-  [/organizing|advocacy|community/i, 'Community Organizing'],
-  [/sustainab|environment|climate|green/i, 'Sustainability'],
+  [/\bteach(er|ers|ing)\b|\bk-12\b|\btutor|education (career|major|program)|school (counselor|teacher)/i, 'Education and Teaching'],
+  [/\bpolicy\b|\bgovernment\b|public administration|political|\bcivic\b/i, 'Public Policy and Government'],
+  [/\blaw\b|\blegal\b|pre-law|attorney/i, 'Law and Legal'],
+  [/journalis|\bnewsroom|\bbroadcast|\bnews\b|\bmedia\b/i, 'Journalism and Media'],
+  [/nonprofit management|fundrais/i, 'Nonprofit Management'],
+  [/academia|graduate school|grad school|\bscholars?\b|\bphd\b|research (assistant|opportunit|program|position)/i, 'Research and Academia'],
+  [/\barts?\b|museum|theat|\bmusic\b/i, 'Arts and Culture'],
+  [/community organizing|\borganizing\b|\badvocacy\b|grassroots|activis/i, 'Community Organizing'],
+  [/sustainab|environmental|climate|renewable|conservation|\bcwea\b|\bwater\b/i, 'Sustainability'],
+  [/\bstem\b|engineering|tesla/i, 'Software Engineering'],
+  [/\bstem\b/i, 'Data Science'],
   [/counsel|social work|mental health|social services/i, 'Counseling and Social Services'],
-  [/writing|writer|content|editing|editor/i, 'Writing and Content'],
+  [/\bwriting\b|\bwriter|copywrit|\beditor|editorial/i, 'Writing and Content'],
 ];
 
 export function classifyInterests(text: string): CareerInterest[] {
@@ -56,7 +69,10 @@ export function classifyInterests(text: string): CareerInterest[] {
 
 const MAJOR_RULES: [RegExp, Major[]][] = [
   [/computer science|software engineering|\bcs\b/i, ['Computer Science']],
-  [/engineering/i, ['Engineering', 'Computer Science']],
+  [/engineering|aviation|tesla/i, ['Engineering', 'Computer Science']],
+  [/\bstem\b/i, ['Engineering', 'Computer Science', 'Mathematics', 'Biology', 'Chemistry']],
+  [/social sciences/i, ['Psychology', 'Sociology', 'Political Science', 'Anthropology', 'Criminology']],
+  [/\bcwea\b|water/i, ['Environmental Science']],
   [/biolog|life science/i, ['Biology']],
   [/chemi/i, ['Chemistry']],
   [/mathematic|\bmath\b/i, ['Mathematics']],

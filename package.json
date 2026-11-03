@@ -11,10 +11,13 @@
     "test": "vitest run",
     "scrape": "node scripts/scrape-sjsu.mjs all",
     "scrape:events": "node scripts/scrape-sjsu.mjs events",
-    "scrape:resources": "node scripts/scrape-sjsu.mjs resources"
+    "scrape:resources": "node scripts/scrape-sjsu.mjs resources",
+    "scrape:instagram": "node scripts/scrape-instagram.mjs",
+    "scrape:instagram:apify": "node scripts/scrape-instagram-apify.mjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
+    "chrono-node": "^2.9.0",
     "lucide-react": "^1.64.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

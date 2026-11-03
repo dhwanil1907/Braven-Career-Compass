@@ -66,26 +66,25 @@ describe('hasProfile', () => {
 });
 
 describe('scoreResource', () => {
-  it('adds 3 for major, 2 per interest, and 1 for featured', () => {
+  it('returns the match percent: full major and strong interest overlap scores 95', () => {
     const resource = makeResource({
       majors: ['Computer Science'],
       interests: ['Data Science', 'Software Engineering'],
-      featured: true,
     });
-    expect(scoreResource(resource, csProfile)).toBe(3 + 2 + 2 + 1);
+    expect(scoreResource(resource, csProfile)).toBe(95);
   });
 
-  it('scores interest-only matches, plus 1 because a listing naming no major is open to all', () => {
+  it('scores an interest-only match on an open-to-all listing at 45', () => {
     const resource = makeResource({ interests: ['Data Science'] });
-    expect(scoreResource(resource, csProfile)).toBe(2 + 1);
+    expect(scoreResource(resource, csProfile)).toBe(45);
   });
 
-  it('does not treat an open-to-all listing as a major match', () => {
+  it('does not treat an open-to-all listing as a match without a specific fit', () => {
     const everyone = makeResource({ majors: [] });
     const everyMajor = makeResource({ majors: MAJORS });
     expect(getMatchReasons(everyone, csProfile)).toEqual([]);
     expect(getMatchReasons(everyMajor, csProfile)).toEqual([]);
-    expect(scoreResource(everyMajor, csProfile)).toBe(1);
+    expect(scoreResource(everyMajor, csProfile)).toBe(0);
   });
 
   it('returns 0 for a featured resource with no profile match', () => {
@@ -116,6 +115,7 @@ describe('recommendResources', () => {
     makeResource({ id: 'none', title: 'Unrelated', majors: ['Biology'], featured: true }),
     makeResource({ id: 'b-interest', title: 'Beta', interests: ['Data Science'] }),
     makeResource({ id: 'a-interest', title: 'Alpha', interests: ['Software Engineering'] }),
+    makeResource({ id: 'cs-only', title: 'Alpha CS', majors: ['Computer Science'] }),
     makeResource({
       id: 'top',
       title: 'Zeta',
@@ -128,12 +128,9 @@ describe('recommendResources', () => {
     expect(recommendResources(resources, emptyProfile)).toEqual([]);
   });
 
-  it('orders by score desc then title, excluding zero scores', () => {
-    expect(recommendResources(resources, csProfile).map((r) => r.id)).toEqual([
-      'top',
-      'a-interest',
-      'b-interest',
-    ]);
+  it('orders by score desc, dropping listings under the 50% cutoff', () => {
+    // a-interest and b-interest score 45% (interest only), so they are not recommended.
+    expect(recommendResources(resources, csProfile).map((r) => r.id)).toEqual(['top', 'cs-only']);
   });
 
   it('respects the limit', () => {
@@ -168,14 +165,19 @@ describe('recommendEvents', () => {
       start: '2026-06-25T10:00:00Z',
       end: '2026-06-25T11:00:00Z',
     }),
+    makeEvent({
+      id: 'major-later',
+      majors: ['Computer Science'],
+      start: '2026-06-28T10:00:00Z',
+      end: '2026-06-28T11:00:00Z',
+    }),
     makeEvent({ id: 'unrelated', majors: ['Design'] }),
   ];
 
-  it('excludes past and unmatched events, sorting by score then start', () => {
+  it('excludes past, unmatched and under-50% events, sorting ties by start', () => {
     expect(recommendEvents(events, csProfile, now).map((e) => e.id)).toEqual([
-      'sooner-interest',
-      'later-interest',
       'major',
+      'major-later',
     ]);
   });
 

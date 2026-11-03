@@ -5,14 +5,12 @@ import { EventCard } from '../components/EventCard';
 import { EventDetailsModal } from '../components/EventDetailsModal';
 import { ResourceCard } from '../components/ResourceCard';
 import { RoadmapList } from '../components/RoadmapList';
-import { SkillsSection } from '../components/SkillsSection';
 import { SectionHeader } from '../components/SectionHeader';
 import { useApp } from '../context/useApp';
 import { events } from '../data/events';
 import { resources } from '../data/resources';
 import { DueSoonBanner } from '../components/DueSoonBanner';
 import { countCompleted, buildRoadmap, getNextStep } from '../lib/roadmap';
-import { getSkillGroups } from '../lib/skills';
 import { getMatchReasons, recommendEvents, recommendResources } from '../lib/recommend';
 import type { CareerEvent } from '../types';
 
@@ -37,7 +35,6 @@ export function JourneyPage() {
     [profile, now, roadmapTargets],
   );
 
-  const skillGroups = useMemo(() => getSkillGroups(profile, resources), [profile]);
 
   const summary = [profile.major, profile.year, profile.goal].filter(Boolean);
 
@@ -144,8 +141,6 @@ export function JourneyPage() {
             <RoadmapList steps={steps} completedIds={completedStepIds} onToggle={toggleStep} />
           </div>
         </section>
-
-        <SkillsSection groups={skillGroups} />
 
         {relevantEvents.length > 0 && (
           <section aria-label="Events that fit you">

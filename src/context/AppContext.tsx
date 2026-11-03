@@ -12,6 +12,9 @@ export interface AppContextValue {
   isEventSaved(id: string): boolean;
   toggleResource(id: string): void;
   toggleEvent(id: string): void;
+  reminderEventIds: string[];
+  isReminderSet(id: string): boolean;
+  toggleReminder(id: string): void;
   profile: UserProfile;
   setMajor(major: Major | null): void;
   toggleInterest(interest: CareerInterest): void;
@@ -75,6 +78,11 @@ export function AppProvider({ children }: { children: ReactNode }) {
     EMPTY_IDS,
     isStringArray,
   );
+  const [reminderEventIds, setReminderEventIds] = useLocalStorage<string[]>(
+    'bcc:reminderEvents',
+    EMPTY_IDS,
+    isStringArray,
+  );
   const [profile, setProfile] = useLocalStorage<UserProfile>(
     'bcc:profile:v2',
     DEFAULT_PROFILE,
@@ -94,6 +102,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const toggleEvent = useCallback(
     (id: string) => setSavedEventIds((previous) => toggleId(previous, id)),
     [setSavedEventIds],
+  );
+
+  const isReminderSet = useCallback(
+    (id: string) => reminderEventIds.includes(id),
+    [reminderEventIds],
+  );
+  const toggleReminder = useCallback(
+    (id: string) => setReminderEventIds((previous) => toggleId(previous, id)),
+    [setReminderEventIds],
   );
 
   const setMajor = useCallback(
@@ -179,6 +196,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
         setSavedResourceIds(stored.savedResourceIds as string[]);
       }
       if (isStringArray(stored.savedEventIds)) setSavedEventIds(stored.savedEventIds as string[]);
+      if (isStringArray(stored.reminderEventIds)) {
+        setReminderEventIds(stored.reminderEventIds as string[]);
+      }
       if (isStringArray(stored.completedStepIds)) {
         setCompletedStepIds(stored.completedStepIds as string[]);
       }
@@ -196,6 +216,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setProfile,
       setSavedResourceIds,
       setSavedEventIds,
+      setReminderEventIds,
       setCompletedStepIds,
       setAttendedEventIds,
       setAppliedResourceIds,
@@ -211,6 +232,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       isEventSaved,
       toggleResource,
       toggleEvent,
+      reminderEventIds,
+      isReminderSet,
+      toggleReminder,
       profile,
       setMajor,
       toggleInterest,
@@ -237,6 +261,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       isEventSaved,
       toggleResource,
       toggleEvent,
+      reminderEventIds,
+      isReminderSet,
+      toggleReminder,
       profile,
       setMajor,
       toggleInterest,

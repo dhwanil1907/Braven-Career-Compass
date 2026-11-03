@@ -3,6 +3,8 @@ import type { CareerEvent } from '../types';
 import { formatTimeRange } from '../lib/dates';
 import { Badge, DemoBadge } from './Badge';
 import { BookmarkButton } from './BookmarkButton';
+import { MatchBadge } from './MatchBadge';
+import { ReminderCheckbox } from './ReminderCheckbox';
 
 function DateTile({ iso, compact }: { iso: string; compact: boolean }) {
   const date = new Date(iso);
@@ -68,6 +70,7 @@ export function EventCard({
             {timeRange}
           </p>
         </div>
+        <ReminderCheckbox event={event} compact />
         <BookmarkButton kind="event" id={event.id} />
       </article>
     );
@@ -86,6 +89,7 @@ export function EventCard({
             <Badge variant="outline">{event.format}</Badge>
             {event.isFull && <Badge variant="amber">Full</Badge>}
             {event.isDemo && <DemoBadge />}
+            <MatchBadge item={event} />
           </div>
           <h3 className="mt-2 font-semibold leading-snug text-navy-900">
             <span className="sr-only">{dateLabel}: </span>
@@ -136,6 +140,7 @@ export function EventCard({
             <span className="sr-only">(opens in a new tab)</span>
           </a>
         </div>
+        <ReminderCheckbox event={event} />
         <BookmarkButton kind="event" id={event.id} />
       </div>
     </article>

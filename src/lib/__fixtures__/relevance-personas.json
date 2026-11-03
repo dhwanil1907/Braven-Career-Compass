@@ -1,0 +1,95 @@
+[
+ {
+  "id": "p1",
+  "desc": "Third-year Computer Science student, interested in Software Engineering and Data Science. Wants a first internship. Struggles with resume and interviews.",
+  "major": "Computer Science",
+  "interests": [
+   "Software Engineering",
+   "Data Science"
+  ],
+  "year": "Third year",
+  "goal": "First internship",
+  "challenge": "Resume or interviews need work"
+ },
+ {
+  "id": "p2",
+  "desc": "First-year Psychology student interested in UX Design. Wants to explore career options. Not sure where to start.",
+  "major": "Psychology",
+  "interests": [
+   "UX Design"
+  ],
+  "year": "First year",
+  "goal": "Explore career options",
+  "challenge": "Not sure where to start"
+ },
+ {
+  "id": "p3",
+  "desc": "Fourth-year Business student interested in Finance and Consulting. Wants a first job after graduation. Finds it hard to find relevant opportunities.",
+  "major": "Business",
+  "interests": [
+   "Finance",
+   "Consulting"
+  ],
+  "year": "Fourth year or later",
+  "goal": "First job after graduation",
+  "challenge": "Hard to find relevant opportunities"
+ },
+ {
+  "id": "p4",
+  "desc": "Second-year Biology student interested in Healthcare and Research and Academia. Preparing for graduate school. Needs connections and mentors.",
+  "major": "Biology",
+  "interests": [
+   "Healthcare",
+   "Research and Academia"
+  ],
+  "year": "Second year",
+  "goal": "Prepare for graduate school",
+  "challenge": "Need connections and mentors"
+ },
+ {
+  "id": "p5",
+  "desc": "Third-year Journalism student interested in Journalism and Media and Writing and Content. Wants to grow their network. Needs connections and mentors.",
+  "major": "Journalism",
+  "interests": [
+   "Journalism and Media",
+   "Writing and Content"
+  ],
+  "year": "Third year",
+  "goal": "Grow my network",
+  "challenge": "Need connections and mentors"
+ },
+ {
+  "id": "p6",
+  "desc": "Recent graduate in Environmental Science interested in Sustainability. Wants a first job. Finds it hard to find relevant opportunities.",
+  "major": "Environmental Science",
+  "interests": [
+   "Sustainability"
+  ],
+  "year": "Recent graduate",
+  "goal": "First job after graduation",
+  "challenge": "Hard to find relevant opportunities"
+ },
+ {
+  "id": "p7",
+  "desc": "First-year Engineering student interested in Software Engineering. Wants to explore career options. Hard to stay on track.",
+  "major": "Engineering",
+  "interests": [
+   "Software Engineering"
+  ],
+  "year": "First year",
+  "goal": "Explore career options",
+  "challenge": "Hard to stay on track"
+ },
+ {
+  "id": "p8",
+  "desc": "Fourth-year Social Work student interested in Social Impact and Counseling and Social Services. Wants a first job after graduation. Resume and interviews need work.",
+  "major": "Social Work",
+  "interests": [
+   "Social Impact",
+   "Counseling and Social Services"
+  ],
+  "year": "Fourth year or later",
+  "goal": "First job after graduation",
+  "challenge": "Resume or interviews need work"
+ }
+]

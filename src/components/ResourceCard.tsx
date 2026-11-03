@@ -19,6 +19,7 @@ import type { Resource, ResourceType } from '../types';
 import { relativeDayLabel } from '../lib/dates';
 import { Badge, DemoBadge } from './Badge';
 import { BookmarkButton } from './BookmarkButton';
+import { MatchBadge } from './MatchBadge';
 
 const TYPE_ICONS: Record<ResourceType, LucideIcon> = {
   Job: Briefcase,
@@ -48,6 +49,7 @@ export function ResourceCard({ resource, reasons }: { resource: Resource; reason
           {resource.resourceType}
         </span>
         {resource.isDemo && <DemoBadge />}
+        <MatchBadge item={resource} />
       </div>
 
       <h3 className="mt-3 font-display text-xl leading-snug text-navy-900">

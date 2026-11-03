@@ -1,8 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import type { CareerEvent, Resource } from '../types';
 import {
+  ALL_CLUBS_HOST,
   filterEvents,
   filterResources,
+  getClubHosts,
   getUpcomingEvents,
   hasActiveFilters,
   matchesQuery,
@@ -144,6 +146,53 @@ describe('filterResources', () => {
   });
 });
 
+describe('host filter', () => {
+  const events: CareerEvent[] = [
+    makeEvent({ id: 'center', host: 'SJSU Career Center' }),
+    makeEvent({ id: 'braven', host: 'Braven at SJSU' }),
+    makeEvent({ id: 'wib', host: 'Women in Business at SJSU' }),
+    makeEvent({ id: 'aib', host: 'AI in Business at SJSU' }),
+    makeEvent({ id: 'aib-2', host: 'AI in Business at SJSU' }),
+  ];
+  const ids = (...hosts: string[]) =>
+    filterEvents(events, '', { hosts }).map((e) => e.id).sort();
+
+  it('keeps only the chosen host', () => {
+    expect(ids('SJSU Career Center')).toEqual(['center']);
+    expect(ids('Braven at SJSU')).toEqual(['braven']);
+    expect(ids('AI in Business at SJSU')).toEqual(['aib', 'aib-2']);
+  });
+
+  it('keeps events from any of several chosen hosts', () => {
+    expect(ids('Braven at SJSU', 'Women in Business at SJSU')).toEqual(['braven', 'wib']);
+  });
+
+  it('shows everything when no host is chosen', () => {
+    expect(ids()).toHaveLength(events.length);
+  });
+
+  it('matches every club, but not the Career Center or Braven, for "All student clubs"', () => {
+    expect(ids(ALL_CLUBS_HOST)).toEqual(['aib', 'aib-2', 'wib']);
+    expect(ids(ALL_CLUBS_HOST, 'Braven at SJSU')).toEqual(['aib', 'aib-2', 'braven', 'wib']);
+  });
+
+  it('combines hosts with the other filters', () => {
+    const mixed = [
+      makeEvent({ id: 'wib-talk', host: 'Women in Business at SJSU', format: 'In-Person' }),
+      makeEvent({ id: 'wib-zoom', host: 'Women in Business at SJSU', format: 'Virtual' }),
+    ];
+    const result = filterEvents(mixed, '', {
+      hosts: ['Women in Business at SJSU'],
+      format: 'In-Person',
+    });
+    expect(result.map((e) => e.id)).toEqual(['wib-talk']);
+  });
+
+  it('lists each club once, alphabetically', () => {
+    expect(getClubHosts(events)).toEqual(['AI in Business at SJSU', 'Women in Business at SJSU']);
+  });
+});
+
 describe('filterEvents', () => {
   const events: CareerEvent[] = [
     makeEvent({
@@ -208,6 +257,11 @@ describe('hasActiveFilters', () => {
   it('is false for empty or blank filters', () => {
     expect(hasActiveFilters({})).toBe(false);
     expect(hasActiveFilters({ major: '', location: '' })).toBe(false);
+    expect(hasActiveFilters({ hosts: [] })).toBe(false);
+  });
+
+  it('is true when hosts are chosen', () => {
+    expect(hasActiveFilters({ hosts: ['Braven at SJSU'] })).toBe(true);
   });
 
   it('is true when any filter has a value', () => {

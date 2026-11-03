@@ -22,6 +22,7 @@ import { getResourceById, resources } from '../data/resources';
 import { useApp } from '../context/useApp';
 import { formatDate, relativeDayLabel } from '../lib/dates';
 import { isOpenToAllMajors } from '../data/taxonomy';
+import { MatchBadge } from '../components/MatchBadge';
 import { getMatchReasons, hasProfile } from '../lib/recommend';
 import type { Resource } from '../types';
 
@@ -166,6 +167,9 @@ export function ResourceDetailPage() {
             <h2 id="relevance-heading" className="text-xl font-semibold text-navy-950">
               Why it may be relevant to you
             </h2>
+            <div className="mt-3 empty:hidden">
+              <MatchBadge item={resource} />
+            </div>
             <p className="mt-3 text-slate-700">
               {reasons.length > 0
                 ? `Matches your profile: ${reasons.join(', ')}.`

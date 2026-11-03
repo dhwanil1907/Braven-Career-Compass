@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { SearchX, SlidersHorizontal, X } from 'lucide-react';
+import { SearchX, SlidersHorizontal, Sparkles, X } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import { EmptyState } from '../components/EmptyState';
 import { FilterSelect } from '../components/FilterSelect';
@@ -15,12 +15,14 @@ import {
   MAJORS,
   RESOURCE_TYPES,
 } from '../data/taxonomy';
+import { useApp } from '../context/useApp';
 import { filterResources, hasActiveFilters } from '../lib/filters';
+import { hasProfile, recommendResources } from '../lib/recommend';
 import type { ResourceFilters } from '../types';
 
 const PAGE_SIZE = 24;
 
-type FilterParam = 'major' | 'interest' | 'type' | 'location';
+type FilterParam = 'major' | 'interest' | 'type' | 'location' | 'rec';
 
 function pickValid<T extends string>(value: string | null, allowed: readonly T[]): T | '' {
   return value !== null && (allowed as readonly string[]).includes(value) ? (value as T) : '';
@@ -40,7 +42,18 @@ export function ResourceExplorerPage() {
     [searchParams],
   );
 
-  const filtered = useMemo(() => filterResources(resources, query, filters), [query, filters]);
+  const { profile } = useApp();
+  const canRecommend = hasProfile(profile);
+  const recommendedOnly = canRecommend && searchParams.get('rec') === '1';
+
+  const filtered = useMemo(() => {
+    const matches = filterResources(resources, query, filters);
+    if (!recommendedOnly) return matches;
+    const rank = new Map(recommendResources(resources, profile).map((item, index) => [item.id, index]));
+    return matches
+      .filter((item) => rank.has(item.id))
+      .sort((first, second) => (rank.get(first.id) ?? 0) - (rank.get(second.id) ?? 0));
+  }, [query, filters, recommendedOnly, profile]);
 
   // Visible count resets whenever the query or filters change (keyed on the URL params).
   const filterKey = searchParams.toString();
@@ -49,7 +62,7 @@ export function ResourceExplorerPage() {
   const visible = filtered.slice(0, visibleCount);
   const loadMore = () => setLoaded({ key: filterKey, count: visibleCount + PAGE_SIZE });
 
-  const filtersActive = hasActiveFilters(filters);
+  const filtersActive = hasActiveFilters(filters) || recommendedOnly;
   const anyActive = filtersActive || query.trim() !== '';
 
   const updateParam = (key: FilterParam | 'q', value: string) => {
@@ -100,6 +113,23 @@ export function ResourceExplorerPage() {
             <SlidersHorizontal className="h-4 w-4 text-teal-600" aria-hidden="true" />
             Filters
           </h2>
+          <button
+            type="button"
+            aria-pressed={recommendedOnly}
+            disabled={!canRecommend}
+            title={canRecommend ? undefined : 'Answer the three quick questions to unlock this'}
+            onClick={() => updateParam('rec', recommendedOnly ? '' : '1')}
+            className={`ml-auto inline-flex min-h-11 items-center gap-1.5 rounded-xl border px-3.5 text-sm font-medium transition
+              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500
+              disabled:cursor-not-allowed disabled:opacity-50 ${
+                recommendedOnly
+                  ? 'border-teal-600 bg-teal-50 text-teal-800'
+                  : 'border-slate-200 bg-surface text-slate-700 hover:border-slate-300'
+              }`}
+          >
+            <Sparkles className="h-4 w-4" aria-hidden="true" />
+            Recommended for me
+          </button>
           {filtersActive && (
             <button
               type="button"

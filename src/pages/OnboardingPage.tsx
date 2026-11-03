@@ -157,7 +157,7 @@ export function OnboardingPage() {
       </h1>
       <p className="mt-2 text-slate-600">
         Three quick questions, about a minute. At the end you get a 5-step plan with a real
-        resource or event for each step, plus skills to build and alumni to talk to.
+        resource or event for each step, plus alumni to talk to.
       </p>
 
       <div className="mt-8 rounded-2xl border border-slate-200/70 bg-surface p-6 shadow-card sm:p-8">

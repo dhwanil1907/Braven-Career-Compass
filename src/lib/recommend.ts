@@ -1,77 +1,44 @@
-import { isOpenToAllMajors } from '../data/taxonomy';
-import type {
-  AlumniProfile,
-  CareerEvent,
-  CareerInterest,
-  Major,
-  ProfileSignals,
-  Resource,
-} from '../types';
+import type { AlumniProfile, CareerEvent, ProfileSignals, Resource } from '../types';
+import { MIN_RECOMMENDED_PERCENT } from './matchRules';
+import { hasAnswers, scoreMatch, type MatchProfile } from './matchScore';
 
-interface Taggable {
-  majors: Major[];
-  interests: CareerInterest[];
+export function hasProfile(profile: MatchProfile): boolean {
+  return hasAnswers(profile);
 }
 
-export function hasProfile(profile: ProfileSignals): boolean {
-  return profile.major !== null || profile.interests.length > 0;
+/** Match percent (0-100). Kept as a number-returning helper for callers that only need to sort. */
+export function scoreResource(resource: Resource, profile: MatchProfile): number {
+  return scoreMatch(resource, profile).percent;
 }
 
-/**
- * Major named by the listing +3, each interest match +2. A listing that is open to every major gets
- * a small +1 so general resources still appear, below real matches.
- */
-function baseScore(item: Taggable, profile: ProfileSignals): number {
-  const openToAll = isOpenToAllMajors(item.majors);
-  const majorScore =
-    profile.major !== null && !openToAll && item.majors.includes(profile.major) ? 3 : 0;
-  const interestMatches = profile.interests.filter((interest) =>
-    item.interests.includes(interest),
-  ).length;
-  return majorScore + interestMatches * 2 + (openToAll ? 1 : 0);
+export function getMatchReasons(resource: Resource, profile: MatchProfile): string[] {
+  return scoreMatch(resource, profile).reasons;
 }
 
-export function scoreResource(resource: Resource, profile: ProfileSignals): number {
-  const score = baseScore(resource, profile);
-  if (score === 0) return 0;
-  return resource.featured ? score + 1 : score;
-}
-
-export function getMatchReasons(resource: Resource, profile: ProfileSignals): string[] {
-  const reasons: string[] = [];
-  if (
-    profile.major !== null &&
-    !isOpenToAllMajors(resource.majors) &&
-    resource.majors.includes(profile.major)
-  ) {
-    reasons.push(`${profile.major} major`);
-  }
-  for (const interest of profile.interests) {
-    if (resource.interests.includes(interest)) reasons.push(`${interest} interest`);
-  }
-  return reasons;
-}
-
+/** Resources at or above the recommendation cutoff, best match first (featured, then title). */
 export function recommendResources(
   resources: Resource[],
-  profile: ProfileSignals,
+  profile: MatchProfile,
   limit?: number,
 ): Resource[] {
   if (!hasProfile(profile)) return [];
   const ranked = resources
-    .map((resource) => ({ resource, score: scoreResource(resource, profile) }))
-    .filter(({ score }) => score > 0)
+    .map((resource) => ({ resource, percent: scoreMatch(resource, profile).percent }))
+    .filter(({ percent }) => percent >= MIN_RECOMMENDED_PERCENT)
     .sort(
       (first, second) =>
-        second.score - first.score || first.resource.title.localeCompare(second.resource.title),
+        second.percent - first.percent ||
+        Number(second.resource.featured) - Number(first.resource.featured) ||
+        first.resource.title.localeCompare(second.resource.title),
     )
     .map(({ resource }) => resource);
   return limit === undefined ? ranked : ranked.slice(0, limit);
 }
 
+/** Upcoming events at or above the cutoff, best match first (ties by start date). */
 export function recommendEvents(
   events: CareerEvent[],
-  profile: ProfileSignals,
+  profile: MatchProfile,
   now: Date = new Date(),
   limit?: number,
 ): CareerEvent[] {
@@ -79,11 +46,11 @@ export function recommendEvents(
   const nowMs = now.getTime();
   const ranked = events
     .filter((event) => new Date(event.end).getTime() >= nowMs)
-    .map((event) => ({ event, score: baseScore(event, profile) }))
-    .filter(({ score }) => score > 0)
+    .map((event) => ({ event, percent: scoreMatch(event, profile).percent }))
+    .filter(({ percent }) => percent >= MIN_RECOMMENDED_PERCENT)
     .sort(
       (first, second) =>
-        second.score - first.score ||
+        second.percent - first.percent ||
         new Date(first.event.start).getTime() - new Date(second.event.start).getTime(),
     )
     .map(({ event }) => event);

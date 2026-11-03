@@ -6,15 +6,26 @@ import {
   CalendarX,
   Info,
   LayoutList,
+  Sparkles,
   X,
 } from 'lucide-react';
 import type { CareerEvent, EventFilters, EventFormat, EventType } from '../types';
 import { events } from '../data/events';
 import { EVENT_FORMATS, EVENT_TYPES } from '../data/taxonomy';
-import { filterEvents, hasActiveFilters } from '../lib/filters';
+import {
+  ALL_CLUBS_HOST,
+  BRAVEN_HOST,
+  CAREER_CENTER_HOST,
+  filterEvents,
+  getClubHosts,
+  hasActiveFilters,
+} from '../lib/filters';
+import { isRecommended } from '../lib/matchScore';
+import { hasProfile } from '../lib/recommend';
 import { useApp } from '../context/useApp';
 import { SearchBar } from '../components/SearchBar';
 import { FilterSelect } from '../components/FilterSelect';
+import { MultiFilterSelect } from '../components/MultiFilterSelect';
 import { EventCard } from '../components/EventCard';
 import { EventDetailsModal } from '../components/EventDetailsModal';
 import { PageHeader } from '../components/PageHeader';
@@ -23,6 +34,11 @@ import { EmptyState } from '../components/EmptyState';
 
 type ViewMode = 'list' | 'calendar';
 
+const CLUB_HOSTS = getClubHosts(events);
+const HOST_GROUPS = [
+  { label: 'Organizers', options: [CAREER_CENTER_HOST, BRAVEN_HOST, ALL_CLUBS_HOST] },
+  { label: 'Student clubs', options: CLUB_HOSTS },
+];
 interface MonthGroup {
   key: string;
   label: string;
@@ -62,10 +78,13 @@ function initialMonth(): Date {
 }
 
 export function EventsPage() {
-  const { isEventSaved } = useApp();
+  const { isEventSaved, profile } = useApp();
+  const canRecommend = hasProfile(profile);
+  const [recommendedOnly, setRecommendedOnly] = useState(false);
   const [query, setQuery] = useState('');
   const [eventType, setEventType] = useState<EventType | ''>('');
   const [format, setFormat] = useState<EventFormat | ''>('');
+  const [hosts, setHosts] = useState<string[]>([]);
   const [savedOnly, setSavedOnly] = useState(false);
   const [showPast, setShowPast] = useState(false);
   const [view, setView] = useState<ViewMode>('list');
@@ -76,13 +95,21 @@ export function EventsPage() {
     return events.find((event) => event.id === requestedId) ?? null;
   });
 
-  const filters: EventFilters = useMemo(() => ({ eventType, format }), [eventType, format]);
-  const isFiltered = hasActiveFilters(filters) || query.trim() !== '' || savedOnly;
+  const filters: EventFilters = useMemo(
+    () => ({ eventType, format, hosts }),
+    [eventType, format, hosts],
+  );
+  const isFiltered =
+    hasActiveFilters(filters) || query.trim() !== '' || savedOnly || recommendedOnly;
 
   const filteredEvents = useMemo(() => {
-    const matches = filterEvents(events, query, filters);
-    return savedOnly ? matches.filter((event) => isEventSaved(event.id)) : matches;
-  }, [query, filters, savedOnly, isEventSaved]);
+    let matches = filterEvents(events, query, filters);
+    if (savedOnly) matches = matches.filter((event) => isEventSaved(event.id));
+    if (recommendedOnly && canRecommend) {
+      matches = matches.filter((event) => isRecommended(event, profile));
+    }
+    return matches;
+  }, [query, filters, savedOnly, recommendedOnly, canRecommend, profile, isEventSaved]);
 
   // The list shows either what is coming up or what already happened (most recent first).
   const listedEvents = useMemo(() => {
@@ -101,7 +128,9 @@ export function EventsPage() {
     setQuery('');
     setEventType('');
     setFormat('');
+    setHosts([]);
     setSavedOnly(false);
+    setRecommendedOnly(false);
   };
 
   const viewButtonClass = (mode: ViewMode) =>
@@ -126,8 +155,8 @@ export function EventsPage() {
           >
             <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
             <p>
-              These events are collected from the SJSU Career Center website. Confirm times and
-              registration there before you go.
+              These events are collected from the SJSU Career Center website and SJSU club
+              Instagram posts. Confirm times and registration on the original page before you go.
             </p>
           </div>
       </PageHeader>
@@ -136,7 +165,14 @@ export function EventsPage() {
         <div className="rounded-2xl border border-slate-200/70 bg-surface p-4 shadow-card sm:p-5">
           <SearchBar value={query} onChange={setQuery} placeholder="Search events..." />
           <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end">
-            <div className="grid flex-1 gap-4 sm:grid-cols-2">
+            <div className="grid flex-1 gap-4 sm:grid-cols-3">
+              <MultiFilterSelect
+                label="Hosted by"
+                selected={hosts}
+                groups={HOST_GROUPS}
+                onChange={setHosts}
+                allLabel="All hosts"
+              />
               <FilterSelect
                 id="event-type"
                 label="Event type"
@@ -171,6 +207,22 @@ export function EventsPage() {
                   aria-hidden="true"
                 />
                 Saved only
+              </button>
+              <button
+                type="button"
+                aria-pressed={recommendedOnly}
+                disabled={!canRecommend}
+                title={canRecommend ? undefined : 'Answer the three quick questions to unlock this'}
+                onClick={() => setRecommendedOnly((current) => !current)}
+                className={`inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-2.5 text-sm
+                  font-medium transition disabled:cursor-not-allowed disabled:opacity-50 ${
+                    recommendedOnly
+                      ? 'border-teal-600 bg-teal-50 text-teal-800'
+                      : 'border-slate-200 bg-surface text-slate-700 hover:border-slate-300'
+                  }`}
+              >
+                <Sparkles className="h-4 w-4" aria-hidden="true" />
+                Recommended for me
               </button>
               {isFiltered && (
                 <button

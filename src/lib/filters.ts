@@ -41,16 +41,36 @@ export function filterResources(
   });
 }
 
+export const CAREER_CENTER_HOST = 'SJSU Career Center';
+export const BRAVEN_HOST = 'Braven at SJSU';
+/** Filter value meaning "any host that is not the Career Center or Braven". */
+export const ALL_CLUBS_HOST = 'All student clubs';
+
+export function isClubEvent(event: CareerEvent): boolean {
+  return event.host !== CAREER_CENTER_HOST && event.host !== BRAVEN_HOST;
+}
+
+/** Club names that have at least one event, alphabetical. */
+export function getClubHosts(events: CareerEvent[]): string[] {
+  const hosts = new Set(events.filter(isClubEvent).map((event) => event.host));
+  return [...hosts].sort((first, second) => first.localeCompare(second));
+}
+
+function matchesAnyHost(event: CareerEvent, hosts: string[]): boolean {
+  return hosts.some((host) => (host === ALL_CLUBS_HOST ? isClubEvent(event) : event.host === host));
+}
+
 export function filterEvents(
   events: CareerEvent[],
   query: string,
   filters: Partial<EventFilters>,
 ): CareerEvent[] {
-  const { eventType, format } = filters;
+  const { eventType, format, hosts = [] } = filters;
   return events
     .filter((event) => {
       if (eventType && event.eventType !== eventType) return false;
       if (format && event.format !== format) return false;
+      if (hosts.length > 0 && !matchesAnyHost(event, hosts)) return false;
       return matchesQuery(
         [
           event.title,
@@ -82,5 +102,7 @@ export function getUpcomingEvents(
 export function hasActiveFilters(
   filters: Partial<ResourceFilters> | Partial<EventFilters>,
 ): boolean {
-  return Object.values(filters).some((value) => value !== undefined && value !== '');
+  return Object.values(filters).some((value) =>
+    Array.isArray(value) ? value.length > 0 : value !== undefined && value !== '',
+  );
 }
