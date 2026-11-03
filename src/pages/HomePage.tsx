@@ -2,14 +2,11 @@ import { useMemo, useState } from 'react';
 import { ArrowRight, ArrowUpRight, Clock, Info, Star, TrendingUp } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-import { EventCard } from '../components/EventCard';
 import { EmptyState } from '../components/EmptyState';
 import { EventDetailsModal } from '../components/EventDetailsModal';
 import { FeaturedShowcase } from '../components/FeaturedShowcase';
-import { ResourceCard } from '../components/ResourceCard';
 import { SearchBar } from '../components/SearchBar';
 import { SectionHeader } from '../components/SectionHeader';
-import { useApp } from '../context/useApp';
 import { events } from '../data/events';
 import { resources } from '../data/resources';
 import { useSaveCounts } from '../hooks/useSaveCounts';
@@ -17,7 +14,6 @@ import { CLOSING_SOON_DAYS, getClosingSoon, getFeaturedGroups } from '../lib/fea
 import type { FeaturedGroups } from '../lib/featured';
 import { formatTime } from '../lib/dates';
 import { getUpcomingEvents } from '../lib/filters';
-import { getMatchReasons, hasProfile, recommendResources } from '../lib/recommend';
 import type { CareerEvent } from '../types';
 
 const POPULAR_SEARCHES = ['Resume', 'Interview', 'Networking', 'Career fair'];
@@ -83,7 +79,6 @@ const QUICK_LINKS = [
 
 export function HomePage() {
   const navigate = useNavigate();
-  const { profile } = useApp();
   const [query, setQuery] = useState('');
   const [selectedEvent, setSelectedEvent] = useState<CareerEvent | null>(null);
 
@@ -107,16 +102,6 @@ export function HomePage() {
     [now],
   );
   const closingSoonCount = useMemo(() => getClosingSoon(resources, now).length, [now]);
-
-  const personalized = hasProfile(profile);
-  const recommended = useMemo(
-    () => (personalized ? recommendResources(resources, profile, 3) : []),
-    [personalized, profile],
-  );
-  const otherOpportunities = useMemo(
-    () => resources.filter((item) => !item.featured).slice(0, 3),
-    [],
-  );
 
   const handleSearch = (value: string) => {
     const trimmed = value.trim();
@@ -406,77 +391,6 @@ export function HomePage() {
       </section>
 
       <div className="mx-auto max-w-7xl space-y-20 px-4 py-20 sm:px-6 lg:px-8">
-        <section className="grid gap-12 lg:grid-cols-2">
-          <div>
-            <SectionHeader
-              title="Upcoming events"
-              subtitle="Don't miss what's happening this month."
-              action={{ label: 'View calendar', to: '/events' }}
-            />
-            <div className="space-y-4">
-              {upcomingEvents.map((event) => (
-                <EventCard key={event.id} event={event} compact onSelect={setSelectedEvent} />
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <SectionHeader
-              title="Recommended for you"
-              subtitle={
-                personalized
-                  ? 'Based on your major and career interests.'
-                  : 'Tell us about yourself to unlock personalized picks.'
-              }
-              action={{ label: personalized ? 'Edit profile' : 'Personalize', to: '/start' }}
-            />
-            <div className="space-y-4">
-              {personalized && recommended.length > 0 ? (
-                recommended.map((resource) => (
-                  <ResourceCard
-                    key={resource.id}
-                    resource={resource}
-                    reasons={getMatchReasons(resource, profile)}
-                  />
-                ))
-              ) : (
-                <>
-                  {!personalized && (
-                    <div className="relative overflow-hidden bg-hero p-7 text-navy-950">
-                      <span
-                        className="pointer-events-none absolute -bottom-16 -right-16 h-40 w-40
-                          rounded-full bg-sky-300"
-                        aria-hidden="true"
-                      />
-                      <div className="relative max-w-sm">
-                        <h3 className="font-display text-2xl">
-                          Get recommendations that fit you
-                        </h3>
-                        <p className="mt-2 text-sm text-navy-900">
-                          Pick your major and career interests, and we&apos;ll surface the
-                          resources and events that matter most.
-                        </p>
-                        <Link
-                          to="/start"
-                          className="mt-5 inline-flex h-10 items-center gap-2 rounded-full
-                            bg-ink px-5 text-sm font-semibold text-on-ink transition
-                            hover:bg-coral-600 hover:text-white"
-                        >
-                          Personalize my feed
-                          <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-                  {otherOpportunities.map((resource) => (
-                    <ResourceCard key={resource.id} resource={resource} />
-                  ))}
-                </>
-              )}
-            </div>
-          </div>
-        </section>
-
         <aside
           className="flex items-start gap-3 border-l-4 border-coral-500 bg-slate-50 px-5 py-4
             text-sm text-navy-900"

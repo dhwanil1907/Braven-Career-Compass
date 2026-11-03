@@ -1,5 +1,4 @@
-import type { ReactNode } from 'react';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Outlet, Route, Routes } from 'react-router-dom';
 import { Layout } from './components/Layout';
 import { AppProvider } from './context/AppContext';
 import { AuthProvider } from './context/AuthContext';
@@ -17,11 +16,11 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { ResourceDetailPage } from './pages/ResourceDetailPage';
 import { ResourceExplorerPage } from './pages/ResourceExplorerPage';
 
-/** Sign-in comes first: anyone without an account or guest choice is sent to /login. */
-function RequireAccess({ children }: { children: ReactNode }) {
+/** The landing page is public; every other page needs an account or guest choice. */
+function RequireAccess() {
   const { hasAccess, loading } = useAuth();
   if (loading) return null;
-  return hasAccess ? <>{children}</> : <Navigate to="/login" replace />;
+  return hasAccess ? <Outlet /> : <Navigate to="/login" replace />;
 }
 
 /** New visitors see the landing page; once onboarded, "/" is their personal journey. */
@@ -38,22 +37,18 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="login" element={<LoginPage />} />
-          <Route
-            element={
-              <RequireAccess>
-                <Layout />
-              </RequireAccess>
-            }
-          >
+          <Route element={<Layout />}>
             <Route index element={<HomeRoute />} />
-            <Route path="start" element={<OnboardingPage />} />
-            <Route path="resources" element={<ResourceExplorerPage />} />
-            <Route path="resources/:id" element={<ResourceDetailPage />} />
-            <Route path="events" element={<EventsPage />} />
-            <Route path="alumni" element={<AlumniPage />} />
-            <Route path="progress" element={<ProgressPage />} />
-            <Route path="dashboard" element={<Navigate to="/progress" replace />} />
-            <Route path="*" element={<NotFoundPage />} />
+            <Route element={<RequireAccess />}>
+              <Route path="start" element={<OnboardingPage />} />
+              <Route path="resources" element={<ResourceExplorerPage />} />
+              <Route path="resources/:id" element={<ResourceDetailPage />} />
+              <Route path="events" element={<EventsPage />} />
+              <Route path="alumni" element={<AlumniPage />} />
+              <Route path="progress" element={<ProgressPage />} />
+              <Route path="dashboard" element={<Navigate to="/progress" replace />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Route>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -25,7 +25,7 @@ function navLinkClasses({ isActive }: { isActive: boolean }): string {
 export function Navbar() {
   const { pathname } = useLocation();
   const { savedResourceIds, savedEventIds, profile } = useApp();
-  const { user, signOut } = useAuth();
+  const { user, hasAccess, signOut } = useAuth();
   // Until a student has a plan, "/" is the landing page, so call it Home.
   const navLinks = NAV_LINKS.map((link) =>
     link.to === '/' && !profile.onboarded ? { ...link, label: 'Home' } : link,
@@ -75,16 +75,26 @@ export function Navbar() {
             <Bookmark className="h-4 w-4" aria-hidden="true" />
             <span>{savedCount}</span>
           </Link>
-          <button
-            type="button"
-            onClick={() => void signOut()}
-            aria-label={user ? `Sign out ${user.email ?? ''}` : 'Leave guest mode'}
-            title={user ? `Sign out (${user.email ?? ''})` : 'Leave guest mode'}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border
-              border-white/20 text-white transition hover:bg-white/10"
-          >
-            <LogOut className="h-4 w-4" aria-hidden="true" />
-          </button>
+          {hasAccess ? (
+            <button
+              type="button"
+              onClick={() => void signOut()}
+              aria-label={user ? `Sign out ${user.email ?? ''}` : 'Leave guest mode'}
+              title={user ? `Sign out (${user.email ?? ''})` : 'Leave guest mode'}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border
+                border-white/20 text-white transition hover:bg-white/10"
+            >
+              <LogOut className="h-4 w-4" aria-hidden="true" />
+            </button>
+          ) : (
+            <Link
+              to="/login"
+              className="inline-flex h-9 items-center rounded-full bg-white px-4 text-sm
+                font-semibold text-slate-900 transition hover:bg-white/90"
+            >
+              Sign in
+            </Link>
+          )}
           <button
             type="button"
             onClick={() => setMenuOpenForPath(menuOpen ? null : pathname)}
