@@ -1,54 +1,32 @@
 import { useMemo, useState } from 'react';
-import { ArrowRight, ArrowUpRight, Clock, Info, Star, TrendingUp } from 'lucide-react';
-import type { LucideIcon } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Info } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
-import { EmptyState } from '../components/EmptyState';
+import { Badge } from '../components/Badge';
+import { CompassDial } from '../components/CompassDial';
 import { EventDetailsModal } from '../components/EventDetailsModal';
 import { FeaturedShowcase } from '../components/FeaturedShowcase';
 import { SearchBar } from '../components/SearchBar';
 import { SectionHeader } from '../components/SectionHeader';
+import { useApp } from '../context/useApp';
 import { events } from '../data/events';
 import { resources } from '../data/resources';
-import { useSaveCounts } from '../hooks/useSaveCounts';
-import { CLOSING_SOON_DAYS, getClosingSoon, getFeaturedGroups } from '../lib/featured';
-import type { FeaturedGroups } from '../lib/featured';
+import { getFeaturedGroups } from '../lib/featured';
 import { formatTime } from '../lib/dates';
 import { getUpcomingEvents } from '../lib/filters';
-import type { CareerEvent } from '../types';
+import { scoreMatch } from '../lib/matchScore';
+import type { CareerEvent, Resource, UserProfile } from '../types';
+
+/** Shown in the hero until the student answers the onboarding questions. */
+const EXAMPLE_PROFILE: UserProfile = {
+  major: 'Computer Science',
+  interests: ['Software Engineering'],
+  year: 'Third year',
+  goal: 'First internship',
+  challenge: 'Not sure where to start',
+  onboarded: true,
+};
 
 const POPULAR_SEARCHES = ['Resume', 'Interview', 'Networking', 'Career fair'];
-
-type FeaturedGroupKey = keyof FeaturedGroups;
-
-const FEATURED_TABS: {
-  key: FeaturedGroupKey;
-  label: string;
-  icon: LucideIcon;
-  description: string;
-  emptyText: string;
-}[] = [
-  {
-    key: 'closingSoon',
-    label: 'Closing soon',
-    icon: Clock,
-    description: `Application deadlines in the next ${CLOSING_SOON_DAYS} days.`,
-    emptyText: `No deadlines in the next ${CLOSING_SOON_DAYS} days. Check back soon.`,
-  },
-  {
-    key: 'important',
-    label: 'Important',
-    icon: Star,
-    description: 'Hand-picked by the Career Compass team as worth your time.',
-    emptyText: 'Nothing is flagged as important right now.',
-  },
-  {
-    key: 'popular',
-    label: 'Popular',
-    icon: TrendingUp,
-    description: 'Resources that students with an account have saved most.',
-    emptyText: 'Popular picks appear once at least 3 students have saved the same resource.',
-  },
-];
 
 const QUICK_LINKS = [
   {
@@ -61,7 +39,7 @@ const QUICK_LINKS = [
     title: 'Career events',
     description: 'Workshops, panels, and career fairs you can add to your calendar.',
     to: '/events',
-    tone: 'bg-sky-300 text-(--color-sky-ink)',
+    tone: 'bg-teal-300 text-(--color-sky-ink)',
   },
   {
     title: 'Resume & interviews',
@@ -83,25 +61,27 @@ export function HomePage() {
   const [selectedEvent, setSelectedEvent] = useState<CareerEvent | null>(null);
 
   const now = useMemo(() => new Date(), []);
-  const saveCounts = useSaveCounts();
-  const featuredGroups = useMemo(
-    () => getFeaturedGroups(resources, now, undefined, saveCounts),
-    [now, saveCounts],
-  );
-  // Open on the first tab that has something in it; deadlines are only on some listings.
-  const [activeTab, setActiveTab] = useState<FeaturedGroupKey>(() =>
-    getClosingSoon(resources, new Date()).length > 0 ? 'closingSoon' : 'important',
-  );
-  const activeTabConfig =
-    FEATURED_TABS.find((tab) => tab.key === activeTab) ?? FEATURED_TABS[0];
-  const activeResources = featuredGroups[activeTab];
+  const { profile } = useApp();
+  const matchProfile = profile.onboarded ? profile : EXAMPLE_PROFILE;
+  const topMatch = useMemo(() => {
+    let best: { resource: Resource; match: ReturnType<typeof scoreMatch> } | null = null;
+    for (const resource of resources) {
+      const match = scoreMatch(resource, matchProfile);
+      const beatsBest =
+        !best ||
+        match.percent > best.match.percent ||
+        (match.percent === best.match.percent && resource.featured && !best.resource.featured);
+      if (beatsBest) best = { resource, match };
+    }
+    return best;
+  }, [matchProfile]);
+  const featuredResources = useMemo(() => getFeaturedGroups(resources, now).important, [now]);
   const upcomingEvents = useMemo(() => getUpcomingEvents(events, now, 4), [now]);
   const radarEvents = upcomingEvents.slice(0, 3);
   const upcomingCount = useMemo(
     () => events.filter((event) => new Date(event.end).getTime() >= now.getTime()).length,
     [now],
   );
-  const closingSoonCount = useMemo(() => getClosingSoon(resources, now).length, [now]);
 
   const handleSearch = (value: string) => {
     const trimmed = value.trim();
@@ -109,11 +89,9 @@ export function HomePage() {
   };
 
   const stats = [
-    { label: 'Career resources in one place', value: resources.length },
+    { label: 'Career resources', value: resources.length },
     { label: 'Upcoming events', value: upcomingCount },
-    closingSoonCount > 0
-      ? { label: `Deadlines in the next ${CLOSING_SOON_DAYS} days`, value: closingSoonCount }
-      : { label: 'Sources', value: new Set(resources.map((item) => item.source)).size },
+    { label: 'Sources', value: new Set(resources.map((item) => item.source)).size },
   ];
 
   return (
@@ -132,8 +110,8 @@ export function HomePage() {
             </h1>
             <span className="mt-6 block h-1 w-16 bg-sky-300" aria-hidden="true" />
             <p className="mt-6 max-w-xl text-lg text-navy-900">
-              Career resources and events from Braven and the SJSU Career Center, in one place,
-              with a plan built around your major and goals.
+              Resources and events from Braven, the SJSU Career Center, and student clubs, with a
+              plan built around your major and goals.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -152,7 +130,7 @@ export function HomePage() {
                 value={query}
                 onChange={setQuery}
                 onSubmit={handleSearch}
-                placeholder="What career resources are you looking for?"
+                placeholder="Search resumes, jobs"
                 size="lg"
               />
               <p className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
@@ -174,71 +152,93 @@ export function HomePage() {
           </div>
 
           <div className="relative hidden lg:col-span-5 lg:block">
-            <span
-              className="absolute -right-24 -top-10 h-80 w-80 rounded-full bg-coral-500"
-              aria-hidden="true"
-            />
-            <div className="relative mt-10">
-              <span
-                className="absolute inset-0 translate-x-6 translate-y-6 bg-sky-300"
-                aria-hidden="true"
-              />
-              <div className="relative bg-surface p-7 text-navy-900">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-coral-ink">
-                  On your radar
-                </p>
-                <h2 className="mt-2 font-display text-2xl">Coming up next</h2>
-                <ul className="mt-5 divide-y-2 divide-dotted divide-coral-400">
-                  {radarEvents.map((event) => {
-                    const start = new Date(event.start);
-                    return (
-                      <li key={event.id}>
-                        <button
-                          type="button"
-                          onClick={() => setSelectedEvent(event)}
-                          className="group flex w-full items-center gap-4 py-4 text-left"
-                        >
-                          <span className="w-12 shrink-0 text-center">
-                            <span
-                              className="block text-[0.65rem] font-semibold uppercase
-                                tracking-[0.14em] text-slate-500"
-                            >
-                              {start.toLocaleDateString('en-US', { month: 'short' })}
-                            </span>
-                            <span className="block font-display text-3xl leading-none">
-                              {start.getDate()}
-                            </span>
-                          </span>
-                          <span className="min-w-0 flex-1">
-                            <span
-                              className="block truncate font-semibold transition
-                                group-hover:text-coral-ink"
-                            >
-                              {event.title}
-                            </span>
-                            <span className="block text-sm text-slate-500">
-                              {formatTime(event.start)} · {event.format}
-                            </span>
-                          </span>
-                          <ArrowUpRight
-                            className="h-4 w-4 shrink-0 text-slate-400 transition
-                              group-hover:text-coral-ink"
-                            aria-hidden="true"
-                          />
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-                <Link
-                  to="/events"
-                  className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold
-                    text-coral-ink underline decoration-2 underline-offset-4"
-                >
-                  Full calendar
-                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            <div className="mt-10 border border-navy-900 bg-surface p-7 text-navy-900">
+              {topMatch && (
+                <Link to={`/resources/${topMatch.resource.id}`} className="group block">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-coral-ink">
+                        {profile.onboarded ? 'Your top match' : 'Example match'}
+                      </p>
+                      {!profile.onboarded && (
+                        <p className="mt-1 text-sm text-slate-500">
+                          {matchProfile.major} major, {matchProfile.goal?.toLowerCase()}
+                        </p>
+                      )}
+                    </div>
+                    <CompassDial
+                      percent={topMatch.match.percent}
+                      size={48}
+                      className="shrink-0 text-coral-ink"
+                    />
+                  </div>
+                  <Badge variant="teal" className="mt-4">
+                    <CompassDial percent={topMatch.match.percent} size={14} />
+                    {topMatch.match.label ?? 'Match'} · {topMatch.match.percent}%
+                  </Badge>
+                  <h2 className="mt-3 font-display text-2xl transition group-hover:text-coral-ink">
+                    {topMatch.resource.title}
+                  </h2>
+                  <ul className="mt-3 space-y-1 text-sm text-slate-600">
+                    {topMatch.match.reasons.slice(0, 2).map((reason) => (
+                      <li key={reason}>{reason}</li>
+                    ))}
+                  </ul>
                 </Link>
-              </div>
+              )}
+              <h2 className="mt-6 border-t-2 border-dotted border-coral-400 pt-5 font-display text-xl">
+                Coming up next
+              </h2>
+              <ul className="mt-3 divide-y-2 divide-dotted divide-coral-400">
+                {radarEvents.slice(0, 2).map((event) => {
+                  const start = new Date(event.start);
+                  return (
+                    <li key={event.id}>
+                      <button
+                        type="button"
+                        onClick={() => setSelectedEvent(event)}
+                        className="group flex w-full items-center gap-4 py-4 text-left"
+                      >
+                        <span className="w-12 shrink-0 text-center">
+                          <span
+                            className="block text-[0.65rem] font-semibold uppercase
+                              tracking-[0.14em] text-slate-500"
+                          >
+                            {start.toLocaleDateString('en-US', { month: 'short' })}
+                          </span>
+                          <span className="block font-display text-3xl leading-none">
+                            {start.getDate()}
+                          </span>
+                        </span>
+                        <span className="min-w-0 flex-1">
+                          <span
+                            className="block truncate font-semibold transition
+                              group-hover:text-coral-ink"
+                          >
+                            {event.title}
+                          </span>
+                          <span className="block text-sm text-slate-500">
+                            {formatTime(event.start)} · {event.format}
+                          </span>
+                        </span>
+                        <ArrowUpRight
+                          className="h-4 w-4 shrink-0 text-slate-400 transition
+                            group-hover:text-coral-ink"
+                          aria-hidden="true"
+                        />
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+              <Link
+                to="/events"
+                className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold
+                  text-coral-ink underline decoration-2 underline-offset-4"
+              >
+                Full calendar
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
             </div>
           </div>
         </div>
@@ -281,8 +281,8 @@ export function HomePage() {
             ],
             [
               '3',
-              'Take the next step',
-              'Save events to your calendar, track what you did, and talk to alumni.',
+              'Save events, track progress',
+              'Add events to your calendar, mark steps done, and book a call with alumni.',
             ],
           ].map(([number, title, text]) => (
             <li key={number} className="flex gap-4">
@@ -310,15 +310,12 @@ export function HomePage() {
           Quick access
         </h2>
         <ul className="grid gap-px bg-navy-900 sm:grid-cols-2 lg:grid-cols-4">
-          {QUICK_LINKS.map((link, index) => (
+          {QUICK_LINKS.map((link) => (
             <li key={link.title}>
               <Link
                 to={link.to}
                 className={`group flex h-full min-h-56 flex-col p-7 transition ${link.tone}`}
               >
-                <span className="text-xs font-semibold tracking-[0.2em] opacity-90">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
                 <span className="mt-auto font-display text-2xl leading-tight">
                   {link.title}
                 </span>
@@ -333,62 +330,18 @@ export function HomePage() {
         </ul>
       </section>
 
-      <section className="mt-20 bg-cream-200 py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeader
-            title="Featured career resources"
-            subtitle="What is closing soon, what matters most, and what other students save."
-            action={{ label: 'Browse all', to: '/resources' }}
-          />
-          <div
-            role="tablist"
-            aria-label="Featured resource groups"
-            className="flex flex-wrap gap-x-8 border-b border-navy-900/20"
-          >
-            {FEATURED_TABS.map(({ key, label }) => {
-              const selected = key === activeTab;
-              return (
-                <button
-                  key={key}
-                  type="button"
-                  role="tab"
-                  id={`featured-tab-${key}`}
-                  aria-selected={selected}
-                  aria-controls="featured-panel"
-                  onClick={() => setActiveTab(key)}
-                  className={`-mb-px border-b-4 pb-3 pt-1 text-base font-semibold transition ${
-                    selected
-                      ? 'border-coral-600 text-navy-900'
-                      : 'border-transparent text-slate-500 hover:text-navy-900'
-                  }`}
-                >
-                  {label}
-                  <span className="ml-2 text-xs font-medium text-slate-500">
-                    {featuredGroups[key].length}
-                  </span>
-                </button>
-              );
-            })}
+      {featuredResources.length > 0 && (
+        <section className="mt-20 bg-cream-200 py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHeader
+              title="Featured career resources"
+              subtitle="Hand-picked by the Career Compass team."
+              action={{ label: 'Browse all', to: '/resources' }}
+            />
+            <FeaturedShowcase group="important" resources={featuredResources} />
           </div>
-          <div
-            id="featured-panel"
-            role="tabpanel"
-            aria-labelledby={`featured-tab-${activeTab}`}
-            className="mt-6"
-          >
-            <p className="mb-6 text-sm text-slate-600">{activeTabConfig.description}</p>
-            {activeResources.length > 0 ? (
-              <FeaturedShowcase group={activeTab} resources={activeResources} saveCounts={saveCounts} />
-            ) : (
-              <EmptyState
-                icon={activeTabConfig.icon}
-                title={`Nothing in ${activeTabConfig.label.toLowerCase()}`}
-                description={activeTabConfig.emptyText}
-              />
-            )}
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       <div className="mx-auto max-w-7xl space-y-20 px-4 py-20 sm:px-6 lg:px-8">
         <aside

@@ -60,7 +60,7 @@ export function LoginPage() {
       <section className="relative flex flex-col justify-between bg-hero p-8 text-navy-950 sm:p-12">
         <div className="flex items-center justify-between">
           <p className="text-sm font-semibold tracking-[0.3em]">
-            BRAVEN <span className="ml-1 tracking-normal text-coral-ink">Career Compass</span>
+            BRAVEN <span className="ml-1 tracking-normal">Career Compass</span>
           </p>
         </div>
         <div className="py-16">
@@ -69,8 +69,8 @@ export function LoginPage() {
           </h1>
           <span className="mt-5 block h-1 w-12 bg-sky-300" aria-hidden="true" />
           <p className="mt-5 max-w-md text-lg text-navy-800">
-            Resources and events from Braven and the SJSU Career Center, with a plan built around
-            your major and goals.
+            Resources and events from Braven, the SJSU Career Center, and student clubs, with a plan
+            built around your major and goals.
           </p>
         </div>
         <p className="text-sm text-navy-800">

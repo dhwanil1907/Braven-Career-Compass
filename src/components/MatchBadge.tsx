@@ -1,8 +1,8 @@
-import { Sparkles } from 'lucide-react';
 import { useApp } from '../context/useApp';
 import { scoreMatch } from '../lib/matchScore';
 import type { CareerEvent, Resource } from '../types';
 import { Badge } from './Badge';
+import { CompassDial } from './CompassDial';
 
 /**
  * How well a listing fits the signed-in student, for example "Slightly matches what you do · 25%".
@@ -15,7 +15,7 @@ export function MatchBadge({ item }: { item: Resource | CareerEvent }) {
 
   return (
     <Badge variant="teal">
-      <Sparkles className="h-3 w-3" aria-hidden="true" />
+      <CompassDial percent={percent} size={14} />
       {label} · {percent}%
     </Badge>
   );

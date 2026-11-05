@@ -96,15 +96,24 @@ export function JourneyPage() {
                 You finished your roadmap
               </h1>
               <p className="mt-4 text-lg text-navy-800">
-                Nice work. Keep the momentum: explore new resources or update your goal.
+                Check Events for what is coming up, or set a new goal for a fresh 5-step plan.
               </p>
-              <Link
-                to="/start"
-                className="mt-6 inline-flex h-12 items-center rounded-full bg-coral-600 px-6 font-semibold
-                  text-white transition hover:bg-deep"
-              >
-                Set a new goal
-              </Link>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link
+                  to="/start"
+                  className="inline-flex h-12 items-center rounded-full bg-coral-600 px-6 font-semibold
+                    text-white transition hover:bg-deep"
+                >
+                  Set a new goal
+                </Link>
+                <Link
+                  to="/events"
+                  className="inline-flex h-12 items-center rounded-full border border-navy-900/30
+                    bg-surface/50 px-6 font-semibold transition hover:bg-surface/80"
+                >
+                  See upcoming events
+                </Link>
+              </div>
             </div>
           )}
         </div>

@@ -81,7 +81,7 @@ function GroupedChips<T extends string>({
     <div className="mt-3 w-full space-y-5">
       {groups.map((group) => (
         <div key={group.label}>
-          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
             {group.label}
           </p>
           <div className="mt-2 flex flex-wrap gap-2">
@@ -135,7 +135,7 @@ export function OnboardingPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-16">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy-800">
+      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-navy-800">
         Step {step + 1} of {STEP_COUNT}
       </p>
       <div
@@ -156,7 +156,7 @@ export function OnboardingPage() {
         {['Tell us about you', 'Where do you want to go?', 'What is in your way?'][step]}
       </h1>
       <p className="mt-2 text-slate-600">
-        Three quick questions, about a minute. At the end you get a 5-step plan with a real
+        Three short steps, about a minute. At the end you get a 5-step plan with a real
         resource or event for each step, plus alumni to talk to.
       </p>
 

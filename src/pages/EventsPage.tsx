@@ -144,8 +144,8 @@ export function EventsPage() {
     <div className="pb-16">
       <PageHeader
         eyebrow="Events"
-        title="Career Events Calendar"
-        description="Workshops, networking nights, career fairs, and info sessions to help you explore paths and meet people in your field."
+        title="Career events calendar"
+        description="Workshops, networking nights, career fairs, and info sessions from the SJSU Career Center and student clubs."
       >
           <div
             className={

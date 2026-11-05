@@ -87,7 +87,7 @@ export function EventDetailsModal({
         aria-modal="true"
         aria-labelledby={titleId}
         className="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-t-2xl bg-surface
-          p-6 shadow-card-hover sm:rounded-2xl"
+          p-6 shadow-xl sm:rounded-2xl"
       >
         <button
           ref={closeButtonRef}

@@ -86,7 +86,7 @@ export function MultiFilterSelect({
         <div
           id={panelId}
           className="absolute left-0 right-0 top-full z-20 mt-2 max-h-80 overflow-y-auto rounded-xl
-            border border-slate-200 bg-surface p-2 shadow-card-hover"
+            border border-slate-200 bg-surface p-2 shadow-lg"
         >
           {selected.length > 0 && (
             <button

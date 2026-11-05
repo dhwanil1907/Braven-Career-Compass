@@ -58,7 +58,7 @@ export function ReminderCheckbox({
           <div
             role="status"
             className="fixed left-1/2 top-[4.75rem] z-[60] max-w-[90vw] animate-toast-flow
-            rounded-xl bg-deep px-5 py-3 text-sm font-medium text-white shadow-card-hover
+            rounded-xl bg-deep px-5 py-3 text-sm font-medium text-white shadow-lg
             motion-reduce:-translate-x-1/2 motion-reduce:animate-none"
           >
             {toast}

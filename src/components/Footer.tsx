@@ -2,11 +2,11 @@ import { Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const FOOTER_LINKS = [
-  { label: 'My Journey', to: '/' },
+  { label: 'My journey', to: '/' },
   { label: 'Resources', to: '/resources' },
   { label: 'Events', to: '/events' },
   { label: 'Alumni', to: '/alumni' },
-  { label: 'My Progress', to: '/progress' },
+  { label: 'My progress', to: '/progress' },
 ];
 
 export function Footer() {

@@ -68,8 +68,8 @@ function ImportantSpread({ resources }: { resources: Resource[] }) {
     <div className="grid gap-6 lg:grid-cols-5">
       <article className="relative overflow-hidden bg-deep p-8 text-white lg:col-span-3 lg:p-10">
         <span
-          className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full
-            bg-coral-500"
+          className="pointer-events-none absolute -bottom-24 -right-24 hidden h-64 w-64 rounded-full
+            bg-coral-500 sm:block"
           aria-hidden="true"
         />
         <div className="relative">

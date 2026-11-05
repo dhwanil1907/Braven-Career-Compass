@@ -18,13 +18,30 @@ const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then((m) => ({ de
 const ResourceDetailPage = lazy(() => import('./pages/ResourceDetailPage').then((m) => ({ default: m.ResourceDetailPage })));
 const ResourceExplorerPage = lazy(() => import('./pages/ResourceExplorerPage').then((m) => ({ default: m.ResourceExplorerPage })));
 
-/** Quiet placeholder that keeps the navbar/footer in place while a route chunk loads. */
-function Page({ children }: { children: ReactNode }) {
+/** Placeholder bars shown in the page area while a route chunk loads. */
+function PageSkeleton() {
   return (
-    <Suspense fallback={<div className="min-h-[60vh]" role="status" aria-label="Loading page" />}>
-      {children}
-    </Suspense>
+    <div
+      className="mx-auto min-h-[60vh] max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
+      role="status"
+      aria-label="Loading page"
+    >
+      <div className="animate-pulse space-y-5 motion-reduce:animate-none">
+        <div className="h-10 w-2/3 max-w-xl rounded bg-slate-200" />
+        <div className="h-5 w-1/2 max-w-md rounded bg-slate-200" />
+        <div className="grid gap-4 pt-8 sm:grid-cols-2 lg:grid-cols-3">
+          {[0, 1, 2].map((index) => (
+            <div key={index} className="h-40 rounded-xl bg-slate-200" />
+          ))}
+        </div>
+      </div>
+    </div>
   );
+}
+
+/** Keeps the navbar/footer in place while a route chunk loads. */
+function Page({ children }: { children: ReactNode }) {
+  return <Suspense fallback={<PageSkeleton />}>{children}</Suspense>;
 }
 
 /** The landing page is public; every other page needs an account or guest choice. */

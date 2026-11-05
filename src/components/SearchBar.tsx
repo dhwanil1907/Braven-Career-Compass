@@ -5,7 +5,7 @@ export function SearchBar({
   value,
   onChange,
   onSubmit,
-  placeholder = 'What career resources are you looking for?',
+  placeholder = 'Search resumes, jobs',
   size = 'md',
   autoFocus,
 }: {
@@ -24,7 +24,7 @@ export function SearchBar({
   };
 
   const containerClasses = isLarge
-    ? 'h-16 rounded-2xl pl-5 pr-2 shadow-card-hover'
+    ? 'h-16 rounded-2xl pl-5 pr-2'
     : 'h-12 rounded-xl pl-4 pr-1.5 shadow-card';
 
   return (

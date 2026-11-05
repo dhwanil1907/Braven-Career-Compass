@@ -10,7 +10,7 @@ export function NotFoundPage() {
           <Compass className="h-12 w-12" aria-hidden="true" />
         </div>
       </div>
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-navy-800">Error 404</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-navy-800">Error 404</p>
       <h1 className="mt-2 text-3xl font-bold tracking-tight text-navy-950 sm:text-4xl">
         Looks like you&apos;ve wandered off the map
       </h1>

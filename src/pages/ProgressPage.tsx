@@ -278,7 +278,7 @@ export function ProgressPage() {
   return (
     <div className="pb-16">
       <PageHeader
-        eyebrow="My Progress"
+        eyebrow="My progress"
         title="Track what you have done and what is next"
         description={`${greetingForHour(now.getHours())}! Everything you save with the bookmark, mark done on your plan, or tick as attended or applied shows up here.`}
       >

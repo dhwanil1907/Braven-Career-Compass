@@ -94,8 +94,8 @@ export function ResourceExplorerPage() {
     <div>
       <PageHeader
         eyebrow="Resources"
-        title="Career Resources"
-        description="Search guides, tools, workshops, mentorship, and more from Braven and the SJSU Career Center. Narrow results by your major, interests, and type."
+        title="Career resources"
+        description="Search guides, tools, workshops, and mentorship from Braven and the SJSU Career Center. Narrow results by your major, interests, and type."
       />
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
 
@@ -152,7 +152,7 @@ export function ResourceExplorerPage() {
           />
           <FilterSelect
             id="filter-interest"
-            label="Career Interest"
+            label="Career interest"
             value={filters.interest}
             options={INTERESTS}
             groups={INTEREST_GROUPS}
@@ -161,7 +161,7 @@ export function ResourceExplorerPage() {
           />
           <FilterSelect
             id="filter-type"
-            label="Resource Type"
+            label="Resource type"
             value={filters.resourceType}
             options={RESOURCE_TYPES}
             onChange={(value) => updateParam('type', value)}
