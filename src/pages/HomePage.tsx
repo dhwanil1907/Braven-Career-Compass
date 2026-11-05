@@ -26,6 +26,9 @@ const EXAMPLE_PROFILE: UserProfile = {
   onboarded: true,
 };
 
+/** Sources that always contribute listings; each student club with an event adds one more. */
+const CORE_SOURCES = ['SJSU', 'Career Center', 'Braven'];
+
 const POPULAR_SEARCHES = ['Resume', 'Interview', 'Networking', 'Career fair'];
 
 const QUICK_LINKS = [
@@ -83,6 +86,19 @@ export function HomePage() {
     [now],
   );
 
+  const clubCount = useMemo(
+    () =>
+      new Set(
+        events
+          .filter(
+            (event) =>
+              event.tags.includes('instagram') && new Date(event.end).getTime() >= now.getTime(),
+          )
+          .map((event) => event.host),
+      ).size,
+    [now],
+  );
+
   const handleSearch = (value: string) => {
     const trimmed = value.trim();
     navigate(trimmed ? `/resources?q=${encodeURIComponent(trimmed)}` : '/resources');
@@ -91,7 +107,10 @@ export function HomePage() {
   const stats = [
     { label: 'Career resources', value: resources.length },
     { label: 'Upcoming events', value: upcomingCount },
-    { label: 'Sources', value: new Set(resources.map((item) => item.source)).size },
+    {
+      label: `Sources: ${CORE_SOURCES.join(', ')} + ${clubCount} clubs`,
+      value: CORE_SOURCES.length + clubCount,
+    },
   ];
 
   return (
