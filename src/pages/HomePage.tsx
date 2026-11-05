@@ -201,7 +201,7 @@ export function HomePage() {
                       >
                         <span className="w-12 shrink-0 text-center">
                           <span
-                            className="block text-[0.65rem] font-semibold uppercase
+                            className="block text-xs font-semibold uppercase
                               tracking-[0.14em] text-slate-500"
                           >
                             {start.toLocaleDateString('en-US', { month: 'short' })}

@@ -17,7 +17,7 @@ function DateTile({ iso, compact }: { iso: string; compact: boolean }) {
         text-white ${sizeClasses}`}
       aria-hidden="true"
     >
-      <span className="text-[10px] font-semibold uppercase tracking-wider text-teal-300">
+      <span className="text-xs font-semibold uppercase tracking-wider text-teal-300">
         {month}
       </span>
       <span className={`font-bold leading-none ${compact ? 'text-lg' : 'text-2xl'}`}>

@@ -7,7 +7,6 @@ import {
   CalendarClock,
   Check,
   ChevronRight,
-  Clock,
   RotateCcw,
   Sparkles,
   Trash2,
@@ -45,7 +44,6 @@ type TimelineItem =
 type SavedTab = 'resources' | 'events';
 
 const TIMELINE_FALLBACK_LIMIT = 5;
-const DEADLINE_WINDOW_DAYS = 30;
 
 function isDefined<T>(value: T | undefined): value is T {
   return value !== undefined;
@@ -141,7 +139,7 @@ function TimelineRow({ item, now, onSelectEvent }: TimelineRowProps) {
         aria-hidden="true"
       />
       <span className="min-w-0 flex-1">
-        <span className="flex flex-wrap items-center gap-2 text-xs">
+        <span className="flex flex-wrap items-center gap-2 text-sm">
           <span className="font-medium text-slate-500">{formatDate(item.date)}</span>
           <span
             className={`rounded-full px-2 py-0.5 font-semibold ${
@@ -159,7 +157,7 @@ function TimelineRow({ item, now, onSelectEvent }: TimelineRowProps) {
         >
           {title}
         </span>
-        <span className="mt-0.5 block text-xs text-slate-500">{kindLabel}</span>
+        <span className="mt-0.5 block text-sm text-slate-500">{kindLabel}</span>
       </span>
       <ChevronRight
         className="mt-1 h-4 w-4 shrink-0 text-slate-300 group-hover:text-teal-600"
@@ -229,16 +227,6 @@ export function ProgressPage() {
     [profile, profileReady, now],
   );
 
-  const upcomingDeadlineCount = useMemo(
-    () =>
-      resources.filter((resource) => {
-        if (!resource.deadline) return false;
-        const days = daysUntil(resource.deadline, now);
-        return days >= 0 && days <= DEADLINE_WINDOW_DAYS;
-      }).length,
-    [now],
-  );
-
   const timeline = useMemo<TimelineItem[]>(() => {
     const upcomingSaved = savedEvents.filter((event) => new Date(event.end) >= now);
     const timelineEvents =
@@ -280,9 +268,9 @@ export function ProgressPage() {
       <PageHeader
         eyebrow="My progress"
         title="Track what you have done and what is next"
-        description={`${greetingForHour(now.getHours())}! Everything you save with the bookmark, mark done on your plan, or tick as attended or applied shows up here.`}
+        description={`${greetingForHour(now.getHours())}! Your saved items, plan steps, and the events you went to.`}
       >
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 sm:grid-cols-3">
             <StatCard
               icon={Bookmark}
               label="Saved resources"
@@ -294,12 +282,6 @@ export function ProgressPage() {
               label="Saved events"
               value={savedEvents.length}
               tone="teal"
-            />
-            <StatCard
-              icon={Clock}
-              label={`Deadlines in next ${DEADLINE_WINDOW_DAYS} days`}
-              value={upcomingDeadlineCount}
-              tone="amber"
             />
             <StatCard
               icon={Sparkles}
@@ -317,8 +299,8 @@ export function ProgressPage() {
           <section aria-labelledby="milestones-heading">
             <Panel>
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h2 id="milestones-heading" className="text-lg font-semibold text-navy-900">
-                  Career milestones
+                <h2 id="milestones-heading" className="text-xl font-semibold text-navy-900">
+                  Your roadmap
                 </h2>
                 {roadmapSteps.length > 0 && (
                   <p className="text-sm font-semibold text-teal-700">
@@ -336,7 +318,7 @@ export function ProgressPage() {
                 </div>
               ) : (
                 <p className="mt-3 text-sm text-slate-600">
-                  Answer three quick questions to get a roadmap.{' '}
+                  Complete three short steps to get a roadmap.{' '}
                   <Link to="/start" className="font-semibold text-teal-700 hover:underline">
                     Build my plan
                   </Link>
@@ -349,7 +331,7 @@ export function ProgressPage() {
             <Panel>
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h2 id="profile-heading" className="text-lg font-semibold text-navy-900">
+                  <h2 id="profile-heading" className="text-xl font-semibold text-navy-900">
                     Your profile
                   </h2>
                   <p className="mt-1 text-sm text-slate-600">
@@ -365,7 +347,7 @@ export function ProgressPage() {
                   }
                 >
                   <RotateCcw className="h-4 w-4" aria-hidden="true" />
-                  Reset
+                  Reset profile
                 </button>
               </div>
 
@@ -382,7 +364,7 @@ export function ProgressPage() {
 
               <fieldset className="mt-6">
                 <legend className="text-sm font-medium text-navy-900">Career interests</legend>
-                <p className="mt-1 text-xs text-slate-500">Pick as many interests as you like</p>
+                <p className="mt-1 text-sm text-slate-500">Pick as many interests as you like</p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {INTERESTS.map((interest) => {
                     const selected = profile.interests.includes(interest);
@@ -470,7 +452,7 @@ export function ProgressPage() {
           <section id="saved" className="scroll-mt-24" aria-labelledby="saved-heading">
             <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
               <div>
-                <h2 id="saved-heading" className="text-2xl font-bold text-navy-900">
+                <h2 id="saved-heading" className="font-display text-3xl tracking-tight text-navy-900">
                   Saved opportunities
                 </h2>
                 <p className="mt-1 text-sm text-slate-600">
@@ -559,7 +541,7 @@ export function ProgressPage() {
             <Panel>
               <div className="flex items-center gap-2">
                 <CalendarClock className="h-5 w-5 text-teal-600" aria-hidden="true" />
-                <h2 id="timeline-heading" className="text-lg font-semibold text-navy-900">
+                <h2 id="timeline-heading" className="text-xl font-semibold text-navy-900">
                   Upcoming events &amp; deadlines
                 </h2>
               </div>

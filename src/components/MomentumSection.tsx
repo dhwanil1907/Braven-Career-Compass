@@ -52,7 +52,7 @@ export function MomentumSection() {
       aria-labelledby="momentum-heading"
       className="rounded-2xl border border-slate-200/70 bg-surface p-6 shadow-card"
     >
-      <h2 id="momentum-heading" className="text-lg font-semibold text-navy-900">
+      <h2 id="momentum-heading" className="text-xl font-semibold text-navy-900">
         Your momentum
       </h2>
       <p className="mt-1 text-sm text-slate-600">{message}</p>
@@ -67,19 +67,20 @@ export function MomentumSection() {
         <Award className="h-4 w-4 text-coral-ink" aria-hidden="true" />
         Badges ({earnedCount} of {badges.length})
       </h3>
-      <ul className="mt-3 flex flex-wrap gap-2">
+      <ul className="mt-3 grid gap-3 sm:grid-cols-3">
         {badges.map((badge) => (
           <li
             key={badge.id}
-            title={badge.earned ? 'Earned' : badge.hint}
-            className={`rounded-full border px-3.5 py-1.5 text-sm font-medium ${
+            className={`rounded-xl border px-4 py-3 ${
               badge.earned
                 ? 'border-coral-600 bg-coral-600 text-white'
-                : 'border-dashed border-slate-300 text-slate-500'
+                : 'border-dashed border-slate-300 text-slate-600'
             }`}
           >
-            {badge.label}
-            {!badge.earned && <span className="sr-only"> (locked: {badge.hint})</span>}
+            <span className="block text-sm font-semibold">{badge.label}</span>
+            <span className={`block text-sm ${badge.earned ? 'text-white/90' : 'text-slate-500'}`}>
+              {badge.earned ? 'Earned' : `To earn: ${badge.hint.toLowerCase()}`}
+            </span>
           </li>
         ))}
       </ul>
