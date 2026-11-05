@@ -100,6 +100,33 @@ describe('instagramParse', () => {
     expect(locationFromCaption('Join us on Zoom for a panel')).toMatch(/Zoom/i);
   });
 
+  it('joins a title that a line break cut off mid-sentence', () => {
+    expect(
+      eventTitleFromCaption(
+        'Want to represent Lurie College at Fall the\n2026 Commencement? Nov 10 at 4pm',
+      ),
+    ).toBe('Want to represent Lurie College at Fall the 2026 Commencement? Nov 10 at 4pm');
+  });
+
+  it('does not join a title to a line after a blank line', () => {
+    expect(eventTitleFromCaption('Meet the\n\nJoin us Nov 5 at 4pm')).toBe('Meet the');
+  });
+
+  it('skips monthly calendar roundups and officer applications', () => {
+    expect(
+      looksLikeEventCaption('HELLO, NOVEMBER! | NETS EVENTS CALENDAR\nWorkshop Nov 10 | Panel Nov 14'),
+    ).toBe(false);
+    expect(
+      looksLikeEventCaption('Want to join our team? Spring Officer Applications are open, apply by Dec 5'),
+    ).toBe(false);
+  });
+
+  it('keeps events that merely mention a calendar link', () => {
+    expect(
+      looksLikeEventCaption('Resume workshop Nov 10 at 4pm in SU 3B\nAdd it to our events calendar!'),
+    ).toBe(true);
+  });
+
   it('uses the first caption line as title', () => {
     expect(eventTitleFromCaption('Info Session: Consulting\nNov 5 at 4pm')).toBe(
       'Info Session: Consulting',

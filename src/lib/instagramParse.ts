@@ -31,6 +31,13 @@ const EVENT_HINT =
 const RECAP_HINT =
   /\b(thanks?( you)? (so much )?(to )?(all|everyone|every)|this past|recap|throwback|was a (huge |great )?success|last (week|night))\b/i;
 
+/** Monthly calendar roundups and officer sign-ups are not events a student can attend. */
+const NOT_EVENT_TITLE_HINT = /\bevents?\s+calendar\b/i;
+const NOT_EVENT_HINT = /\bofficer\s+applications?\b/i;
+
+/** A first line ending on one of these was cut off by a line break mid-sentence. */
+const DANGLING_END = /\b(the|a|an|of|at|for|to|and|or|in|on|with|from|by|our|your|this|that)$/i;
+
 /** Clubs usually put details on emoji lines: "📅 November 5", "⏰ 6-7 PM", "📍 SU 3B". */
 const DATE_LINE = /^\s*(?:\u{1F4C5}|\u{1F4C6}|\u{1F5D3}\uFE0F?|date\s*:|when\s*:)\s*(.+)$/imu;
 const TIME_LINE = /^\s*(?:\u23F0\uFE0F?|[\u{1F550}-\u{1F567}]|time\s*:)\s*(.+)$/imu;
@@ -57,16 +64,24 @@ const EMOJI = /[\p{Extended_Pictographic}\uFE0F\u200D]/gu;
 export function looksLikeEventCaption(caption: string): boolean {
   const text = caption.trim();
   if (text.length < 12) return false;
+  const firstLine = text.split('\n', 1)[0];
+  if (NOT_EVENT_TITLE_HINT.test(firstLine) || NOT_EVENT_HINT.test(text)) return false;
   return EVENT_HINT.test(text) && !RECAP_HINT.test(text);
 }
 
 export function eventTitleFromCaption(caption: string): string {
-  const line = caption
+  const lines = caption
     .trim()
     .split('\n')
-    .map((part) => part.trim())
-    .find(Boolean);
-  if (!line) return 'Club event';
+    .map((part) => part.trim());
+  const firstIndex = lines.findIndex(Boolean);
+  if (firstIndex === -1) return 'Club event';
+  let line = lines[firstIndex];
+  // Captions sometimes wrap mid-sentence ("...at Fall the" / "2026 Commencement?"); a blank line
+  // always ends the title, so a heading followed by details is left alone.
+  for (let next = firstIndex + 1; DANGLING_END.test(line) && lines[next]; next += 1) {
+    line = `${line} ${lines[next]}`;
+  }
   const cleaned = line.replace(/^[\p{Extended_Pictographic}\uFE0F\s]+/u, '').trim();
   if (cleaned.length <= MAX_TITLE_LENGTH) return cleaned || 'Club event';
   const firstSentence = cleaned.match(/^.+?[.!?](?=\s|$)/)?.[0];
