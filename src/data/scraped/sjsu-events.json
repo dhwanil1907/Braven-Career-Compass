@@ -1,89 +1,8 @@
 {
-  "scrapedAt": "2026-10-30T04:55:13.712Z",
+  "scrapedAt": "2026-11-10T19:18:35.729Z",
   "source": "SJSU Career Center",
   "sourceUrl": "https://careercenter.sjsu.edu",
   "events": [
-    {
-      "slug": "community-event-cwea-sfbs-and-sac-sypc-hybrid-career-panel",
-      "title": "COMMUNITY EVENT: CWEA SFBS and SAC SYPC Hybrid Career Panel",
-      "url": "https://careercenter.sjsu.edu/events/2026/10/30/community-event-cwea-sfbs-and-sac-sypc-hybrid-career-panel/",
-      "start": "2026-10-30T16:00:00-07:00",
-      "end": "2026-10-30T18:00:00-07:00",
-      "location": "1277 Treat Boulevard, Walnut Creek, California 94597, United States",
-      "timeText": "4pm - 6pm"
-    },
-    {
-      "slug": "dinner-with-the-executives",
-      "title": "Dinner with the Executives (event full)",
-      "url": "https://careercenter.sjsu.edu/events/2026/11/02/dinner-with-the-executives/",
-      "start": "2026-11-02T16:30:00-08:00",
-      "end": "2026-11-02T18:30:00-08:00",
-      "location": "Clark Hall, Room 102, Elevate Career Hub, San José State University, San Jose, CA 95112, United States",
-      "timeText": "4:30pm - 6:30pm"
-    },
-    {
-      "slug": "community-event-united-states-postal-service-job-fair-san-jose-2",
-      "title": "COMMUNITY EVENT: United States Postal Service Job Fair (San Jose)",
-      "url": "https://careercenter.sjsu.edu/events/2026/11/03/community-event-united-states-postal-service-job-fair-san-jose-2/",
-      "start": "2026-11-03T10:00:00-08:00",
-      "end": "2026-11-03T14:00:00-08:00",
-      "location": "1750 Meridian Avenue, San Jose, California 95125, United States",
-      "timeText": "10am - 2pm"
-    },
-    {
-      "slug": "linkedin-launch-craft-your-profile-grow-your-network-2",
-      "title": "LinkedIn Launch: Craft Your Profile, Grow Your Network",
-      "url": "https://careercenter.sjsu.edu/events/2026/11/04/linkedin-launch-craft-your-profile-grow-your-network-2/",
-      "start": "2026-11-04T12:00:00-08:00",
-      "end": "2026-11-04T13:00:00-08:00",
-      "location": "Virtual",
-      "timeText": "12pm - 1pm"
-    },
-    {
-      "slug": "first-gen-journeys-beyond-sjsu-2",
-      "title": "First-Gen Journeys Beyond SJSU",
-      "url": "https://careercenter.sjsu.edu/events/2026/11/04/first-gen-journeys-beyond-sjsu-2/",
-      "start": "2026-11-04T12:00:00-08:00",
-      "end": "2026-11-04T14:00:00-08:00",
-      "location": "Student Union, Meeting Room 3B, 211 S 9th St, San Jose, CA 95112, United States",
-      "timeText": "12pm - 2pm"
-    },
-    {
-      "slug": "stem-launch-your-career-series-get-your-career-in-gear-senior-work-day-2",
-      "title": "STEM Launch Your Career Series: Get Your Career in Gear Senior Work Day",
-      "url": "https://careercenter.sjsu.edu/events/2026/11/04/stem-launch-your-career-series-get-your-career-in-gear-senior-work-day-2/",
-      "start": "2026-11-04T16:30:00-08:00",
-      "end": "2026-11-04T18:00:00-08:00",
-      "location": "Student Union, Meeting Room 2A and 2B, 211 S 9th St, San Jose, CA 95112, United States",
-      "timeText": "4:30pm - 6pm"
-    },
-    {
-      "slug": "tesla-day-undergraduate-students",
-      "title": "Tesla Day (Undergraduate students)",
-      "url": "https://careercenter.sjsu.edu/events/2026/11/06/tesla-day-undergraduate-students/",
-      "start": "2026-11-06T12:00:00-08:00",
-      "end": "2026-11-06T14:00:00-08:00",
-      "location": "Clark Hall, Room 102, Elevate Career Hub, San José State University, San Jose, CA 95112, United States",
-      "timeText": "12pm - 2pm"
-    },
-    {
-      "slug": "tesla-day-masters-students",
-      "title": "Tesla Day (Masters students)",
-      "url": "https://careercenter.sjsu.edu/events/2026/11/06/tesla-day-masters-students/",
-      "start": "2026-11-06T12:00:00-08:00",
-      "end": "2026-11-06T14:00:00-08:00",
-      "location": "Clark Hall, Room 102, Elevate Career Hub, San José State University, San Jose, CA 95112, United States",
-      "timeText": "12pm - 2pm"
-    },
-    {
-      "slug": "community-event-2026-cwea-sfbs-sypc-annual-career-fair",
-      "title": "COMMUNITY EVENT: 2026 CWEA SFBS SYPC Annual Career Fair",
-      "url": "https://careercenter.sjsu.edu/events/2026/11/06/community-event-2026-cwea-sfbs-sypc-annual-career-fair/",
-      "start": "2026-11-06T17:00:00-08:00",
-      "end": "2026-11-06T20:00:00-08:00",
-      "location": "2150 Allston Way, Berkeley, California 94704, United States",
-      "timeText": "5pm - 8pm"
-    },
     {
       "slug": "get-your-network-on-polish-your-skills-for-graduate-students-2",
       "title": "Get Your Network On: Polish Your Skills for Graduate Students",
@@ -121,6 +40,24 @@
       "timeText": "9am - 5pm"
     },
     {
+      "slug": "adobe-student-academy-nov-16-17-watch-parties-check-in",
+      "title": "Adobe Student Academy | Nov 16-17 | Watch Parties Check In",
+      "url": "https://careercenter.sjsu.edu/events/2026/11/16/adobe-student-academy-nov-16-17-watch-parties-check-in/",
+      "start": "2026-11-16T10:00:00-08:00",
+      "end": "2026-11-16T13:00:00-08:00",
+      "location": "Clark Hall, Room 102, Elevate Career Hub, San José State University, San Jose, CA 95112, United States",
+      "timeText": "10am - 1pm"
+    },
+    {
+      "slug": "resume-workshop-presented-by-nets-and-career-center",
+      "title": "Resume Workshop presented by NETS and Career Center",
+      "url": "https://careercenter.sjsu.edu/events/2026/11/16/resume-workshop-presented-by-nets-and-career-center/",
+      "start": "2026-11-16T16:30:00-08:00",
+      "end": "2026-11-16T17:30:00-08:00",
+      "location": "Clark Hall, Room 102, Elevate Career Hub, San José State University, San Jose, CA 95112, United States",
+      "timeText": "4:30pm - 5:30pm"
+    },
+    {
       "slug": "negotiate-with-confidence-workshop-salary-beyond-2",
       "title": "Negotiate with Confidence Workshop: Salary & Beyond",
       "url": "https://careercenter.sjsu.edu/events/2026/11/18/negotiate-with-confidence-workshop-salary-beyond-2/",
@@ -128,6 +65,15 @@
       "end": "2026-11-18T13:00:00-08:00",
       "location": "Virtual",
       "timeText": "12pm - 1pm"
+    },
+    {
+      "slug": "nnme-career-lab-semiconductor-day",
+      "title": "NNME Career Lab (SemiConductor Day)",
+      "url": "https://careercenter.sjsu.edu/events/2026/11/20/nnme-career-lab-semiconductor-day/",
+      "start": "2026-11-20T09:00:00-08:00",
+      "end": "2026-11-20T12:00:00-08:00",
+      "location": "Student Union, Ballroom C, 211 S 9th St, San Jose, CA 95112, United States",
+      "timeText": "9am - 12pm"
     },
     {
       "slug": "from-graduate-student-to-professional-build-a-standout-brand-2",
@@ -182,6 +128,15 @@
       "end": "2027-02-17T16:00:00-08:00",
       "location": "Student Union Ballroom",
       "timeText": "12pm - 4pm"
+    },
+    {
+      "slug": "careers-in-tech-for-non-tech-majors-spring-2027",
+      "title": "Careers in Tech for Non-Tech Majors - Spring 2027",
+      "url": "https://careercenter.sjsu.edu/events/2027/02/25/careers-in-tech-for-non-tech-majors-spring-2027/",
+      "start": "2027-02-25T17:00:00-08:00",
+      "end": "2027-02-25T18:00:00-08:00",
+      "location": "Virtual",
+      "timeText": "5pm - 6pm"
     },
     {
       "slug": "sjsu-spring-27-health-wellness-public-service-job-internship-fair",
