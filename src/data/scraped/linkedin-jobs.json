@@ -1,5 +1,2184 @@
 {
-  "scrapedAt": "",
+  "scrapedAt": "2026-11-18T22:26:45.709Z",
   "source": "LinkedIn",
-  "jobs": []
+  "jobs": [
+    {
+      "id": "4465226718",
+      "title": "Platform Full-Stack Engineer, New Grad 2027",
+      "company": "C3 AI",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/platform-full-stack-engineer-new-grad-2027-at-c3-ai-4465226718",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491881339",
+      "title": "Junior Full-Stack Software Engineer (Bilingual Mandarin/English)",
+      "company": "TalentXM AI",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/junior-full-stack-software-engineer-bilingual-mandarin-english-at-talentxm-ai-4491881339",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491779472",
+      "title": "Data Statistician",
+      "company": "Tesla",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-statistician-at-tesla-4491779472",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491771505",
+      "title": "Associate Clinical Information Analyst",
+      "company": "Abbott",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-clinical-information-analyst-at-abbott-4491771505",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476118044",
+      "title": "Software Development Engineer II – Life Hub (Super App) (New Grad / Early Career)",
+      "company": "IDMe",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-ii-%E2%80%93-life-hub-super-app-new-grad-early-career-at-idme-4476118044",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491791466",
+      "title": "Business Operations Analyst (Human Data)",
+      "company": "SpaceX Super Intelligence",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-operations-analyst-human-data-at-spacex-super-intelligence-4491791466",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474409095",
+      "title": "Software Business Analyst",
+      "company": "UL Solutions",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-business-analyst-at-ul-solutions-4474409095",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491883402",
+      "title": "Real Estate Marketing & Operations Assistant",
+      "company": "Spring Valley Partners",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/real-estate-marketing-operations-assistant-at-spring-valley-partners-4491883402",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475879887",
+      "title": "Mechanical Engineer I",
+      "company": "Therma",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineer-i-at-therma-4475879887",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484436262",
+      "title": "Recruiting Coordinator",
+      "company": "SpaceX Super Intelligence",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/recruiting-coordinator-at-spacex-super-intelligence-4484436262",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491801104",
+      "title": "Human Resources Coordinator - Security",
+      "company": "GardaWorld",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/human-resources-coordinator-security-at-gardaworld-4491801104",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492084776",
+      "title": "Human Resources Payroll Coordinator",
+      "company": "4LEAF, Inc.",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/human-resources-payroll-coordinator-at-4leaf-inc-4492084776",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492090409",
+      "title": "Human Resources Coordinator",
+      "company": "4LEAF, Inc.",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/human-resources-coordinator-at-4leaf-inc-4492090409",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491895059",
+      "title": "Project Support Coordinator",
+      "company": "Sciens Building Solutions",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-support-coordinator-at-sciens-building-solutions-4491895059",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491324443",
+      "title": "Junior Project Coordinator - Construction",
+      "company": "Jobot",
+      "location": "Los Altos, CA",
+      "url": "https://www.linkedin.com/jobs/view/junior-project-coordinator-construction-at-jobot-4491324443",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490887929",
+      "title": "Founding Content Marketer",
+      "company": "Closr",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/founding-content-marketer-at-closr-4490887929",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491813148",
+      "title": "Materials Characterization Technician",
+      "company": "Carbon",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/materials-characterization-technician-at-carbon-4491813148",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492085771",
+      "title": "Resident Services Coordinator",
+      "company": "Abode",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/resident-services-coordinator-at-abode-4492085771",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491309758",
+      "title": "Consultant, Business Consulting - Banking & Digital",
+      "company": "Infosys",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/consultant-business-consulting-banking-digital-at-infosys-4491309758",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491816339",
+      "title": "Alcohol and Other Drug Prevention Coordinator - (Health Educator, Range I) - Health Promotion & Wellness",
+      "company": "San Francisco State University",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/alcohol-and-other-drug-prevention-coordinator-health-educator-range-i-health-promotion-wellness-at-san-francisco-state-university-4491816339",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491789320",
+      "title": "Paraeducator Life Skills, Special Ed - Santa Clara HS (QSS # 6851)",
+      "company": "Santa Clara Unified School District",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/paraeducator-life-skills-special-ed-santa-clara-hs-qss-%23-6851-at-santa-clara-unified-school-district-4491789320",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491876881",
+      "title": "Litigation Legal Assistant",
+      "company": "Robert Half",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/litigation-legal-assistant-at-robert-half-4491876881",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490979233",
+      "title": "Junior Full Stack Software Engineer",
+      "company": "iSoftstone Malaysia",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/junior-full-stack-software-engineer-at-isoftstone-malaysia-4490979233",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483767136",
+      "title": "Software Engineer",
+      "company": "PayPal",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-at-paypal-4483767136",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490475875",
+      "title": "Engineering Analyst",
+      "company": "Russell Tobin",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/engineering-analyst-at-russell-tobin-4490475875",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491727163",
+      "title": "Early Careers: Software Developer Engineer",
+      "company": "Fortinet",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/early-careers-software-developer-engineer-at-fortinet-4491727163",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490967841",
+      "title": "Recruiting Coordinator",
+      "company": "Etched",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/recruiting-coordinator-at-etched-4490967841",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491424096",
+      "title": "Human Resources Coordinator",
+      "company": "Quanta Manufacturing Fremont",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/human-resources-coordinator-at-quanta-manufacturing-fremont-4491424096",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490192885",
+      "title": "Business Operations Coordinator (GTM & Marketing)",
+      "company": "AB180 - 에이비일팔공",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/business-operations-coordinator-gtm-marketing-at-ab180-%EC%97%90%EC%9D%B4%EB%B9%84%EC%9D%BC%ED%8C%94%EA%B3%B5-4490192885",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479438453",
+      "title": "Financial Analyst",
+      "company": "Air Apps",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/financial-analyst-at-air-apps-4479438453",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490465455",
+      "title": "Financial Management Asc - Early Career",
+      "company": "Lockheed Martin",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/financial-management-asc-early-career-at-lockheed-martin-4490465455",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492012881",
+      "title": "Accounting Professional (AP)",
+      "company": "LG Display America, Inc.",
+      "location": "Cupertino, CA",
+      "url": "https://www.linkedin.com/jobs/view/accounting-professional-ap-at-lg-display-america-inc-4492012881",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491442606",
+      "title": "Program Coordinator",
+      "company": "Cadence",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/program-coordinator-at-cadence-4491442606",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491435763",
+      "title": "Project Coordinator, Engineering Operations",
+      "company": "Celestica",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-coordinator-engineering-operations-at-celestica-4491435763",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490825540",
+      "title": "Utility Conservation/Efficiency Coordinator",
+      "company": "City of Santa Clara",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/utility-conservation-efficiency-coordinator-at-city-of-santa-clara-4490825540",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491735603",
+      "title": "Research Associate – Spatial Biology",
+      "company": "Omicsveu",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-associate-%E2%80%93-spatial-biology-at-omicsveu-4491735603",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481473278",
+      "title": "Behavior Paraprofessional (26-27)",
+      "company": "Alpha Public Schools",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/behavior-paraprofessional-26-27-at-alpha-public-schools-4481473278",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483781583",
+      "title": "Research Associate",
+      "company": "BillionToOne",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-associate-at-billiontoone-4483781583",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491434864",
+      "title": "🌟 Teacher Assistant – Autism Paraprofessional",
+      "company": "The Creekside School",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/%F0%9F%8C%9F-teacher-assistant-%E2%80%93-autism-paraprofessional-at-the-creekside-school-4491434864",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491502827",
+      "title": "SmartCare Sales Operations Associate",
+      "company": "GForce Life Sciences",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/smartcare-sales-operations-associate-at-gforce-life-sciences-4491502827",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483186582",
+      "title": "Associate Software Engineer",
+      "company": "ServiceNow",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-software-engineer-at-servicenow-4483186582",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490111270",
+      "title": "Opto-Mechanical Design Engineer (Precision Mechanism Design)",
+      "company": "KLA",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/opto-mechanical-design-engineer-precision-mechanism-design-at-kla-4490111270",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490605352",
+      "title": "Mechanical Hardware Engineer I Graduate",
+      "company": "Hewlett Packard Enterprise",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-hardware-engineer-i-graduate-at-hewlett-packard-enterprise-4490605352",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489741887",
+      "title": "Graduate Mechanical Engineer (Available 2027)",
+      "company": "Arup",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/graduate-mechanical-engineer-available-2027-at-arup-4489741887",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490940904",
+      "title": "Recruiting Coordinator",
+      "company": "Astranis Space Technologies",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/recruiting-coordinator-at-astranis-space-technologies-4490940904",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491543464",
+      "title": "Digital Communications Social Media Specialist I (Full-Time) - United States",
+      "company": "Cisco",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/digital-communications-social-media-specialist-i-full-time-united-states-at-cisco-4491543464",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490919538",
+      "title": "Marketing Operations Specialist",
+      "company": "InnoActive Group",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/marketing-operations-specialist-at-innoactive-group-4490919538",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4376567852",
+      "title": "Environmental Health Specialist I-II-III - Consumer Protection Programs",
+      "company": "County of San Mateo",
+      "location": "San Mateo County, CA",
+      "url": "https://www.linkedin.com/jobs/view/environmental-health-specialist-i-ii-iii-consumer-protection-programs-at-county-of-san-mateo-4376567852",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490955348",
+      "title": "Community Safety Ambassador",
+      "company": "Wu Yee Children's Services",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/community-safety-ambassador-at-wu-yee-children-s-services-4490955348",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489750158",
+      "title": "Graduate Electrical Engineer (Available 2027)",
+      "company": "Arup",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/graduate-electrical-engineer-available-2027-at-arup-4489750158",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490902645",
+      "title": "Paralegal/Administrative Assistant",
+      "company": "Barr & Douds Attorneys",
+      "location": "Danville, CA",
+      "url": "https://www.linkedin.com/jobs/view/paralegal-administrative-assistant-4490902645",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475060264",
+      "title": "Software Engineer Graduate (Traffic Infrastructure)- 2027 Start",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-graduate-traffic-infrastructure-2027-start-at-bytedance-4475060264",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454659121",
+      "title": "Associate Supply Chain Analyst",
+      "company": "Analog Devices",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-supply-chain-analyst-at-analog-devices-4454659121",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491204585",
+      "title": "Project Coordinator, External Programs, Optimus",
+      "company": "Tesla",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-coordinator-external-programs-optimus-at-tesla-4491204585",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475054517",
+      "title": "Software Development Engineer Graduate (Intent-Based Networking) - 2027 Start",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-graduate-intent-based-networking-2027-start-at-bytedance-4475054517",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475042955",
+      "title": "Organizational Effectiveness Graduate (RD Mid-Platform) - 2027 Start",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/organizational-effectiveness-graduate-rd-mid-platform-2027-start-at-bytedance-4475042955",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489885943",
+      "title": "Data Scientist (PGC) - TikTok",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-scientist-pgc-tiktok-at-tiktok-4489885943",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4434149314",
+      "title": "Software Engineer, New Grad - Infrastructure",
+      "company": "Palantir Technologies",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-new-grad-infrastructure-at-palantir-technologies-4434149314",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4455922608",
+      "title": "Software Development Engineer – Embedded Systems 2026 (US)",
+      "company": "Amazon",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-%E2%80%93-embedded-systems-2026-us-at-amazon-4455922608",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491038465",
+      "title": "Human Resources Coordinator",
+      "company": "Stanford University School of Medicine",
+      "location": "Stanford, CA",
+      "url": "https://www.linkedin.com/jobs/view/human-resources-coordinator-at-stanford-university-school-of-medicine-4491038465",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483139636",
+      "title": "Analyst - Real Estate Investment",
+      "company": "Northwestern Mutual",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/analyst-real-estate-investment-at-northwestern-mutual-4483139636",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491033023",
+      "title": "Analyst, FP&A Business Operations",
+      "company": "Tesla",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/analyst-fp-a-business-operations-at-tesla-4491033023",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483105265",
+      "title": "Asset Management Analyst",
+      "company": "Prometheus Real Estate Group",
+      "location": "San Mateo, CA",
+      "url": "https://www.linkedin.com/jobs/view/asset-management-analyst-at-prometheus-real-estate-group-4483105265",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491096522",
+      "title": "Project Coordinator",
+      "company": "Mathews Mechanical",
+      "location": "Newark, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-coordinator-at-mathews-mechanical-4491096522",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491083813",
+      "title": "Assistant Account Executive, Technology",
+      "company": "Zeno Group",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/assistant-account-executive-technology-at-zeno-group-4491083813",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488987779",
+      "title": "Product Marketing New College Grad - Masters Degree (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-marketing-new-college-grad-masters-degree-santa-clara-ca-at-applied-materials-4488987779",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466038372",
+      "title": "Hardware Design Engineer",
+      "company": "Supermicro",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/hardware-design-engineer-at-supermicro-4466038372",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489864502",
+      "title": "Research Associate, Biology",
+      "company": "Integrated Biosciences, Inc.",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-associate-biology-at-integrated-biosciences-inc-4489864502",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4410910053",
+      "title": "Legal Support Specialist (IP)",
+      "company": "Pillsbury Winthrop Shaw Pittman LLP",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/legal-support-specialist-ip-at-pillsbury-winthrop-shaw-pittman-llp-4410910053",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4437433081",
+      "title": "Paralegal - Corporate",
+      "company": "DLA Piper",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/paralegal-corporate-at-dla-piper-4437433081",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474587891",
+      "title": "Business Intelligence Analyst",
+      "company": "Snowflake",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-intelligence-analyst-at-snowflake-4474587891",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454295809",
+      "title": "Audit Entry Level Accountant 2027",
+      "company": "Withum",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/audit-entry-level-accountant-2027-at-withum-4454295809",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489826902",
+      "title": "Marketing Coordinator - Full Time - Oakmont of Silver Creek",
+      "company": "Oakmont Senior Living",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-coordinator-full-time-oakmont-of-silver-creek-at-oakmont-senior-living-4489826902",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479219018",
+      "title": "Accounting Analyst",
+      "company": "3 Bridge Networks",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/accounting-analyst-at-3-bridge-networks-4479219018",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479159609",
+      "title": "Investments Analyst",
+      "company": "Interstate Equities Corporation",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/investments-analyst-at-interstate-equities-corporation-4479159609",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489587888",
+      "title": "Project Coordinator",
+      "company": "Infotree Global Solutions",
+      "location": "Cupertino, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-coordinator-at-infotree-global-solutions-4489587888",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479600374",
+      "title": "Technical PR & Communications Specialist - AI & Enterprise Solutions",
+      "company": "ASUS",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/technical-pr-communications-specialist-ai-enterprise-solutions-at-asus-4479600374",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488596047",
+      "title": "Electrical Engineer New College Grad - BS/MS Degree (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-engineer-new-college-grad-bs-ms-degree-santa-clara-ca-at-applied-materials-4488596047",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472329152",
+      "title": "Product Designer",
+      "company": "LangChain",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/product-designer-at-langchain-4472329152",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474560129",
+      "title": "Hardware UX Designer Graduate (PICO-Edge AI & Spatial Computing) - 2027 Start",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/hardware-ux-designer-graduate-pico-edge-ai-spatial-computing-2027-start-at-bytedance-4474560129",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4447901616",
+      "title": "Product Designer Graduate (TikTok-Design) - 2027 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-designer-graduate-tiktok-design-2027-start-at-tiktok-4447901616",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490557043",
+      "title": "Paralegal",
+      "company": "Modern Family Law",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/paralegal-at-modern-family-law-4490557043",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489833345",
+      "title": "Preschool Teacher's Aide",
+      "company": "Kimber Hills Preschool",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/preschool-teacher-s-aide-at-kimber-hills-preschool-4489833345",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490540737",
+      "title": "Paralegal",
+      "company": "Modern Family Law",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/paralegal-at-modern-family-law-4490540737",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482752382",
+      "title": "Corporate Paralegal",
+      "company": "SpaceX Super Intelligence",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/corporate-paralegal-at-spacex-super-intelligence-4482752382",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489581473",
+      "title": "Instructional Assistant",
+      "company": "Redwood City School District",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/instructional-assistant-at-redwood-city-school-district-4489581473",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490080205",
+      "title": "Software Engineer - Virtual Platform",
+      "company": "Rubrik",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-virtual-platform-at-rubrik-4490080205",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4434142462",
+      "title": "Software Engineer, New Grad - Defense",
+      "company": "Palantir Technologies",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-new-grad-defense-at-palantir-technologies-4434142462",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484385338",
+      "title": "Logistics Automation New College Grad- Bachelor's (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/logistics-automation-new-college-grad-bachelor-s-santa-clara-ca-at-applied-materials-4484385338",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4449977510",
+      "title": "Software Engineer Graduate (Global CRM) - 2027 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-graduate-global-crm-2027-start-at-tiktok-4449977510",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481199551",
+      "title": "Analyst, Early Career (Full Stack)",
+      "company": "Affirm",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/analyst-early-career-full-stack-at-affirm-4481199551",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484378542",
+      "title": "Business Intelligence Analyst I, New College Grad- Bachelor's (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-intelligence-analyst-i-new-college-grad-bachelor-s-santa-clara-ca-at-applied-materials-4484378542",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454704486",
+      "title": "Associate Software Engineer - 2027 Start Dates",
+      "company": "Veeva Systems",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-software-engineer-2027-start-dates-at-veeva-systems-4454704486",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4446281814",
+      "title": "Software Engineer Graduate (Transaction Platform) - 2027 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-graduate-transaction-platform-2027-start-at-tiktok-4446281814",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489074049",
+      "title": "Mechanical Engineer",
+      "company": "LMK Recruiting Solutions",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineer-at-lmk-recruiting-solutions-4489074049",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484380511",
+      "title": "Mechanical / Systems Engineer (NCG)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-systems-engineer-ncg-at-applied-materials-4484380511",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484380529",
+      "title": "Mechanical Engineer New College Grad - Masters Degree (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineer-new-college-grad-masters-degree-santa-clara-ca-at-applied-materials-4484380529",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490505985",
+      "title": "Human Resources Assistant",
+      "company": "Pathways Personnel",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/human-resources-assistant-at-pathways-personnel-4490505985",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479445657",
+      "title": "2027 Investment Banking Analyst – Healthcare Biotech",
+      "company": "Piper Sandler",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-investment-banking-analyst-%E2%80%93-healthcare-biotech-at-piper-sandler-4479445657",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490525804",
+      "title": "Community Relations Representative",
+      "company": "Essex Property Trust",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/community-relations-representative-at-essex-property-trust-4490525804",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490058979",
+      "title": "Associate Scientist I",
+      "company": "Vaxcyte",
+      "location": "San Carlos, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-scientist-i-at-vaxcyte-4490058979",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490523149",
+      "title": "Associate Engineer - Electrical",
+      "company": "Vector Atomic",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-engineer-electrical-at-vector-atomic-4490523149",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484383381",
+      "title": "RF Electrical Engineer New College Grad- Master's (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/rf-electrical-engineer-new-college-grad-master-s-santa-clara-ca-at-applied-materials-4484383381",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473549548",
+      "title": "Product Designer",
+      "company": "Kikoff",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/product-designer-at-kikoff-4473549548",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488229824",
+      "title": "Entry Level Software Developer-Different locations",
+      "company": "IBM",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/entry-level-software-developer-different-locations-at-ibm-4488229824",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454349781",
+      "title": "Data Scientist – Analytics",
+      "company": "AppLovin",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-scientist-%E2%80%93-analytics-at-applovin-4454349781",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489964547",
+      "title": "Software Engineering AMTS (College Grad)",
+      "company": "Salesforce",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-amts-college-grad-at-salesforce-4489964547",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4452901177",
+      "title": "Software Engineer Graduate (Foundation Platform) - 2027 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-graduate-foundation-platform-2027-start-at-tiktok-4452901177",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489989262",
+      "title": "Mechanical Engineer (New Grad 2027)",
+      "company": "Eight Sleep",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineer-new-grad-2027-at-eight-sleep-4489989262",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4447905369",
+      "title": "AI Product Designer Graduate (TikTok-Design) - 2027 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/ai-product-designer-graduate-tiktok-design-2027-start-at-tiktok-4447905369",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4437421857",
+      "title": "Paralegal - Corporate",
+      "company": "DLA Piper",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/paralegal-corporate-at-dla-piper-4437421857",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489691735",
+      "title": "11/12 Info Session Portal",
+      "company": "Think Academy U.S",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/11-12-info-session-portal-at-think-academy-u-s-4489691735",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489935592",
+      "title": "Grades Teaching Assistant (Full-Time)",
+      "company": "Waldorf School of the Peninsula",
+      "location": "Los Altos, CA",
+      "url": "https://www.linkedin.com/jobs/view/grades-teaching-assistant-full-time-at-waldorf-school-of-the-peninsula-4489935592",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481778183",
+      "title": "Paralegal",
+      "company": "Tenderloin Housing Clinic",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/paralegal-at-tenderloin-housing-clinic-4481778183",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488623374",
+      "title": "Operations Research Analyst",
+      "company": "PHI Hong USA",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/operations-research-analyst-at-phi-hong-usa-4488623374",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487826561",
+      "title": "Software Engineer",
+      "company": "WD",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-at-wd-4487826561",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481558846",
+      "title": "Software Development Engineer, Early Career - 2027 (US)",
+      "company": "Amazon",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-early-career-2027-us-at-amazon-4481558846",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487838380",
+      "title": "Cryogenic Mechanical Engineer",
+      "company": "PsiQuantum",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/cryogenic-mechanical-engineer-at-psiquantum-4487838380",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489191003",
+      "title": "Mechanical Design Engineer, Optimus Battery, Battery Engineering",
+      "company": "Tesla",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-design-engineer-optimus-battery-battery-engineering-at-tesla-4489191003",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487984826",
+      "title": "Associate, Business Operations & Analytics",
+      "company": "Jerry",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/associate-business-operations-analytics-at-jerry-4487984826",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488991823",
+      "title": "18 Reasons Program Coordinator VISTA",
+      "company": "AmeriCorps",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/18-reasons-program-coordinator-vista-at-americorps-4488991823",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487970987",
+      "title": "HEALTH PROGRAM SPECIALIST I JC-538461",
+      "company": "California Department of Public Health",
+      "location": "Contra Costa County, CA",
+      "url": "https://www.linkedin.com/jobs/view/health-program-specialist-i-jc-538461-at-california-department-of-public-health-4487970987",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478611891",
+      "title": "Communication Specialist",
+      "company": "Equinix",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/communication-specialist-at-equinix-4478611891",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489408404",
+      "title": "COMMUNITY HEALTH WORKER",
+      "company": "Axis Community Health",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/community-health-worker-at-axis-community-health-4489408404",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488645352",
+      "title": "Research Associate / Associate Scientist, Data Generation",
+      "company": "Divergence Labs",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/research-associate-associate-scientist-data-generation-at-divergence-labs-4488645352",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471568750",
+      "title": "ASIC Design Engineer - New College Grad 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/asic-design-engineer-new-college-grad-2027-at-nvidia-4471568750",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471252270",
+      "title": "Electrical Engineer, Power Distribution",
+      "company": "KLA",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-engineer-power-distribution-at-kla-4471252270",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488396427",
+      "title": "Electrical Engineer 1",
+      "company": "Lam Research",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-engineer-1-at-lam-research-4488396427",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489196723",
+      "title": "Paraeducator (SLC) SPED",
+      "company": "Redwood City School District",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/paraeducator-slc-sped-at-redwood-city-school-district-4489196723",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488611209",
+      "title": "Paralegal",
+      "company": "Robert Half",
+      "location": "Berkeley, CA",
+      "url": "https://www.linkedin.com/jobs/view/paralegal-at-robert-half-4488611209",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489193200",
+      "title": "Paraeducator Student Attendant - Huerta (QSS 8152)",
+      "company": "Santa Clara Unified School District",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/paraeducator-student-attendant-huerta-qss-8152-at-santa-clara-unified-school-district-4489193200",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481241765",
+      "title": "Legal Writing Clerk",
+      "company": "Kimball, Tirey & St. John LLP",
+      "location": "Concord, CA",
+      "url": "https://www.linkedin.com/jobs/view/legal-writing-clerk-at-kimball-tirey-st-john-llp-4481241765",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478651249",
+      "title": "Paralegal",
+      "company": "Kahana Feld",
+      "location": "Walnut Creek, CA",
+      "url": "https://www.linkedin.com/jobs/view/paralegal-at-kahana-feld-4478651249",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487171523",
+      "title": "Associate Data Scientist",
+      "company": "Jerry",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/associate-data-scientist-at-jerry-4487171523",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488827207",
+      "title": "Growth Associate",
+      "company": "Encord",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/growth-associate-at-encord-4488827207",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487938452",
+      "title": "Investment Analyst",
+      "company": "RETS Associates",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/investment-analyst-at-rets-associates-4487938452",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454246028",
+      "title": "Tax Entry Level Accountant 2027",
+      "company": "Withum",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/tax-entry-level-accountant-2027-at-withum-4454246028",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489184104",
+      "title": "Outreach Specialist",
+      "company": "Insight Housing",
+      "location": "Martinez, CA",
+      "url": "https://www.linkedin.com/jobs/view/outreach-specialist-at-insight-housing-4489184104",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491025076",
+      "title": "Community Health Worker",
+      "company": "Serene Health",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/community-health-worker-at-serene-health-4491025076",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454584413",
+      "title": "New Graduate Engineer, Software - '26/'27 (Starlink)",
+      "company": "SpaceX",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/new-graduate-engineer-software-26-27-starlink-at-spacex-4454584413",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488808096",
+      "title": "Resident Services Coordinator",
+      "company": "Abode",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/resident-services-coordinator-at-abode-4488808096",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486682728",
+      "title": "AI E-Commerce Content & Customer Success Specialist",
+      "company": "Jobot",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/ai-e-commerce-content-customer-success-specialist-at-jobot-4486682728",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4444216120",
+      "title": "Software Engineer - Platform & Application",
+      "company": "Boson AI",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-platform-application-at-boson-ai-4444216120",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480524206",
+      "title": "Software Engineer 1",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-1-at-intuit-4480524206",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461176162",
+      "title": "Software Engineer I, Entry-Level (Graduation Date: Fall 2026-Summer 2027) - US",
+      "company": "DoorDash",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-i-entry-level-graduation-date-fall-2026-summer-2027-us-at-doordash-4461176162",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487389637",
+      "title": "Early Career R&D Mechanical Engineer - National Security Products Center, NM/CA, Onsite",
+      "company": "Sandia National Laboratories",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/early-career-r-d-mechanical-engineer-national-security-products-center-nm-ca-onsite-at-sandia-national-laboratories-4487389637",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470730494",
+      "title": "October 2027 Tax Associate - San Jose",
+      "company": "Frank, Rimerman + Co. LLP",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/october-2027-tax-associate-san-jose-at-frank-rimerman-%2B-co-llp-4470730494",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488474145",
+      "title": "Associate NVH Test Engineer",
+      "company": "Tesla",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-nvh-test-engineer-at-tesla-4488474145",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4442918369",
+      "title": "RTL Power Optimization Engineer – New College Grad 2026",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/rtl-power-optimization-engineer-%E2%80%93-new-college-grad-2026-at-nvidia-4442918369",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470103129",
+      "title": "Product Designer",
+      "company": "C3 AI",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-designer-at-c3-ai-4470103129",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487613050",
+      "title": "Teacher Assistant - Palm Academy",
+      "company": "Christian Career Center",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/teacher-assistant-palm-academy-at-christian-career-center-4487613050",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4414662269",
+      "title": "Business Intelligence Data Analyst",
+      "company": "Hyve Solutions",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-intelligence-data-analyst-at-hyve-solutions-4414662269",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480122576",
+      "title": "Product Design Engineer (Early Career)",
+      "company": "Skydio",
+      "location": "San Mateo, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-engineer-early-career-at-skydio-4480122576",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4452767437",
+      "title": "Entry-level Mechanical Engineer",
+      "company": "Salas O'Brien",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/entry-level-mechanical-engineer-at-salas-o-brien-4452767437",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487338669",
+      "title": "Social Media Coordinator",
+      "company": "k2o",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/social-media-coordinator-at-k2o-4487338669",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486268064",
+      "title": "Youth Prevention Navigator",
+      "company": "Public Health Institute",
+      "location": "Berkeley, CA",
+      "url": "https://www.linkedin.com/jobs/view/youth-prevention-navigator-at-public-health-institute-4486268064",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488413683",
+      "title": "Event Communications Coordinator",
+      "company": "cred.",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/event-communications-coordinator-at-cred-4488413683",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488454567",
+      "title": "Public Information Representative I/ II - Library Department",
+      "company": "City of San José",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/public-information-representative-i-ii-library-department-at-city-of-san-jos%C3%A9-4488454567",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469072068",
+      "title": "Electronic Engineer I",
+      "company": "Advanced Energy",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/electronic-engineer-i-at-advanced-energy-4469072068",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479890437",
+      "title": "Electrical Engineer, Avionics",
+      "company": "Zipline",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-engineer-avionics-at-zipline-4479890437",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460455049",
+      "title": "Product Designer, Meta",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-designer-meta-at-meta-4460455049",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487329765",
+      "title": "Product Designer",
+      "company": "Moxo",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-designer-at-moxo-4487329765",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488039504",
+      "title": "Clinical Data Analyst",
+      "company": "MaximaTek",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/clinical-data-analyst-at-maximatek-4488039504",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479723612",
+      "title": "MRT Data Analysis Specialist - Mental Health 353",
+      "company": "Telecare Corporation",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/mrt-data-analysis-specialist-mental-health-353-at-telecare-corporation-4479723612",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481756467",
+      "title": "Project Analyst",
+      "company": "Quick Release_",
+      "location": "Newark, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-analyst-at-quick-release-4481756467",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486932248",
+      "title": "Marketing Coordinator - Ivy Park at San Jose",
+      "company": "Oakmont Senior Living",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-coordinator-ivy-park-at-san-jose-at-oakmont-senior-living-4486932248",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488028811",
+      "title": "Marketing Coordinator",
+      "company": "groundcover",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-coordinator-at-groundcover-4488028811",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486787582",
+      "title": "Park Interpreter",
+      "company": "County of Santa Clara",
+      "location": "Santa Clara County, CA",
+      "url": "https://www.linkedin.com/jobs/view/park-interpreter-at-county-of-santa-clara-4486787582",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479594197",
+      "title": "Community Outreach Coordinator",
+      "company": "Fleet Feet",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/community-outreach-coordinator-at-fleet-feet-4479594197",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486573546",
+      "title": "2027 Campus_Analog and Mixed Signal Design",
+      "company": "MediaTek",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-campus-analog-and-mixed-signal-design-at-mediatek-4486573546",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467962883",
+      "title": "Data Scientist",
+      "company": "PayPal",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-scientist-at-paypal-4467962883",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4449548361",
+      "title": "Software Engineer Graduate (Search) - 2027 Start",
+      "company": "TikTok USDS Joint Venture",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-graduate-search-2027-start-at-tiktok-usds-joint-venture-4449548361",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469047841",
+      "title": "(General Hire) HR Operations Lifecycle Graduate (Global HR Operation) - 2027 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/general-hire-hr-operations-lifecycle-graduate-global-hr-operation-2027-start-at-tiktok-4469047841",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460044993",
+      "title": "2027 Full-Time Analyst, Valuations & Opinions Group",
+      "company": "Lincoln International",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-full-time-analyst-valuations-opinions-group-at-lincoln-international-4460044993",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486325748",
+      "title": "Laboratory Technician",
+      "company": "Centrillion Tech",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/laboratory-technician-at-centrillion-tech-4486325748",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478596774",
+      "title": "Research Technician (tissue processing and cell culture)",
+      "company": "Retro Biosciences",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-technician-tissue-processing-and-cell-culture-at-retro-biosciences-4478596774",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4463249226",
+      "title": "Product Designer (UX/UI)",
+      "company": "Wanderboat AI",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-designer-ux-ui-at-wanderboat-ai-4463249226",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486532556",
+      "title": "Paraeducator - High School (26-27)",
+      "company": "KIPP Public Schools Northern California",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/paraeducator-high-school-26-27-at-kipp-public-schools-northern-california-4486532556",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487208870",
+      "title": "Life Science Research Professional 1",
+      "company": "Stanford University School of Medicine",
+      "location": "Stanford, CA",
+      "url": "https://www.linkedin.com/jobs/view/life-science-research-professional-1-at-stanford-university-school-of-medicine-4487208870",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466433020",
+      "title": "Business Immigration Data and Content Analyst",
+      "company": "Fragomen",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/business-immigration-data-and-content-analyst-at-fragomen-4466433020",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486055895",
+      "title": "Associate, GMS Tax Technology Business Analyst",
+      "company": "KPMG US",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-gms-tax-technology-business-analyst-at-kpmg-us-4486055895",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483325065",
+      "title": "Referral Coordinator",
+      "company": "Premise Health",
+      "location": "Foster City, CA",
+      "url": "https://www.linkedin.com/jobs/view/referral-coordinator-at-premise-health-4483325065",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487071183",
+      "title": "Street Health Outreach Community Health Worker",
+      "company": "Tiburcio Vasquez Health Center",
+      "location": "Union City, CA",
+      "url": "https://www.linkedin.com/jobs/view/street-health-outreach-community-health-worker-at-tiburcio-vasquez-health-center-4487071183",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486494925",
+      "title": "Financial Analyst I",
+      "company": "Williams-Sonoma, Inc.",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/financial-analyst-i-at-williams-sonoma-inc-4486494925",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467184016",
+      "title": "Content Designer I",
+      "company": "Illumio",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/content-designer-i-at-illumio-4467184016",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4414655977",
+      "title": "Business Immigration Analyst (Paralegal)",
+      "company": "Fragomen",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-immigration-analyst-paralegal-at-fragomen-4414655977",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477684324",
+      "title": "Field Marketing Operations Coordinator",
+      "company": "Renewal by Andersen Metro & Midwest",
+      "location": "Hayward, CA",
+      "url": "https://www.linkedin.com/jobs/view/field-marketing-operations-coordinator-at-renewal-by-andersen-metro-midwest-4477684324",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4421867040",
+      "title": "Analyst - Healthcare",
+      "company": "Lazard",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/analyst-healthcare-at-lazard-4421867040",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485268126",
+      "title": "Accountant I/II",
+      "company": "City of San José",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/accountant-i-ii-at-city-of-san-jos%C3%A9-4485268126",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485760832",
+      "title": "Family Resource Specialist-Bilingual",
+      "company": "East Bay Agency for Children",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/family-resource-specialist-bilingual-at-east-bay-agency-for-children-4485760832",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486441324",
+      "title": "Research Associate",
+      "company": "AccuScan Sciences",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-associate-at-accuscan-sciences-4486441324",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485928306",
+      "title": "Robotics Mechanical Design Engineer, Structures & Mechanisms, Optimus",
+      "company": "Tesla",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/robotics-mechanical-design-engineer-structures-mechanisms-optimus-at-tesla-4485928306",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485926349",
+      "title": "Operations Coordinator, People Systems & Analytics",
+      "company": "Tesla",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/operations-coordinator-people-systems-analytics-at-tesla-4485926349",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485689739",
+      "title": "Software Development Engineer (Database) Early Career- 2027 (US)",
+      "company": "Amazon",
+      "location": "East Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-database-early-career-2027-us-at-amazon-4485689739",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4450736912",
+      "title": "Construction Assistant",
+      "company": "HITT Contracting Inc.",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/construction-assistant-at-hitt-contracting-inc-4450736912",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469275385",
+      "title": "Instructional Aide",
+      "company": "Spectrum Center Schools and Programs",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/instructional-aide-at-spectrum-center-schools-and-programs-4469275385",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478378313",
+      "title": "Associate Software Engineer - Consumer Application",
+      "company": "Sandisk",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-software-engineer-consumer-application-at-sandisk-4478378313",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4459611323",
+      "title": "Product Marketing Specialist",
+      "company": "Delta Electronics Americas",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-marketing-specialist-at-delta-electronics-americas-4459611323",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4456968944",
+      "title": "2027 July Strategic Insights Full Time Analyst (San Francisco)",
+      "company": "Financial Technology Partners / FT Partners",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-july-strategic-insights-full-time-analyst-san-francisco-at-financial-technology-partners-ft-partners-4456968944",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485277338",
+      "title": "Coordinator, Email Marketing",
+      "company": "TATCHA",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/coordinator-email-marketing-at-tatcha-4485277338",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481902669",
+      "title": "Financial Analyst - Portfolio Management",
+      "company": "MAVERIQ Capital Group LLC",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/financial-analyst-portfolio-management-at-maveriq-capital-group-llc-4481902669",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483495958",
+      "title": "Health Educator I",
+      "company": "Public Health Institute",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/health-educator-i-at-public-health-institute-4483495958",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485390693",
+      "title": "Community Health Worker",
+      "company": "COPE Health Solutions",
+      "location": "Salinas, CA",
+      "url": "https://www.linkedin.com/jobs/view/community-health-worker-at-cope-health-solutions-4485390693",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485646314",
+      "title": "Project Coordinator",
+      "company": "Vector Atomic",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-coordinator-at-vector-atomic-4485646314",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483456163",
+      "title": "Project Assistant",
+      "company": "Foxsemicon Technology LLC",
+      "location": "Union City, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-assistant-at-foxsemicon-technology-llc-4483456163",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486484305",
+      "title": "Community Health Worker",
+      "company": "Serene Health",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/community-health-worker-at-serene-health-4486484305",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485643320",
+      "title": "Environmental Outreach Coordinator",
+      "company": "GreenWaste",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/environmental-outreach-coordinator-at-greenwaste-4485643320",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4448923600",
+      "title": "Marketing Assistant",
+      "company": "The Whiting-Turner Contracting Company",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/marketing-assistant-at-the-whiting-turner-contracting-company-4448923600",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485102631",
+      "title": "Research Associate- Analytical Chemistry",
+      "company": "Sapho Bio",
+      "location": "San Carlos, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-associate-analytical-chemistry-at-sapho-bio-4485102631",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485284525",
+      "title": "Electrical Engineer (Early Career)",
+      "company": "Noble Machines",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-engineer-early-career-at-noble-machines-4485284525",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4388400374",
+      "title": "Special Education School Aide",
+      "company": "Pacific Autism Center for Education",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/special-education-school-aide-at-pacific-autism-center-for-education-4388400374",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485623515",
+      "title": "Immigration Paralegal (FT)",
+      "company": "Chugh, LLP",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/immigration-paralegal-ft-at-chugh-llp-4485623515",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4450031020",
+      "title": "Associate Software Engineer (College Grad 2027)",
+      "company": "Solace",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-software-engineer-college-grad-2027-at-solace-4450031020",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467957285",
+      "title": "Data Scientist - Payments Risk Management & Data analytics",
+      "company": "PayPal",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-scientist-payments-risk-management-data-analytics-at-paypal-4467957285",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484566160",
+      "title": "Business Intelligence Technical Analyst - Trust and Safety",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-intelligence-technical-analyst-trust-and-safety-at-tiktok-4484566160",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4446630171",
+      "title": "Software Engineer Graduate (Tech and Product, USDS) - 2027 Start",
+      "company": "TikTok USDS Joint Venture",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-graduate-tech-and-product-usds-2027-start-at-tiktok-usds-joint-venture-4446630171",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474136165",
+      "title": "Mechanical Design Engineer",
+      "company": "Cooler Master USA",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-design-engineer-at-cooler-master-usa-4474136165",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482035067",
+      "title": "Franchise Field Marketing Coordinator",
+      "company": "OHG Brands",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/franchise-field-marketing-coordinator-at-ohg-brands-4482035067",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484770679",
+      "title": "Financial Accounting Operations Controllership Consultant",
+      "company": "Deloitte",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/financial-accounting-operations-controllership-consultant-at-deloitte-4484770679",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485202278",
+      "title": "Hardware Engineer I (Full-Time) - United States",
+      "company": "Cisco",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/hardware-engineer-i-full-time-united-states-at-cisco-4485202278",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484524831",
+      "title": "Forward Deployed UX Designer",
+      "company": "Air",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/forward-deployed-ux-designer-at-air-4484524831",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484147230",
+      "title": "Product Strategist Graduate (TikTok - Product - Business Analytics) - 2027 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-strategist-graduate-tiktok-product-business-analytics-2027-start-at-tiktok-4484147230",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484114459",
+      "title": "Strategic Events Coordinator",
+      "company": "MaintainX",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/strategic-events-coordinator-at-maintainx-4484114459",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482514343",
+      "title": "Design Technologist",
+      "company": "Abaka AI",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/design-technologist-at-abaka-ai-4482514343",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471529479",
+      "title": "Human Resources Coordinator",
+      "company": "Serena & Lily",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/human-resources-coordinator-at-serena-lily-4471529479",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483806581",
+      "title": "Project Coordinator",
+      "company": "Underground Construction Co., Inc.",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-coordinator-at-underground-construction-co-inc-4483806581",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484224332",
+      "title": "Electrical Engineer (Early Career)",
+      "company": "Farcast",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-engineer-early-career-at-farcast-4484224332",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483206165",
+      "title": "Project Coordinator",
+      "company": "Sciens Building Solutions",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-coordinator-at-sciens-building-solutions-4483206165",
+      "postedAt": "2026-10-26T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481431734",
+      "title": "Legal Assistant",
+      "company": "Phillips Spallas & Angstadt LLP",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/legal-assistant-at-phillips-spallas-angstadt-llp-4481431734",
+      "postedAt": "2026-10-26T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483186095",
+      "title": "Recruiting Coordinator",
+      "company": "Muon Space",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/recruiting-coordinator-at-muon-space-4483186095",
+      "postedAt": "2026-10-24T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483110039",
+      "title": "Technical Operations & Workforce Program Analyst – Trainee",
+      "company": "Iron Systems, Inc",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/technical-operations-workforce-program-analyst-%E2%80%93-trainee-at-iron-systems-inc-4483110039",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482806682",
+      "title": "HR Business Partner Associate – Field Workforce",
+      "company": "Iron Systems, Inc",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/hr-business-partner-associate-%E2%80%93-field-workforce-at-iron-systems-inc-4482806682",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481950881",
+      "title": "Accounting Specialist",
+      "company": "Robert Half",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/accounting-specialist-at-robert-half-4481950881",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482756477",
+      "title": "Financial Analyst",
+      "company": "Precise Financial Management Services Ltd.",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/financial-analyst-at-precise-financial-management-services-ltd-4482756477",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481962828",
+      "title": "User Researcher",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/user-researcher-at-tiktok-4481962828",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482835234",
+      "title": "Research Associate I",
+      "company": "SeqMatic LLC.",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-associate-i-at-seqmatic-llc-4482835234",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482198407",
+      "title": "In-House Marketing Coordinator",
+      "company": "Travel + Leisure Co.",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/in-house-marketing-coordinator-at-travel-%2B-leisure-co-4482198407",
+      "postedAt": "2026-10-22T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481132779",
+      "title": "Business System Analyst (French)",
+      "company": "Odoo",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/business-system-analyst-french-at-odoo-4481132779",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482157446",
+      "title": "Human Resource Associate",
+      "company": "Sagent Management",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/human-resource-associate-at-sagent-management-4482157446",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477882040",
+      "title": "Bachelors - Finance & Accounting Rotation Program (2027 New College Graduates)",
+      "company": "Sandisk",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/bachelors-finance-accounting-rotation-program-2027-new-college-graduates-at-sandisk-4477882040",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469799477",
+      "title": "Academic Interventionist (26-27)",
+      "company": "Alpha Public Schools",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/academic-interventionist-26-27-at-alpha-public-schools-4469799477",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480411394",
+      "title": "Paraeducator - K-8 (26-27)",
+      "company": "KIPP Public Schools Northern California",
+      "location": "East Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/paraeducator-k-8-26-27-at-kipp-public-schools-northern-california-4480411394",
+      "postedAt": "2026-10-20T00:00:00.000Z",
+      "workplaceType": null
+    }
+  ]
 }
