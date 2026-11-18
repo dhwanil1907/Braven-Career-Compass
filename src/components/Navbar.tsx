@@ -12,7 +12,6 @@ const NAV_LINKS = [
   { label: 'Resources', to: '/resources' },
   { label: 'Events', to: '/events' },
   { label: 'Alumni', to: '/alumni' },
-  { label: 'My progress', to: '/progress' },
 ];
 
 function navLinkClasses({ isActive }: { isActive: boolean }): string {
@@ -67,7 +66,7 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <Link
-            to="/progress#saved"
+            to="/#saved"
             aria-label={`Saved items: ${savedCount}`}
             className="inline-flex h-9 items-center gap-1.5 rounded-full bg-coral-600 px-3.5
               text-sm font-semibold text-white transition hover:bg-coral-700"

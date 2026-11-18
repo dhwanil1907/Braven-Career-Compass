@@ -8,7 +8,6 @@ import { AccountSync } from './components/AccountSync';
 import { LoginPage } from './pages/LoginPage';
 import { useApp } from './context/useApp';
 
-const ProgressPage = lazy(() => import('./pages/ProgressPage').then((m) => ({ default: m.ProgressPage })));
 const AlumniPage = lazy(() => import('./pages/AlumniPage').then((m) => ({ default: m.AlumniPage })));
 const EventsPage = lazy(() => import('./pages/EventsPage').then((m) => ({ default: m.EventsPage })));
 const HomePage = lazy(() => import('./pages/HomePage').then((m) => ({ default: m.HomePage })));
@@ -73,8 +72,8 @@ export default function App() {
               <Route path="resources/:id" element={<Page><ResourceDetailPage /></Page>} />
               <Route path="events" element={<Page><EventsPage /></Page>} />
               <Route path="alumni" element={<Page><AlumniPage /></Page>} />
-              <Route path="progress" element={<Page><ProgressPage /></Page>} />
-              <Route path="dashboard" element={<Navigate to="/progress" replace />} />
+              <Route path="progress" element={<Navigate to="/" replace />} />
+              <Route path="dashboard" element={<Navigate to="/" replace />} />
               <Route path="*" element={<Page><NotFoundPage /></Page>} />
             </Route>
           </Route>

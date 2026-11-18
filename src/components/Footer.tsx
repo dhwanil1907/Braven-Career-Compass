@@ -6,7 +6,6 @@ const FOOTER_LINKS = [
   { label: 'Resources', to: '/resources' },
   { label: 'Events', to: '/events' },
   { label: 'Alumni', to: '/alumni' },
-  { label: 'My progress', to: '/progress' },
 ];
 
 export function Footer() {
