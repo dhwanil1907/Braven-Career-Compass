@@ -9,7 +9,7 @@ Currently, two official plugins are available:
 
 ## Assistant chat (NVIDIA)
 
-The chat button calls `/api/chat`, a server function (`api/chat.ts`) that forwards questions to
+The Assistant tab (`/assistant`) calls `/api/chat`, a server function (`api/chat.ts`) that forwards questions to
 NVIDIA's OpenAI-compatible API together with matching listings from our catalog. The key never
 reaches the browser.
 

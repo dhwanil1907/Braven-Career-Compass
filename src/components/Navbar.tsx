@@ -13,6 +13,7 @@ const NAV_LINKS = [
   { label: 'Resources', to: '/resources' },
   { label: 'Events', to: '/events' },
   { label: 'Alumni', to: '/alumni' },
+  { label: 'Assistant', to: '/assistant' },
 ];
 
 function navLinkClasses({ isActive }: { isActive: boolean }): string {
