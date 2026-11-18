@@ -9,10 +9,10 @@ import {
   ExternalLink,
   RefreshCw,
   Square,
-  SquarePen,
 } from 'lucide-react';
 import { useApp } from '../context/useApp';
 import { streamChat } from '../lib/chat/client';
+import type { StoredMessage } from '../lib/chat/history';
 import type { ChatProfile, ChatMessage, ChatSource } from '../lib/chat/types';
 import { ChatMarkdown } from './ChatMarkdown';
 
@@ -24,7 +24,6 @@ const MAX_INPUT_LENGTH = 800;
 const MAX_INPUT_HEIGHT_PX = 192;
 const STICK_TO_BOTTOM_PX = 80;
 const COPIED_RESET_MS = 2000;
-const STORAGE_KEY = 'bcc:chat';
 const BASE_STARTERS = [
   'How do I contact Braven?',
   'Help me improve my resume bullets',
@@ -36,31 +35,9 @@ const focusRing =
 const iconButton = `inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-600
   transition hover:bg-slate-100 hover:text-navy-900 ${focusRing}`;
 
-function loadStoredMessages(): DisplayMessage[] {
-  try {
-    const raw = sessionStorage.getItem(STORAGE_KEY);
-    const parsed: unknown = raw ? JSON.parse(raw) : [];
-    if (!Array.isArray(parsed)) return [];
-    const messages = parsed.filter(
-      (item): item is DisplayMessage =>
-        typeof item === 'object' &&
-        item !== null &&
-        (item.role === 'user' || item.role === 'assistant') &&
-        typeof item.content === 'string',
-    );
-    // A trailing question means the answer never arrived; drop it instead of showing it unanswered.
-    return messages.at(-1)?.role === 'user' ? messages.slice(0, -1) : messages;
-  } catch {
-    return [];
-  }
-}
-
-function storeMessages(messages: DisplayMessage[]): void {
-  try {
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(messages));
-  } catch {
-    // Storage can be blocked (private mode); the chat still works in memory.
-  }
+function settleInitialMessages(messages: StoredMessage[]): DisplayMessage[] {
+  // A trailing question means the answer never arrived; drop it instead of showing it unanswered.
+  return messages.at(-1)?.role === 'user' ? messages.slice(0, -1) : messages;
 }
 
 function prefersReducedMotion(): boolean {
@@ -95,10 +72,19 @@ function TypingDots() {
   );
 }
 
-/** The conversation itself: header row, message list, starter questions and the composer. */
-export function ChatPanel() {
+interface ChatPanelProps {
+  conversationId: string;
+  initialMessages: StoredMessage[];
+  /** Called when a turn settles (finished, stopped or failed), never per streamed token. */
+  onPersist: (messages: StoredMessage[]) => void;
+}
+
+/** The conversation itself: message list, starter questions and the composer. */
+export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPanelProps) {
   const { profile } = useApp();
-  const [messages, setMessages] = useState<DisplayMessage[]>(loadStoredMessages);
+  const [messages, setMessages] = useState<DisplayMessage[]>(() =>
+    settleInitialMessages(initialMessages),
+  );
   const [draft, setDraft] = useState('');
   const [streaming, setStreaming] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -111,6 +97,9 @@ export function ChatPanel() {
   const stickRef = useRef(true);
   const frameRef = useRef<number | null>(null);
   const copyTimerRef = useRef<number | null>(null);
+  const mountedRef = useRef(true);
+  const onPersistRef = useRef(onPersist);
+  onPersistRef.current = onPersist;
 
   const chatProfile = useMemo<ChatProfile | undefined>(
     () =>
@@ -139,20 +128,16 @@ export function ChatPanel() {
     inputRef.current?.focus({ preventScroll: true });
   }, []);
 
-  useEffect(
-    () => () => {
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+      // The aborted request still settles and persists its partial text without touching state.
       controllerRef.current?.abort();
       if (frameRef.current !== null) cancelAnimationFrame(frameRef.current);
       if (copyTimerRef.current !== null) window.clearTimeout(copyTimerRef.current);
-    },
-    [],
-  );
-
-  // Persist only settled messages; partial streaming text is saved once the stream ends or stops.
-  useEffect(() => {
-    if (streaming) return;
-    storeMessages(messages.filter((message) => message.role === 'user' || message.content));
-  }, [messages, streaming]);
+    };
+  }, []);
 
   useLayoutEffect(() => {
     const input = inputRef.current;
@@ -220,14 +205,16 @@ export function ChatPanel() {
       cancelFrame();
       if (controllerRef.current !== controller) return;
       controllerRef.current = null;
-      setStreaming(false);
 
       const sources = result.ok ? result.sources : undefined;
-      if (text) {
-        setMessages([...history, { role: 'assistant', content: text, sources }]);
-      } else {
-        setMessages(history);
-      }
+      const settled: DisplayMessage[] = text
+        ? [...history, { role: 'assistant', content: text, sources }]
+        : history;
+      onPersistRef.current(settled);
+      if (!mountedRef.current) return;
+
+      setStreaming(false);
+      setMessages(settled);
       if (result.ok) {
         setFinished(true);
       } else if (result.aborted) {
@@ -257,17 +244,6 @@ export function ChatPanel() {
 
   const retry = () => {
     if (!streaming && messages.at(-1)?.role === 'user') void requestReply(messages);
-  };
-
-  const startOver = () => {
-    controllerRef.current?.abort();
-    controllerRef.current = null;
-    setStreaming(false);
-    setFinished(false);
-    setMessages([]);
-    setError(null);
-    setDraft('');
-    inputRef.current?.focus({ preventScroll: true });
   };
 
   const copy = async (index: number, content: string) => {
@@ -301,27 +277,7 @@ export function ChatPanel() {
   const statusText = streaming ? 'Assistant is responding' : finished ? 'Response complete' : '';
 
   return (
-    <div className="flex h-[calc(100dvh-5rem)] min-h-[32rem] flex-col">
-      <div className="flex min-h-12 items-center justify-between gap-3 py-2">
-        <div className="flex items-center gap-2">
-          <h1 className="text-base font-semibold text-navy-900">Career Compass Assistant</h1>
-          <span className="rounded-full bg-coral-600 px-2 py-0.5 text-[0.65rem] font-bold text-white">
-            AI
-          </span>
-        </div>
-        {messages.length > 0 && (
-          <button
-            type="button"
-            onClick={startOver}
-            className={`inline-flex min-h-10 items-center gap-1.5 rounded-full border border-slate-300
-              px-3 text-sm font-semibold text-navy-900 transition hover:border-coral-600 ${focusRing}`}
-          >
-            <SquarePen className="h-4 w-4" aria-hidden="true" />
-            New chat
-          </button>
-        )}
-      </div>
-
+    <div data-conversation-id={conversationId} className="flex h-full min-h-0 flex-col">
       <p role="status" className="sr-only">
         {statusText}
       </p>
