@@ -4,8 +4,9 @@ import {
   handleChatRequest,
   resetRateLimits,
   retrieveContext,
+  streamChatRequest,
 } from './server';
-import type { ChatFailure, ChatSuccess } from './types';
+import type { ChatFailure, ChatStreamEvent, ChatSuccess } from './types';
 
 const validInput = { messages: [{ role: 'user', content: 'marketing internship tips' }] };
 
@@ -25,7 +26,7 @@ describe('validation', () => {
     ['null', null],
     ['missing messages', {}],
     ['empty messages', { messages: [] }],
-    ['too many messages', { messages: Array.from({ length: 11 }, () => ({ role: 'user', content: 'hi' })) }],
+    ['too many messages', { messages: Array.from({ length: 21 }, () => ({ role: 'user', content: 'hi' })) }],
     ['bad role', { messages: [{ role: 'system', content: 'hi' }] }],
     ['empty content', { messages: [{ role: 'user', content: '   ' }] }],
     ['too long', { messages: [{ role: 'user', content: 'a'.repeat(801) }] }],
@@ -127,6 +128,7 @@ describe('handleChatRequest upstream call', () => {
     const body = JSON.parse(init.body as string);
     expect(body.model).toBe('test-model');
     expect(body.stream).toBe(false);
+    expect(body.max_tokens).toBe(1200);
     expect(body.chat_template_kwargs).toEqual({ enable_thinking: false });
     expect(body.messages[0].role).toBe('system');
     expect(body.messages[0].content).toContain('Career Compass Assistant');
@@ -166,12 +168,17 @@ describe('handleChatRequest upstream call', () => {
     expect(tooLong.status).toBe(400);
   });
 
-  it('removes markdown bold and heading markers so the plain-text panel reads cleanly', async () => {
-    const result = await handleChatRequest(validInput, {
-      apiKey: 'k',
-      fetchFn: fakeFetch('## Options\n- **Marketing Intern** at Acme\n- __Data Intern__ at Beta'),
-    });
-    expect((result.body as ChatSuccess).reply).toBe('Options\n- Marketing Intern at Acme\n- Data Intern at Beta');
+  it('keeps markdown in the reply and accepts up to 20 messages', async () => {
+    const result = await handleChatRequest(
+      {
+        messages: Array.from({ length: 19 }, (_v, index) => ({
+          role: index % 2 === 0 ? 'user' : 'assistant',
+          content: 'hi',
+        })).concat([{ role: 'user', content: 'marketing tips' }]),
+      },
+      { apiKey: 'k', fetchFn: fakeFetch('## Options\n- **Marketing Intern**') },
+    );
+    expect((result.body as ChatSuccess).reply).toBe('## Options\n- **Marketing Intern**');
   });
 
   it('returns 502 on upstream failure, network error and empty content', async () => {
@@ -214,5 +221,148 @@ describe('buildSystemPrompt', () => {
     );
     expect(prompt).toContain('Computer Science');
     expect(prompt).toContain('None found');
+  });
+});
+
+function sseFetch(chunks: string[], ok = true) {
+  const encoder = new TextEncoder();
+  return vi.fn(async (_url: string, _init?: RequestInit) => ({
+    ok,
+    status: ok ? 200 : 500,
+    body: new ReadableStream<Uint8Array>({
+      start(controller) {
+        for (const chunk of chunks) controller.enqueue(encoder.encode(chunk));
+        controller.close();
+      },
+    }),
+  })) as unknown as typeof fetch & ReturnType<typeof vi.fn>;
+}
+
+const sse = (content: string) => `data: ${JSON.stringify({ choices: [{ delta: { content } }] })}\n\n`;
+
+async function collect(input: unknown, options: Parameters<typeof streamChatRequest>[1]) {
+  const result = await streamChatRequest(input, options);
+  if (!('events' in result)) return { result, events: [] as ChatStreamEvent[] };
+  const events: ChatStreamEvent[] = [];
+  for await (const event of result.events) events.push(event);
+  return { result, events };
+}
+
+const streamError = 'The assistant could not answer right now. Please try again.';
+
+describe('streamChatRequest', () => {
+  it('yields deltas then done, tolerating split lines, think tags and junk', async () => {
+    const title = retrieveContext('marketing internship tips').resources[0].title;
+    const first = sse('<think>hidden');
+    const second = sse(' reasoning</th');
+    const third = sse('ink>Hello ');
+    const fourth = sse(`try ${title} now`);
+    const split = fourth.length - 10;
+    const fetchFn = sseFetch([
+      ': keepalive\n\n',
+      'data: not json\n\n',
+      first,
+      second,
+      `${third}data: ${JSON.stringify({ choices: [{ delta: { reasoning_content: 'x' } }] })}\n\n`,
+      fourth.slice(0, split),
+      `${fourth.slice(split)}data: [DONE]\n\n`,
+    ]);
+    const { result, events } = await collect(
+      { ...validInput, stream: true },
+      { apiKey: 'k', fetchFn },
+    );
+    expect(result.status).toBe(200);
+    const last = events[events.length - 1];
+    expect(last.type).toBe('done');
+    const deltas = events.slice(0, -1);
+    expect(deltas.every((event) => event.type === 'delta')).toBe(true);
+    const text = deltas.map((event) => (event as { text: string }).text).join('');
+    expect(text).toBe(`Hello try ${title} now`);
+    expect((last as { sources: unknown[] }).sources).toHaveLength(1);
+    const body = JSON.parse((fetchFn.mock.calls[0][1] as RequestInit).body as string);
+    expect(body.stream).toBe(true);
+    expect(body.max_tokens).toBe(1200);
+  });
+
+  it('gives no sources when no title is mentioned', async () => {
+    const { events } = await collect(
+      validInput,
+      { apiKey: 'k', fetchFn: sseFetch([sse('No '), sse('match.'), 'data: [DONE]\n\n']) },
+    );
+    expect(events).toEqual([
+      { type: 'delta', text: 'No ' },
+      { type: 'delta', text: 'match.' },
+      { type: 'done', sources: [] },
+    ]);
+  });
+
+  it('yields a single error event on upstream failure, thrown fetch or empty output', async () => {
+    const failing = await collect(validInput, { apiKey: 'k', fetchFn: sseFetch([], false) });
+    expect(failing.events).toEqual([{ type: 'error', error: streamError }]);
+
+    const throwing = vi.fn(async () => {
+      throw new Error('boom secret-key');
+    }) as unknown as typeof fetch;
+    const thrown = await collect(validInput, { apiKey: 'k', fetchFn: throwing });
+    expect(thrown.events).toEqual([{ type: 'error', error: streamError }]);
+
+    const empty = await collect(validInput, {
+      apiKey: 'k',
+      fetchFn: sseFetch([sse('<think>x</think>'), 'data: [DONE]\n\n']),
+    });
+    expect(empty.events).toEqual([{ type: 'error', error: streamError }]);
+  });
+
+  it('yields error after partial text when the stream breaks', async () => {
+    const encoder = new TextEncoder();
+    let sent = false;
+    const fetchFn = vi.fn(async () => ({
+      ok: true,
+      status: 200,
+      body: new ReadableStream<Uint8Array>({
+        pull(controller) {
+          if (sent) {
+            controller.error(new Error('reset'));
+            return;
+          }
+          sent = true;
+          controller.enqueue(encoder.encode(sse('Partial ')));
+        },
+      }),
+    })) as unknown as typeof fetch;
+    const { events } = await collect(validInput, { apiKey: 'k', fetchFn });
+    expect(events[0]).toEqual({ type: 'delta', text: 'Partial ' });
+    expect(events[events.length - 1]).toEqual({ type: 'error', error: streamError });
+  });
+
+  it('returns pre-stream failures as plain results', async () => {
+    const fetchFn = sseFetch([]);
+    expect(await streamChatRequest({ messages: [] }, { apiKey: 'k', fetchFn })).toEqual({
+      status: 400,
+      body: { error: 'Please send between 1 and 20 messages.' },
+    });
+    expect(await streamChatRequest(validInput, { apiKey: '', fetchFn })).toEqual({
+      status: 503,
+      body: { error: 'The assistant is not set up yet.' },
+    });
+    const options = { apiKey: 'k', fetchFn, clientId: 'z', now: 5 };
+    for (let count = 0; count < 20; count += 1) await streamChatRequest(validInput, options);
+    const blocked = await streamChatRequest(validInput, options);
+    expect(blocked).toEqual({ status: 429, body: { error: 'Too many questions. Please wait a few minutes.' } });
+    expect(fetchFn).not.toHaveBeenCalled();
+  });
+
+  it('forwards a client abort to the upstream request', async () => {
+    const fetchFn = sseFetch([sse('Hi'), 'data: [DONE]\n\n']);
+    const client = new AbortController();
+    const result = await streamChatRequest(validInput, { apiKey: 'k', fetchFn, signal: client.signal });
+    if (!('events' in result)) throw new Error('expected a stream');
+    const next = result.events.next();
+    await next;
+    const upstreamSignal = (fetchFn.mock.calls[0][1] as RequestInit).signal as AbortSignal;
+    expect(upstreamSignal.aborted).toBe(false);
+    client.abort();
+    expect(upstreamSignal.aborted).toBe(true);
+    await result.events.return(undefined);
   });
 });

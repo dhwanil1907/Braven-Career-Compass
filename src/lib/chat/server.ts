@@ -6,6 +6,7 @@ import type {
   ChatMessage,
   ChatProfile,
   ChatSource,
+  ChatStreamEvent,
   ChatSuccess,
 } from './types';
 
@@ -15,7 +16,12 @@ export interface ChatOptions {
   fetchFn?: typeof fetch;
   clientId?: string;
   now?: number;
+  signal?: AbortSignal;
 }
+
+export type StreamChatResult =
+  | { status: number; body: ChatFailure }
+  | { status: 200; events: AsyncGenerator<ChatStreamEvent> };
 
 export interface ChatResult {
   status: number;
@@ -29,13 +35,15 @@ export interface ChatContext {
 
 const NVIDIA_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
 const DEFAULT_MODEL = 'nvidia/nemotron-3.5-lightning-30b-a3b';
-const MAX_MESSAGES = 10;
+const MAX_MESSAGES = 20;
+const MAX_TOKENS = 1200;
 const MAX_CONTENT = 800;
 const MAX_ASSISTANT_CONTENT = 3000;
 const MAX_INTERESTS = 8;
 const RATE_LIMIT = 20;
 const RATE_WINDOW_MS = 10 * 60 * 1000;
 const TIMEOUT_MS = 25_000;
+const STREAM_TIMEOUT_MS = 60_000;
 
 const UPSTREAM_ERROR = 'The assistant could not answer right now. Please try again.';
 
@@ -232,19 +240,23 @@ export function buildSystemPrompt(profile: ChatProfile | undefined, context: Cha
   if (profile?.goal) profileLines.push(`Goal: ${profile.goal}`);
 
   return [
-    'You are "Career Compass Assistant", a helper for SJSU students on a student capstone project site.',
-    'You can answer questions about:',
+    'You are "Career Compass Assistant", a warm, direct and knowledgeable career coach for SJSU students, built into a student capstone project site.',
+    'Talk like a modern chat assistant: conversational, natural sentences, no stiff template. Remember the whole conversation and build on it. When it genuinely helps, ask one brief follow-up question.',
+    '',
+    'What you help with:',
     '- Braven, the nonprofit program. Only state Braven facts that appear in the context below; otherwise say you are not sure and suggest asking Braven staff.',
-    '- This website. Pages: My journey, Internships (internships and entry-level jobs from LinkedIn and the SJSU Career Center, with an "I applied" button and an application tracker), Resources, Events, Alumni.',
-    "- Companies: answer from your general knowledge: what the company does, typical intern and entry-level roles and projects, the skills and tools they usually value, and how to prepare. Be specific and useful, not vague. Add one short note that company details can be out of date and should be confirmed on the company's careers page. Only say you do not know when you truly have no knowledge of the company.",
-    '- Careers: resumes, interviews, internships, networking, choosing a path.',
+    '- This website. Pages: My journey, Internships (internships and entry-level jobs from LinkedIn and the SJSU Career Center, with an "I applied" button and an application tracker), Resources, Events, Alumni, Assistant.',
+    "- Companies: answer from your general knowledge and be specific and useful: what the company does, typical intern and entry-level roles, the skills they value, and how to prepare. Add one short note that details can be out of date and are worth confirming on the company's careers page.",
+    '- Anything in a student\'s career life: resumes, cover letters, LinkedIn and outreach messages, interview practice (you may run a mock interview, asking one question at a time), internship and job search strategy, networking, choosing a path, skills to learn, and offers and negotiation basics.',
+    '- You may write and improve resume bullets, cover letters and outreach emails.',
+    '',
     'Rules:',
-    '- Stay on those topics. Politely decline unrelated requests such as homework answers, code unrelated to careers, medical, legal or financial advice, or anything harmful.',
+    '- Politely decline unrelated requests (homework answers, unrelated code, medical, legal or financial advice, anything harmful) in one friendly sentence, then steer back to careers.',
     '- Never invent listings, deadlines, links or Braven facts.',
-    '- When recommending a listing, use ONLY items from the context below and mention its title.',
-    '- Be concise (under 180 words unless asked for more) and friendly. Use plain text with short hyphen lists. Do not use markdown formatting such as ** or #.',
-    '- You may use the student profile to personalize answers.',
-    '- Remind the student that you are an AI assistant and can be wrong when giving company or career facts.',
+    '- Recommend a listing only from the context below, and mention its exact title.',
+    '- Use the student profile to personalize answers.',
+    '',
+    'Formatting: Markdown is rendered, so use it naturally. Short paragraphs, **bold** for key terms, bullet or numbered lists, a heading only for long answers, code blocks only for code. No emoji unless the student uses them. Match length to the question: short for simple questions, thorough for planning or writing tasks, never padded. Do not repeat disclaimers; mention that you are an AI and can be wrong only once in a while, when stating company or career facts, not in every reply.',
     '',
     'Student profile:',
     profileLines.length ? profileLines.join('\n') : 'Not provided.',
@@ -256,14 +268,6 @@ export function buildSystemPrompt(profile: ChatProfile | undefined, context: Cha
 
 function stripThinking(text: string): string {
   return text.replace(/<think>[\s\S]*?<\/think>/gi, '').trim();
-}
-
-/** The chat panel shows plain text, so models' habitual **bold** and # headings are removed. */
-function stripMarkdown(text: string): string {
-  return text
-    .replace(/\*\*(.+?)\*\*/g, '$1')
-    .replace(/__(.+?)__/g, '$1')
-    .replace(/^#{1,6}\s+/gm, '');
 }
 
 function buildSources(context: ChatContext, reply: string): ChatSource[] {
@@ -282,7 +286,13 @@ function extractContent(data: unknown): string {
   return typeof content === 'string' ? content : '';
 }
 
-export async function handleChatRequest(input: unknown, options: ChatOptions): Promise<ChatResult> {
+interface PreparedRequest {
+  messages: ChatMessage[];
+  context: ChatContext;
+  systemPrompt: string;
+}
+
+function prepareRequest(input: unknown, options: ChatOptions): PreparedRequest | ChatResult {
   const valid = validate(input);
   if ('error' in valid) return fail(400, valid.error);
 
@@ -295,37 +305,199 @@ export async function handleChatRequest(input: unknown, options: ChatOptions): P
 
   const lastQuestion = valid.messages[valid.messages.length - 1].content;
   const context = retrieveContext(lastQuestion, valid.profile, now);
-  const systemPrompt = buildSystemPrompt(valid.profile, context);
+  return { messages: valid.messages, context, systemPrompt: buildSystemPrompt(valid.profile, context) };
+}
+
+function upstreamInit(
+  options: ChatOptions,
+  prepared: PreparedRequest,
+  stream: boolean,
+  signal: AbortSignal,
+): RequestInit {
+  return {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${options.apiKey}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      model: options.model ?? DEFAULT_MODEL,
+      messages: [{ role: 'system', content: prepared.systemPrompt }, ...prepared.messages],
+      temperature: 0.6,
+      top_p: 0.95,
+      max_tokens: MAX_TOKENS,
+      stream,
+      chat_template_kwargs: { enable_thinking: false },
+    }),
+    signal,
+  };
+}
+
+export async function handleChatRequest(input: unknown, options: ChatOptions): Promise<ChatResult> {
+  const prepared = prepareRequest(input, options);
+  if ('status' in prepared) return prepared;
 
   const fetchFn = options.fetchFn ?? fetch;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
-    const response = await fetchFn(NVIDIA_URL, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${options.apiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: options.model ?? DEFAULT_MODEL,
-        messages: [{ role: 'system', content: systemPrompt }, ...valid.messages],
-        temperature: 0.6,
-        top_p: 0.95,
-        max_tokens: 700,
-        stream: false,
-        chat_template_kwargs: { enable_thinking: false },
-      }),
-      signal: controller.signal,
-    });
+    const response = await fetchFn(NVIDIA_URL, upstreamInit(options, prepared, false, controller.signal));
     if (!response.ok) return fail(502, UPSTREAM_ERROR);
-    const reply = stripMarkdown(stripThinking(extractContent(await response.json())));
+    const reply = stripThinking(extractContent(await response.json()));
     if (!reply) return fail(502, UPSTREAM_ERROR);
-    return { status: 200, body: { reply, sources: buildSources(context, reply) } };
+    return { status: 200, body: { reply, sources: buildSources(prepared.context, reply) } };
   } catch {
     // Upstream details are deliberately not logged or returned: they could echo the key or prompt.
     return fail(502, UPSTREAM_ERROR);
   } finally {
     clearTimeout(timer);
   }
+}
+
+const THINK_OPEN = '<think>';
+const THINK_CLOSE = '</think>';
+
+/** Length of the longest suffix of `text` that is a proper prefix of `tag` (a tag split across chunks). */
+function partialTagLength(text: string, tag: string): number {
+  const lower = text.toLowerCase();
+  for (let length = Math.min(tag.length - 1, lower.length); length > 0; length -= 1) {
+    if (tag.startsWith(lower.slice(lower.length - length))) return length;
+  }
+  return 0;
+}
+
+/** Removes <think>...</think> from streamed text, holding back text that might be a split tag. */
+function createThinkFilter() {
+  let pending = '';
+  let inThink = false;
+  let started = false;
+
+  const emit = (text: string): string => {
+    const visible = started ? text : text.trimStart();
+    if (visible) started = true;
+    return visible;
+  };
+
+  return {
+    push(chunk: string): string {
+      pending += chunk;
+      let out = '';
+      for (;;) {
+        const lower = pending.toLowerCase();
+        const tag = inThink ? THINK_CLOSE : THINK_OPEN;
+        const index = lower.indexOf(tag);
+        if (index >= 0) {
+          if (!inThink) out += pending.slice(0, index);
+          pending = pending.slice(index + tag.length);
+          inThink = !inThink;
+          continue;
+        }
+        const keep = partialTagLength(pending, tag);
+        if (!inThink) out += pending.slice(0, pending.length - keep);
+        pending = pending.slice(pending.length - keep);
+        break;
+      }
+      return emit(out);
+    },
+    flush(): string {
+      const rest = inThink ? '' : pending;
+      pending = '';
+      return emit(rest);
+    },
+  };
+}
+
+function parseSseContent(line: string): { done: boolean; content: string } {
+  const trimmed = line.trim();
+  if (!trimmed.startsWith('data:')) return { done: false, content: '' };
+  const payload = trimmed.slice(5).trim();
+  if (payload === '[DONE]') return { done: true, content: '' };
+  try {
+    const choices = (JSON.parse(payload) as { choices?: unknown })?.choices;
+    if (!Array.isArray(choices)) return { done: false, content: '' };
+    const content = (choices[0] as { delta?: { content?: unknown } } | undefined)?.delta?.content;
+    return { done: false, content: typeof content === 'string' ? content : '' };
+  } catch {
+    return { done: false, content: '' };
+  }
+}
+
+async function* runStream(
+  options: ChatOptions,
+  prepared: PreparedRequest,
+): AsyncGenerator<ChatStreamEvent> {
+  const fetchFn = options.fetchFn ?? fetch;
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), STREAM_TIMEOUT_MS);
+  const onClientAbort = () => controller.abort();
+  if (options.signal?.aborted) controller.abort();
+  options.signal?.addEventListener('abort', onClientAbort);
+
+  let reader: ReadableStreamDefaultReader<Uint8Array> | undefined;
+  try {
+    const response = await fetchFn(NVIDIA_URL, upstreamInit(options, prepared, true, controller.signal));
+    if (!response.ok || !response.body) {
+      yield { type: 'error', error: UPSTREAM_ERROR };
+      return;
+    }
+    reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    const filter = createThinkFilter();
+    let buffer = '';
+    let reply = '';
+    let finished = false;
+
+    const consume = (line: string): string => {
+      const parsed = parseSseContent(line);
+      if (parsed.done) finished = true;
+      return parsed.content ? filter.push(parsed.content) : '';
+    };
+
+    while (!finished) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n');
+      buffer = lines.pop() ?? '';
+      for (const line of lines) {
+        const text = consume(line);
+        if (text) {
+          reply += text;
+          yield { type: 'delta', text };
+        }
+        if (finished) break;
+      }
+    }
+    if (!finished && buffer) {
+      const text = consume(buffer);
+      if (text) {
+        reply += text;
+        yield { type: 'delta', text };
+      }
+    }
+    const tail = filter.flush();
+    if (tail) {
+      reply += tail;
+      yield { type: 'delta', text: tail };
+    }
+    if (!reply.trim()) {
+      yield { type: 'error', error: UPSTREAM_ERROR };
+      return;
+    }
+    yield { type: 'done', sources: buildSources(prepared.context, reply) };
+  } catch {
+    // Upstream details are deliberately not logged or returned: they could echo the key or prompt.
+    yield { type: 'error', error: UPSTREAM_ERROR };
+  } finally {
+    clearTimeout(timer);
+    options.signal?.removeEventListener('abort', onClientAbort);
+    controller.abort();
+    reader?.cancel().catch(() => undefined);
+  }
+}
+
+export async function streamChatRequest(input: unknown, options: ChatOptions): Promise<StreamChatResult> {
+  const prepared = prepareRequest(input, options);
+  if ('status' in prepared) return { status: prepared.status, body: prepared.body as ChatFailure };
+  return { status: 200, events: runStream(options, prepared) };
 }

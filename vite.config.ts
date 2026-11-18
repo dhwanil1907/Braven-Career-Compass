@@ -37,11 +37,34 @@ function chatApiDev(env: Record<string, string>): Plugin {
         }
         const input = await readJsonBody(request);
         const chat = await server.ssrLoadModule('/src/lib/chat/server.ts');
-        const { status, body } = await chat.handleChatRequest(input, {
+        const options = {
           apiKey: env.NVIDIA_API_KEY,
           model: env.NVIDIA_MODEL || undefined,
           clientId: request.socket.remoteAddress ?? 'dev',
-        });
+        };
+
+        if ((input as { stream?: unknown } | null)?.stream === true) {
+          const aborter = new AbortController();
+          response.on('close', () => aborter.abort());
+          const result = await chat.streamChatRequest(input, { ...options, signal: aborter.signal });
+          if (!('events' in result)) {
+            response.statusCode = result.status;
+            response.setHeader('Content-Type', 'application/json');
+            response.end(JSON.stringify(result.body));
+            return;
+          }
+          response.statusCode = 200;
+          response.setHeader('Content-Type', 'application/x-ndjson; charset=utf-8');
+          response.setHeader('Cache-Control', 'no-store');
+          response.flushHeaders();
+          for await (const event of result.events as AsyncIterable<unknown>) {
+            response.write(`${JSON.stringify(event)}\n`);
+          }
+          response.end();
+          return;
+        }
+
+        const { status, body } = await chat.handleChatRequest(input, options);
         response.statusCode = status;
         response.setHeader('Content-Type', 'application/json');
         response.end(JSON.stringify(body));
