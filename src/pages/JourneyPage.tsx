@@ -141,6 +141,7 @@ export function JourneyPage() {
 
       <div className="mx-auto max-w-7xl space-y-14 px-4 pt-10 sm:px-6 lg:px-8">
         <DueSoonBanner />
+        <MomentumSection />
         <section aria-labelledby="roadmap-heading" className="grid gap-8 lg:grid-cols-3">
           <div className="lg:col-span-1">
             <h2 id="roadmap-heading" className="text-2xl font-semibold text-navy-900">
@@ -170,8 +171,6 @@ export function JourneyPage() {
             <RoadmapList steps={steps} completedIds={completedStepIds} onToggle={toggleStep} />
           </div>
         </section>
-
-        <MomentumSection />
 
         <section id="saved" className="scroll-mt-24" aria-labelledby="saved-heading">
           <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
