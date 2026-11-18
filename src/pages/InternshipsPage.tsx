@@ -67,7 +67,8 @@ export function InternshipsPage() {
       />
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <p className="text-sm text-slate-600">
-          Listings come from the SJSU Career Center and partner postings collected in this catalog.
+          Listings come from the SJSU Career Center and from LinkedIn searches near San José. Each
+          one links to its original posting, so confirm it is still open before you apply.
           They are not a live feed, so check each posting for current openings and deadlines.
         </p>
 

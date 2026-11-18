@@ -1,4 +1,5 @@
 import type { Resource } from '../types';
+import { linkedinResources } from './linkedinCatalog';
 import { sjsuResources } from './sjsuCatalog';
 import { MAJORS } from './taxonomy';
 
@@ -338,6 +339,7 @@ export const resources: Resource[] = [
   ...curatedResources,
   // A hand-written entry wins if a scraped listing has the same id.
   ...sjsuResources.filter((resource) => !curatedIds.has(resource.id)),
+  ...linkedinResources,
 ];
 
 export function getResourceById(id: string): Resource | undefined {
