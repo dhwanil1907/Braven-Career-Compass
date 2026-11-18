@@ -1,4 +1,5 @@
 import type {
+  AcademicYear,
   CareerEvent,
   CareerGoal,
   EventType,
@@ -8,7 +9,7 @@ import type {
   RoadmapStep,
   UserProfile,
 } from '../types';
-import { recommendEvents, scoreResource } from './recommend';
+import { getMatchReasons, recommendEvents, scoreResource } from './recommend';
 
 type StepKey = 'resume' | 'internships' | 'jobs' | 'interview' | 'mentor' | 'network' | 'explore' | 'event';
 
@@ -91,7 +92,43 @@ const CHALLENGE_PRIORITY: Record<NonNullable<UserProfile['challenge']>, StepKey[
   'Hard to stay on track': ['event'],
 };
 
+/** Where a student is in their degree decides what is worth doing first. */
+const YEAR_PRIORITY: Record<AcademicYear, StepKey[]> = {
+  'First year': ['explore', 'event'],
+  'Second year': ['explore', 'internships'],
+  'Third year': ['internships', 'resume'],
+  'Fourth year or later': ['jobs', 'interview'],
+  'Recent graduate': ['jobs', 'resume'],
+};
+
 const MAX_STEPS = 5;
+
+/** Step title written for this student; falls back to the generic title when the profile is thin. */
+function personaliseTitle(rule: StepRule, profile: UserProfile): string {
+  const { major, year } = profile;
+  const interest = profile.interests[0];
+  switch (rule.key) {
+    case 'resume':
+      return year === 'First year' ? 'Build your first resume' : rule.title;
+    case 'internships':
+      return major ? `Explore ${major} internships` : rule.title;
+    case 'jobs':
+      return major ? `Explore entry-level ${major} roles` : rule.title;
+    case 'explore':
+      return interest ? `Explore ${interest} careers` : rule.title;
+    default:
+      return rule.title;
+  }
+}
+
+/** Adds why this specific item was picked, using the match reasons the catalog already computes. */
+function personaliseWhy(rule: StepRule, resource: Resource | undefined, profile: UserProfile) {
+  if (!resource) return rule.why;
+  const reasons = getMatchReasons(resource, profile)
+    .filter((reason) => !reason.startsWith('Fits your goal'))
+    .slice(0, 2);
+  return reasons.length > 0 ? `${rule.why} Picked for you: ${reasons.join(', ')}.` : rule.why;
+}
 
 /** Moves the keys the student said they struggle with to the front, keeping the rest in order. */
 function prioritise(sequence: StepKey[], promoted: StepKey[]): StepKey[] {
@@ -113,9 +150,10 @@ function bestResource(
       (first, second) =>
         // Types are listed in order of preference, so the first-listed type always wins.
         types.indexOf(first.resource.resourceType) - types.indexOf(second.resource.resourceType) ||
-        // Hand-picked entries beat scraped ones of the same type.
-        Number(Boolean(first.resource.scraped)) - Number(Boolean(second.resource.scraped)) ||
+        // Fit to the student comes before source, so a strong match is never beaten by a weak one.
         second.score - first.score ||
+        // Hand-picked entries beat scraped ones with the same score.
+        Number(Boolean(first.resource.scraped)) - Number(Boolean(second.resource.scraped)) ||
         Number(second.resource.featured) - Number(first.resource.featured) ||
         first.resource.title.localeCompare(second.resource.title),
     )[0]?.resource;
@@ -157,8 +195,12 @@ export function buildRoadmap(
   now: Date = new Date(),
 ): RoadmapStep[] {
   if (profile.goal === null) return [];
+  const byYear = profile.year
+    ? prioritise(GOAL_SEQUENCES[profile.goal], YEAR_PRIORITY[profile.year])
+    : GOAL_SEQUENCES[profile.goal];
+  // The stated challenge is applied last so it always outranks the year.
   const promoted = profile.challenge ? CHALLENGE_PRIORITY[profile.challenge] : [];
-  const sequence = prioritise(GOAL_SEQUENCES[profile.goal], promoted);
+  const sequence = prioritise(byYear, promoted);
 
   const usedResources = new Set<string>();
   const usedEvents = new Set<string>();
@@ -175,7 +217,7 @@ export function buildRoadmap(
       usedEvents.add(event.id);
       steps.push({
         id: `${key}:${event.id}`,
-        title: rule.title,
+        title: personaliseTitle(rule, profile),
         why: rule.why,
         actionLabel: event.title,
         href: `/events?event=${event.id}`,
@@ -190,8 +232,8 @@ export function buildRoadmap(
       usedResources.add(resource.id);
       steps.push({
         id: `${key}:${resource.id}`,
-        title: rule.title,
-        why: rule.why,
+        title: personaliseTitle(rule, profile),
+        why: personaliseWhy(rule, resource, profile),
         actionLabel: resource.title,
         href: `/resources/${resource.id}`,
         kind: 'resource',

@@ -35,6 +35,40 @@ describe('buildRoadmap', () => {
     expect(resumeFirst[0].id.startsWith('resume:')).toBe(true);
   });
 
+  it('orders steps by academic year when no challenge is set', () => {
+    const base = { ...MAYA_PROFILE, goal: 'First internship' as const, challenge: null };
+    const first = buildRoadmap({ ...base, year: 'First year' }, resources, events, now);
+    const senior = buildRoadmap({ ...base, year: 'Fourth year or later' }, resources, events, now);
+    expect(first[0].id.startsWith('explore:') || first[0].id.startsWith('event:')).toBe(true);
+    expect(senior.map((step) => step.id)).not.toEqual(first.map((step) => step.id));
+  });
+
+  it('keeps the stated challenge ahead of the year ordering', () => {
+    const steps = buildRoadmap(
+      { ...MAYA_PROFILE, year: 'First year', challenge: 'Resume or interviews need work' },
+      resources,
+      events,
+      now,
+    );
+    expect(steps[0].id.startsWith('resume:')).toBe(true);
+  });
+
+  it('writes step titles from the major and interests', () => {
+    const steps = buildRoadmap(
+      { ...MAYA_PROFILE, major: 'Computer Science', goal: 'First internship', challenge: null },
+      resources,
+      events,
+      now,
+    );
+    const internship = steps.find((step) => step.id.startsWith('internships:'));
+    expect(internship?.title).toBe('Explore Computer Science internships');
+  });
+
+  it('explains why a resource was picked using its match reasons', () => {
+    const steps = buildRoadmap(MAYA_PROFILE, resources, events, now);
+    expect(steps.some((step) => step.why.includes('Picked for you:'))).toBe(true);
+  });
+
   it('is deterministic for the same profile', () => {
     expect(buildRoadmap(MAYA_PROFILE, resources, events, now)).toEqual(
       buildRoadmap(MAYA_PROFILE, resources, events, now),
