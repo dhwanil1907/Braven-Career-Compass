@@ -177,7 +177,9 @@ describe('scoreMatch denominator and gate', () => {
 
 describe('labelForPercent', () => {
   it('maps band boundaries', () => {
-    expect(labelForPercent(49)).toBeNull();
+    expect(labelForPercent(34)).toBeNull();
+    expect(labelForPercent(35)).toBe('Possible match');
+    expect(labelForPercent(49)).toBe('Possible match');
     expect(labelForPercent(50)).toBe('Partly matches');
     expect(labelForPercent(59)).toBe('Partly matches');
     expect(labelForPercent(60)).toBe('Strong match');
@@ -187,12 +189,12 @@ describe('labelForPercent', () => {
   });
 
   it('shows no label below the recommendation cutoff', () => {
-    expect(labelForPercent(25)).toBeNull();
+    expect(labelForPercent(20)).toBeNull();
   });
 
   it('keeps the lowest band at the recommendation cutoff', () => {
     expect(BANDS[BANDS.length - 1].min).toBe(MIN_RECOMMENDED_PERCENT);
-    expect(MIN_RECOMMENDED_PERCENT).toBe(50);
+    expect(MIN_RECOMMENDED_PERCENT).toBe(35);
   });
 });
 

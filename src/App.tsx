@@ -11,6 +11,7 @@ import { useApp } from './context/useApp';
 const AlumniPage = lazy(() => import('./pages/AlumniPage').then((m) => ({ default: m.AlumniPage })));
 const EventsPage = lazy(() => import('./pages/EventsPage').then((m) => ({ default: m.EventsPage })));
 const HomePage = lazy(() => import('./pages/HomePage').then((m) => ({ default: m.HomePage })));
+const InternshipsPage = lazy(() => import('./pages/InternshipsPage').then((m) => ({ default: m.InternshipsPage })));
 const JourneyPage = lazy(() => import('./pages/JourneyPage').then((m) => ({ default: m.JourneyPage })));
 const OnboardingPage = lazy(() => import('./pages/OnboardingPage').then((m) => ({ default: m.OnboardingPage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
@@ -68,6 +69,7 @@ export default function App() {
             <Route index element={<Page><HomeRoute /></Page>} />
             <Route element={<RequireAccess />}>
               <Route path="start" element={<Page><OnboardingPage /></Page>} />
+              <Route path="internships" element={<Page><InternshipsPage /></Page>} />
               <Route path="resources" element={<Page><ResourceExplorerPage /></Page>} />
               <Route path="resources/:id" element={<Page><ResourceDetailPage /></Page>} />
               <Route path="events" element={<Page><EventsPage /></Page>} />

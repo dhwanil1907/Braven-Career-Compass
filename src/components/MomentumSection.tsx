@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
-import { Award, CalendarCheck, Flame, Send } from 'lucide-react';
+import { CalendarCheck, Flame, Send } from 'lucide-react';
 import { useApp } from '../context/useApp';
 import { events } from '../data/events';
 import { resources } from '../data/resources';
-import { attendedWeekStreak, getBadges } from '../lib/progress';
+import { attendedWeekStreak } from '../lib/progress';
 
 function Stat({
   icon: Icon,
@@ -38,8 +38,6 @@ export function MomentumSection() {
     [appliedResourceIds],
   );
   const streak = attendedWeekStreak(attendedEvents);
-  const badges = getBadges(attendedEvents.length, appliedCount);
-  const earnedCount = badges.filter((badge) => badge.earned).length;
   const total = attendedEvents.length + appliedCount;
 
   const message =
@@ -63,27 +61,6 @@ export function MomentumSection() {
         <Stat icon={Flame} value={streak} label={streak === 1 ? 'Week in a row' : 'Weeks in a row'} />
       </div>
 
-      <h3 className="mt-6 flex items-center gap-2 text-sm font-semibold text-navy-900">
-        <Award className="h-4 w-4 text-coral-ink" aria-hidden="true" />
-        Badges ({earnedCount} of {badges.length})
-      </h3>
-      <ul className="mt-3 grid gap-3 sm:grid-cols-3">
-        {badges.map((badge) => (
-          <li
-            key={badge.id}
-            className={`rounded-xl border px-4 py-3 ${
-              badge.earned
-                ? 'border-coral-600 bg-coral-600 text-white'
-                : 'border-dashed border-slate-300 text-slate-600'
-            }`}
-          >
-            <span className="block text-sm font-semibold">{badge.label}</span>
-            <span className={`block text-sm ${badge.earned ? 'text-white/90' : 'text-slate-500'}`}>
-              {badge.earned ? 'Earned' : `To earn: ${badge.hint.toLowerCase()}`}
-            </span>
-          </li>
-        ))}
-      </ul>
     </section>
   );
 }

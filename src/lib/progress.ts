@@ -25,27 +25,6 @@ export function attendedWeekStreak(attended: CareerEvent[], now: Date = new Date
   return streak;
 }
 
-export interface Badge {
-  id: string;
-  label: string;
-  /** What earns it, shown while it is still locked. */
-  hint: string;
-  earned: boolean;
-}
-
-export function getBadges(attendedCount: number, appliedCount: number): Badge[] {
-  return [
-    { id: 'first-event', label: 'First event', hint: 'Attend one event', earned: attendedCount >= 1 },
-    { id: 'three-events', label: 'Three events', hint: 'Attend three events', earned: attendedCount >= 3 },
-    {
-      id: 'first-application',
-      label: 'First application',
-      hint: 'Mark one resource as applied',
-      earned: appliedCount >= 1,
-    },
-  ];
-}
-
 export interface DueSoonItem {
   kind: 'resource' | 'event';
   id: string;

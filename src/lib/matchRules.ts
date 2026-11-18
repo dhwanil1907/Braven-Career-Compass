@@ -22,12 +22,13 @@ export const SPECIFICITY_FLOOR = 0.6;
 export const ADJACENT_CREDIT = 0.5;
 
 /** Listings below this percent are not recommended and show no label. */
-export const MIN_RECOMMENDED_PERCENT = 50;
+export const MIN_RECOMMENDED_PERCENT = 35;
 
 export const BANDS: { min: number; label: string }[] = [
   { min: 80, label: 'Excellent match' },
   { min: 60, label: 'Strong match' },
-  { min: MIN_RECOMMENDED_PERCENT, label: 'Partly matches' },
+  { min: 50, label: 'Partly matches' },
+  { min: MIN_RECOMMENDED_PERCENT, label: 'Possible match' },
 ];
 
 /**
@@ -63,6 +64,7 @@ export const CHALLENGE_FIT: Record<Challenge, string[]> = {
   'Resume or interviews need work': ['Resume Help', 'Interview Prep', 'Workshop'],
   'Need connections and mentors': ['Networking', 'Mentorship', 'Panel', 'Career Fair'],
   'Hard to stay on track': ['Workshop', 'Mentorship'],
+  'Lack of experience': ['Workshop', 'Mentorship', 'Career Exploration', 'Internship'],
 };
 
 export const YEAR_FIT: Record<AcademicYear, string[]> = {

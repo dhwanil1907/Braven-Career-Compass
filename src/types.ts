@@ -138,7 +138,8 @@ export type Challenge =
   | 'Hard to find relevant opportunities'
   | 'Resume or interviews need work'
   | 'Need connections and mentors'
-  | 'Hard to stay on track';
+  | 'Hard to stay on track'
+  | 'Lack of experience';
 
 export type ReferralSource =
   | 'Braven course or coach'

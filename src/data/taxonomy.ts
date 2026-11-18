@@ -136,6 +136,7 @@ export const CHALLENGES: Challenge[] = [
   'Resume or interviews need work',
   'Need connections and mentors',
   'Hard to stay on track',
+  'Lack of experience',
 ];
 
 export const REFERRAL_SOURCES: ReferralSource[] = [

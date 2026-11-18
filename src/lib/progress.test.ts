@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { CareerEvent, Resource } from '../types';
-import { attendedWeekStreak, getBadges, getDueSoon } from './progress';
+import { attendedWeekStreak, getDueSoon } from './progress';
 
 // Wednesday, Nov 4 2026, noon local time
 const NOW = new Date(2026, 10, 4, 12, 0);
@@ -70,16 +70,6 @@ describe('attendedWeekStreak', () => {
 
   it('ignores events older than last week', () => {
     expect(attendedWeekStreak([eventOn('old', 2026, 9, 14)], NOW)).toBe(0);
-  });
-});
-
-describe('getBadges', () => {
-  it('earns badges at the right counts', () => {
-    const earned = (events: number, applied: number) =>
-      getBadges(events, applied).filter((badge) => badge.earned).map((badge) => badge.id);
-    expect(earned(0, 0)).toEqual([]);
-    expect(earned(1, 0)).toEqual(['first-event']);
-    expect(earned(3, 1)).toEqual(['first-event', 'three-events', 'first-application']);
   });
 });
 

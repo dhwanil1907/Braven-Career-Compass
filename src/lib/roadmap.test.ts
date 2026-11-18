@@ -35,6 +35,27 @@ describe('buildRoadmap', () => {
     expect(resumeFirst[0].id.startsWith('resume:')).toBe(true);
   });
 
+  it('puts an experience step first for students who lack experience', () => {
+    const steps = buildRoadmap(
+      { ...MAYA_PROFILE, goal: 'First internship', challenge: 'Lack of experience' },
+      resources,
+      events,
+      now,
+    );
+    expect(steps[0].id.startsWith('experience:')).toBe(true);
+  });
+
+  it('puts interview prep ahead of the resume step for a first internship', () => {
+    const ids = buildRoadmap(
+      { ...MAYA_PROFILE, year: null, goal: 'First internship', challenge: null },
+      resources,
+      events,
+      now,
+    ).map((step) => step.id.split(':')[0]);
+    expect(ids.indexOf('interview')).toBeGreaterThanOrEqual(0);
+    expect(ids.indexOf('interview')).toBeLessThan(ids.indexOf('resume'));
+  });
+
   it('orders steps by academic year when no challenge is set', () => {
     const base = { ...MAYA_PROFILE, goal: 'First internship' as const, challenge: null };
     const first = buildRoadmap({ ...base, year: 'First year' }, resources, events, now);

@@ -9,6 +9,7 @@ import { getResourceById } from '../data/resources';
 
 const NAV_LINKS = [
   { label: 'My journey', to: '/' },
+  { label: 'Internships', to: '/internships' },
   { label: 'Resources', to: '/resources' },
   { label: 'Events', to: '/events' },
   { label: 'Alumni', to: '/alumni' },

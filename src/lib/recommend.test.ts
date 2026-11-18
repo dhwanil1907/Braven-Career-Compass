@@ -128,9 +128,14 @@ describe('recommendResources', () => {
     expect(recommendResources(resources, emptyProfile)).toEqual([]);
   });
 
-  it('orders by score desc, dropping listings under the 50% cutoff', () => {
-    // a-interest and b-interest score 45% (interest only), so they are not recommended.
-    expect(recommendResources(resources, csProfile).map((r) => r.id)).toEqual(['top', 'cs-only']);
+  it('orders by score desc, dropping listings under the 35% cutoff', () => {
+    // a-interest and b-interest score 45% (interest only): above the 35% cutoff, below the 50% band.
+    expect(recommendResources(resources, csProfile).map((r) => r.id)).toEqual([
+      'top',
+      'cs-only',
+      'a-interest',
+      'b-interest',
+    ]);
   });
 
   it('respects the limit', () => {
@@ -174,10 +179,12 @@ describe('recommendEvents', () => {
     makeEvent({ id: 'unrelated', majors: ['Design'] }),
   ];
 
-  it('excludes past, unmatched and under-50% events, sorting ties by start', () => {
+  it('excludes past, unmatched and under-35% events, sorting ties by start', () => {
     expect(recommendEvents(events, csProfile, now).map((e) => e.id)).toEqual([
       'major',
       'major-later',
+      'sooner-interest',
+      'later-interest',
     ]);
   });
 

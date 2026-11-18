@@ -11,7 +11,7 @@ import type {
 } from '../types';
 import { getMatchReasons, recommendEvents, scoreResource } from './recommend';
 
-type StepKey = 'resume' | 'internships' | 'jobs' | 'interview' | 'mentor' | 'network' | 'explore' | 'event';
+type StepKey = 'resume' | 'internships' | 'jobs' | 'interview' | 'mentor' | 'network' | 'explore' | 'event' | 'experience';
 
 interface StepRule {
   key: StepKey;
@@ -74,14 +74,21 @@ const RULES: Record<StepKey, StepRule> = {
     resourceTypes: ['Workshop'],
     eventTypes: ['Workshop', 'Career Fair', 'Networking', 'Panel', 'Info Session'],
   },
+  experience: {
+    key: 'experience',
+    title: 'Build experience with an early-career program',
+    why: 'Hands-on experience from a program or workshop makes internship applications much stronger.',
+    resourceTypes: ['Workshop', 'Mentorship'],
+    eventTypes: ['Workshop'],
+  },
 };
 
 const GOAL_SEQUENCES: Record<CareerGoal, StepKey[]> = {
-  'First internship': ['resume', 'internships', 'event', 'mentor', 'interview'],
-  'First job after graduation': ['resume', 'jobs', 'interview', 'network', 'event'],
-  'Explore career options': ['explore', 'event', 'mentor', 'resume', 'internships'],
-  'Prepare for graduate school': ['explore', 'resume', 'mentor', 'event', 'network'],
-  'Grow my network': ['network', 'mentor', 'event', 'resume', 'interview'],
+  'First internship': ['interview', 'resume', 'internships', 'event', 'mentor', 'experience'],
+  'First job after graduation': ['interview', 'resume', 'jobs', 'network', 'event', 'experience'],
+  'Explore career options': ['explore', 'event', 'mentor', 'resume', 'internships', 'experience'],
+  'Prepare for graduate school': ['explore', 'resume', 'mentor', 'event', 'network', 'experience'],
+  'Grow my network': ['network', 'mentor', 'event', 'interview', 'resume', 'experience'],
 };
 
 const CHALLENGE_PRIORITY: Record<NonNullable<UserProfile['challenge']>, StepKey[]> = {
@@ -90,6 +97,7 @@ const CHALLENGE_PRIORITY: Record<NonNullable<UserProfile['challenge']>, StepKey[
   'Resume or interviews need work': ['resume', 'interview'],
   'Need connections and mentors': ['mentor', 'network'],
   'Hard to stay on track': ['event'],
+  'Lack of experience': ['experience', 'mentor'],
 };
 
 /** Where a student is in their degree decides what is worth doing first. */
@@ -130,9 +138,9 @@ function personaliseWhy(rule: StepRule, resource: Resource | undefined, profile:
   return reasons.length > 0 ? `${rule.why} Picked for you: ${reasons.join(', ')}.` : rule.why;
 }
 
-/** Moves the keys the student said they struggle with to the front, keeping the rest in order. */
+/** Moves the promoted keys to the front in their promoted order, keeping the rest in sequence order. */
 function prioritise(sequence: StepKey[], promoted: StepKey[]): StepKey[] {
-  const front = sequence.filter((key) => promoted.includes(key));
+  const front = promoted.filter((key) => sequence.includes(key));
   const rest = sequence.filter((key) => !promoted.includes(key));
   return [...front, ...rest];
 }
