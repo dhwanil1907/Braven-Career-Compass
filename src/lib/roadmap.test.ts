@@ -2,7 +2,9 @@ import { describe, expect, it } from 'vitest';
 import { events } from '../data/events';
 import { DEFAULT_PROFILE, MAYA_PROFILE } from '../data/persona';
 import { resources } from '../data/resources';
+import personaData from './__fixtures__/relevance-personas.json';
 import { buildRoadmap, countCompleted, getNextStep } from './roadmap';
+import type { UserProfile } from '../types';
 
 const now = new Date();
 
@@ -88,6 +90,47 @@ describe('buildRoadmap', () => {
   it('explains why a resource was picked using its match reasons', () => {
     const steps = buildRoadmap(MAYA_PROFILE, resources, events, now);
     expect(steps.some((step) => step.why.includes('Picked for you:'))).toBe(true);
+  });
+
+  describe('accuracy across the judged personas', () => {
+    const personas = personaData as unknown as UserProfile[];
+    const roadmaps = personas.map((persona) => ({
+      persona,
+      steps: buildRoadmap({ ...persona, onboarded: true }, resources, events, now),
+    }));
+
+    it('never defaults a student to a group for a specific identity', () => {
+      const identity = /\b(black|indigenous|latinx?|hispanic|women|lgbtq\+?|queer)\b|ostem/i;
+      for (const { steps } of roadmaps) {
+        for (const step of steps) expect(step.actionLabel).not.toMatch(identity);
+      }
+    });
+
+    it('only names a major in a title when the linked listing is about that major', () => {
+      for (const { persona, steps } of roadmaps) {
+        const step = steps.find((item) => item.id.startsWith('internships:'));
+        if (!step?.title.includes(persona.major ?? '#')) continue;
+        const listing = resources.find((resource) => resource.id === step.targetId);
+        expect(listing?.majors).toContain(persona.major);
+      }
+    });
+
+    it('does not link to contract roles or student clubs for internships and exploring', () => {
+      for (const { steps } of roadmaps) {
+        for (const step of steps) {
+          if (step.id.startsWith('internships:')) expect(step.actionLabel).not.toMatch(/contract/i);
+          if (step.id.startsWith('explore:')) expect(step.actionLabel).not.toMatch(/association|\bclub\b/i);
+        }
+      }
+    });
+
+    it('gives event steps a date and a format', () => {
+      for (const { steps } of roadmaps) {
+        for (const step of steps.filter((item) => item.kind === 'event')) {
+          expect(step.why).toMatch(/\b(virtual|in-person|hybrid)\.$/);
+        }
+      }
+    });
   });
 
   it('is deterministic for the same profile', () => {
