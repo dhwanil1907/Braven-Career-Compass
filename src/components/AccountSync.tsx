@@ -23,6 +23,7 @@ export function AccountSync() {
     completedStepIds,
     attendedEventIds,
     appliedResourceIds,
+    applications,
     referralSource,
     restoreFromAccount,
   } = useApp();
@@ -41,6 +42,7 @@ export function AccountSync() {
     completedStepIds,
     attendedEventIds,
     appliedResourceIds,
+    applications,
     referralSource,
   });
 

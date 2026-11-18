@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { ArrowRight, Bookmark, Check, Pencil, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { ApplicationTracker } from '../components/ApplicationTracker';
 import { EmptyState } from '../components/EmptyState';
 import { EventCard } from '../components/EventCard';
 import { EventDetailsModal } from '../components/EventDetailsModal';
@@ -271,6 +272,8 @@ export function JourneyPage() {
             />
           )}
         </section>
+
+        <ApplicationTracker />
       </div>
 
       <EventDetailsModal event={selectedEvent} onClose={() => setSelectedEvent(null)} />

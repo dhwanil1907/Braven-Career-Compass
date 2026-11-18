@@ -152,6 +152,8 @@ export type ReferralSource =
 
 export interface UserProfile {
   major: Major | null;
+  /** Optional second field of study; widens which interests are suggested. */
+  minor?: Major | null;
   interests: CareerInterest[];
   year: AcademicYear | null;
   goal: CareerGoal | null;
@@ -215,4 +217,12 @@ export interface AlumniProfile {
   schedulingUrl?: string;
   isSample: boolean;
   consentGiven: boolean;
+}
+
+export type ApplicationStatus = 'Applied' | 'Interviewing' | 'Offer' | 'Rejected';
+
+export interface ApplicationRecord {
+  /** ISO 8601 timestamp of when the student marked the resource as applied. */
+  appliedAt: string;
+  status: ApplicationStatus;
 }

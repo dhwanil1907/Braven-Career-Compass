@@ -5,6 +5,7 @@ import {
   Building2,
   CalendarClock,
   Compass,
+  ExternalLink,
   FileText,
   GraduationCap,
   HeartHandshake,
@@ -20,6 +21,7 @@ import { relativeDayLabel } from '../lib/dates';
 import { Badge, DemoBadge } from './Badge';
 import { BookmarkButton } from './BookmarkButton';
 import { MatchBadge } from './MatchBadge';
+import { ProgressToggle } from './ProgressToggle';
 
 const TYPE_ICONS: Record<ResourceType, LucideIcon> = {
   Job: Briefcase,
@@ -32,7 +34,18 @@ const TYPE_ICONS: Record<ResourceType, LucideIcon> = {
   'Career Exploration': Compass,
 };
 
-export function ResourceCard({ resource, reasons }: { resource: Resource; reasons?: string[] }) {
+export function ResourceCard({
+  resource,
+  reasons,
+  showMatch = true,
+  listing = false,
+}: {
+  /** Internship and job cards link straight to the original posting and offer "I applied". */
+  listing?: boolean;
+  resource: Resource;
+  reasons?: string[];
+  showMatch?: boolean;
+}) {
   const TypeIcon = TYPE_ICONS[resource.resourceType];
 
   return (
@@ -49,7 +62,7 @@ export function ResourceCard({ resource, reasons }: { resource: Resource; reason
           {resource.resourceType}
         </span>
         {resource.isDemo && <DemoBadge />}
-        <MatchBadge item={resource} />
+        {showMatch && <MatchBadge item={resource} />}
       </div>
 
       <h3 className="mt-3 font-display text-xl leading-snug text-navy-900">
@@ -97,7 +110,7 @@ export function ResourceCard({ resource, reasons }: { resource: Resource; reason
         </ul>
       )}
 
-      {reasons && reasons.length > 0 && (
+      {showMatch && reasons && reasons.length > 0 && (
         <p className="mt-3 flex items-start gap-1.5 text-xs font-medium text-teal-700">
           <Sparkles className="mt-px h-3.5 w-3.5 shrink-0" aria-hidden="true" />
           <span>Matches: {reasons.join(', ')}</span>
@@ -106,21 +119,41 @@ export function ResourceCard({ resource, reasons }: { resource: Resource; reason
 
       <div className="mt-auto pt-5">
         <div
-          className="flex items-center justify-between gap-3 border-t-2 border-dotted
+          className="flex flex-wrap items-center justify-between gap-3 border-t-2 border-dotted
             border-coral-400 pt-4"
         >
-          <Link
-            to={`/resources/${resource.id}`}
-            className="group inline-flex h-9 items-center gap-1.5 rounded-full bg-coral-600 px-4
-              text-sm font-semibold text-white transition hover:bg-navy-950"
-          >
-            View Resource
-            <ArrowRight
-              className="h-4 w-4 transition group-hover:translate-x-0.5"
-              aria-hidden="true"
-            />
-          </Link>
-          <BookmarkButton kind="resource" id={resource.id} />
+          {listing ? (
+            <a
+              href={resource.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex h-10 items-center gap-1.5 rounded-full bg-coral-600 px-4
+                text-sm font-semibold text-white transition hover:bg-navy-950"
+            >
+              View listing
+              <ExternalLink
+                className="h-4 w-4 transition group-hover:translate-x-0.5"
+                aria-hidden="true"
+              />
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
+          ) : (
+            <Link
+              to={`/resources/${resource.id}`}
+              className="group inline-flex h-9 items-center gap-1.5 rounded-full bg-coral-600 px-4
+                text-sm font-semibold text-white transition hover:bg-navy-950"
+            >
+              View Resource
+              <ArrowRight
+                className="h-4 w-4 transition group-hover:translate-x-0.5"
+                aria-hidden="true"
+              />
+            </Link>
+          )}
+          <div className="flex items-center gap-2">
+            {listing && <ProgressToggle kind="applied" id={resource.id} />}
+            <BookmarkButton kind="resource" id={resource.id} />
+          </div>
         </div>
       </div>
     </article>

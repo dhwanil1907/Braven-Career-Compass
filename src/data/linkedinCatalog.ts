@@ -1,5 +1,5 @@
 import type { Resource } from '../types';
-import { linkedinJobToResource } from '../lib/linkedinJobs';
+import { linkedinJobToResource, selectLinkedinJobs } from '../lib/linkedinJobs';
 import type { LinkedinJob } from '../lib/linkedinJobs';
 import snapshot from './scraped/linkedin-internships.json';
 
@@ -9,6 +9,6 @@ import snapshot from './scraped/linkedin-internships.json';
  */
 export const LINKEDIN_SCRAPED_AT = snapshot.scrapedAt;
 
-export const linkedinResources: Resource[] = (snapshot.jobs as LinkedinJob[]).map((job) =>
-  linkedinJobToResource(job, snapshot.scrapedAt),
+export const linkedinResources: Resource[] = selectLinkedinJobs(snapshot.jobs as LinkedinJob[]).map(
+  (job) => linkedinJobToResource(job, snapshot.scrapedAt),
 );

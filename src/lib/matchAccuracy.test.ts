@@ -18,7 +18,9 @@ import { scoreMatch, type MatchProfile } from './matchScore';
 type Persona = MatchProfile & { id: string };
 const personas = personaData as unknown as Persona[];
 const gold = goldData as Record<string, Record<string, number>>;
-const listings = [...resources, ...events];
+// LinkedIn listings were added after the judge graded the catalog, so they have no labels and
+// would all count as "not relevant". They are left out until they are graded.
+const listings = [...resources.filter((resource) => !resource.tags.includes('linkedin')), ...events];
 const gain = (grade: number) => 2 ** grade - 1;
 
 function discountedGain(grades: number[]): number {

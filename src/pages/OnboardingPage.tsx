@@ -8,6 +8,7 @@ import {
   CHALLENGES,
   INTEREST_GROUPS,
   MAJOR_GROUPS,
+  interestGroupsFor,
   REFERRAL_SOURCES,
 } from '../data/taxonomy';
 import type {
@@ -105,6 +106,8 @@ export function OnboardingPage() {
   const { profile, updateProfile, referralSource, setReferralSource } = useApp();
   const [step, setStep] = useState(0);
   const [major, setMajor] = useState<Major | null>(profile.major);
+  const [minor, setMinor] = useState<Major | null>(profile.minor ?? null);
+  const [showAllInterests, setShowAllInterests] = useState(false);
   const [year, setYear] = useState<AcademicYear | null>(profile.year);
   const [goal, setGoal] = useState<CareerGoal | null>(profile.goal);
   const [interests, setInterests] = useState<CareerInterest[]>(profile.interests);
@@ -120,6 +123,22 @@ export function OnboardingPage() {
           : previous,
     );
 
+  const interestGroups = showAllInterests ? INTEREST_GROUPS : interestGroupsFor([major, minor]);
+  const isNarrowed = interestGroups !== INTEREST_GROUPS;
+
+  const handleMajorSelect = (option: Major) => {
+    setMajor(option);
+    if (minor === option) setMinor(null);
+    setInterests([]);
+  };
+
+  const handleMinorSelect = (option: Major) => {
+    const next = minor === option ? null : option;
+    setMinor(next);
+    const allowed = new Set(interestGroupsFor([major, next]).flatMap((group) => group.options));
+    setInterests((previous) => previous.filter((interest) => allowed.has(interest)));
+  };
+
   const canContinue = [major !== null && year !== null, goal !== null, challenge !== null][step];
   const isLast = step === STEP_COUNT - 1;
 
@@ -128,7 +147,7 @@ export function OnboardingPage() {
       setStep(step + 1);
       return;
     }
-    updateProfile({ major, year, goal, interests, challenge, onboarded: true });
+    updateProfile({ major, minor, year, goal, interests, challenge, onboarded: true });
     setReferralSource(referral);
     navigate('/');
   };
@@ -167,7 +186,14 @@ export function OnboardingPage() {
               <GroupedChips
                 groups={MAJOR_GROUPS}
                 isSelected={(option) => major === option}
-                onSelect={setMajor}
+                onSelect={handleMajorSelect}
+              />
+            </Question>
+            <Question title="Do you have a minor?" hint="Optional. Tap again to clear." grouped>
+              <GroupedChips
+                groups={MAJOR_GROUPS.filter((group) => group.label !== 'Other')}
+                isSelected={(option) => minor === option}
+                onSelect={handleMinorSelect}
               />
             </Question>
             <Question title="Where are you in school?">
@@ -196,14 +222,25 @@ export function OnboardingPage() {
             </Question>
             <Question
               title="Which fields interest you?"
-              hint={`Optional. Pick up to ${MAX_INTERESTS}.`}
+              hint={`Optional. Pick up to ${MAX_INTERESTS}.${
+                isNarrowed ? ' Showing fields that fit your major.' : ''
+              }`}
               grouped
             >
               <GroupedChips
-                groups={INTEREST_GROUPS}
+                groups={interestGroups}
                 isSelected={(option) => interests.includes(option)}
                 onSelect={toggleInterest}
               />
+              {(isNarrowed || showAllInterests) && (
+                <button
+                  type="button"
+                  onClick={() => setShowAllInterests(!showAllInterests)}
+                  className="mt-4 text-sm font-medium text-navy-800 underline underline-offset-2"
+                >
+                  {showAllInterests ? 'Show only fields that fit my major' : 'Show all fields'}
+                </button>
+              )}
             </Question>
           </>
         )}

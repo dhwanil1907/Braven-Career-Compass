@@ -1,31 +1,13 @@
 {
-  "scrapedAt": "2026-11-18T21:41:23.244Z",
+  "scrapedAt": "2026-11-18T21:50:27.757Z",
   "source": "LinkedIn",
   "jobs": [
     {
-      "id": "4483811539",
-      "title": "Intern",
-      "company": "Cytek Biosciences",
-      "location": "Fremont, CA",
-      "url": "https://www.linkedin.com/jobs/view/intern-at-cytek-biosciences-4483811539",
-      "postedAt": "2026-11-18T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4484032417",
-      "title": "2027 Summer Intern - Finance Summer Associate",
-      "company": "Genentech",
-      "location": "South San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-finance-summer-associate-at-genentech-4484032417",
-      "postedAt": "2026-11-18T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4465257461",
-      "title": "Software Engineer, Intern (Summer 2027) - US",
-      "company": "DoorDash",
-      "location": "Sunnyvale, CA",
-      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2027-us-at-doordash-4465257461",
+      "id": "4467726052",
+      "title": "Summer 2027: MS Fraud & Risk Intern",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-ms-fraud-risk-intern-at-intuit-4467726052",
       "postedAt": "2026-11-18T00:00:00.000Z",
       "workplaceType": null
     },
@@ -39,47 +21,47 @@
       "workplaceType": null
     },
     {
-      "id": "4467726052",
-      "title": "Summer 2027: MS Fraud & Risk Intern",
-      "company": "Intuit",
-      "location": "Mountain View, CA",
-      "url": "https://www.linkedin.com/jobs/view/summer-2027-ms-fraud-risk-intern-at-intuit-4467726052",
-      "postedAt": "2026-11-18T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4475848077",
-      "title": "Research Scientist Intern - Multimodal Sensing & On-Device Perception - Global Frontier Tech Recruitment Program - 2027 Start (PHD)",
-      "company": "ByteDance",
+      "id": "4470114096",
+      "title": "Machine Learning Engineer Intern (CapCut) - 2027 Start",
+      "company": "TikTok USDS Joint Venture",
       "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-multimodal-sensing-on-device-perception-global-frontier-tech-recruitment-program-2027-start-phd-at-bytedance-4475848077",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-intern-capcut-2027-start-at-tiktok-usds-joint-venture-4470114096",
       "postedAt": "2026-11-18T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4490892012",
-      "title": "Research Scientist Intern, Perception, Displays and Graphics (PhD)",
-      "company": "Meta",
+      "id": "4465257461",
+      "title": "Software Engineer, Intern (Summer 2027) - US",
+      "company": "DoorDash",
       "location": "Sunnyvale, CA",
-      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-perception-displays-and-graphics-phd-at-meta-4490892012",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2027-us-at-doordash-4465257461",
       "postedAt": "2026-11-18T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4475140343",
-      "title": "PhD Research Intern, Cross-Disciplinary Vision Science - Summer 2027",
-      "company": "NVIDIA",
-      "location": "Santa Clara, CA",
-      "url": "https://www.linkedin.com/jobs/view/phd-research-intern-cross-disciplinary-vision-science-summer-2027-at-nvidia-4475140343",
+      "id": "4483811539",
+      "title": "Intern",
+      "company": "Cytek Biosciences",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-at-cytek-biosciences-4483811539",
       "postedAt": "2026-11-18T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4492011438",
-      "title": "Spring/Summer Marketing Intern",
-      "company": "Ephemeris Net",
-      "location": "Oakland, CA",
-      "url": "https://www.linkedin.com/jobs/view/spring-summer-marketing-intern-at-ephemeris-net-4492011438",
+      "id": "4491331051",
+      "title": "Analog Design Engineer Intern",
+      "company": "Analog Devices",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/analog-design-engineer-intern-at-analog-devices-4491331051",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484280897",
+      "title": "Mechanical Engineer Intern (Summer 2027)",
+      "company": "Scout AI",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineer-intern-summer-2027-at-scout-ai-4484280897",
       "postedAt": "2026-11-18T00:00:00.000Z",
       "workplaceType": null
     },
@@ -102,29 +84,200 @@
       "workplaceType": null
     },
     {
-      "id": "4476165762",
-      "title": "Summer 2027: MBA Strategic Finance Intern, Corporate FP&A",
+      "id": "4490829824",
+      "title": "2027 Product Management Intern, US",
+      "company": "Uber",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-product-management-intern-us-at-uber-4490829824",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4456040280",
+      "title": "Intern - Safety",
+      "company": "Southland Industries",
+      "location": "Union City, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-safety-at-southland-industries-4456040280",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490892012",
+      "title": "Research Scientist Intern, Perception, Displays and Graphics (PhD)",
+      "company": "Meta",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-perception-displays-and-graphics-phd-at-meta-4490892012",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491485680",
+      "title": "2027 Summer Intern - Translational Medicine Oncology",
+      "company": "Genentech",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-translational-medicine-oncology-at-genentech-4491485680",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492055342",
+      "title": "Platform Partnerships Intern",
+      "company": "AppLovin",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/platform-partnerships-intern-at-applovin-4492055342",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492081889",
+      "title": "Peer Specialist",
+      "company": "Abode",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/peer-specialist-at-abode-4492081889",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492098147",
+      "title": "Resident Services Coordinator",
+      "company": "Abode",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/resident-services-coordinator-at-abode-4492098147",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466122134",
+      "title": "Product Design Intern (2027)",
+      "company": "Figma",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-2027-at-figma-4466122134",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475140343",
+      "title": "PhD Research Intern, Cross-Disciplinary Vision Science - Summer 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/phd-research-intern-cross-disciplinary-vision-science-summer-2027-at-nvidia-4475140343",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491449731",
+      "title": "Career Advance Internship",
+      "company": "San Francisco International Airport",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/career-advance-internship-at-san-francisco-international-airport-4491449731",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492011438",
+      "title": "Spring/Summer Marketing Intern",
+      "company": "Ephemeris Net",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/spring-summer-marketing-intern-at-ephemeris-net-4492011438",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491793906",
+      "title": "Battery Modeling Intern - Santa Clara, CA - Spring 2027",
+      "company": "Nissan Motor Corporation",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/battery-modeling-intern-santa-clara-ca-spring-2027-at-nissan-motor-corporation-4491793906",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485602359",
+      "title": "Accelerated Science Intern, Representation Learning for Molecules and Materials",
+      "company": "Toyota Research Institute",
+      "location": "Los Altos, CA",
+      "url": "https://www.linkedin.com/jobs/view/accelerated-science-intern-representation-learning-for-molecules-and-materials-at-toyota-research-institute-4485602359",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4437287376",
+      "title": "Summer 2027 Intern - Americas Division [UG/Masters]",
+      "company": "Simon-Kucher",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-americas-division-ug-masters-at-simon-kucher-4437287376",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465240902",
+      "title": "Winemaking Intern - Ripon",
+      "company": "The Wine Group",
+      "location": "Ripon, CA",
+      "url": "https://www.linkedin.com/jobs/view/winemaking-intern-ripon-at-the-wine-group-4465240902",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467715984",
+      "title": "Summer 2027: Software Engineering Intern - Cybersecurity",
       "company": "Intuit",
       "location": "Mountain View, CA",
-      "url": "https://www.linkedin.com/jobs/view/summer-2027-mba-strategic-finance-intern-corporate-fp-a-at-intuit-4476165762",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-software-engineering-intern-cybersecurity-at-intuit-4467715984",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491106570",
+      "title": "Internship - Data Science & Analytics",
+      "company": "Lumentum",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-data-science-analytics-at-lumentum-4491106570",
       "postedAt": "2026-11-17T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4490976120",
-      "title": "Internship, FP&A & Business Operations (Summer 2027)",
-      "company": "Tesla",
-      "location": "Palo Alto, CA",
-      "url": "https://www.linkedin.com/jobs/view/internship-fp-a-business-operations-summer-2027-at-tesla-4490976120",
+      "id": "4467737012",
+      "title": "Summer 2027: AI Science Intern",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-ai-science-intern-at-intuit-4467737012",
       "postedAt": "2026-11-17T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4490975197",
-      "title": "Internship, Thermal Controls Engineer, Vehicle Controls (Winter/Spring 2027)",
+      "id": "4491742964",
+      "title": "Electrical Design Engineer Intern",
+      "company": "Matic Robots",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-design-engineer-intern-at-matic-robots-4491742964",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490784424",
+      "title": "PMIC Analog Intern",
+      "company": "Renesas Electronics",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/pmic-analog-intern-at-renesas-electronics-4490784424",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491748664",
+      "title": "Mechanical Engineering Intern (Spring 2027)",
+      "company": "Marathon Fusion",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineering-intern-spring-2027-at-marathon-fusion-4491748664",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490975199",
+      "title": "Internship, Mechanical Engineer, Cell Engineering (Winter/Spring 2027)",
       "company": "Tesla",
-      "location": "Palo Alto, CA",
-      "url": "https://www.linkedin.com/jobs/view/internship-thermal-controls-engineer-vehicle-controls-winter-spring-2027-at-tesla-4490975197",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-mechanical-engineer-cell-engineering-winter-spring-2027-at-tesla-4490975199",
       "postedAt": "2026-11-17T00:00:00.000Z",
       "workplaceType": null
     },
@@ -138,65 +291,20 @@
       "workplaceType": null
     },
     {
-      "id": "4491106570",
-      "title": "Internship - Data Science & Analytics",
-      "company": "Lumentum",
-      "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/internship-data-science-analytics-at-lumentum-4491106570",
-      "postedAt": "2026-11-17T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4490977162",
-      "title": "Applied Research Scientist Intern, Agentic Biology - Summer 2027",
+      "id": "4490968551",
+      "title": "Product Marketing Manager MBA Intern, Digital Health AI - Summer 2027",
       "company": "NVIDIA",
       "location": "Santa Clara, CA",
-      "url": "https://www.linkedin.com/jobs/view/applied-research-scientist-intern-agentic-biology-summer-2027-at-nvidia-4490977162",
+      "url": "https://www.linkedin.com/jobs/view/product-marketing-manager-mba-intern-digital-health-ai-summer-2027-at-nvidia-4490968551",
       "postedAt": "2026-11-17T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4490180073",
-      "title": "Internship- AI Research and Development",
-      "company": "ASML",
-      "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/internship-ai-research-and-development-at-asml-4490180073",
-      "postedAt": "2026-11-17T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4483284299",
-      "title": "Intern - LCLS Research Support",
-      "company": "SLAC National Accelerator Laboratory",
-      "location": "Menlo Park, CA",
-      "url": "https://www.linkedin.com/jobs/view/intern-lcls-research-support-at-slac-national-accelerator-laboratory-4483284299",
-      "postedAt": "2026-11-17T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4490400203",
-      "title": "ESH Undergraduate Intern - Summer 2027",
-      "company": "Lawrence Livermore National Laboratory",
-      "location": "Livermore, CA",
-      "url": "https://www.linkedin.com/jobs/view/esh-undergraduate-intern-summer-2027-at-lawrence-livermore-national-laboratory-4490400203",
-      "postedAt": "2026-11-17T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4483774809",
-      "title": "Research Associate Intern",
-      "company": "BillionToOne",
-      "location": "Menlo Park, CA",
-      "url": "https://www.linkedin.com/jobs/view/research-associate-intern-at-billiontoone-4483774809",
-      "postedAt": "2026-11-17T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4490187794",
-      "title": "ESH Graduate Intern - Summer 2027",
-      "company": "Lawrence Livermore National Laboratory",
-      "location": "Livermore, CA",
-      "url": "https://www.linkedin.com/jobs/view/esh-graduate-intern-summer-2027-at-lawrence-livermore-national-laboratory-4490187794",
+      "id": "4490826111",
+      "title": "Accounting Intern, BS - Summer 2027",
+      "company": "Marvell Technology",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/accounting-intern-bs-summer-2027-at-marvell-technology-4490826111",
       "postedAt": "2026-11-17T00:00:00.000Z",
       "workplaceType": null
     },
@@ -210,11 +318,101 @@
       "workplaceType": null
     },
     {
+      "id": "4490974221",
+      "title": "Internship, HR Partner, Energy & Engineering (Winter/Spring 2027)",
+      "company": "Tesla",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-hr-partner-energy-engineering-winter-spring-2027-at-tesla-4490974221",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490976120",
+      "title": "Internship, FP&A & Business Operations (Summer 2027)",
+      "company": "Tesla",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-fp-a-business-operations-summer-2027-at-tesla-4490976120",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490963645",
+      "title": "Internship, HR & People Teams (Winter/Spring 2027)",
+      "company": "Tesla",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-hr-people-teams-winter-spring-2027-at-tesla-4490963645",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481882187",
+      "title": "Battery Engineering Intern, Cell Engineering (PhD)",
+      "company": "Meta",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/battery-engineering-intern-cell-engineering-phd-at-meta-4481882187",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483284299",
+      "title": "Intern - LCLS Research Support",
+      "company": "SLAC National Accelerator Laboratory",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-lcls-research-support-at-slac-national-accelerator-laboratory-4483284299",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490149979",
+      "title": "Summer 2027 Materials Science Internship",
+      "company": "Pacific Fusion",
+      "location": "San Leandro, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-materials-science-internship-at-pacific-fusion-4490149979",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485792132",
+      "title": "Metrology Development Intern (Spring 2027)",
+      "company": "First Solar",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/metrology-development-intern-spring-2027-at-first-solar-4485792132",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490400203",
+      "title": "ESH Undergraduate Intern - Summer 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/esh-undergraduate-intern-summer-2027-at-lawrence-livermore-national-laboratory-4490400203",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4490966143",
       "title": "Student Intern/Graduate Student Intern (Part-Time) - Department of Transportation",
       "company": "City of San José",
       "location": "San Jose, CA",
       "url": "https://www.linkedin.com/jobs/view/student-intern-graduate-student-intern-part-time-department-of-transportation-at-city-of-san-jos%C3%A9-4490966143",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489401792",
+      "title": "Clinical Leader Intern - Santa Clara",
+      "company": "Center for Social Dynamics",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/clinical-leader-intern-santa-clara-at-center-for-social-dynamics-4489401792",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490187794",
+      "title": "ESH Graduate Intern - Summer 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/esh-graduate-intern-summer-2027-at-lawrence-livermore-national-laboratory-4490187794",
       "postedAt": "2026-11-17T00:00:00.000Z",
       "workplaceType": null
     },
@@ -228,11 +426,209 @@
       "workplaceType": null
     },
     {
-      "id": "4490609209",
-      "title": "GMC Finance & Operations Intern",
+      "id": "4490418539",
+      "title": "Intern - Data Collection",
+      "company": "Xtreme Management Solutions Pvt Ltd",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-data-collection-at-xtreme-management-solutions-pvt-ltd-4490418539",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483774809",
+      "title": "Research Associate Intern",
+      "company": "BillionToOne",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-associate-intern-at-billiontoone-4483774809",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491734839",
+      "title": "Future Product Innovation Research Intern, Computational Cognitive Science",
+      "company": "Toyota Research Institute",
+      "location": "Los Altos, CA",
+      "url": "https://www.linkedin.com/jobs/view/future-product-innovation-research-intern-computational-cognitive-science-at-toyota-research-institute-4491734839",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490977162",
+      "title": "Applied Research Scientist Intern, Agentic Biology - Summer 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/applied-research-scientist-intern-agentic-biology-summer-2027-at-nvidia-4490977162",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491785010",
+      "title": "Public Information Representative (Communication) Intern - Office of Retirement Services",
+      "company": "City of San José",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/public-information-representative-communication-intern-office-of-retirement-services-at-city-of-san-jos%C3%A9-4491785010",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491598410",
+      "title": "Intern, Scouting and Academia - Spring 2027 - Summer 2027",
+      "company": "BMW Group",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-scouting-and-academia-spring-2027-summer-2027-at-bmw-group-4491598410",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491737481",
+      "title": "2027 Summer Associate (1L)",
+      "company": "General Legal (YC26)",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-associate-1l-at-general-legal-yc26-4491737481",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490811888",
+      "title": "Internship - SW Developer Support - Program Management Office",
+      "company": "Lumentum",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-sw-developer-support-program-management-office-at-lumentum-4490811888",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491591328",
+      "title": "PhD Research Intern, AI Lab",
+      "company": "InterDigital, Inc.",
+      "location": "Los Altos, CA",
+      "url": "https://www.linkedin.com/jobs/view/phd-research-intern-ai-lab-at-interdigital-inc-4491591328",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475523179",
+      "title": "Student Researcher - (Seed Model - LLM) - 2026 Start (PhD)",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/student-researcher-seed-model-llm-2026-start-phd-at-bytedance-4475523179",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491408447",
+      "title": "Curriculum Packaging Intern (Hybrid, San Jose, CA)",
+      "company": "Cultivating Literacy",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/curriculum-packaging-intern-hybrid-san-jose-ca-at-cultivating-literacy-4491408447",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491108028",
+      "title": "UX Designer Intern [Summer 2027]",
+      "company": "Zoox",
+      "location": "Foster City, CA",
+      "url": "https://www.linkedin.com/jobs/view/ux-designer-intern-summer-2027-at-zoox-4491108028",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490193324",
+      "title": "San Francisco Public Utilities Commission Summer 2027 Student Design Trainee Program",
+      "company": "San Francisco Public Utilities Commission",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/san-francisco-public-utilities-commission-summer-2027-student-design-trainee-program-at-san-francisco-public-utilities-commission-4490193324",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491153904",
+      "title": "Intern - Segment Marketing Data Analyst",
+      "company": "Micron Technology",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-segment-marketing-data-analyst-at-micron-technology-4491153904",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491760898",
+      "title": "Content and Social Media Marketing Intern",
+      "company": "Crusoe",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/content-and-social-media-marketing-intern-at-crusoe-4491760898",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491725416",
+      "title": "Volunteer Coordinator Intern",
+      "company": "Sierra Club",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/volunteer-coordinator-intern-at-sierra-club-4491725416",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490954233",
+      "title": "Summer 2027 Community Science Partnerships Intern",
+      "company": "Natural Resources Defense Council (NRDC)",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-community-science-partnerships-intern-at-natural-resources-defense-council-nrdc-4490954233",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483748289",
+      "title": "Software Engineering Intern (Summer 2027)",
+      "company": "Cohesity",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-summer-2027-at-cohesity-4483748289",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490964576",
+      "title": "Internship, Grid Compliance Test Engineer, Energy Engineering (Winter/Spring 2027)",
+      "company": "Tesla",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-grid-compliance-test-engineer-energy-engineering-winter-spring-2027-at-tesla-4490964576",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490964605",
+      "title": "Student Internship - Winter/Spring 2026 - San Francisco",
+      "company": "Gensler",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/student-internship-winter-spring-2026-san-francisco-at-gensler-4490964605",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474524268",
+      "title": "Data Analyst, Intern",
+      "company": "Stripe",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-analyst-intern-at-stripe-4474524268",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481468687",
+      "title": "Signal and Power Integrity Intern, MS - Summer 2027",
+      "company": "Marvell Technology",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/signal-and-power-integrity-intern-ms-summer-2027-at-marvell-technology-4481468687",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490610263",
+      "title": "GMC Field & Partner Marketing Intern",
       "company": "Hewlett Packard Enterprise",
       "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/gmc-finance-operations-intern-at-hewlett-packard-enterprise-4490609209",
+      "url": "https://www.linkedin.com/jobs/view/gmc-field-partner-marketing-intern-at-hewlett-packard-enterprise-4490610263",
       "postedAt": "2026-11-16T00:00:00.000Z",
       "workplaceType": null
     },
@@ -246,15 +642,6 @@
       "workplaceType": null
     },
     {
-      "id": "4491543477",
-      "title": "2027 Summer Intern - GCS ML Sequencing",
-      "company": "Roche",
-      "location": "Santa Clara, CA",
-      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-gcs-ml-sequencing-at-roche-4491543477",
-      "postedAt": "2026-11-16T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
       "id": "4489788900",
       "title": "Displays Engineer Intern (Summer 2027)",
       "company": "Reliable Robotics Corporation",
@@ -264,38 +651,434 @@
       "workplaceType": null
     },
     {
-      "id": "4455795957",
-      "title": "Robotics - Hardware Development Engineer Intern/Co-op - 2026 (Robotics, Mechanical, Electrical, Hardware Test, Reliability, Failure Analysis, Operations, and more)",
-      "company": "Amazon",
+      "id": "4490609209",
+      "title": "GMC Finance & Operations Intern",
+      "company": "Hewlett Packard Enterprise",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/gmc-finance-operations-intern-at-hewlett-packard-enterprise-4490609209",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481779431",
+      "title": "Finance & Accounting Internship (Bachelors, Summer 2027)",
+      "company": "Sandisk",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/finance-accounting-internship-bachelors-summer-2027-at-sandisk-4481779431",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490949570",
+      "title": "2027 Process Engineering Intern - PhD (6 months)",
+      "company": "Lam Research",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-process-engineering-intern-phd-6-months-at-lam-research-4490949570",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491543477",
+      "title": "2027 Summer Intern - GCS ML Sequencing",
+      "company": "Roche",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-gcs-ml-sequencing-at-roche-4491543477",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485241010",
+      "title": "Robotics Intern, Human-Machine Interaction Research",
+      "company": "Toyota Research Institute",
+      "location": "Los Altos, CA",
+      "url": "https://www.linkedin.com/jobs/view/robotics-intern-human-machine-interaction-research-at-toyota-research-institute-4485241010",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490606491",
+      "title": "GMC Product & Solutions Marketing Intern",
+      "company": "Hewlett Packard Enterprise",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/gmc-product-solutions-marketing-intern-at-hewlett-packard-enterprise-4490606491",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490139068",
+      "title": "Clinical Research Engineering Intern",
+      "company": "Intuitive",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/clinical-research-engineering-intern-at-intuitive-4490139068",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489754115",
+      "title": "Cost Advisory Intern (Summer 2027)",
+      "company": "Arup",
       "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/robotics-hardware-development-engineer-intern-co-op-2026-robotics-mechanical-electrical-hardware-test-reliability-failure-analysis-operations-and-more-at-amazon-4455795957",
-      "postedAt": "2026-11-14T00:00:00.000Z",
+      "url": "https://www.linkedin.com/jobs/view/cost-advisory-intern-summer-2027-at-arup-4489754115",
+      "postedAt": "2026-11-16T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4491023139",
-      "title": "Automation Engineering Intern",
-      "company": "Bloom Energy",
-      "location": "Fremont, CA",
-      "url": "https://www.linkedin.com/jobs/view/automation-engineering-intern-at-bloom-energy-4491023139",
-      "postedAt": "2026-11-14T00:00:00.000Z",
+      "id": "4489749359",
+      "title": "Resilience Engineer Intern (Summer 2027)",
+      "company": "Arup",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/resilience-engineer-intern-summer-2027-at-arup-4489749359",
+      "postedAt": "2026-11-16T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4481642525",
-      "title": "Software Engineering Intern - Connected Systems (Summer 2027)",
-      "company": "Rivian and Volkswagen Group Technologies",
+      "id": "4491532269",
+      "title": "Service Designer Intern [Summer 2027]",
+      "company": "Zoox",
+      "location": "Foster City, CA",
+      "url": "https://www.linkedin.com/jobs/view/service-designer-intern-summer-2027-at-zoox-4491532269",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490151348",
+      "title": "Finance Intern",
+      "company": "Dublin San Ramon Services District",
+      "location": "Dublin, CA",
+      "url": "https://www.linkedin.com/jobs/view/finance-intern-at-dublin-san-ramon-services-district-4490151348",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490917265",
+      "title": "Internship - Strength & Performance Coach",
+      "company": "Efficiency Sports Performance",
+      "location": "San Ramon, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-strength-performance-coach-at-efficiency-sports-performance-4490917265",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490602709",
+      "title": "HPE Labs - Systems Architecture Lab Research Associate Intern",
+      "company": "Hewlett Packard Enterprise",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/hpe-labs-systems-architecture-lab-research-associate-intern-at-hewlett-packard-enterprise-4490602709",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474517714",
+      "title": "PhD Data Scientist, Intern",
+      "company": "Stripe",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/phd-data-scientist-intern-at-stripe-4474517714",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490613290",
+      "title": "GMC Customer Advocacy & Engagement Intern",
+      "company": "Hewlett Packard Enterprise",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/gmc-customer-advocacy-engagement-intern-at-hewlett-packard-enterprise-4490613290",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465698962",
+      "title": "Data Analytics Intern (Spring 2027)",
+      "company": "Zipline",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-analytics-intern-spring-2027-at-zipline-4465698962",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491217097",
+      "title": "Internship, Electrical Engineer, High Speed Hardware Design, Optimus (Winter/Spring 2027)",
+      "company": "Tesla",
       "location": "Palo Alto, CA",
-      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-connected-systems-summer-2027-at-rivian-and-volkswagen-group-technologies-4481642525",
-      "postedAt": "2026-11-13T00:00:00.000Z",
+      "url": "https://www.linkedin.com/jobs/view/internship-electrical-engineer-high-speed-hardware-design-optimus-winter-spring-2027-at-tesla-4491217097",
+      "postedAt": "2026-11-15T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4486289539",
-      "title": "Electrical Engineering Intern - Equipment Engineering Team",
-      "company": "Seagate Technology",
+      "id": "4464557871",
+      "title": "Field/Office Engineer Intern - Underground District - Summer 2027",
+      "company": "Kiewit",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/field-office-engineer-intern-underground-district-summer-2027-at-kiewit-4464557871",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475049192",
+      "title": "Summer 2027: Finance Transformation & Analytics Intern",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-finance-transformation-analytics-intern-at-intuit-4475049192",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475050719",
+      "title": "Datacenter Procurement Project Intern (Data Center Development) - 2026 Start",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/datacenter-procurement-project-intern-data-center-development-2026-start-at-bytedance-4475050719",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489710339",
+      "title": "Summer 2027 International Tax Intern",
+      "company": "Baker Tilly US",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-international-tax-intern-at-baker-tilly-us-4489710339",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489378836",
+      "title": "Strategic Sourcing Manager, Intern",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/strategic-sourcing-manager-intern-at-meta-4489378836",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4456003913",
+      "title": "Rotational Accounting Internship - Summer 2027 - San Jose",
+      "company": "Frank, Rimerman + Co. LLP",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/rotational-accounting-internship-summer-2027-san-jose-at-frank-rimerman-%2B-co-llp-4456003913",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473400182",
+      "title": "AI Product Manager - MBA Intern (Summer 2027)",
+      "company": "C3 AI",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/ai-product-manager-mba-intern-summer-2027-at-c3-ai-4473400182",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466328241",
+      "title": "Legal Summer Intern Rising 2L  (Intern) - United States",
+      "company": "Cisco",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/legal-summer-intern-rising-2l-intern-united-states-at-cisco-4466328241",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4463984844",
+      "title": "Product Design, Intern (Summer 2027)",
+      "company": "DoorDash",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-summer-2027-at-doordash-4463984844",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465105173",
+      "title": "Global Content Ecosystem Policy Operation Intern (TikTok-Product-Content Ecosystem) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/global-content-ecosystem-policy-operation-intern-tiktok-product-content-ecosystem-2027-summer-at-tiktok-4465105173",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475060236",
+      "title": "Software Engineer Project Intern (Security-Data) - 2026 Start (BS/MS)",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-project-intern-security-data-2026-start-bs-ms-at-bytedance-4475060236",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466354432",
+      "title": "Data Science Intern, Algorithms (Summer 2027 - SF/NYC)",
+      "company": "Lyft",
+      "location": "San Francisco County, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-science-intern-algorithms-summer-2027-sf-nyc-at-lyft-4466354432",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465808852",
+      "title": "Data Analytics Intern (Summer 2027)",
+      "company": "Zipline",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-analytics-intern-summer-2027-at-zipline-4465808852",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474366446",
+      "title": "PhD Data Science Internship 2027 (USA)",
+      "company": "Pinterest",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/phd-data-science-internship-2027-usa-at-pinterest-4474366446",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4455918307",
+      "title": "Area Manager Intern - Summer 2027 (California), University Recruiting",
+      "company": "Amazon",
+      "location": "Tracy, CA",
+      "url": "https://www.linkedin.com/jobs/view/area-manager-intern-summer-2027-california-university-recruiting-at-amazon-4455918307",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483313899",
+      "title": "Summer 2027: Marketing Intern, AI Tooling for Marketing Efficiency",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-marketing-intern-ai-tooling-for-marketing-efficiency-at-intuit-4483313899",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491010678",
+      "title": "Structured Finance Summer Associate (MBA Intern)",
+      "company": "Bloom Energy",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/structured-finance-summer-associate-mba-intern-at-bloom-energy-4491010678",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491024014",
+      "title": "Process Development Engineering Intern",
+      "company": "Bloom Energy",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/process-development-engineering-intern-at-bloom-energy-4491024014",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454149506",
+      "title": "Legal Intern - Fall 2026",
+      "company": "Lambda",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/legal-intern-fall-2026-at-lambda-4454149506",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491026802",
+      "title": "Strategic Operations Intern (Summer 2027 - Masters Degree)",
+      "company": "ServiceNow",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/strategic-operations-intern-summer-2027-masters-degree-at-servicenow-4491026802",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474549489",
+      "title": "Language Specialist Project Intern (PMO-Language Center) - 2027 Start",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/language-specialist-project-intern-pmo-language-center-2027-start-at-bytedance-4474549489",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491003895",
+      "title": "Energy Transition Solutions Intern",
+      "company": "Bloom Energy",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/energy-transition-solutions-intern-at-bloom-energy-4491003895",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483107162",
+      "title": "Graduate Associate, Public Relations (Paid Internship)",
+      "company": "Method Communications",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/graduate-associate-public-relations-paid-internship-at-method-communications-4483107162",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4457088136",
+      "title": "Operations Experience Intern (Summer 2027)",
+      "company": "Zipline",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/operations-experience-intern-summer-2027-at-zipline-4457088136",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4455474236",
+      "title": "NVIDIA 2027 Internships: Systems Software Engineering",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/nvidia-2027-internships-systems-software-engineering-at-nvidia-4455474236",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474561093",
+      "title": "Security Engineering Project Intern (Watermark) - 2026 Start (BS/MS)",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/security-engineering-project-intern-watermark-2026-start-bs-ms-at-bytedance-4474561093",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482385374",
+      "title": "Building Automation Systems Specialist Internship",
+      "company": "Siemens",
       "location": "Fremont, CA",
-      "url": "https://www.linkedin.com/jobs/view/electrical-engineering-intern-equipment-engineering-team-at-seagate-technology-4486289539",
+      "url": "https://www.linkedin.com/jobs/view/building-automation-systems-specialist-internship-at-siemens-4482385374",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491008705",
+      "title": "Microgrid Commissioning Support Intern (MSEE)",
+      "company": "Bloom Energy",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/microgrid-commissioning-support-intern-msee-at-bloom-energy-4491008705",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491026981",
+      "title": "Industrial Design Intern [Summer 2027]",
+      "company": "Zoox",
+      "location": "Foster City, CA",
+      "url": "https://www.linkedin.com/jobs/view/industrial-design-intern-summer-2027-at-zoox-4491026981",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474353778",
+      "title": "PhD Data Science Internship 2027 (USA)",
+      "company": "Pinterest",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/phd-data-science-internship-2027-usa-at-pinterest-4474353778",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474720730",
+      "title": "Summer 2027: Business Data Analyst Intern, Strategy & Planning",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-business-data-analyst-intern-strategy-planning-at-intuit-4474720730",
       "postedAt": "2026-11-13T00:00:00.000Z",
       "workplaceType": null
     },
@@ -309,38 +1092,218 @@
       "workplaceType": null
     },
     {
-      "id": "4481630923",
-      "title": "Electromechanical Design Engineering Intern (Summer 2027)",
+      "id": "4490557138",
+      "title": "Sales Analytics Intern 2027 (USA)",
+      "company": "Pinterest",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/sales-analytics-intern-2027-usa-at-pinterest-4490557138",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480090775",
+      "title": "Data Science Intern (2027 Start)",
+      "company": "Databricks",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-science-intern-2027-start-at-databricks-4480090775",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474352883",
+      "title": "Master's Data Science Internship 2027 (USA)",
+      "company": "Pinterest",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/master-s-data-science-internship-2027-usa-at-pinterest-4474352883",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472991448",
+      "title": "Machine Learning Engineer Intern (Risk & Integrity) - 2027 Start (PhD)",
+      "company": "TikTok USDS Joint Venture",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-intern-risk-integrity-2027-start-phd-at-tiktok-usds-joint-venture-4472991448",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474575961",
+      "title": "2027 Summer Intern – AI/ML Engineer, Autonomous Vehicles: Simulation (PhD)",
+      "company": "General Motors",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-%E2%80%93-ai-ml-engineer-autonomous-vehicles-simulation-phd-at-general-motors-4474575961",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481642525",
+      "title": "Software Engineering Intern - Connected Systems (Summer 2027)",
       "company": "Rivian and Volkswagen Group Technologies",
       "location": "Palo Alto, CA",
-      "url": "https://www.linkedin.com/jobs/view/electromechanical-design-engineering-intern-summer-2027-at-rivian-and-volkswagen-group-technologies-4481630923",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-connected-systems-summer-2027-at-rivian-and-volkswagen-group-technologies-4481642525",
       "postedAt": "2026-11-13T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4489845185",
-      "title": "Intern, Optical Packaging - Optical Validation & Statistical Analysis",
-      "company": "Ayar Labs",
+      "id": "4491010095",
+      "title": "Avionics Intern (Summer 2027)",
+      "company": "Reliable Robotics Corporation",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/avionics-intern-summer-2027-at-reliable-robotics-corporation-4491010095",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4455483200",
+      "title": "NVIDIA 2027 Internships: Digital Circuit Design",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/nvidia-2027-internships-digital-circuit-design-at-nvidia-4455483200",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491010028",
+      "title": "Electrical Systems Integration Intern (Summer 2027)",
+      "company": "Reliable Robotics Corporation",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-systems-integration-intern-summer-2027-at-reliable-robotics-corporation-4491010028",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486289539",
+      "title": "Electrical Engineering Intern - Equipment Engineering Team",
+      "company": "Seagate Technology",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-engineering-intern-equipment-engineering-team-at-seagate-technology-4486289539",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481620503",
+      "title": "Business and Administrative Intern - Strategy Analyst",
+      "company": "Rivian",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-and-administrative-intern-strategy-analyst-at-rivian-4481620503",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4464125863",
+      "title": "2027 Spring Mechanical Engineering Intern (R20828)",
+      "company": "MKS Inc.",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-spring-mechanical-engineering-intern-r20828-at-mks-inc-4464125863",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490711552",
+      "title": "Security Engineering Intern (Summer 2027)",
+      "company": "Climactic",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/security-engineering-intern-summer-2027-at-climactic-4490711552",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490563000",
+      "title": "Security Engineering Intern (Summer 2027)",
+      "company": "Muon Space",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/security-engineering-intern-summer-2027-at-muon-space-4490563000",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474541221",
+      "title": "Mechanical Engineer I (Intern) - United States",
+      "company": "Cisco",
       "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/intern-optical-packaging-optical-validation-statistical-analysis-at-ayar-labs-4489845185",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineer-i-intern-united-states-at-cisco-4474541221",
       "postedAt": "2026-11-13T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4464699186",
-      "title": "R&D Intern (Summer 2027)",
-      "company": "The Clorox Company",
-      "location": "Pleasanton, CA",
-      "url": "https://www.linkedin.com/jobs/view/r-d-intern-summer-2027-at-the-clorox-company-4464699186",
+      "id": "4480073462",
+      "title": "Mechanical Engineering, Intern - Labs (Summer 2027)",
+      "company": "DoorDash",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineering-intern-labs-summer-2027-at-doordash-4480073462",
       "postedAt": "2026-11-13T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4464979288",
-      "title": "Materials Engineering Division (MED): Undergraduate Intern - Summer 2027",
-      "company": "Lawrence Livermore National Laboratory",
-      "location": "Livermore, CA",
-      "url": "https://www.linkedin.com/jobs/view/materials-engineering-division-med-undergraduate-intern-summer-2027-at-lawrence-livermore-national-laboratory-4464979288",
+      "id": "4488987608",
+      "title": "Indirect Procurement Intern",
+      "company": "Rambus",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/indirect-procurement-intern-at-rambus-4488987608",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4455789302",
+      "title": "Global Supply Management Intern (Spring 2027)",
+      "company": "Zipline",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/global-supply-management-intern-spring-2027-at-zipline-4455789302",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474549563",
+      "title": "Product Management Project Intern (Global Payment) - 2027 Start",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-management-project-intern-global-payment-2027-start-at-bytedance-4474549563",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462548846",
+      "title": "Summer 2027 Intern - Human Resources",
+      "company": "WD",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-human-resources-at-wd-4462548846",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462548842",
+      "title": "Summer 2027 Intern - Financial Analyst - Undergraduate & MBA",
+      "company": "WD",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-financial-analyst-undergraduate-mba-at-wd-4462548842",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473056449",
+      "title": "University Recruitment Ambassador Internship",
+      "company": "Tacit",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/university-recruitment-ambassador-internship-at-tacit-4473056449",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472851478",
+      "title": "Aviation Planning Intern",
+      "company": "Kimley-Horn",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/aviation-planning-intern-at-kimley-horn-4472851478",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490548174",
+      "title": "NPI Engineering Development Intern",
+      "company": "Bloom Energy",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/npi-engineering-development-intern-at-bloom-energy-4490548174",
       "postedAt": "2026-11-13T00:00:00.000Z",
       "workplaceType": null
     },
@@ -354,15 +1317,6 @@
       "workplaceType": null
     },
     {
-      "id": "4481606314",
-      "title": "Growth Marketing Intern (Summer 2027)",
-      "company": "Together AI",
-      "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/growth-marketing-intern-summer-2027-at-together-ai-4481606314",
-      "postedAt": "2026-11-13T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
       "id": "4490799892",
       "title": "2027 Summer Intern - Computational Science",
       "company": "Roche",
@@ -372,65 +1326,83 @@
       "workplaceType": null
     },
     {
-      "id": "4474720730",
-      "title": "Summer 2027: Business Data Analyst Intern, Strategy & Planning",
-      "company": "Intuit",
-      "location": "Mountain View, CA",
-      "url": "https://www.linkedin.com/jobs/view/summer-2027-business-data-analyst-intern-strategy-planning-at-intuit-4474720730",
+      "id": "4488770703",
+      "title": "Translational Sciences undergrad intern (Summer 2027)",
+      "company": "Amgen",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/translational-sciences-undergrad-intern-summer-2027-at-amgen-4488770703",
       "postedAt": "2026-11-13T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4454711489",
-      "title": "Data Science Project Intern (Advertisement Team) - 2026 Start",
+      "id": "4474556225",
+      "title": "Developer Advocacy Project Intern (PICO) - 2026 Start",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/developer-advocacy-project-intern-pico-2026-start-at-bytedance-4474556225",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490780940",
+      "title": "Legal Intern",
+      "company": "Menlo Security Inc.",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/legal-intern-at-menlo-security-inc-4490780940",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465890204",
+      "title": "Legal Rising 3L  (Intern) - United States",
+      "company": "Cisco",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/legal-rising-3l-intern-united-states-at-cisco-4465890204",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474539980",
+      "title": "Student Researcher (Video Quality Analysis & Coding Strategy) - 2026 Start (PhD)",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/student-researcher-video-quality-analysis-coding-strategy-2026-start-phd-at-bytedance-4474539980",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488604618",
+      "title": "Hatch's Summer 2027 Internship Program",
+      "company": "Hatch",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/hatch-s-summer-2027-internship-program-at-hatch-4488604618",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4452901153",
+      "title": "Open Platform Product Project Intern (TikTok-Product-Open Platform) - 2026 Start",
       "company": "TikTok",
       "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/data-science-project-intern-advertisement-team-2026-start-at-tiktok-4454711489",
-      "postedAt": "2026-11-12T00:00:00.000Z",
+      "url": "https://www.linkedin.com/jobs/view/open-platform-product-project-intern-tiktok-product-open-platform-2026-start-at-tiktok-4452901153",
+      "postedAt": "2026-11-13T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4484385322",
-      "title": "Summer 2027 Associate Finance Intern (MBA - Santa Clara, CA)",
+      "id": "4480638615",
+      "title": "Research Scientist Intern, Central Applied Science (PhD)",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-central-applied-science-phd-at-meta-4480638615",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484390188",
+      "title": "Summer 2027 Business Intelligence Analyst Intern- Master's (Santa Clara, CA)",
       "company": "Applied Materials",
       "location": "Santa Clara, CA",
-      "url": "https://www.linkedin.com/jobs/view/summer-2027-associate-finance-intern-mba-santa-clara-ca-at-applied-materials-4484385322",
-      "postedAt": "2026-11-12T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4473756333",
-      "title": "Summer 2027: MBA Strategic Finance Intern, GBSG",
-      "company": "Intuit",
-      "location": "Mountain View, CA",
-      "url": "https://www.linkedin.com/jobs/view/summer-2027-mba-strategic-finance-intern-gbsg-at-intuit-4473756333",
-      "postedAt": "2026-11-12T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4490320063",
-      "title": "Summer 2027 Financial Analyst Internship",
-      "company": "McGrath RentCorp",
-      "location": "Livermore, CA",
-      "url": "https://www.linkedin.com/jobs/view/summer-2027-financial-analyst-internship-at-mcgrath-rentcorp-4490320063",
-      "postedAt": "2026-11-12T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4472644227",
-      "title": "Mechatronics Engineering Internship",
-      "company": "KLA",
-      "location": "Milpitas, CA",
-      "url": "https://www.linkedin.com/jobs/view/mechatronics-engineering-internship-at-kla-4472644227",
-      "postedAt": "2026-11-12T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4472637494",
-      "title": "Mechatronics/Systems Engineering Internship",
-      "company": "KLA",
-      "location": "Milpitas, CA",
-      "url": "https://www.linkedin.com/jobs/view/mechatronics-systems-engineering-internship-at-kla-4472637494",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-business-intelligence-analyst-intern-master-s-santa-clara-ca-at-applied-materials-4484390188",
       "postedAt": "2026-11-12T00:00:00.000Z",
       "workplaceType": null
     },
@@ -444,38 +1416,236 @@
       "workplaceType": null
     },
     {
-      "id": "4484390188",
-      "title": "Summer 2027 Business Intelligence Analyst Intern- Master's (Santa Clara, CA)",
-      "company": "Applied Materials",
-      "location": "Santa Clara, CA",
-      "url": "https://www.linkedin.com/jobs/view/summer-2027-business-intelligence-analyst-intern-master-s-santa-clara-ca-at-applied-materials-4484390188",
-      "postedAt": "2026-11-12T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4482198355",
-      "title": "Clinical Scientist Intern",
-      "company": "Intuitive",
-      "location": "Sunnyvale, CA",
-      "url": "https://www.linkedin.com/jobs/view/clinical-scientist-intern-at-intuitive-4482198355",
-      "postedAt": "2026-11-12T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4447913217",
-      "title": "Research Scientist Intern (TikTok-Neural Graphics and World Models) - 2027 Start (PhD)",
+      "id": "4454711489",
+      "title": "Data Science Project Intern (Advertisement Team) - 2026 Start",
       "company": "TikTok",
       "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-tiktok-neural-graphics-and-world-models-2027-start-phd-at-tiktok-4447913217",
+      "url": "https://www.linkedin.com/jobs/view/data-science-project-intern-advertisement-team-2026-start-at-tiktok-4454711489",
       "postedAt": "2026-11-12T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4464967543",
-      "title": "Materials Engineering Division (MED): Graduate Intern - Summer 2027",
-      "company": "Lawrence Livermore National Laboratory",
+      "id": "4448990233",
+      "title": "Data Scientist Intern (VOD Data) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-scientist-intern-vod-data-2027-summer-at-tiktok-4448990233",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490075214",
+      "title": "Data Science Intern",
+      "company": "Bloom Energy",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-science-intern-at-bloom-energy-4490075214",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484385343",
+      "title": "Summer 2027 Data Scientist Intern - Master's (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-data-scientist-intern-master-s-santa-clara-ca-at-applied-materials-4484385343",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479426397",
+      "title": "Enterprise Security Engineer, Intern (Summer 2027)",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/enterprise-security-engineer-intern-summer-2027-at-meta-4479426397",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486272051",
+      "title": "2027 Summer Electrical Engineer Intern- Master's (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-electrical-engineer-intern-master-s-santa-clara-ca-at-applied-materials-4486272051",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490061884",
+      "title": "Service Operations Intern",
+      "company": "Bloom Energy",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/service-operations-intern-at-bloom-energy-4490061884",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490070049",
+      "title": "Utilities Analyst Intern",
+      "company": "Bloom Energy",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/utilities-analyst-intern-at-bloom-energy-4490070049",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484373857",
+      "title": "2027 Summer Intern - Electrical Engineer - BS/MS Degree, (Santa Clara)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-electrical-engineer-bs-ms-degree-santa-clara-at-applied-materials-4484373857",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4435857047",
+      "title": "Security Software Engineer Project Intern (Network Security) - 2026 Start (BS/MS)",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/security-software-engineer-project-intern-network-security-2026-start-bs-ms-at-bytedance-4435857047",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4366561915",
+      "title": "Security Software Engineer Project Intern (Product Security) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/security-software-engineer-project-intern-product-security-2026-start-bs-ms-at-tiktok-4366561915",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479434038",
+      "title": "Product Security Engineer, Intern (Summer 2027)",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-security-engineer-intern-summer-2027-at-meta-4479434038",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484384366",
+      "title": "2027 Summer Intern - Mechanical Engineer - BS/MS Degree, (Santa Clara)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-mechanical-engineer-bs-ms-degree-santa-clara-at-applied-materials-4484384366",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489280646",
+      "title": "Communication and Social Media Intern (unpaid)",
+      "company": "CASA of San Mateo County",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/communication-and-social-media-intern-unpaid-at-casa-of-san-mateo-county-4489280646",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484378553",
+      "title": "Summer 2027 Industrial Engineer Intern- Master's (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-industrial-engineer-intern-master-s-santa-clara-ca-at-applied-materials-4484378553",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481110656",
+      "title": "Intern - Semiconductor Global Category Supplier Management",
+      "company": "Micron Technology",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-semiconductor-global-category-supplier-management-at-micron-technology-4481110656",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484376772",
+      "title": "Summer 2027 Supply Chain Materials Project Manager Intern- Master's (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-supply-chain-materials-project-manager-intern-master-s-santa-clara-ca-at-applied-materials-4484376772",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4428895682",
+      "title": "Social Commerce Intern",
+      "company": "Logitech",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/social-commerce-intern-at-logitech-4428895682",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482158677",
+      "title": "University Recruiting Intern",
+      "company": "Rakuten International",
+      "location": "San Mateo, CA",
+      "url": "https://www.linkedin.com/jobs/view/university-recruiting-intern-at-rakuten-international-4482158677",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484385322",
+      "title": "Summer 2027 Associate Finance Intern (MBA - Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-associate-finance-intern-mba-santa-clara-ca-at-applied-materials-4484385322",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490310040",
+      "title": "Talent Acquisition Partner - Intern (Data) - 2027 Start",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-partner-intern-data-2027-start-at-bytedance-4490310040",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473756333",
+      "title": "Summer 2027: MBA Strategic Finance Intern, GBSG",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-mba-strategic-finance-intern-gbsg-at-intuit-4473756333",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4390421365",
+      "title": "HR Business Partner Project Intern (GMPT) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/hr-business-partner-project-intern-gmpt-2026-start-bs-ms-at-tiktok-4390421365",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4464908146",
+      "title": "Associate Product Manager Intern",
+      "company": "Coinbase",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-product-manager-intern-at-coinbase-4464908146",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490320063",
+      "title": "Summer 2027 Financial Analyst Internship",
+      "company": "McGrath RentCorp",
       "location": "Livermore, CA",
-      "url": "https://www.linkedin.com/jobs/view/materials-engineering-division-med-graduate-intern-summer-2027-at-lawrence-livermore-national-laboratory-4464967543",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-financial-analyst-internship-at-mcgrath-rentcorp-4490320063",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484386334",
+      "title": "Summer 2027 Process Engineer Intern- Master's (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-process-engineer-intern-master-s-santa-clara-ca-at-applied-materials-4484386334",
       "postedAt": "2026-11-12T00:00:00.000Z",
       "workplaceType": null
     },
@@ -489,6 +1659,132 @@
       "workplaceType": null
     },
     {
+      "id": "4447323835",
+      "title": "AI Product Design Intern (TikTok-Design) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/ai-product-design-intern-tiktok-design-2027-summer-at-tiktok-4447323835",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4448292103",
+      "title": "Data Science Intern (TikTok Integrity and Safety) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-science-intern-tiktok-integrity-and-safety-2027-summer-at-tiktok-4448292103",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4464419981",
+      "title": "2027 Future Talent Program – Discovery Oncology – Intern (South San Francisco, CA)",
+      "company": "Merck",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-future-talent-program-%E2%80%93-discovery-oncology-%E2%80%93-intern-south-san-francisco-ca-at-merck-4464419981",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490529821",
+      "title": "Community Intern",
+      "company": "MeshyAI",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/community-intern-at-meshyai-4490529821",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4447343085",
+      "title": "Effect Design Intern (TikTok-Design) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/effect-design-intern-tiktok-design-2027-summer-at-tiktok-4447343085",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4443165435",
+      "title": "Data Scientist Project Intern (TikTok Integrity and Safety) - 2026 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-scientist-project-intern-tiktok-integrity-and-safety-2026-start-at-tiktok-4443165435",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4387327666",
+      "title": "(General Hire) Designer Project Intern (TikTok-Design) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/general-hire-designer-project-intern-tiktok-design-2026-start-bs-ms-at-tiktok-4387327666",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484692916",
+      "title": "Summer 2027 Technical Project/Program Management Intern- Master's (Santa Clara, CA)",
+      "company": "Applied Materials",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-technical-project-program-management-intern-master-s-santa-clara-ca-at-applied-materials-4484692916",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4463802022",
+      "title": "Product Design Intern, 2027 Summer U.S.",
+      "company": "Atlassian",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-2027-summer-u-s-at-atlassian-4463802022",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4464901470",
+      "title": "Product Design Intern",
+      "company": "Coinbase",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-at-coinbase-4464901470",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454482548",
+      "title": "MBA Intern",
+      "company": "Republic Services",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/mba-intern-at-republic-services-4454482548",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473545709",
+      "title": "Summer 2027: MBA Product Marketing Intern, Payments",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-mba-product-marketing-intern-payments-at-intuit-4473545709",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488574700",
+      "title": "MBA Intern, Platform Strategy (Summer 2027)",
+      "company": "Electronic Arts (EA)",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/mba-intern-platform-strategy-summer-2027-at-electronic-arts-ea-4488574700",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490538084",
+      "title": "Marketing & Content Intern (Part-Time)",
+      "company": "Kinelo",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-content-intern-part-time-at-kinelo-4490538084",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4489066326",
       "title": "Growth Marketing Intern, Sixtyfour",
       "company": "Sixtyfour",
@@ -498,21 +1794,66 @@
       "workplaceType": null
     },
     {
-      "id": "4463103534",
-      "title": "Finance Intern - Undergrad Summer 2027",
-      "company": "ServiceNow",
-      "location": "Santa Clara, CA",
-      "url": "https://www.linkedin.com/jobs/view/finance-intern-undergrad-summer-2027-at-servicenow-4463103534",
-      "postedAt": "2026-11-11T00:00:00.000Z",
+      "id": "4426560529",
+      "title": "Applied Research Intern, Proactive Intelligence & Customer World Models (PhD / Graduate Co-op)",
+      "company": "Block",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/applied-research-intern-proactive-intelligence-customer-world-models-phd-graduate-co-op-at-block-4426560529",
+      "postedAt": "2026-11-12T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4488659631",
-      "title": "Financial Analyst Intern, Hardware FP&A - Summer 2027",
+      "id": "4473551597",
+      "title": "Summer 2027: MBA Pricing & Monetization Strategy Intern",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-mba-pricing-monetization-strategy-intern-at-intuit-4473551597",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4440202281",
+      "title": "Leave of Absence Analyst Project Intern (HROP) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/leave-of-absence-analyst-project-intern-hrop-2026-start-bs-ms-at-tiktok-4440202281",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4409698724",
+      "title": "Global Agency Acquisition Project Intern (Scaled Growth) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/global-agency-acquisition-project-intern-scaled-growth-2026-start-bs-ms-at-tiktok-4409698724",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471723462",
+      "title": "Payment Partnership Project Intern (Global Payment) - 2026 Start (BS/MS)",
+      "company": "ByteDance",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/payment-partnership-project-intern-global-payment-2026-start-bs-ms-at-bytedance-4471723462",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481174366",
+      "title": "PhD Research Intern, AI for Climate and Weather Simulation - 2027",
       "company": "NVIDIA",
       "location": "Santa Clara, CA",
-      "url": "https://www.linkedin.com/jobs/view/financial-analyst-intern-hardware-fp-a-summer-2027-at-nvidia-4488659631",
-      "postedAt": "2026-11-11T00:00:00.000Z",
+      "url": "https://www.linkedin.com/jobs/view/phd-research-intern-ai-for-climate-and-weather-simulation-2027-at-nvidia-4481174366",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490300141",
+      "title": "Experience Design Intern (Summer 2027)",
+      "company": "HP IQ",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/experience-design-intern-summer-2027-at-hp-iq-4490300141",
+      "postedAt": "2026-11-12T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -534,29 +1875,74 @@
       "workplaceType": null
     },
     {
-      "id": "4478690863",
-      "title": "Research Scientist Intern, Smart Glasses in Wearables AI (PhD)",
-      "company": "Meta",
-      "location": "Menlo Park, CA",
-      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-smart-glasses-in-wearables-ai-phd-at-meta-4478690863",
+      "id": "4480729402",
+      "title": "Security Research, Intern",
+      "company": "Illumio",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/security-research-intern-at-illumio-4480729402",
       "postedAt": "2026-11-11T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4490049362",
-      "title": "Future Product Innovation Research Intern, Human Computer Interaction",
-      "company": "Toyota Research Institute",
-      "location": "Los Altos, CA",
-      "url": "https://www.linkedin.com/jobs/view/future-product-innovation-research-intern-human-computer-interaction-at-toyota-research-institute-4490049362",
+      "id": "4489652039",
+      "title": "Internship- Configuration Management",
+      "company": "ASML",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-configuration-management-at-asml-4489652039",
       "postedAt": "2026-11-11T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4447341096",
-      "title": "Product Design Intern (TikTok-Design) - 2027 Summer",
+      "id": "4480709263",
+      "title": "Security Intern",
+      "company": "Docusign",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/security-intern-at-docusign-4480709263",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482049330",
+      "title": "Mechanical Engineer Intern, Autonomy (Summer 2027)",
+      "company": "Joby Aviation",
+      "location": "San Carlos, CA",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineer-intern-autonomy-summer-2027-at-joby-aviation-4482049330",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488659631",
+      "title": "Financial Analyst Intern, Hardware FP&A - Summer 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/financial-analyst-intern-hardware-fp-a-summer-2027-at-nvidia-4488659631",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4440207036",
+      "title": "Payroll Analyst Project Intern (HROP) - 2026 Start (BS/MS)",
       "company": "TikTok",
       "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/product-design-intern-tiktok-design-2027-summer-at-tiktok-4447341096",
+      "url": "https://www.linkedin.com/jobs/view/payroll-analyst-project-intern-hrop-2026-start-bs-ms-at-tiktok-4440207036",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489054308",
+      "title": "Supply Chain Internship - Summer 2027",
+      "company": "Lightmatter",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/supply-chain-internship-summer-2027-at-lightmatter-4489054308",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4455774428",
+      "title": "Global Supply Management Intern (Summer 2027)",
+      "company": "Zipline",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/global-supply-management-intern-summer-2027-at-zipline-4455774428",
       "postedAt": "2026-11-11T00:00:00.000Z",
       "workplaceType": null
     },
@@ -570,6 +1956,204 @@
       "workplaceType": null
     },
     {
+      "id": "4447341096",
+      "title": "Product Design Intern (TikTok-Design) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-tiktok-design-2027-summer-at-tiktok-4447341096",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490049362",
+      "title": "Future Product Innovation Research Intern, Human Computer Interaction",
+      "company": "Toyota Research Institute",
+      "location": "Los Altos, CA",
+      "url": "https://www.linkedin.com/jobs/view/future-product-innovation-research-intern-human-computer-interaction-at-toyota-research-institute-4490049362",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473761252",
+      "title": "Summer 2027: MBA Strategic Finance Intern, Consumer Group",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-mba-strategic-finance-intern-consumer-group-at-intuit-4473761252",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488639857",
+      "title": "Learning & Development Intern",
+      "company": "Patelco Credit Union",
+      "location": "Dublin, CA",
+      "url": "https://www.linkedin.com/jobs/view/learning-development-intern-at-patelco-credit-union-4488639857",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489904161",
+      "title": "Finance & Accounting Internship (BS, Summer 2027)",
+      "company": "Sandisk",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/finance-accounting-internship-bs-summer-2027-at-sandisk-4489904161",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4463103534",
+      "title": "Finance Intern - Undergrad Summer 2027",
+      "company": "ServiceNow",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/finance-intern-undergrad-summer-2027-at-servicenow-4463103534",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482010674",
+      "title": "MBA Product Management Internship, Summer 2027",
+      "company": "GoFundMe",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/mba-product-management-internship-summer-2027-at-gofundme-4482010674",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4452370784",
+      "title": "Product Manager Intern (Signal and Identity Product) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-manager-intern-signal-and-identity-product-2027-summer-at-tiktok-4452370784",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490025911",
+      "title": "Research Intern",
+      "company": "Pramaana Labs",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-intern-at-pramaana-labs-4490025911",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481591230",
+      "title": "AI Autonomous Driving Verification & Validation Intern - Summer 2027 - Santa Clara, CA",
+      "company": "Nissan Motor Corporation",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/ai-autonomous-driving-verification-validation-intern-summer-2027-santa-clara-ca-at-nissan-motor-corporation-4481591230",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4452902145",
+      "title": "Design System Design Intern (Monetization Ads) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/design-system-design-intern-monetization-ads-2027-summer-at-tiktok-4452902145",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4453902176",
+      "title": "Content Design Intern (Monetization Ads) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/content-design-intern-monetization-ads-2027-summer-at-tiktok-4453902176",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488705620",
+      "title": "Undergraduate Intern-R&D -Oncology Research (Summer 2027)",
+      "company": "Amgen",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/undergraduate-intern-r-d-oncology-research-summer-2027-at-amgen-4488705620",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489939557",
+      "title": "GTM Intern – Developer Relations & Technical Content",
+      "company": "NeuroSpark AI",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/gtm-intern-%E2%80%93-developer-relations-technical-content-at-neurospark-ai-4489939557",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489910269",
+      "title": "Translational Sciences undergrad intern (Summer 2027)",
+      "company": "BioSpace",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/translational-sciences-undergrad-intern-summer-2027-at-biospace-4489910269",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4404425338",
+      "title": "Applied Scientist Intern - Business Integrity - Global Frontier Tech Recruitment Program - 2027 Start (PhD)",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/applied-scientist-intern-business-integrity-global-frontier-tech-recruitment-program-2027-start-phd-at-tiktok-4404425338",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489038984",
+      "title": "Intern, Program Management Office (PMO)",
+      "company": "Ayar Labs",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-program-management-office-pmo-at-ayar-labs-4489038984",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4413673142",
+      "title": "CEGIU Demo Data Strategy Intern - OVIP",
+      "company": "Oracle",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/cegiu-demo-data-strategy-intern-ovip-at-oracle-4413673142",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489025097",
+      "title": "J-1 Culinary program with The Ritz-Carlton, Half Moon Bay",
+      "company": "Hospitaliti",
+      "location": "Half Moon Bay, CA",
+      "url": "https://www.linkedin.com/jobs/view/j-1-culinary-program-with-the-ritz-carlton-half-moon-bay-at-hospitaliti-4489025097",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489043854",
+      "title": "Intern, AI Automation - HR and Global Operations",
+      "company": "Ayar Labs",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-ai-automation-hr-and-global-operations-at-ayar-labs-4489043854",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4452915627",
+      "title": "Data Science Intern (Advertisement Team) - 2027 Start (PhD)",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-science-intern-advertisement-team-2027-start-phd-at-tiktok-4452915627",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4400087232",
+      "title": "Talent Acquisition Project Intern (E-Commerce) - 2026 Summer (BS/MS)",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-project-intern-e-commerce-2026-summer-bs-ms-at-tiktok-4400087232",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4480295835",
       "title": "Software Engineering Intern - Summer 2027",
       "company": "Patreon",
@@ -579,11 +2163,11 @@
       "workplaceType": null
     },
     {
-      "id": "4489199590",
-      "title": "MENTAL HEALTH INTERN",
-      "company": "Axis Community Health",
-      "location": "Pleasanton, CA",
-      "url": "https://www.linkedin.com/jobs/view/mental-health-intern-at-axis-community-health-4489199590",
+      "id": "4481294842",
+      "title": "Electrical Engineer - Intern (Summer 2027)",
+      "company": "Joby Aviation",
+      "location": "San Carlos, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-engineer-intern-summer-2027-at-joby-aviation-4481294842",
       "postedAt": "2026-11-10T00:00:00.000Z",
       "workplaceType": null
     },
@@ -597,11 +2181,191 @@
       "workplaceType": null
     },
     {
-      "id": "4463566356",
-      "title": "Electromechanical Design Engineering Intern (January - August 2027)",
-      "company": "Rivian and Volkswagen Group Technologies",
+      "id": "4487431697",
+      "title": "Intern",
+      "company": "Rambus",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-at-rambus-4487431697",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454218980",
+      "title": "Tax Summer Internship 2027",
+      "company": "Withum",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/tax-summer-internship-2027-at-withum-4454218980",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454233932",
+      "title": "Audit Summer Internship 2027",
+      "company": "Withum",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/audit-summer-internship-2027-at-withum-4454233932",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492089688",
+      "title": "HR Intern - Mandarin Required",
+      "company": "Think Academy U.S",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/hr-intern-mandarin-required-at-think-academy-u-s-4492089688",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480410020",
+      "title": "Product Manager MBA Intern, Enterprise AI - Summer 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-manager-mba-intern-enterprise-ai-summer-2027-at-nvidia-4480410020",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478295997",
+      "title": "Product Management Intern (Summer 2027)",
+      "company": "Databricks",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-management-intern-summer-2027-at-databricks-4478295997",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478299793",
+      "title": "Product Management Intern (Summer 2027)",
+      "company": "Databricks",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-management-intern-summer-2027-at-databricks-4478299793",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4464422961",
+      "title": "2027 Future Talent Program - Discovery Chemistry & Process Research - Intern",
+      "company": "Merck",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-future-talent-program-discovery-chemistry-process-research-intern-at-merck-4464422961",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489199590",
+      "title": "MENTAL HEALTH INTERN",
+      "company": "Axis Community Health",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/mental-health-intern-at-axis-community-health-4489199590",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489432181",
+      "title": "Undergraduate Intern-R&D -Oncology Research (Summer 2027)",
+      "company": "BioSpace",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/undergraduate-intern-r-d-oncology-research-summer-2027-at-biospace-4489432181",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489417661",
+      "title": "Product Design Intern (USA)",
+      "company": "Pinterest",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-usa-at-pinterest-4489417661",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480281463",
+      "title": "2027 Summer Intern, PhD, Research, Behavior Post-training",
+      "company": "Waymo",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-phd-research-behavior-post-training-at-waymo-4480281463",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489606234",
+      "title": "Summer 2027 Intern - AI Research Incubator",
+      "company": "Salesforce",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-ai-research-incubator-at-salesforce-4489606234",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478618078",
+      "title": "Product Design Intern (2027 Start)",
+      "company": "Databricks",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-2027-start-at-databricks-4478618078",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487833776",
+      "title": "Intern - Optics Customer Success",
+      "company": "Keysight Technologies",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-optics-customer-success-at-keysight-technologies-4487833776",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487824631",
+      "title": "Summer 2027 Intern - Software Engineering",
+      "company": "WD",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-software-engineering-at-wd-4487824631",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4453797194",
+      "title": "Mechanical Engineer Intern (Spring 2027)",
+      "company": "Astranis Space Technologies",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/mechanical-engineer-intern-spring-2027-at-astranis-space-technologies-4453797194",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487917956",
+      "title": "Engineering Intern Level 2",
+      "company": "San Francisco Municipal Transportation Agency (SFMTA)",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/engineering-intern-level-2-at-san-francisco-municipal-transportation-agency-sfmta-4487917956",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487937258",
+      "title": "Engineer Intern",
+      "company": "San Francisco Municipal Transportation Agency (SFMTA)",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/engineer-intern-at-san-francisco-municipal-transportation-agency-sfmta-4487937258",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487973677",
+      "title": "Internship, Mechanical Engineering (Summer 2027)",
+      "company": "Pivotal",
       "location": "Palo Alto, CA",
-      "url": "https://www.linkedin.com/jobs/view/electromechanical-design-engineering-intern-january-august-2027-at-rivian-and-volkswagen-group-technologies-4463566356",
+      "url": "https://www.linkedin.com/jobs/view/internship-mechanical-engineering-summer-2027-at-pivotal-4487973677",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483264622",
+      "title": "Development Engineering Intern (Spring 2027)",
+      "company": "First Solar",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/development-engineering-intern-spring-2027-at-first-solar-4483264622",
       "postedAt": "2026-11-09T00:00:00.000Z",
       "workplaceType": null
     },
@@ -624,11 +2388,263 @@
       "workplaceType": null
     },
     {
+      "id": "4467595653",
+      "title": "2027 Summer Intern, MS/PhD, Conflict Behavior",
+      "company": "Waymo",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-ms-phd-conflict-behavior-at-waymo-4467595653",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489140894",
+      "title": "2027 Summer Intern - In Vitro Safety & Neurotoxicology",
+      "company": "Genentech",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-in-vitro-safety-neurotoxicology-at-genentech-4489140894",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487937528",
+      "title": "Planning Intern",
+      "company": "San Francisco Municipal Transportation Agency (SFMTA)",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/planning-intern-at-san-francisco-municipal-transportation-agency-sfmta-4487937528",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486462665",
+      "title": "Mid-Level Supervisor Intern ABA - South Bay",
+      "company": "Center for Social Dynamics",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/mid-level-supervisor-intern-aba-south-bay-at-center-for-social-dynamics-4486462665",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487656712",
+      "title": "Electrical Engineering Intern, Test and Characterization",
+      "company": "RadianX",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrical-engineering-intern-test-and-characterization-at-radianx-4487656712",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470186728",
+      "title": "Machine Learning Intern (Masters) - Summer 2027",
+      "company": "DoorDash",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-intern-masters-summer-2027-at-doordash-4470186728",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4454090252",
+      "title": "Field Engineer Intern",
+      "company": "FlatironDragados",
+      "location": "Morgan Hill, CA",
+      "url": "https://www.linkedin.com/jobs/view/field-engineer-intern-at-flatirondragados-4454090252",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4451270846",
+      "title": "Delivery Consultant Intern - Entry Level Sales Program 2027",
+      "company": "IBM",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/delivery-consultant-intern-entry-level-sales-program-2027-at-ibm-4451270846",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4435517024",
+      "title": "Internship Opportunities for All Telecare Locations! FY27",
+      "company": "Telecare Corporation",
+      "location": "Alameda, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-opportunities-for-all-telecare-locations%21-fy27-at-telecare-corporation-4435517024",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486674532",
+      "title": "Battery Algorithms Engineering Intern",
+      "company": "Meta",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/battery-algorithms-engineering-intern-at-meta-4486674532",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488747950",
+      "title": "Global Talent Sourcing Intern",
+      "company": "Tencent",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/global-talent-sourcing-intern-at-tencent-4488747950",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488480772",
+      "title": "Safety Reporting Intern [Summer 2027]",
+      "company": "Zoox",
+      "location": "Foster City, CA",
+      "url": "https://www.linkedin.com/jobs/view/safety-reporting-intern-summer-2027-at-zoox-4488480772",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4488472217",
       "title": "Internship, Data Analyst, People Products (Winter/Spring 2027)",
       "company": "Tesla",
       "location": "Palo Alto, CA",
       "url": "https://www.linkedin.com/jobs/view/internship-data-analyst-people-products-winter-spring-2027-at-tesla-4488472217",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470192577",
+      "title": "Machine Learning Intern (Masters) - Summer 2027",
+      "company": "DoorDash",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-intern-masters-summer-2027-at-doordash-4470192577",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461987035",
+      "title": "Project Engineer Intern",
+      "company": "Swinerton",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-engineer-intern-at-swinerton-4461987035",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461906283",
+      "title": "Civil Engineering Intern",
+      "company": "Kimley-Horn",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/civil-engineering-intern-at-kimley-horn-4461906283",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462494158",
+      "title": "Site Design Engineering Intern",
+      "company": "Westwood Professional Services",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/site-design-engineering-intern-at-westwood-professional-services-4462494158",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471678825",
+      "title": "Security Engineer Intern, 2027 Summer U.S.",
+      "company": "Atlassian",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/security-engineer-intern-2027-summer-u-s-at-atlassian-4471678825",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479647314",
+      "title": "Product Marketing Management MBA Intern - Summer 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-marketing-management-mba-intern-summer-2027-at-nvidia-4479647314",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460733320",
+      "title": "Human Resource Intern",
+      "company": "KLA",
+      "location": "Milpitas, CA",
+      "url": "https://www.linkedin.com/jobs/view/human-resource-intern-at-kla-4460733320",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488498055",
+      "title": "Process Improvement Intern [ Summer 2027]",
+      "company": "Zoox",
+      "location": "Foster City, CA",
+      "url": "https://www.linkedin.com/jobs/view/process-improvement-intern-summer-2027-at-zoox-4488498055",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461670407",
+      "title": "Payroll Tax Project Intern(HROP)- 2026 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/payroll-tax-project-intern-hrop-2026-start-at-tiktok-4461670407",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488464613",
+      "title": "Marketing Events Intern",
+      "company": "Intuitive",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-events-intern-at-intuitive-4488464613",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479639559",
+      "title": "Engineering Intern - Technical Program Management (Spring 2027 Co-op)",
+      "company": "Rivian",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/engineering-intern-technical-program-management-spring-2027-co-op-at-rivian-4479639559",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488466393",
+      "title": "UX Quantitative Research Intern (USA)",
+      "company": "Pinterest",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/ux-quantitative-research-intern-usa-at-pinterest-4488466393",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4413672129",
+      "title": "CEGIU Demo Data Strategy Intern - OVIP",
+      "company": "Oracle",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/cegiu-demo-data-strategy-intern-ovip-at-oracle-4413672129",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472092328",
+      "title": "Cloud Media Services Intern",
+      "company": "Tencent",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/cloud-media-services-intern-at-tencent-4472092328",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479660701",
+      "title": "Search Safety & Operations Project Intern（TikTok-Platform Responsibility-Search）- 2026 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/search-safety-operations-project-intern%EF%BC%88tiktok-platform-responsibility-search%EF%BC%89-2026-start-at-tiktok-4479660701",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488490634",
+      "title": "Strategy Intern",
+      "company": "HP",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/strategy-intern-at-hp-4488490634",
       "postedAt": "2026-11-07T00:00:00.000Z",
       "workplaceType": null
     },
@@ -642,20 +2658,92 @@
       "workplaceType": null
     },
     {
+      "id": "4461143168",
+      "title": "Public Service Aide - Associate to Professionals - SFPUC Internship, 2026 (9922)",
+      "company": "San Francisco Public Utilities Commission",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/public-service-aide-associate-to-professionals-sfpuc-internship-2026-9922-at-san-francisco-public-utilities-commission-4461143168",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488701137",
+      "title": "San Francisco Municipal Transportation Agency Student Intern Program, Summer 2027 – 5380 Planning Intern (Level 1)",
+      "company": "City and County of San Francisco",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/san-francisco-municipal-transportation-agency-student-intern-program-summer-2027-%E2%80%93-5380-planning-intern-level-1-at-city-and-county-of-san-francisco-4488701137",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488492688",
+      "title": "San Francisco Municipal Transportation Agency Student Intern Program, Summer 2027 – 5381 Planning Intern (Level 2)",
+      "company": "City and County of San Francisco",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/san-francisco-municipal-transportation-agency-student-intern-program-summer-2027-%E2%80%93-5381-planning-intern-level-2-at-city-and-county-of-san-francisco-4488492688",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480599985",
+      "title": "Engineering Technical Sales Intern",
+      "company": "Ecolab",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/engineering-technical-sales-intern-at-ecolab-4480599985",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486933894",
+      "title": "Software Engineer Intern, Autonomy Software [Summer 2027]",
+      "company": "Zoox",
+      "location": "Foster City, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-autonomy-software-summer-2027-at-zoox-4486933894",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488152122",
+      "title": "Applied AI & Analytics Summer Intern",
+      "company": "Moody's Corporation",
+      "location": "Newark, CA",
+      "url": "https://www.linkedin.com/jobs/view/applied-ai-analytics-summer-intern-at-moody-s-corporation-4488152122",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479840391",
+      "title": "Machine Learning Research Intern - Spring 2027 - Santa Clara, CA",
+      "company": "Nissan Motor Corporation",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-research-intern-spring-2027-santa-clara-ca-at-nissan-motor-corporation-4479840391",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486978923",
+      "title": "Machine Learning Engineer Intern",
+      "company": "Tinder",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-intern-at-tinder-4486978923",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479828836",
+      "title": "Machine Learning Research Perception Intern - Spring 2027 - Santa Clara, CA",
+      "company": "Nissan Motor Corporation",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-research-perception-intern-spring-2027-santa-clara-ca-at-nissan-motor-corporation-4479828836",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4486933893",
       "title": "Software Engineer Intern, Software Systems [Summer 2027]",
       "company": "Zoox",
       "location": "Foster City, CA",
       "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-software-systems-summer-2027-at-zoox-4486933893",
-      "postedAt": "2026-11-06T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4466173203",
-      "title": "2027 Summer Intern, MBA, Strategic Finance",
-      "company": "Waymo",
-      "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-mba-strategic-finance-at-waymo-4466173203",
       "postedAt": "2026-11-06T00:00:00.000Z",
       "workplaceType": null
     },
@@ -678,38 +2766,20 @@
       "workplaceType": null
     },
     {
-      "id": "4486938784",
-      "title": "Hardware Engineer Intern, Manufacturing Operations [Summer 2027]",
-      "company": "Zoox",
-      "location": "Foster City, CA",
-      "url": "https://www.linkedin.com/jobs/view/hardware-engineer-intern-manufacturing-operations-summer-2027-at-zoox-4486938784",
-      "postedAt": "2026-11-06T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4486951438",
-      "title": "Hardware Engineer Intern, Vehicle Development [Summer 2027]",
-      "company": "Zoox",
-      "location": "Foster City, CA",
-      "url": "https://www.linkedin.com/jobs/view/hardware-engineer-intern-vehicle-development-summer-2027-at-zoox-4486951438",
-      "postedAt": "2026-11-06T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4479710496",
-      "title": "Amplify Marketing Specialist I (Intern) - United States",
-      "company": "Cisco",
+      "id": "4486282566",
+      "title": "People Team Intern, HR Transformation (Winter 2027)",
+      "company": "Cloudflare",
       "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/amplify-marketing-specialist-i-intern-united-states-at-cisco-4479710496",
+      "url": "https://www.linkedin.com/jobs/view/people-team-intern-hr-transformation-winter-2027-at-cloudflare-4486282566",
       "postedAt": "2026-11-06T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4488190230",
-      "title": "Software Engineering Internship - San Francisco",
-      "company": "Samsara",
-      "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/software-engineering-internship-san-francisco-at-samsara-4488190230",
+      "id": "4480318681",
+      "title": "Summer 2027: MBA Marketing Intern, Out-Market Investment Diagnostic (NTTF)",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-mba-marketing-intern-out-market-investment-diagnostic-nttf-at-intuit-4480318681",
       "postedAt": "2026-11-06T00:00:00.000Z",
       "workplaceType": null
     },
@@ -723,30 +2793,129 @@
       "workplaceType": null
     },
     {
-      "id": "4488027578",
-      "title": "NBC Sports Bay Area & California - Finance Intern - Summer 2027",
-      "company": "NBCUniversal",
+      "id": "4452731013",
+      "title": "Global Talent Acquisition - San Francisco （Intern / Contract）",
+      "company": "Plaud",
       "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/nbc-sports-bay-area-california-finance-intern-summer-2027-at-nbcuniversal-4488027578",
-      "postedAt": "2026-11-05T00:00:00.000Z",
+      "url": "https://www.linkedin.com/jobs/view/global-talent-acquisition-san-francisco-%EF%BC%88intern-contract%EF%BC%89-at-plaud-4452731013",
+      "postedAt": "2026-11-06T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4487715366",
-      "title": "Software Engineer Intern - Summer 2027",
-      "company": "PayPal",
+      "id": "4470029750",
+      "title": "Mission Applications Intern (Winter 2027)",
+      "company": "Astranis Space Technologies",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/mission-applications-intern-winter-2027-at-astranis-space-technologies-4470029750",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479115318",
+      "title": "Intern - Micron Ventures",
+      "company": "Micron Technology",
       "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2027-at-paypal-4487715366",
-      "postedAt": "2026-11-05T00:00:00.000Z",
+      "url": "https://www.linkedin.com/jobs/view/intern-micron-ventures-at-micron-technology-4479115318",
+      "postedAt": "2026-11-06T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4479847210",
-      "title": "AV Mechanical Engineering Intern - Spring 2027 - Santa Clara, CA",
-      "company": "Nissan Motor Corporation",
+      "id": "4488190230",
+      "title": "Software Engineering Internship - San Francisco",
+      "company": "Samsara",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-internship-san-francisco-at-samsara-4488190230",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486962258",
+      "title": "Human Resources Intern - Summer 2027",
+      "company": "NVIDIA",
       "location": "Santa Clara, CA",
-      "url": "https://www.linkedin.com/jobs/view/av-mechanical-engineering-intern-spring-2027-santa-clara-ca-at-nissan-motor-corporation-4479847210",
-      "postedAt": "2026-11-05T00:00:00.000Z",
+      "url": "https://www.linkedin.com/jobs/view/human-resources-intern-summer-2027-at-nvidia-4486962258",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479304069",
+      "title": "Product Management MBA Intern, Laptop - Summer 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-management-mba-intern-laptop-summer-2027-at-nvidia-4479304069",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4450195097",
+      "title": "Product Manager Intern 2027",
+      "company": "IBM",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-manager-intern-2027-at-ibm-4450195097",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4435503870",
+      "title": "(SCHOOL GROUP ROTATIONS ONLY) Internship Opportunities for All Telecare Locations! FY27",
+      "company": "Telecare Corporation",
+      "location": "Alameda, CA",
+      "url": "https://www.linkedin.com/jobs/view/school-group-rotations-only-internship-opportunities-for-all-telecare-locations%21-fy27-at-telecare-corporation-4435503870",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486070713",
+      "title": "Legal Intern",
+      "company": "Travelers",
+      "location": "Walnut Creek, CA",
+      "url": "https://www.linkedin.com/jobs/view/legal-intern-at-travelers-4486070713",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488101679",
+      "title": "Product Design Intern",
+      "company": "Stripe",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-at-stripe-4488101679",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488422952",
+      "title": "UX Product Design Intern - Winter 2027",
+      "company": "Skydio",
+      "location": "San Mateo, CA",
+      "url": "https://www.linkedin.com/jobs/view/ux-product-design-intern-winter-2027-at-skydio-4488422952",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488114321",
+      "title": "Center for Global Security Research (CGSR) Undergraduate Research Associate - Summer 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/center-for-global-security-research-cgsr-undergraduate-research-associate-summer-2027-at-lawrence-livermore-national-laboratory-4488114321",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488176097",
+      "title": "Youth Lead Intern, 67 Sueños",
+      "company": "American Friends Service Committee",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/youth-lead-intern-67-sue%C3%B1os-at-american-friends-service-committee-4488176097",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469714450",
+      "title": "Technical Project Management Intern (Winter 2027)",
+      "company": "Astranis Space Technologies",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/technical-project-management-intern-winter-2027-at-astranis-space-technologies-4469714450",
+      "postedAt": "2026-11-06T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -755,15 +2924,6 @@
       "company": "Marvell Technology",
       "location": "Santa Clara, CA",
       "url": "https://www.linkedin.com/jobs/view/supply-chain-intern-bs-summer-2027-at-marvell-technology-4469732167",
-      "postedAt": "2026-11-05T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4487701762",
-      "title": "Data Scientist Intern - Summer 2027",
-      "company": "PayPal",
-      "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/data-scientist-intern-summer-2027-at-paypal-4487701762",
       "postedAt": "2026-11-05T00:00:00.000Z",
       "workplaceType": null
     },
@@ -777,20 +2937,74 @@
       "workplaceType": null
     },
     {
+      "id": "4487701762",
+      "title": "Data Scientist Intern - Summer 2027",
+      "company": "PayPal",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-scientist-intern-summer-2027-at-paypal-4487701762",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487712250",
+      "title": "Machine Learning Engineer PhD Intern - Summer 2027",
+      "company": "PayPal",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-engineer-phd-intern-summer-2027-at-paypal-4487712250",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488030782",
+      "title": "Last Minute AI-Machine Learning Summer Internship (Gen AI - Multimodal)",
+      "company": "Eluvio",
+      "location": "Berkeley, CA",
+      "url": "https://www.linkedin.com/jobs/view/last-minute-ai-machine-learning-summer-internship-gen-ai-multimodal-at-eluvio-4488030782",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486577484",
+      "title": "VLSI Timing Methodology Intern - Summer 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/vlsi-timing-methodology-intern-summer-2027-at-nvidia-4486577484",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487715366",
+      "title": "Software Engineer Intern - Summer 2027",
+      "company": "PayPal",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2027-at-paypal-4487715366",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487720022",
+      "title": "Cybersecurity Intern - Summer 2027",
+      "company": "PayPal",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/cybersecurity-intern-summer-2027-at-paypal-4487720022",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479847210",
+      "title": "AV Mechanical Engineering Intern - Spring 2027 - Santa Clara, CA",
+      "company": "Nissan Motor Corporation",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/av-mechanical-engineering-intern-spring-2027-santa-clara-ca-at-nissan-motor-corporation-4479847210",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4479751004",
       "title": "Marketing Intern",
       "company": "Tencent",
       "location": "Palo Alto, CA",
       "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-tencent-4479751004",
-      "postedAt": "2026-11-05T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4470639008",
-      "title": "Customer Engagement Marketing Intern, 2027 Summer U.S.",
-      "company": "Atlassian",
-      "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/customer-engagement-marketing-intern-2027-summer-u-s-at-atlassian-4470639008",
       "postedAt": "2026-11-05T00:00:00.000Z",
       "workplaceType": null
     },
@@ -804,6 +3018,69 @@
       "workplaceType": null
     },
     {
+      "id": "4486338150",
+      "title": "Financial Analyst/Accounting Internship",
+      "company": "Sanmina",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/financial-analyst-accounting-internship-at-sanmina-4486338150",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479828833",
+      "title": "Battery Experimental Intern - Summer 2027 - Santa Clara, CA",
+      "company": "Nissan Motor Corporation",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/battery-experimental-intern-summer-2027-santa-clara-ca-at-nissan-motor-corporation-4479828833",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488057315",
+      "title": "Electrolyte Research Intern",
+      "company": "Anthro Energy",
+      "location": "Alameda, CA",
+      "url": "https://www.linkedin.com/jobs/view/electrolyte-research-intern-at-anthro-energy-4488057315",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479840390",
+      "title": "Machine Learning Research Perception Intern - Spring 2027 - Santa Clara, CA",
+      "company": "Nissan Motor Corporation",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/machine-learning-research-perception-intern-spring-2027-santa-clara-ca-at-nissan-motor-corporation-4479840390",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469074413",
+      "title": "PhD Research Intern, Learning Embodied Skills from Human Data - 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/phd-research-intern-learning-embodied-skills-from-human-data-2027-at-nvidia-4469074413",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4277122877",
+      "title": "Product Designer Project Intern (TikTok-Design-UX) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-designer-project-intern-tiktok-design-ux-2026-start-bs-ms-at-tiktok-4277122877",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466129533",
+      "title": "2027 Summer Intern, PhD, Safety Research, Human Behavior Analytics",
+      "company": "Waymo",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-phd-safety-research-human-behavior-analytics-at-waymo-4466129533",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4488085193",
       "title": "Student Intern (Unbenefited, Part-Time) - Council District 3 Office",
       "company": "City of San José",
@@ -813,29 +3090,128 @@
       "workplaceType": null
     },
     {
-      "id": "4488032493",
-      "title": "NBC Sports Bay Area & California - Marketing Intern - Summer 2027",
-      "company": "NBCUniversal",
-      "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/nbc-sports-bay-area-california-marketing-intern-summer-2027-at-nbcuniversal-4488032493",
+      "id": "4469722323",
+      "title": "Technical Project Management Intern (Summer 2027)",
+      "company": "Astranis Space Technologies",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/technical-project-management-intern-summer-2027-at-astranis-space-technologies-4469722323",
       "postedAt": "2026-11-05T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4461297754",
-      "title": "Strategic Finance Intern (Summer 2027)",
-      "company": "Zipline",
-      "location": "South San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/strategic-finance-intern-summer-2027-at-zipline-4461297754",
-      "postedAt": "2026-11-04T00:00:00.000Z",
+      "id": "4479812243",
+      "title": "2027 1L Patent Litigation Summer Associate (JD Class 2029)",
+      "company": "Fish & Richardson P.C.",
+      "location": "Silicon Valley, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-1l-patent-litigation-summer-associate-jd-class-2029-at-fish-richardson-p-c-4479812243",
+      "postedAt": "2026-11-05T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4461501754",
-      "title": "Strategic Finance Intern (Spring 2027)",
+      "id": "4485581787",
+      "title": "Research Scientist Intern, GenAI Safety (PhD)",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-genai-safety-phd-at-meta-4485581787",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485581339",
+      "title": "Political Data Intern - Spring 2027",
+      "company": "WeVote",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/political-data-intern-spring-2027-at-wevote-4485581339",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488060588",
+      "title": "Sales & Operations Internship (Summer 2027)",
+      "company": "Sandisk",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/sales-operations-internship-summer-2027-at-sandisk-4488060588",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488023664",
+      "title": "NBC Sports Bay Area & California - Production Assistant Intern - Summer 2027",
+      "company": "NBCUniversal",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/nbc-sports-bay-area-california-production-assistant-intern-summer-2027-at-nbcuniversal-4488023664",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488029522",
+      "title": "NBC Sports Bay Area & California - Programming Intern - Summer 2027",
+      "company": "NBCUniversal",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/nbc-sports-bay-area-california-programming-intern-summer-2027-at-nbcuniversal-4488029522",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4453054370",
+      "title": "Strategic Engagements & Events Intern (Spring 2027)",
       "company": "Zipline",
       "location": "South San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/strategic-finance-intern-spring-2027-at-zipline-4461501754",
+      "url": "https://www.linkedin.com/jobs/view/strategic-engagements-events-intern-spring-2027-at-zipline-4453054370",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4453071236",
+      "title": "Strategic Engagements & Events Intern (Summer 2027)",
+      "company": "Zipline",
+      "location": "South San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/strategic-engagements-events-intern-summer-2027-at-zipline-4453071236",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487599856",
+      "title": "Mobile Engineer Intern - Summer 2027",
+      "company": "PayPal",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/mobile-engineer-intern-summer-2027-at-paypal-4487599856",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479821093",
+      "title": "2027 1L Patent Litigation Summer Associate with 1L Fellowship (JD Class 2029)",
+      "company": "Fish & Richardson P.C.",
+      "location": "Silicon Valley, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-1l-patent-litigation-summer-associate-with-1l-fellowship-jd-class-2029-at-fish-richardson-p-c-4479821093",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462040559",
+      "title": "2027 Design Internship – San Francisco",
+      "company": "Williams-Sonoma, Inc.",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-design-internship-%E2%80%93-san-francisco-at-williams-sonoma-inc-4462040559",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485258308",
+      "title": "Clinical Leader Intern - Salinas",
+      "company": "Center for Social Dynamics",
+      "location": "Salinas, CA",
+      "url": "https://www.linkedin.com/jobs/view/clinical-leader-intern-salinas-at-center-for-social-dynamics-4485258308",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4459251666",
+      "title": "Data Science - Intern (Summer 2027)",
+      "company": "C3 AI",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/data-science-intern-summer-2027-at-c3-ai-4459251666",
       "postedAt": "2026-11-04T00:00:00.000Z",
       "workplaceType": null
     },
@@ -849,6 +3225,240 @@
       "workplaceType": null
     },
     {
+      "id": "4469410335",
+      "title": "2027 Summer Intern, PhD, Data Science",
+      "company": "Waymo",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-phd-data-science-at-waymo-4469410335",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482774592",
+      "title": "Business Systems Analyst Undergraduate Intern - 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-systems-analyst-undergraduate-intern-2027-at-lawrence-livermore-national-laboratory-4482774592",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4394638874",
+      "title": "DoW SkillBridge Internship",
+      "company": "Mott MacDonald",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/dow-skillbridge-internship-at-mott-macdonald-4394638874",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487211808",
+      "title": "Cybersecurity Graduate Intern - Cyber and Critical Infrastructure Summer Institute - Summer 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/cybersecurity-graduate-intern-cyber-and-critical-infrastructure-summer-institute-summer-2027-at-lawrence-livermore-national-laboratory-4487211808",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487217538",
+      "title": "Cybersecurity Undergraduate Intern - Cyber and Critical Infrastructure Summer Institute - Summer 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/cybersecurity-undergraduate-intern-cyber-and-critical-infrastructure-summer-institute-summer-2027-at-lawrence-livermore-national-laboratory-4487217538",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482775450",
+      "title": "Procurement Analyst Undergraduate Intern - 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/procurement-analyst-undergraduate-intern-2027-at-lawrence-livermore-national-laboratory-4482775450",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461543302",
+      "title": "2027 Inventory Management Internship - San Francisco",
+      "company": "Williams-Sonoma, Inc.",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-inventory-management-internship-san-francisco-at-williams-sonoma-inc-4461543302",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487084547",
+      "title": "Internship, Product Management, Megapack Services (Winter/Spring 2027)",
+      "company": "Tesla",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-product-management-megapack-services-winter-spring-2027-at-tesla-4487084547",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476601790",
+      "title": "PIC Process Integration Intern",
+      "company": "Nokia",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/pic-process-integration-intern-at-nokia-4476601790",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485045799",
+      "title": "Research Scientist Intern PhD, PAR Safety Evals and Red Teaming",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-phd-par-safety-evals-and-red-teaming-at-meta-4485045799",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487751368",
+      "title": "MBA Intern - Growth Marketing & Content Strategy",
+      "company": "Tierra",
+      "location": "Stanford, CA",
+      "url": "https://www.linkedin.com/jobs/view/mba-intern-growth-marketing-content-strategy-at-tierra-4487751368",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4402895275",
+      "title": "SkillBridge Fellowship",
+      "company": "TurbineOne",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/skillbridge-fellowship-at-turbineone-4402895275",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487212607",
+      "title": "Critical Infrastructure Analysis Undergraduate Intern - Cyber and Critical Infrastructure Summer Institute - Summer 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/critical-infrastructure-analysis-undergraduate-intern-cyber-and-critical-infrastructure-summer-institute-summer-2027-at-lawrence-livermore-national-laboratory-4487212607",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478182403",
+      "title": "Enterprise Platform Technical Marketing Engineer Intern - Summer 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/enterprise-platform-technical-marketing-engineer-intern-summer-2027-at-nvidia-4478182403",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486503862",
+      "title": "Strategic Social Media and Communications Intern",
+      "company": "Docusign",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/strategic-social-media-and-communications-intern-at-docusign-4486503862",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487524450",
+      "title": "Content Enablement Intern 2027 (USA)",
+      "company": "Pinterest",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/content-enablement-intern-2027-usa-at-pinterest-4487524450",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479085518",
+      "title": "Internal Communications Intern",
+      "company": "Prologis",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/internal-communications-intern-at-prologis-4479085518",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487544674",
+      "title": "Spring 2027 Central Pacific Regional Intern",
+      "company": "Anti-Defamation League",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/spring-2027-central-pacific-regional-intern-at-anti-defamation-league-4487544674",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487748580",
+      "title": "MBA Intern - Commercial Strategy",
+      "company": "Tierra",
+      "location": "Berkeley, CA",
+      "url": "https://www.linkedin.com/jobs/view/mba-intern-commercial-strategy-at-tierra-4487748580",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487220365",
+      "title": "Power Systems Undergraduate Intern - Cyber and Critical Infrastructure Summer Institute - Summer 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/power-systems-undergraduate-intern-cyber-and-critical-infrastructure-summer-institute-summer-2027-at-lawrence-livermore-national-laboratory-4487220365",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470224812",
+      "title": "Intern/Co-op – Landscape Architecture + Planning (Summer 2027)",
+      "company": "Langan Engineering & Environmental Services",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-co-op-%E2%80%93-landscape-architecture-%2B-planning-summer-2027-at-langan-engineering-environmental-services-4470224812",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487211776",
+      "title": "Power Systems Graduate Intern - Cyber and Critical Infrastructure Summer Institute - Summer 2027",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/power-systems-graduate-intern-cyber-and-critical-infrastructure-summer-institute-summer-2027-at-lawrence-livermore-national-laboratory-4487211776",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476650426",
+      "title": "Materials Regulatory Compliance (MRC) Intern",
+      "company": "Meta",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/materials-regulatory-compliance-mrc-intern-at-meta-4476650426",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485072749",
+      "title": "Research Scientist Intern, Ads Quality (PhD)",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-ads-quality-phd-at-meta-4485072749",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469970065",
+      "title": "PhD Intern, Data Science (2027)",
+      "company": "Figma",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/phd-intern-data-science-2027-at-figma-4469970065",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485046766",
+      "title": "Summer Intern - Interior Design",
+      "company": "Skidmore, Owings & Merrill (SOM)",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-intern-interior-design-at-skidmore-owings-merrill-som-4485046766",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4483905945",
       "title": "Influencer Marketing & Content Creation Internship",
       "company": "JUNOCO",
@@ -858,12 +3468,174 @@
       "workplaceType": null
     },
     {
-      "id": "4466946334",
-      "title": "Software Engineer Intern (Tech and Product) - 2027 Summer",
-      "company": "TikTok USDS Joint Venture",
-      "location": "San Jose, CA",
-      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-tech-and-product-2027-summer-at-tiktok-usds-joint-venture-4466946334",
-      "postedAt": "2026-11-01T00:00:00.000Z",
+      "id": "4470229482",
+      "title": "Internal Audit Analytics Intern",
+      "company": "Coinbase",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/internal-audit-analytics-intern-at-coinbase-4470229482",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477974073",
+      "title": "Business and Administrative Intern - Strategy Analyst, CCO Strategy and Program Management",
+      "company": "Rivian",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-and-administrative-intern-strategy-analyst-cco-strategy-and-program-management-at-rivian-4477974073",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481391079",
+      "title": "Intern - Sandia/DOE Science Undergrad Laboratory Intern (SULI) - RD Undergrad Summer",
+      "company": "Sandia National Laboratories",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-sandia-doe-science-undergrad-laboratory-intern-suli-rd-undergrad-summer-at-sandia-national-laboratories-4481391079",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481637974",
+      "title": "Intern - Sandia/CA DOE Community College Internship (CCI) - Technical Undergrad Summer",
+      "company": "Sandia National Laboratories",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-sandia-ca-doe-community-college-internship-cci-technical-undergrad-summer-at-sandia-national-laboratories-4481637974",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486038029",
+      "title": "Product Marketing MBA Intern, AI Infrastructure — Summer 2027",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-marketing-mba-intern-ai-infrastructure-%E2%80%94-summer-2027-at-nvidia-4486038029",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478574383",
+      "title": "Carrier Operations Intern (Operations)",
+      "company": "SageSure",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/carrier-operations-intern-operations-at-sagesure-4478574383",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481219023",
+      "title": "Predictive Science Academic Alliance Program IV Student Intern (PSAAP IV)",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/predictive-science-academic-alliance-program-iv-student-intern-psaap-iv-at-lawrence-livermore-national-laboratory-4481219023",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486492621",
+      "title": "Sales Intern - Sunnyvale",
+      "company": "Alibaba Cloud",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/sales-intern-sunnyvale-at-alibaba-cloud-4486492621",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486894176",
+      "title": "Accelerated Science Intern, Bridging Atomistic Modeling to Real Electrochemical Systems",
+      "company": "Toyota Research Institute",
+      "location": "Los Altos, CA",
+      "url": "https://www.linkedin.com/jobs/view/accelerated-science-intern-bridging-atomistic-modeling-to-real-electrochemical-systems-at-toyota-research-institute-4486894176",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487059594",
+      "title": "Product & Motion Design (Co-op / extended internship)",
+      "company": "Engramme",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-motion-design-co-op-extended-internship-at-engramme-4487059594",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486474842",
+      "title": "Spring 2027 Internship",
+      "company": "Perkins&Will",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/spring-2027-internship-at-perkins-will-4486474842",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487070415",
+      "title": "Founding Brand Design Intern",
+      "company": "Skild AI",
+      "location": "San Mateo, CA",
+      "url": "https://www.linkedin.com/jobs/view/founding-brand-design-intern-at-skild-ai-4487070415",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477296081",
+      "title": "2027 Summer Civil Engineering Intern",
+      "company": "BKF Engineers",
+      "location": "Redwood City, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-civil-engineering-intern-at-bkf-engineers-4477296081",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477280726",
+      "title": "2027 Summer Civil Engineering Intern",
+      "company": "BKF Engineers",
+      "location": "Pleasanton, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-civil-engineering-intern-at-bkf-engineers-4477280726",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486465210",
+      "title": "Propulsion Engineering Intern",
+      "company": "Astro Mechanica",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/propulsion-engineering-intern-at-astro-mechanica-4486465210",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486406896",
+      "title": "Summer Law Clerk",
+      "company": "Lawrence Livermore National Laboratory",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-law-clerk-at-lawrence-livermore-national-laboratory-4486406896",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484352981",
+      "title": "Student Intern (Part-Time)",
+      "company": "EBMUD",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/student-intern-part-time-at-ebmud-4484352981",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486441982",
+      "title": "Research Intern",
+      "company": "The Voleon Group",
+      "location": "Berkeley, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-intern-at-the-voleon-group-4486441982",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484615446",
+      "title": "Summer Intern - City Design",
+      "company": "Skidmore, Owings & Merrill (SOM)",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-intern-city-design-at-skidmore-owings-merrill-som-4484615446",
+      "postedAt": "2026-11-02T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -876,11 +3648,65 @@
       "workplaceType": null
     },
     {
-      "id": "4469187392",
-      "title": "Brand Management Intern (MBA - Summer 2027)",
-      "company": "The Clorox Company",
+      "id": "4466946334",
+      "title": "Software Engineer Intern (Tech and Product) - 2027 Summer",
+      "company": "TikTok USDS Joint Venture",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-tech-and-product-2027-summer-at-tiktok-usds-joint-venture-4466946334",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4468088820",
+      "title": "RF/Analog Design/Mixed-Signal Engineering Internship – Summer 2027",
+      "company": "Qualcomm",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/rf-analog-design-mixed-signal-engineering-internship-%E2%80%93-summer-2027-at-qualcomm-4468088820",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460530361",
+      "title": "Project Engineer Intern – Summer 2027 (Livermore, CA)",
+      "company": "Goodfellow Bros.",
+      "location": "Livermore, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-engineer-intern-%E2%80%93-summer-2027-livermore-ca-at-goodfellow-bros-4460530361",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485191037",
+      "title": "Audit Intern – Summer 2027",
+      "company": "Sensiba LLP",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/audit-intern-%E2%80%93-summer-2027-at-sensiba-llp-4485191037",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458620147",
+      "title": "Intern - CDBU Marketing",
+      "company": "Micron Technology",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-cdbu-marketing-at-micron-technology-4458620147",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458987323",
+      "title": "(2028 Bachelor's/Master's graduates) Economics Consulting Analyst/Associate Intern (Summer 2027)",
+      "company": "Charles River Associates",
       "location": "Oakland, CA",
-      "url": "https://www.linkedin.com/jobs/view/brand-management-intern-mba-summer-2027-at-the-clorox-company-4469187392",
+      "url": "https://www.linkedin.com/jobs/view/2028-bachelor-s-master-s-graduates-economics-consulting-analyst-associate-intern-summer-2027-at-charles-river-associates-4458987323",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458976511",
+      "title": "(2028 Bachelor's/Master's graduates) Accounting/Business/Finance Consulting Analyst/Associate Intern (Summer 2027)",
+      "company": "Charles River Associates",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/2028-bachelor-s-master-s-graduates-accounting-business-finance-consulting-analyst-associate-intern-summer-2027-at-charles-river-associates-4458976511",
       "postedAt": "2026-11-01T00:00:00.000Z",
       "workplaceType": null
     },
@@ -894,20 +3720,20 @@
       "workplaceType": null
     },
     {
-      "id": "4469247140",
-      "title": "MBA Finance Intern (Summer 2027)",
-      "company": "The Clorox Company",
-      "location": "Oakland, CA",
-      "url": "https://www.linkedin.com/jobs/view/mba-finance-intern-summer-2027-at-the-clorox-company-4469247140",
-      "postedAt": "2026-10-31T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
       "id": "4485632952",
       "title": "Internship, Distributed Systems Software Engineer, Energy Engineering (Winter/Spring 2027)",
       "company": "Tesla",
       "location": "Palo Alto, CA",
       "url": "https://www.linkedin.com/jobs/view/internship-distributed-systems-software-engineer-energy-engineering-winter-spring-2027-at-tesla-4485632952",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485637828",
+      "title": "Internship, Megapack Business Development, Energy (Winter/Spring 2027)",
+      "company": "Tesla",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-megapack-business-development-energy-winter-spring-2027-at-tesla-4485637828",
       "postedAt": "2026-10-31T00:00:00.000Z",
       "workplaceType": null
     },
@@ -921,6 +3747,24 @@
       "workplaceType": null
     },
     {
+      "id": "4476853761",
+      "title": "Cybersecurity - Summer 2027 Internships",
+      "company": "Rivian",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/cybersecurity-summer-2027-internships-at-rivian-4476853761",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458301777",
+      "title": "Family Office Accounting Internship - Summer 2027 - San Jose",
+      "company": "Frank, Rimerman + Co. LLP",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/family-office-accounting-internship-summer-2027-san-jose-at-frank-rimerman-%2B-co-llp-4458301777",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4479242044",
       "title": "Summer 2027 Internship -  Member of Technical Staff -  Frontend",
       "company": "Armadin",
@@ -930,11 +3774,83 @@
       "workplaceType": null
     },
     {
-      "id": "4477460988",
-      "title": "Defense Technologies Engineering Division (DTED): Undergraduate Intern - Summer 2027",
-      "company": "Lawrence Livermore National Laboratory",
-      "location": "Livermore, CA",
-      "url": "https://www.linkedin.com/jobs/view/defense-technologies-engineering-division-dted-undergraduate-intern-summer-2027-at-lawrence-livermore-national-laboratory-4477460988",
+      "id": "4458927176",
+      "title": "Talent Acquisition Project Intern (Product & Design) - 2026 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-project-intern-product-design-2026-start-at-tiktok-4458927176",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485673227",
+      "title": "Chemistry Intern",
+      "company": "Capable",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/chemistry-intern-at-capable-4485673227",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477883372",
+      "title": "Communications Specialist I (Intern) - United States",
+      "company": "Cisco",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/communications-specialist-i-intern-united-states-at-cisco-4477883372",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485141210",
+      "title": "TD Memory Quality and Reliability PhD Intern",
+      "company": "Intel",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/td-memory-quality-and-reliability-phd-intern-at-intel-4485141210",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470941038",
+      "title": "Summer 2027 Internship - Member of Technical Staff - Agent Systems",
+      "company": "Armadin",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-internship-member-of-technical-staff-agent-systems-at-armadin-4470941038",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458960045",
+      "title": "Talent Acquisition Project Intern (Corporate Functions) - 2026 Fall",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-project-intern-corporate-functions-2026-fall-at-tiktok-4458960045",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485365653",
+      "title": "Master's Machine Learning Engineer, Intern",
+      "company": "Stripe",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/master-s-machine-learning-engineer-intern-at-stripe-4485365653",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485356898",
+      "title": "PhD Machine Learning Engineer, Intern",
+      "company": "Stripe",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/phd-machine-learning-engineer-intern-at-stripe-4485356898",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476219067",
+      "title": "Summer 2027 - Electrical Engineering Intern - BS",
+      "company": "Lam Research",
+      "location": "Fremont, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-electrical-engineering-intern-bs-at-lam-research-4476219067",
       "postedAt": "2026-10-30T00:00:00.000Z",
       "workplaceType": null
     },
@@ -948,11 +3864,29 @@
       "workplaceType": null
     },
     {
+      "id": "4483437961",
+      "title": "Intern of BeyondStyle Content Marketing",
+      "company": "BorderX Lab",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-of-beyondstyle-content-marketing-at-borderx-lab-4483437961",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4485307699",
       "title": "Marketing Intern (North America Cloud & AI) - Sunnyvale",
       "company": "Alibaba Cloud",
       "location": "Sunnyvale, CA",
       "url": "https://www.linkedin.com/jobs/view/marketing-intern-north-america-cloud-ai-sunnyvale-at-alibaba-cloud-4485307699",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4459080943",
+      "title": "Human Resources Intern",
+      "company": "FlatironDragados",
+      "location": "Concord, CA",
+      "url": "https://www.linkedin.com/jobs/view/human-resources-intern-at-flatirondragados-4459080943",
       "postedAt": "2026-10-30T00:00:00.000Z",
       "workplaceType": null
     },
@@ -966,12 +3900,84 @@
       "workplaceType": null
     },
     {
-      "id": "4467168556",
-      "title": "Mechatronics Intern",
-      "company": "Physical Intelligence",
+      "id": "4485113428",
+      "title": "Product Manager - Project Intern (Global Monetization Product and Technology) - 2027 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-manager-project-intern-global-monetization-product-and-technology-2027-start-at-tiktok-4485113428",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466800600",
+      "title": "Safety Intern - Summer 2027",
+      "company": "Granite Construction",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/safety-intern-summer-2027-at-granite-construction-4466800600",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485603137",
+      "title": "Transportation Internship (Summer 2027)",
+      "company": "Fehr & Peers",
       "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/mechatronics-intern-at-physical-intelligence-4467168556",
-      "postedAt": "2026-10-29T00:00:00.000Z",
+      "url": "https://www.linkedin.com/jobs/view/transportation-internship-summer-2027-at-fehr-peers-4485603137",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485388859",
+      "title": "Transportation Internship (Summer 2027)",
+      "company": "Fehr & Peers",
+      "location": "Walnut Creek, CA",
+      "url": "https://www.linkedin.com/jobs/view/transportation-internship-summer-2027-at-fehr-peers-4485388859",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4385384801",
+      "title": "Growth Ops Intern",
+      "company": "Etched",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/growth-ops-intern-at-etched-4385384801",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484828706",
+      "title": "Community Management Intern — San Francisco",
+      "company": "XClub",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/community-management-intern-%E2%80%94-san-francisco-at-xclub-4484828706",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484844051",
+      "title": "Fundraising Associate Intern — San Francisco",
+      "company": "XClub",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/fundraising-associate-intern-%E2%80%94-san-francisco-at-xclub-4484844051",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483488102",
+      "title": "Research Scientist Intern, Scam and Trust (PhD)",
+      "company": "Meta",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-scientist-intern-scam-and-trust-phd-at-meta-4483488102",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475979703",
+      "title": "[2027] Data Scientist - PhD Intern",
+      "company": "Roblox",
+      "location": "San Mateo, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-data-scientist-phd-intern-at-roblox-4475979703",
+      "postedAt": "2026-10-30T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -980,6 +3986,60 @@
       "company": "Analog Devices",
       "location": "San Jose, CA",
       "url": "https://www.linkedin.com/jobs/view/supply-chain-analyst-intern-at-analog-devices-4457279447",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474471926",
+      "title": "Business Process Mining & Intelligence Analyst Intern, BS - Summer 2027",
+      "company": "Marvell Technology",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-process-mining-intelligence-analyst-intern-bs-summer-2027-at-marvell-technology-4474471926",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4457414759",
+      "title": "Client Solutions Intern (GBS-NA) - 2027 Summer",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/client-solutions-intern-gbs-na-2027-summer-at-tiktok-4457414759",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466565940",
+      "title": "Engineer Intern - Summer 2027",
+      "company": "Granite Construction",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/engineer-intern-summer-2027-at-granite-construction-4466565940",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484174105",
+      "title": "PhD Intern, Security Engineer (2027)",
+      "company": "Figma",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/phd-intern-security-engineer-2027-at-figma-4484174105",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484579519",
+      "title": "Procurement Intern (Winter 2027)",
+      "company": "Astranis Space Technologies",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/procurement-intern-winter-2027-at-astranis-space-technologies-4484579519",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484780200",
+      "title": "Digital Assurance & Transparency (DAT) - Data - Intern - Summer 2027",
+      "company": "PwC",
+      "location": "Silicon Valley, CA",
+      "url": "https://www.linkedin.com/jobs/view/digital-assurance-transparency-dat-data-intern-summer-2027-at-pwc-4484780200",
       "postedAt": "2026-10-29T00:00:00.000Z",
       "workplaceType": null
     },
@@ -1002,6 +4062,87 @@
       "workplaceType": null
     },
     {
+      "id": "4485242301",
+      "title": "Arena Engineering Intern (Summer 2027)",
+      "company": "PTC",
+      "location": "San Mateo County, CA",
+      "url": "https://www.linkedin.com/jobs/view/arena-engineering-intern-summer-2027-at-ptc-4485242301",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467180599",
+      "title": "People Operations Intern",
+      "company": "Etched",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/people-operations-intern-at-etched-4467180599",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484996890",
+      "title": "Summer 2027 Product Manager Intern",
+      "company": "Intuit",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-product-manager-intern-at-intuit-4484996890",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484774410",
+      "title": "Medical Education & Communication Intern",
+      "company": "Intuitive",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/medical-education-communication-intern-at-intuitive-4484774410",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4410874474",
+      "title": "Applied Deep Learning PhD Research Intern, Reinforcement Learning for LLMs - Fall 2026",
+      "company": "NVIDIA",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/applied-deep-learning-phd-research-intern-reinforcement-learning-for-llms-fall-2026-at-nvidia-4410874474",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472856429",
+      "title": "Transportation Planning Intern",
+      "company": "Kimley-Horn",
+      "location": "Oakland, CA",
+      "url": "https://www.linkedin.com/jobs/view/transportation-planning-intern-at-kimley-horn-4472856429",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484965371",
+      "title": "Public Relations Intern (Post-Graduate)",
+      "company": "Highwire",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/public-relations-intern-post-graduate-at-highwire-4484965371",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4457904582",
+      "title": "Talent Acquisition Project Intern (GMPT) - 2026 Start",
+      "company": "TikTok",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-project-intern-gmpt-2026-start-at-tiktok-4457904582",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4459055873",
+      "title": "Social Media & Content Marketing Intern",
+      "company": "Arcade",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/social-media-content-marketing-intern-at-arcade-4459055873",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4465267257",
       "title": "Software Engineer, Intern (Summer 2027) - US",
       "company": "DoorDash",
@@ -1011,20 +4152,20 @@
       "workplaceType": null
     },
     {
-      "id": "4467297292",
-      "title": "Systems Engineering Intern, Winter 2026",
-      "company": "Mill",
-      "location": "San Bruno, CA",
-      "url": "https://www.linkedin.com/jobs/view/systems-engineering-intern-winter-2026-at-mill-4467297292",
+      "id": "4448658904",
+      "title": "Security Analyst Intern",
+      "company": "Monolithic Power Systems",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/security-analyst-intern-at-monolithic-power-systems-4448658904",
       "postedAt": "2026-10-28T00:00:00.000Z",
       "workplaceType": null
     },
     {
-      "id": "4484729151",
-      "title": "Health Economics & Outcomes Research (HEOR) Intern",
-      "company": "Intuitive",
-      "location": "Sunnyvale, CA",
-      "url": "https://www.linkedin.com/jobs/view/health-economics-outcomes-research-heor-intern-at-intuitive-4484729151",
+      "id": "4484720408",
+      "title": "Powertrain Mechanical Engineer, Battery (Intern Summer 2027)",
+      "company": "Joby Aviation",
+      "location": "San Carlos, CA",
+      "url": "https://www.linkedin.com/jobs/view/powertrain-mechanical-engineer-battery-intern-summer-2027-at-joby-aviation-4484720408",
       "postedAt": "2026-10-28T00:00:00.000Z",
       "workplaceType": null
     },
@@ -1038,11 +4179,110 @@
       "workplaceType": null
     },
     {
+      "id": "4465214006",
+      "title": "Investment Analyst MBA Intern, Robinhood Ventures (Summer 2027)",
+      "company": "Robinhood",
+      "location": "Menlo Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/investment-analyst-mba-intern-robinhood-ventures-summer-2027-at-robinhood-4465214006",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483877374",
+      "title": "Intern – CMBU Product Management",
+      "company": "Micron Technology",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-%E2%80%93-cmbu-product-management-at-micron-technology-4483877374",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484729151",
+      "title": "Health Economics & Outcomes Research (HEOR) Intern",
+      "company": "Intuitive",
+      "location": "Sunnyvale, CA",
+      "url": "https://www.linkedin.com/jobs/view/health-economics-outcomes-research-heor-intern-at-intuitive-4484729151",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477360389",
+      "title": "Short Drama Creative Editor Intern",
+      "company": "NewsBreak",
+      "location": "Mountain View, CA",
+      "url": "https://www.linkedin.com/jobs/view/short-drama-creative-editor-intern-at-newsbreak-4477360389",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467406896",
+      "title": "Product Marketing Engineer Intern",
+      "company": "Monolithic Power Systems",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-marketing-engineer-intern-at-monolithic-power-systems-4467406896",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4437287377",
+      "title": "Summer 2027 Intern - Healthcare & Life Sciences Division - US/LATAM [UG/Masters]",
+      "company": "Simon-Kucher",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-healthcare-life-sciences-division-us-latam-ug-masters-at-simon-kucher-4437287377",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484057532",
+      "title": "Industrial Design Internship",
+      "company": "leManoosh",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/industrial-design-internship-at-lemanoosh-4484057532",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4483101192",
       "title": "Data Analytics & Data Science Intern — Spring & Summer 2027",
       "company": "Simbe",
       "location": "San Francisco Bay Area",
       "url": "https://www.linkedin.com/jobs/view/data-analytics-data-science-intern-%E2%80%94-spring-summer-2027-at-simbe-4483101192",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483113024",
+      "title": "Computer Vision / Applied AI Intern — Summer 2027",
+      "company": "Simbe",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/computer-vision-applied-ai-intern-%E2%80%94-summer-2027-at-simbe-4483113024",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482894784",
+      "title": "Hardware / Mechanical Engineering Intern — Spring & Summer 2027",
+      "company": "Simbe",
+      "location": "San Francisco Bay Area",
+      "url": "https://www.linkedin.com/jobs/view/hardware-mechanical-engineering-intern-%E2%80%94-spring-summer-2027-at-simbe-4482894784",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460649727",
+      "title": "2027 Summer Intern, MBA, Operations Planning",
+      "company": "Waymo",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-mba-operations-planning-at-waymo-4460649727",
+      "postedAt": "2026-10-23T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481002086",
+      "title": "Marketing Coordinator Intern",
+      "company": "Keysight Technologies",
+      "location": "Santa Clara, CA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-coordinator-intern-at-keysight-technologies-4481002086",
       "postedAt": "2026-10-23T00:00:00.000Z",
       "workplaceType": null
     },
@@ -1056,12 +4296,39 @@
       "workplaceType": null
     },
     {
-      "id": "4479624931",
-      "title": "Strategic Finance Intern",
-      "company": "Bright Machines",
-      "location": "Burlingame, CA",
-      "url": "https://www.linkedin.com/jobs/view/strategic-finance-intern-at-bright-machines-4479624931",
+      "id": "4480083436",
+      "title": "INTERN",
+      "company": "Community Bridges",
+      "location": "Watsonville, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-at-community-bridges-4480083436",
+      "postedAt": "2026-10-22T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482006869",
+      "title": "Summer 2027 Intern - AI Research",
+      "company": "Salesforce",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-ai-research-at-salesforce-4482006869",
       "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480481291",
+      "title": "Intern Engineering Designer, Roads & Highways",
+      "company": "TYLin",
+      "location": "San Jose, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-engineering-designer-roads-highways-at-tylin-4480481291",
+      "postedAt": "2026-10-20T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480293828",
+      "title": "GTM Intern",
+      "company": "Arcafeed (Acq. by Whop)",
+      "location": "Palo Alto, CA",
+      "url": "https://www.linkedin.com/jobs/view/gtm-intern-at-arcafeed-acq-by-whop-4480293828",
+      "postedAt": "2026-10-20T00:00:00.000Z",
       "workplaceType": null
     }
   ]

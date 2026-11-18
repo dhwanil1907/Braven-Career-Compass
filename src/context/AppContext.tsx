@@ -2,8 +2,15 @@ import { createContext, useCallback, useMemo } from 'react';
 import type { ReactNode } from 'react';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { DEFAULT_PROFILE } from '../data/persona';
-import { REFERRAL_SOURCES } from '../data/taxonomy';
-import type { CareerInterest, Major, ReferralSource, UserProfile } from '../types';
+import { APPLICATION_STATUSES, REFERRAL_SOURCES } from '../data/taxonomy';
+import type {
+  ApplicationRecord,
+  ApplicationStatus,
+  CareerInterest,
+  Major,
+  ReferralSource,
+  UserProfile,
+} from '../types';
 
 export interface AppContextValue {
   savedResourceIds: string[];
@@ -24,10 +31,13 @@ export interface AppContextValue {
   toggleStep(id: string): void;
   attendedEventIds: string[];
   appliedResourceIds: string[];
+  /** Details per applied resource id. Ids applied before this existed may have no record. */
+  applications: Record<string, ApplicationRecord>;
   isEventAttended(id: string): boolean;
   isResourceApplied(id: string): boolean;
   toggleAttended(id: string): void;
   toggleApplied(id: string): void;
+  setApplicationStatus(id: string, status: ApplicationStatus): void;
   referralSource: ReferralSource | null;
   setReferralSource(source: ReferralSource | null): void;
   resetProfile(): void;
@@ -37,6 +47,7 @@ export interface AppContextValue {
 }
 
 const EMPTY_IDS: string[] = [];
+const EMPTY_APPLICATIONS: Record<string, ApplicationRecord> = {};
 
 function isStringArray(value: unknown): boolean {
   return Array.isArray(value) && value.every((item) => typeof item === 'string');
@@ -55,6 +66,15 @@ function isProfile(value: unknown): boolean {
     isNullableString(challenge) &&
     typeof onboarded === 'boolean'
   );
+}
+
+function isApplications(value: unknown): boolean {
+  if (typeof value !== 'object' || value === null || Array.isArray(value)) return false;
+  return Object.values(value).every((record) => {
+    if (typeof record !== 'object' || record === null) return false;
+    const { appliedAt, status } = record as Record<string, unknown>;
+    return typeof appliedAt === 'string' && APPLICATION_STATUSES.some((valid) => valid === status);
+  });
 }
 
 function isReferralSource(value: unknown): boolean {
@@ -166,9 +186,37 @@ export function AppProvider({ children }: { children: ReactNode }) {
     (id: string) => setAttendedEventIds((previous) => toggleId(previous, id)),
     [setAttendedEventIds],
   );
+  const [applications, setApplications] = useLocalStorage<Record<string, ApplicationRecord>>(
+    'bcc:applications',
+    EMPTY_APPLICATIONS,
+    isApplications,
+  );
   const toggleApplied = useCallback(
-    (id: string) => setAppliedResourceIds((previous) => toggleId(previous, id)),
-    [setAppliedResourceIds],
+    (id: string) => {
+      if (appliedResourceIds.includes(id)) {
+        setApplications((previous) => {
+          const { [id]: _removed, ...rest } = previous;
+          return rest;
+        });
+      } else {
+        setApplications((previous) => ({
+          ...previous,
+          [id]: { appliedAt: new Date().toISOString(), status: 'Applied' },
+        }));
+      }
+      setAppliedResourceIds((previous) => toggleId(previous, id));
+    },
+    [appliedResourceIds, setAppliedResourceIds, setApplications],
+  );
+  const setApplicationStatus = useCallback(
+    (id: string, status: ApplicationStatus) =>
+      setApplications((previous) => {
+        const existing = previous[id];
+        // Without a record (applied before dates were tracked) there is no date to keep.
+        if (!existing) return previous;
+        return { ...previous, [id]: { ...existing, status } };
+      }),
+    [setApplications],
   );
   const [referralSource, setReferralSource] = useLocalStorage<ReferralSource | null>(
     'bcc:referralSource',
@@ -180,7 +228,14 @@ export function AppProvider({ children }: { children: ReactNode }) {
     setCompletedStepIds([]);
     setAttendedEventIds([]);
     setAppliedResourceIds([]);
-  }, [setProfile, setCompletedStepIds, setAttendedEventIds, setAppliedResourceIds]);
+    setApplications({});
+  }, [
+    setProfile,
+    setCompletedStepIds,
+    setAttendedEventIds,
+    setAppliedResourceIds,
+    setApplications,
+  ]);
 
   const clearSaved = useCallback(() => {
     setSavedResourceIds([]);
@@ -208,6 +263,9 @@ export function AppProvider({ children }: { children: ReactNode }) {
       if (isStringArray(stored.appliedResourceIds)) {
         setAppliedResourceIds(stored.appliedResourceIds as string[]);
       }
+      if (isApplications(stored.applications)) {
+        setApplications(stored.applications as Record<string, ApplicationRecord>);
+      }
       if (isReferralSource(stored.referralSource)) {
         setReferralSource(stored.referralSource as ReferralSource | null);
       }
@@ -220,6 +278,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setCompletedStepIds,
       setAttendedEventIds,
       setAppliedResourceIds,
+      setApplications,
       setReferralSource,
     ],
   );
@@ -244,10 +303,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
       toggleStep,
       attendedEventIds,
       appliedResourceIds,
+      applications,
       isEventAttended,
       isResourceApplied,
       toggleAttended,
       toggleApplied,
+      setApplicationStatus,
       referralSource,
       setReferralSource,
       resetProfile,
@@ -273,10 +334,12 @@ export function AppProvider({ children }: { children: ReactNode }) {
       toggleStep,
       attendedEventIds,
       appliedResourceIds,
+      applications,
       isEventAttended,
       isResourceApplied,
       toggleAttended,
       toggleApplied,
+      setApplicationStatus,
       referralSource,
       setReferralSource,
       resetProfile,
