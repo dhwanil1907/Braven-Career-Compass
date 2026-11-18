@@ -10,10 +10,12 @@ const COPY = {
 export function ProgressToggle({
   kind,
   id,
+  compact = false,
   className = '',
 }: {
   kind: 'attended' | 'applied';
   id: string;
+  compact?: boolean;
   className?: string;
 }) {
   const { isEventAttended, isResourceApplied, toggleAttended, toggleApplied } = useApp();
@@ -25,15 +27,17 @@ export function ProgressToggle({
       type="button"
       onClick={() => (kind === 'attended' ? toggleAttended(id) : toggleApplied(id))}
       aria-pressed={done}
-      className={`inline-flex h-10 items-center justify-center gap-2 rounded-full border px-4
-        text-sm font-semibold transition ${
+      aria-label={compact ? COPY[kind].off : undefined}
+      title={compact ? (done ? COPY[kind].on : COPY[kind].off) : undefined}
+      className={`inline-flex items-center justify-center gap-2 rounded-full border text-sm
+        font-semibold transition ${compact ? 'h-9 w-9' : 'h-10 px-4'} ${
           done
             ? 'border-teal-200 bg-teal-50 text-teal-700 hover:bg-teal-100'
             : 'border-slate-300 bg-surface text-navy-900 hover:bg-navy-50'
         } ${className}`}
     >
       <Icon className="h-4 w-4" aria-hidden="true" />
-      {done ? COPY[kind].on : COPY[kind].off}
+      {!compact && (done ? COPY[kind].on : COPY[kind].off)}
     </button>
   );
 }

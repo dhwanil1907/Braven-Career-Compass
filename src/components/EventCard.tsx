@@ -4,7 +4,12 @@ import { formatTimeRange } from '../lib/dates';
 import { Badge, DemoBadge } from './Badge';
 import { BookmarkButton } from './BookmarkButton';
 import { MatchBadge } from './MatchBadge';
+import { ProgressToggle } from './ProgressToggle';
 import { ReminderCheckbox } from './ReminderCheckbox';
+
+function hasStarted(event: CareerEvent): boolean {
+  return new Date(event.start).getTime() <= Date.now();
+}
 
 function DateTile({ iso, compact }: { iso: string; compact: boolean }) {
   const date = new Date(iso);
@@ -71,6 +76,7 @@ export function EventCard({
           </p>
         </div>
         <ReminderCheckbox event={event} compact />
+        {hasStarted(event) && <ProgressToggle kind="attended" id={event.id} compact />}
         <BookmarkButton kind="event" id={event.id} />
       </article>
     );
@@ -141,6 +147,7 @@ export function EventCard({
           </a>
         </div>
         <ReminderCheckbox event={event} />
+        {hasStarted(event) && <ProgressToggle kind="attended" id={event.id} />}
         <BookmarkButton kind="event" id={event.id} />
       </div>
     </article>
