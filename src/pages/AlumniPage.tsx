@@ -5,7 +5,6 @@ import { AlumniCard, StoryMarquee } from '../components/AlumniStories';
 import { EmptyState } from '../components/EmptyState';
 import { FilterSelect } from '../components/FilterSelect';
 import { PageHeader } from '../components/PageHeader';
-import { ProfessionalsSection } from '../components/ProfessionalsSection';
 import { SectionHeader } from '../components/SectionHeader';
 import { useApp } from '../context/useApp';
 import { alumni } from '../data/stories';
@@ -68,10 +67,6 @@ export function AlumniPage() {
           </div>
         )}
       </PageHeader>
-
-      <div className="mx-auto max-w-7xl border-b border-slate-200 px-4 py-12 sm:px-6 lg:px-8">
-        <ProfessionalsSection />
-      </div>
 
       {alumni.length === 0 ? (
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
