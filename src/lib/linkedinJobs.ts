@@ -16,6 +16,8 @@ const SOURCE_URL = 'https://www.linkedin.com/jobs/';
 
 interface TagRule {
   pattern: RegExp;
+  /** The rule is skipped when the title also matches this, to avoid known false positives. */
+  exclude?: RegExp;
   majors: Major[];
   interests?: CareerInterest[];
 }
@@ -77,7 +79,9 @@ const TAG_RULES: TagRule[] = [
     interests: ['Product Management'],
   },
   {
-    pattern: /human resources|\bhr\b|people (products|operations|partner)|talent acquisition|recruiter|recruiting|learning and development/i,
+    pattern:
+      /human resources|\bhr\b|people (products|operations|partner|team)|talent (acquisition|sourcing)|recruiter|recruit(ing|ment)|learning and development/i,
+    exclude: /area manager|operations manager|recruitment program/i,
     majors: ['Psychology', 'Business', 'Sociology'],
     interests: ['Human Resources'],
   },
@@ -115,12 +119,13 @@ const TAG_RULES: TagRule[] = [
     majors: ['Environmental Science', 'Public Health'],
   },
   {
-    pattern: /psycholog|behavior|counsel|mental health/i,
+    pattern: /psycholog|behavioral (health|science|research)|human behavior|counsel(or|ing)|mental health/i,
     majors: ['Psychology'],
     interests: ['Counseling and Social Services'],
   },
   {
-    pattern: /mental health|social work|case manag|community|nonprofit|non-profit|advocacy/i,
+    pattern:
+      /mental health|social work|case manag|nonprofit|non-profit|outreach|social services|family services|victim|patient advocate|youth advocate|community (outreach|health|organi[sz]|services|program)/i,
     majors: ['Social Work', 'Sociology'],
     interests: ['Social Impact', 'Community Organizing'],
   },
@@ -131,6 +136,7 @@ const TAG_RULES: TagRule[] = [
   },
   {
     pattern: /education|teach|tutor|youth|instruction|curriculum/i,
+    exclude: /medical education|continuing education/i,
     majors: ['Education'],
     interests: ['Education and Teaching'],
   },
@@ -161,7 +167,7 @@ export function tagLinkedinTitle(title: string): { majors: Major[]; interests: C
   const majors = new Set<Major>();
   const interests = new Set<CareerInterest>();
   for (const rule of TAG_RULES) {
-    if (!rule.pattern.test(title)) continue;
+    if (!rule.pattern.test(title) || rule.exclude?.test(title)) continue;
     rule.majors.forEach((major) => majors.add(major));
     rule.interests?.forEach((interest) => interests.add(interest));
   }

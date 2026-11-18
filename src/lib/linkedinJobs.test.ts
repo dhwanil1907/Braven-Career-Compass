@@ -116,6 +116,48 @@ describe('linkedinJobToResource', () => {
       expect(tags.majors).not.toContain('Public Health');
     });
 
+    it('does not read tech community and advocacy roles as social science', () => {
+      for (const title of [
+        'Developer Advocacy Project Intern (PICO) - 2026 Start',
+        'Community Management Intern — San Francisco',
+        'Community Intern',
+        'GMC Customer Advocacy & Engagement Intern',
+        'Intern - Sandia/CA DOE Community College Internship (CCI) - Technical Undergrad Summer',
+      ]) {
+        const { majors } = tagLinkedinTitle(title);
+        expect(majors).not.toContain('Sociology');
+        expect(majors).not.toContain('Social Work');
+      }
+    });
+
+    it('still tags real community and social services roles', () => {
+      expect(tagLinkedinTitle('Community Outreach Intern').majors).toContain('Social Work');
+      expect(tagLinkedinTitle('Social Work Intern').majors).toContain('Sociology');
+      expect(tagLinkedinTitle('Nonprofit Program Intern').majors).toContain('Social Work');
+    });
+
+    it('treats recruiting as HR except for area manager roles', () => {
+      expect(tagLinkedinTitle('University Recruiting Intern').interests).toContain('Human Resources');
+      expect(tagLinkedinTitle('Global Talent Sourcing Intern').interests).toContain('Human Resources');
+      expect(
+        tagLinkedinTitle('Area Manager Intern - Summer 2027 (California), University Recruiting'),
+      ).toEqual({ majors: [], interests: [] });
+    });
+
+    it('does not tag machine learning "behavior" titles as Psychology', () => {
+      expect(tagLinkedinTitle('Summer Intern, Research, Behavior Post-training').majors).not.toContain(
+        'Psychology',
+      );
+      expect(tagLinkedinTitle('Behavioral Health Intern').majors).toContain('Psychology');
+    });
+
+    it('does not tag medical education as Education', () => {
+      expect(tagLinkedinTitle('Medical Education & Communication Intern').majors).not.toContain(
+        'Education',
+      );
+      expect(tagLinkedinTitle('Curriculum Packaging Intern').majors).toContain('Education');
+    });
+
     it('leaves generic titles untagged', () => {
       expect(tagLinkedinTitle('Operations Intern')).toEqual({ majors: [], interests: [] });
       expect(tagLinkedinTitle('Intern')).toEqual({ majors: [], interests: [] });
