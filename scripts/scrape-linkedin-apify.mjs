@@ -1,7 +1,8 @@
 // Fetches internship listings from LinkedIn through Apify's LinkedIn Jobs Scraper
 // (curious_coder/linkedin-jobs-scraper), so no LinkedIn login or cookie is needed.
-// Run: APIFY_TOKEN='…' npm run scrape:linkedin
-// Check the raw output first, without saving: APIFY_TOKEN='…' npm run scrape:linkedin -- --sample
+// Run: APIFY_TOKEN='…' npm run scrape:linkedin          (internships)
+//      APIFY_TOKEN='…' npm run scrape:linkedin:jobs     (entry-level full-time jobs)
+// Check the raw output first, without saving: add `-- --sample` to either command.
 // Pricing is per job returned ($1 to $2 per 1,000); MAX_CHARGE_USD caps a run.
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
@@ -13,8 +14,19 @@ const SAMPLE_SEARCHES = 2;
 const PAST_MONTH_SECONDS = 30 * 24 * 60 * 60;
 const MAX_CHARGE_USD = 1.5;
 const FINISHED = new Set(['SUCCEEDED', 'FAILED', 'ABORTED', 'TIMED-OUT']);
-const SEARCHES_URL = new URL('./linkedin-searches.json', import.meta.url);
-const OUT_FILE = new URL('../src/data/scraped/linkedin-internships.json', import.meta.url);
+// `--jobs` collects entry-level full-time roles instead of internships.
+const JOBS_MODE = process.argv.includes('--jobs');
+const SEARCHES_URL = new URL(
+  JOBS_MODE ? './linkedin-job-searches.json' : './linkedin-searches.json',
+  import.meta.url,
+);
+const OUT_FILE = new URL(
+  JOBS_MODE
+    ? '../src/data/scraped/linkedin-jobs.json'
+    : '../src/data/scraped/linkedin-internships.json',
+  import.meta.url,
+);
+const LISTING_NAME = JOBS_MODE ? 'jobs' : 'internships';
 
 async function apify(path, token, init = {}) {
   const response = await fetch(`${API}${path}`, {
@@ -75,6 +87,18 @@ function looksLikeInternship(item) {
   return /intern/i.test(text);
 }
 
+const SENIOR_TITLE =
+  /\b(senior|sr\.?|staff|principal|director|vp|head of|manager|lead|architect|chief)\b|ph\.?d|\bmba\b/i;
+
+/** Entry-level full-time roles: not an internship, and not a senior or management title. */
+function looksLikeEntryLevelJob(item) {
+  const title = String(item.title ?? '');
+  const type = `${item.employmentType ?? ''}`;
+  return !/intern|co-?op/i.test(`${title} ${type}`) && !SENIOR_TITLE.test(title);
+}
+
+const matchesMode = (item) => (JOBS_MODE ? looksLikeEntryLevelJob(item) : looksLikeInternship(item));
+
 /** Drops LinkedIn's tracking parameters so the saved link is short and stable. */
 function cleanUrl(link) {
   try {
@@ -122,7 +146,7 @@ async function main() {
   const byId = new Map();
   let skipped = 0;
   for (const item of items) {
-    if (!item.id || !item.title || !item.link || !looksLikeInternship(item)) {
+    if (!item.id || !item.title || !item.link || !matchesMode(item)) {
       skipped += 1;
       continue;
     }
@@ -131,7 +155,7 @@ async function main() {
   }
 
   if (byId.size === 0) {
-    throw new Error(`No usable internships in ${items.length} items; kept the existing file.`);
+    throw new Error(`No usable ${LISTING_NAME} in ${items.length} items; kept the existing file.`);
   }
   const jobs = [...byId.values()].sort(
     (a, b) => new Date(b.postedAt ?? 0).getTime() - new Date(a.postedAt ?? 0).getTime(),
@@ -141,7 +165,7 @@ async function main() {
     OUT_FILE,
     JSON.stringify({ scrapedAt: new Date().toISOString(), source: 'LinkedIn', jobs }, null, 2),
   );
-  console.log(`Saved ${jobs.length} internships (${skipped} of ${items.length} skipped).`);
+  console.log(`Saved ${jobs.length} ${LISTING_NAME} (${skipped} of ${items.length} skipped).`);
 }
 
 main().catch((error) => {

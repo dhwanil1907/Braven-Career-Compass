@@ -26,9 +26,6 @@ export interface AppContextValue {
   setMajor(major: Major | null): void;
   toggleInterest(interest: CareerInterest): void;
   updateProfile(changes: Partial<UserProfile>): void;
-  completedStepIds: string[];
-  isStepComplete(id: string): boolean;
-  toggleStep(id: string): void;
   attendedEventIds: string[];
   appliedResourceIds: string[];
   /** Details per applied resource id. Ids applied before this existed may have no record. */
@@ -151,19 +148,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
     (changes: Partial<UserProfile>) => setProfile((previous) => ({ ...previous, ...changes })),
     [setProfile],
   );
-  const [completedStepIds, setCompletedStepIds] = useLocalStorage<string[]>(
-    'bcc:completedSteps',
-    EMPTY_IDS,
-    isStringArray,
-  );
-  const isStepComplete = useCallback(
-    (id: string) => completedStepIds.includes(id),
-    [completedStepIds],
-  );
-  const toggleStep = useCallback(
-    (id: string) => setCompletedStepIds((previous) => toggleId(previous, id)),
-    [setCompletedStepIds],
-  );
   const [attendedEventIds, setAttendedEventIds] = useLocalStorage<string[]>(
     'bcc:attendedEvents',
     EMPTY_IDS,
@@ -225,17 +209,10 @@ export function AppProvider({ children }: { children: ReactNode }) {
   );
   const resetProfile = useCallback(() => {
     setProfile(DEFAULT_PROFILE);
-    setCompletedStepIds([]);
     setAttendedEventIds([]);
     setAppliedResourceIds([]);
     setApplications({});
-  }, [
-    setProfile,
-    setCompletedStepIds,
-    setAttendedEventIds,
-    setAppliedResourceIds,
-    setApplications,
-  ]);
+  }, [setProfile, setAttendedEventIds, setAppliedResourceIds, setApplications]);
 
   const clearSaved = useCallback(() => {
     setSavedResourceIds([]);
@@ -253,9 +230,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
       if (isStringArray(stored.savedEventIds)) setSavedEventIds(stored.savedEventIds as string[]);
       if (isStringArray(stored.reminderEventIds)) {
         setReminderEventIds(stored.reminderEventIds as string[]);
-      }
-      if (isStringArray(stored.completedStepIds)) {
-        setCompletedStepIds(stored.completedStepIds as string[]);
       }
       if (isStringArray(stored.attendedEventIds)) {
         setAttendedEventIds(stored.attendedEventIds as string[]);
@@ -275,7 +249,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setSavedResourceIds,
       setSavedEventIds,
       setReminderEventIds,
-      setCompletedStepIds,
       setAttendedEventIds,
       setAppliedResourceIds,
       setApplications,
@@ -298,9 +271,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setMajor,
       toggleInterest,
       updateProfile,
-      completedStepIds,
-      isStepComplete,
-      toggleStep,
       attendedEventIds,
       appliedResourceIds,
       applications,
@@ -329,9 +299,6 @@ export function AppProvider({ children }: { children: ReactNode }) {
       setMajor,
       toggleInterest,
       updateProfile,
-      completedStepIds,
-      isStepComplete,
-      toggleStep,
       attendedEventIds,
       appliedResourceIds,
       applications,

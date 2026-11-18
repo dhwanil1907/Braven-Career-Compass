@@ -55,6 +55,13 @@ describe('linkedinJobToResource', () => {
     expect(majorsFor('Electrical Engineering Intern')).not.toContain('Computer Science');
   });
 
+  it('builds a Job resource when the listing is an entry-level role', () => {
+    const resource = linkedinJobToResource({ ...job, title: 'Entry Level Data Analyst' }, SCRAPED_AT, 'Job');
+    expect(resource.resourceType).toBe('Job');
+    expect(resource.tags).toEqual(['linkedin', 'job']);
+    expect(resource.whoItsFor[0]).toMatch(/entry-level/);
+  });
+
   it('tells students to confirm details on LinkedIn', () => {
     expect(linkedinJobToResource(job, SCRAPED_AT).description).toContain('LinkedIn');
   });

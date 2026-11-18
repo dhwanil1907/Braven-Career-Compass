@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { ArrowRight, Bookmark, Check, Pencil, Trash2 } from 'lucide-react';
+import { ArrowRight, Bookmark, Pencil, Trash2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ApplicationTracker } from '../components/ApplicationTracker';
 import { EmptyState } from '../components/EmptyState';
@@ -7,12 +7,10 @@ import { EventCard } from '../components/EventCard';
 import { EventDetailsModal } from '../components/EventDetailsModal';
 import { MomentumSection } from '../components/MomentumSection';
 import { ResourceCard } from '../components/ResourceCard';
-import { RoadmapList } from '../components/RoadmapList';
 import { useApp } from '../context/useApp';
-import { events, getEventById } from '../data/events';
-import { resources, getResourceById } from '../data/resources';
+import { getEventById } from '../data/events';
+import { getResourceById } from '../data/resources';
 import { DueSoonBanner } from '../components/DueSoonBanner';
-import { countCompleted, buildRoadmap, getNextStep } from '../lib/roadmap';
 import type { CareerEvent } from '../types';
 
 type SavedTab = 'resources' | 'events';
@@ -22,15 +20,9 @@ function isDefined<T>(value: T | undefined): value is T {
 }
 
 export function JourneyPage() {
-  const { profile, completedStepIds, toggleStep, savedResourceIds, savedEventIds, clearSaved } =
-    useApp();
+  const { profile, savedResourceIds, savedEventIds, clearSaved } = useApp();
   const [selectedEvent, setSelectedEvent] = useState<CareerEvent | null>(null);
   const [savedTab, setSavedTab] = useState<SavedTab>('resources');
-  const now = useMemo(() => new Date(), []);
-
-  const steps = useMemo(() => buildRoadmap(profile, resources, events, now), [profile, now]);
-  const nextStep = getNextStep(steps, completedStepIds);
-  const doneCount = countCompleted(steps, completedStepIds);
 
   const savedResources = useMemo(
     () => savedResourceIds.map((id) => getResourceById(id)).filter(isDefined),
@@ -83,96 +75,36 @@ export function JourneyPage() {
             </Link>
           </div>
 
-          <p className="mt-8 text-sm font-semibold uppercase tracking-wider text-navy-800">
-            Your next action
-          </p>
-          {nextStep ? (
-            <div className="mt-3 max-w-3xl">
-              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">{nextStep.title}</h1>
-              <p className="mt-4 text-lg text-navy-800">{nextStep.why}</p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Link
-                  to={nextStep.href}
-                  className="inline-flex h-12 items-center gap-2 rounded-full bg-coral-600 px-6 text-base
-                    font-semibold text-white transition hover:bg-deep"
-                >
-                  {nextStep.kind === 'event' ? 'View event' : 'Open resource'}
-                  <ArrowRight className="h-5 w-5" aria-hidden="true" />
-                </Link>
-                <button
-                  type="button"
-                  onClick={() => toggleStep(nextStep.id)}
-                  className="inline-flex h-12 items-center gap-2 rounded-full border border-navy-950/25
-                    bg-surface/50 px-5 text-base font-semibold transition hover:bg-surface/80"
-                >
-                  <Check className="h-5 w-5" aria-hidden="true" />
-                  Mark as done
-                </button>
-                <span className="text-sm text-navy-800">{nextStep.actionLabel}</span>
-              </div>
+          <div className="mt-8 max-w-3xl">
+            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">My journey</h1>
+            <p className="mt-4 text-lg text-navy-800">
+              Find opportunities that fit your profile, then keep track of what you apply to and
+              attend.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center gap-3">
+              <Link
+                to="/internships"
+                className="inline-flex h-12 items-center gap-2 rounded-full bg-coral-600 px-6 text-base
+                  font-semibold text-white transition hover:bg-deep"
+              >
+                Find internships
+                <ArrowRight className="h-5 w-5" aria-hidden="true" />
+              </Link>
+              <Link
+                to="/events"
+                className="inline-flex h-12 items-center rounded-full border border-navy-950/25
+                  bg-surface/50 px-6 text-base font-semibold transition hover:bg-surface/80"
+              >
+                Browse events
+              </Link>
             </div>
-          ) : (
-            <div className="mt-3 max-w-3xl">
-              <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
-                You finished your roadmap
-              </h1>
-              <p className="mt-4 text-lg text-navy-800">
-                Check Events for what is coming up, or set a new goal for a fresh 5-step plan.
-              </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Link
-                  to="/start"
-                  className="inline-flex h-12 items-center rounded-full bg-coral-600 px-6 font-semibold
-                    text-white transition hover:bg-deep"
-                >
-                  Set a new goal
-                </Link>
-                <Link
-                  to="/events"
-                  className="inline-flex h-12 items-center rounded-full border border-navy-900/30
-                    bg-surface/50 px-6 font-semibold transition hover:bg-surface/80"
-                >
-                  See upcoming events
-                </Link>
-              </div>
-            </div>
-          )}
+          </div>
         </div>
       </section>
 
       <div className="mx-auto max-w-7xl space-y-14 px-4 pt-10 sm:px-6 lg:px-8">
         <DueSoonBanner />
         <MomentumSection />
-        <section aria-labelledby="roadmap-heading" className="grid gap-8 lg:grid-cols-3">
-          <div className="lg:col-span-1">
-            <h2 id="roadmap-heading" className="text-2xl font-semibold text-navy-900">
-              Your roadmap
-            </h2>
-            <p className="mt-2 text-sm text-slate-600">
-              Built from your answers using simple rules, and linked to real items in the catalog.
-            </p>
-            <p className="mt-6 text-sm font-semibold text-navy-900">
-              {doneCount} of {steps.length} steps done
-            </p>
-            <div
-              className="mt-2 h-2 overflow-hidden rounded-full bg-slate-200"
-              role="progressbar"
-              aria-valuemin={0}
-              aria-valuemax={steps.length}
-              aria-valuenow={doneCount}
-              aria-label="Roadmap progress"
-            >
-              <div
-                className="h-full rounded-full bg-coral-500 transition-all"
-                style={{ width: steps.length ? `${(doneCount / steps.length) * 100}%` : '0%' }}
-              />
-            </div>
-          </div>
-          <div className="lg:col-span-2">
-            <RoadmapList steps={steps} completedIds={completedStepIds} onToggle={toggleStep} />
-          </div>
-        </section>
-
         <section id="saved" className="scroll-mt-24" aria-labelledby="saved-heading">
           <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
             <div>

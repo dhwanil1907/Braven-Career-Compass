@@ -14,7 +14,8 @@
     "scrape:resources": "node scripts/scrape-sjsu.mjs resources",
     "scrape:instagram": "node scripts/scrape-instagram.mjs",
     "scrape:instagram:apify": "node scripts/scrape-instagram-apify.mjs",
-    "scrape:linkedin": "node scripts/scrape-linkedin-apify.mjs"
+    "scrape:linkedin": "node scripts/scrape-linkedin-apify.mjs",
+    "scrape:linkedin:jobs": "node scripts/scrape-linkedin-apify.mjs --jobs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",

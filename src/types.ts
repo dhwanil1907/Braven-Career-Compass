@@ -165,17 +165,6 @@ export interface UserProfile {
 /** The profile fields that drive matching; lets callers pass partial profiles. */
 export type ProfileSignals = Pick<UserProfile, 'major' | 'interests'>;
 
-/** One step of the generated career roadmap. Ids are stable so completion can be persisted. */
-export interface RoadmapStep {
-  id: string;
-  title: string;
-  why: string;
-  actionLabel: string;
-  href: string;
-  kind: 'resource' | 'event';
-  targetId: string;
-}
-
 export interface ResourceFilters {
   major: Major | '';
   interest: CareerInterest | '';

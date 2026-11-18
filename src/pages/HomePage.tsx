@@ -295,13 +295,13 @@ export function HomePage() {
             ['1', 'Tell us about you', 'Pick your major, year and goal. It takes about a minute.'],
             [
               '2',
-              'Get your plan',
-              'A 5-step roadmap with a real resource or event linked to every step.',
+              'Get matched',
+              'Internships, resources and events ranked by how well they fit you.',
             ],
             [
               '3',
-              'Save events, track progress',
-              'Add events to your calendar, mark steps done, and book a call with alumni.',
+              'Save and track',
+              'Save what you like, mark the internships you applied to, and watch your momentum.',
             ],
           ].map(([number, title, text]) => (
             <li key={number} className="flex gap-4">
