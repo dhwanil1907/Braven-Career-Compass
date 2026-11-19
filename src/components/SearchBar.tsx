@@ -24,8 +24,8 @@ export function SearchBar({
   };
 
   const containerClasses = isLarge
-    ? 'h-16 rounded-2xl pl-5 pr-2'
-    : 'h-12 rounded-xl pl-4 pr-1.5 shadow-card';
+    ? 'h-16 rounded-full pl-6 pr-2'
+    : 'h-12 rounded-full pl-5 pr-1.5';
 
   return (
     <form role="search" onSubmit={handleSubmit} className="w-full">

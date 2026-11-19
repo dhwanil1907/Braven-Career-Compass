@@ -1,19 +1,15 @@
 import { useMemo, useState } from 'react';
-import { Info, Sparkles, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Handshake, Info, MessageCircle, Users } from 'lucide-react';
 import { AlumniCard, StoryMarquee } from '../components/AlumniStories';
 import { EmptyState } from '../components/EmptyState';
 import { FilterSelect } from '../components/FilterSelect';
 import { PageHeader } from '../components/PageHeader';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { SectionHeader } from '../components/SectionHeader';
-import { useApp } from '../context/useApp';
 import { alumni } from '../data/stories';
 import { INTEREST_GROUPS, INTERESTS, MAJOR_GROUPS, MAJORS } from '../data/taxonomy';
-import { hasProfile, matchAlumni } from '../lib/recommend';
 import type { CareerInterest, Major } from '../types';
 
-const MATCH_COUNT = 3;
 const PAGE_SIZE = 15;
 const PAGE_BUTTON_BASE =
   'inline-flex h-11 items-center justify-center rounded-full border px-4 text-sm font-semibold ' +
@@ -23,14 +19,11 @@ const PAGE_BUTTON_ACTIVE = `${PAGE_BUTTON_BASE} border-ink bg-ink text-on-ink`;
 
 export function AlumniPage() {
   usePageTitle('Alumni');
-  const { profile } = useApp();
   const [major, setMajor] = useState<Major | ''>('');
   const [interest, setInterest] = useState<CareerInterest | ''>('');
   const [page, setPage] = useState(1);
 
   const hasSamples = alumni.some((alum) => alum.isSample);
-  const personalized = hasProfile(profile);
-  const matches = useMemo(() => matchAlumni(alumni, profile, MATCH_COUNT), [profile]);
   const filtered = useMemo(
     () =>
       alumni.filter(
@@ -53,23 +46,10 @@ export function AlumniPage() {
   return (
     <div>
       <PageHeader
+        icons={[Users, MessageCircle, Handshake]}
         title="Talk to someone who has done it"
         description="Find alumni who studied what you study or work in the field you want, read what they would tell you, and book a call."
-      >
-        {hasSamples && (
-          <div
-            className="flex max-w-[75ch] items-start gap-2 rounded-lg border border-amber-200 bg-amber-50
-              px-3 py-2 text-sm text-amber-900"
-          >
-            <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
-            <p>
-              The profiles marked <span className="font-semibold">Sample profile</span> are invented
-              for this prototype and are not real people. Real alumni will appear here with their
-              own permission, LinkedIn and scheduling link.
-            </p>
-          </div>
-        )}
-      </PageHeader>
+      />
 
       {alumni.length === 0 ? (
         <div className="mx-auto max-w-[100rem] px-4 py-10 sm:px-8 lg:px-16">
@@ -81,41 +61,6 @@ export function AlumniPage() {
         </div>
       ) : (
         <div className="mx-auto max-w-[100rem] space-y-12 px-4 py-8 sm:px-8 lg:px-16">
-          <section aria-labelledby="matches-heading">
-            <SectionHeader
-              title="Matched for you"
-              subtitle="Based on your major and the fields you picked. Same major counts most."
-              action={personalized ? { label: 'Edit my answers', to: '/start' } : undefined}
-            />
-            {!personalized ? (
-              <EmptyState
-                icon={Sparkles}
-                title="Tell us about you to see your matches"
-                description="Pick your major and the fields you like, and we will show the alumni closest to your path."
-                action={
-                  <Link
-                    to="/start"
-                    className="rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-coral-700"
-                  >
-                    Build my plan
-                  </Link>
-                }
-              />
-            ) : matches.length === 0 ? (
-              <EmptyState
-                icon={Users}
-                title="No close matches yet"
-                description="Nobody in the list shares your major or fields yet. Browse everyone below."
-              />
-            ) : (
-              <div className="grid gap-6 md:grid-cols-3" id="matches-heading">
-                {matches.map((match) => (
-                  <AlumniCard key={match.alum.id} alum={match.alum} reasons={match.reasons} />
-                ))}
-              </div>
-            )}
-          </section>
-
           <section id="browse-section" aria-labelledby="browse-heading" className="scroll-mt-24">
             <SectionHeader title="Browse all alumni" />
             <div className="grid gap-4 sm:grid-cols-2">
@@ -198,6 +143,16 @@ export function AlumniPage() {
           </section>
 
           <StoryMarquee />
+
+          {hasSamples && (
+            <p className="flex max-w-[75ch] items-start gap-2 text-sm text-slate-600">
+              <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+              <span>
+                These profiles are invented for this prototype and are not real people. Real
+                alumni will appear here with their own permission.
+              </span>
+            </p>
+          )}
         </div>
       )}
     </div>

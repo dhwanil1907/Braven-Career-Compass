@@ -6,7 +6,9 @@ import {
   CalendarX,
   Info,
   LayoutList,
+  Megaphone,
   Sparkles,
+  Ticket,
   X,
 } from 'lucide-react';
 import type { CareerEvent, EventFilters, EventFormat, EventType } from '../types';
@@ -28,6 +30,7 @@ import { FilterSelect } from '../components/FilterSelect';
 import { MultiFilterSelect } from '../components/MultiFilterSelect';
 import { EventCard } from '../components/EventCard';
 import { EventDetailsModal } from '../components/EventDetailsModal';
+import { SlidingToggle } from '../components/SlidingToggle';
 import { PageHeader } from '../components/PageHeader';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { CalendarGrid } from '../components/CalendarGrid';
@@ -135,16 +138,10 @@ export function EventsPage() {
     setRecommendedOnly(false);
   };
 
-  const viewButtonClass = (mode: ViewMode) =>
-    `inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-      view === mode
-        ? 'bg-surface text-navy-900 shadow-sm'
-        : 'text-slate-600 hover:text-navy-900'
-    }`;
-
   return (
     <div className="pb-16">
       <PageHeader
+        icons={[CalendarDays, Ticket, Megaphone]}
         title="Career events calendar"
         description="Workshops, networking nights, career fairs, and info sessions from the SJSU Career Center and student clubs."
       >
@@ -158,7 +155,7 @@ export function EventsPage() {
       </PageHeader>
 
       <div className="mx-auto max-w-[100rem] px-4 pt-8 sm:px-8 lg:px-16">
-        <div className="rounded-xl border border-slate-200 bg-surface p-4 sm:p-5">
+        <div className="rounded-3xl bg-slate-100 p-5 dark:bg-surface sm:p-6">
           <SearchBar value={query} onChange={setQuery} placeholder="Search events..." />
           <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end">
             <div className="grid flex-1 gap-4 sm:grid-cols-3">
@@ -191,11 +188,11 @@ export function EventsPage() {
                 type="button"
                 aria-pressed={savedOnly}
                 onClick={() => setSavedOnly((current) => !current)}
-                className={`inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-2.5 text-sm
-                  font-medium transition ${
+                className={`inline-flex h-11 items-center gap-1.5 rounded-full border px-5 text-sm
+                  font-semibold transition ${
                     savedOnly
-                      ? 'border-teal-600 bg-teal-50 text-teal-800'
-                      : 'border-slate-200 bg-surface text-slate-700 hover:border-slate-300'
+                      ? 'border-ink bg-ink text-on-ink'
+                      : 'border-slate-300 bg-surface text-slate-700 hover:border-slate-400'
                   }`}
               >
                 <Bookmark
@@ -210,11 +207,11 @@ export function EventsPage() {
                 disabled={!canRecommend}
                 title={canRecommend ? undefined : 'Answer the three quick questions to unlock this'}
                 onClick={() => setRecommendedOnly((current) => !current)}
-                className={`inline-flex items-center gap-1.5 rounded-xl border px-3.5 py-2.5 text-sm
-                  font-medium transition disabled:cursor-not-allowed disabled:opacity-50 ${
+                className={`inline-flex h-11 items-center gap-1.5 rounded-full border px-5 text-sm
+                  font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 ${
                     recommendedOnly
-                      ? 'border-teal-600 bg-teal-50 text-teal-800'
-                      : 'border-slate-200 bg-surface text-slate-700 hover:border-slate-300'
+                      ? 'border-ink bg-ink text-on-ink'
+                      : 'border-slate-300 bg-surface text-slate-700 hover:border-slate-400'
                   }`}
               >
                 <Sparkles className="h-4 w-4" aria-hidden="true" />
@@ -258,30 +255,31 @@ export function EventsPage() {
               {showPast ? 'Showing past events' : 'Show past events'}
             </button>
           )}
-          <div
-            className="inline-flex rounded-xl bg-slate-100 p-1"
-            role="group"
-            aria-label="Choose view"
-          >
-            <button
-              type="button"
-              aria-pressed={view === 'list'}
-              onClick={() => setView('list')}
-              className={viewButtonClass('list')}
-            >
-              <LayoutList className="h-4 w-4" aria-hidden="true" />
-              List
-            </button>
-            <button
-              type="button"
-              aria-pressed={view === 'calendar'}
-              onClick={() => setView('calendar')}
-              className={viewButtonClass('calendar')}
-            >
-              <CalendarDays className="h-4 w-4" aria-hidden="true" />
-              Calendar
-            </button>
-          </div>
+          <SlidingToggle
+            label="Choose view"
+            value={view}
+            onChange={setView}
+            options={[
+              {
+                value: 'list',
+                label: (
+                  <>
+                    <LayoutList className="h-4 w-4" aria-hidden="true" />
+                    List
+                  </>
+                ),
+              },
+              {
+                value: 'calendar',
+                label: (
+                  <>
+                    <CalendarDays className="h-4 w-4" aria-hidden="true" />
+                    Calendar
+                  </>
+                ),
+              },
+            ]}
+          />
         </div>
 
         <div className="mt-4">

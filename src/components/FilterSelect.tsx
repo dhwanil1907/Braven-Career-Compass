@@ -31,7 +31,7 @@ export function FilterSelect<T extends string>({
           id={id}
           value={value}
           onChange={(changeEvent) => onChange(changeEvent.target.value as T | '')}
-          className="h-11 w-full cursor-pointer appearance-none rounded-xl border border-slate-200
+          className="h-11 w-full cursor-pointer appearance-none rounded-2xl border border-slate-200
             bg-surface pl-3.5 pr-10 text-sm text-navy-900 shadow-card transition
             hover:border-slate-300 focus-visible:border-navy-900"
         >

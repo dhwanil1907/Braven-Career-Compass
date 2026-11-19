@@ -16,7 +16,8 @@ import {
 import { Link } from 'react-router-dom';
 import type { Resource, ResourceType } from '../types';
 import { relativeDayLabel } from '../lib/dates';
-import { Badge, DemoBadge, MetaText } from './Badge';
+import { stripEmoji } from '../lib/text';
+import { DemoBadge } from './Badge';
 import { BookmarkButton } from './BookmarkButton';
 import { MatchBadge } from './MatchBadge';
 import { ProgressToggle } from './ProgressToggle';
@@ -59,18 +60,37 @@ export function ResourceCard({
   const TypeIcon = TYPE_ICONS[resource.resourceType];
   const tags = informativeTags(resource);
   const primaryClasses =
-    'group inline-flex h-11 items-center gap-1.5 rounded-full bg-coral-600 px-5 text-sm ' +
-    'font-semibold text-white transition hover:bg-coral-700 focus-visible:outline-2 ' +
+    'group inline-flex h-11 items-center gap-1.5 rounded-full bg-ink px-5 text-sm ' +
+    'font-semibold text-on-ink transition hover:opacity-85 focus-visible:outline-2 ' +
     'focus-visible:outline-offset-2 focus-visible:outline-teal-500';
 
   return (
     <article
-      className="flex h-full flex-col rounded-xl border border-slate-200 bg-surface p-5 transition
-        hover:border-navy-300 hover:shadow-card-hover"
+      className="flex h-full flex-col rounded-3xl bg-slate-100 p-6 transition duration-300
+        hover:-translate-y-1 dark:bg-surface"
     >
       {/* Reserved meta row: titles start at the same height with or without a match. */}
-      <div className="flex min-h-5 flex-wrap items-center gap-x-3 gap-y-1">
-        <MetaText icon={TypeIcon}>{resource.resourceType}</MetaText>
+      <div className="flex min-h-9 flex-wrap items-center gap-x-3 gap-y-1">
+        <span
+          className={`flex items-center justify-center ${
+            'h-9 w-9 rounded-xl'
+          } ${
+            resource.resourceType === 'Job'
+              ? 'bg-sky-200 text-sky-ink'
+              : 'bg-black/5 text-navy-900 dark:bg-white/10'
+          }`}
+        >
+          <TypeIcon className="h-5 w-5" aria-hidden="true" />
+        </span>
+        <p className="text-sm text-slate-600">
+          <span className="font-semibold text-navy-900">{resource.resourceType}</span>
+          <span aria-hidden="true"> · </span>
+          <span className="sr-only">, </span>
+          {resource.source}
+          <span aria-hidden="true"> · </span>
+          <span className="sr-only">, </span>
+          {resource.location}
+        </p>
         {resource.isDemo && <DemoBadge />}
         {showMatch && (
           <span className="ml-auto">
@@ -79,18 +99,21 @@ export function ResourceCard({
         )}
       </div>
 
-      <h3 className="mt-3 line-clamp-3 font-display text-xl font-semibold leading-snug text-navy-900">
+      <h3
+        className="mt-4 line-clamp-2 font-display text-2xl font-semibold leading-[1.1]
+          tracking-[-0.03em] text-navy-900"
+        title={resource.title}
+      >
         <Link to={`/resources/${resource.id}`} className="transition hover:text-coral-ink">
-          {resource.title}
+          {stripEmoji(resource.title)}
         </Link>
       </h3>
-      <p className="mt-1 text-sm font-medium text-slate-600">
-        {resource.source}
-        <span aria-hidden="true"> · </span>
-        <span className="sr-only">, </span>
-        {resource.location}
-      </p>
-      <p className="mt-2 line-clamp-2 text-sm text-slate-600">{resource.summary}</p>
+      {listing ? (
+        // Company and city sit right under the title as one group.
+        <p className="mt-3 line-clamp-1 text-base font-semibold text-slate-700">{resource.summary}</p>
+      ) : (
+        <p className="mt-3 line-clamp-3 text-base text-slate-700">{resource.summary}</p>
+      )}
 
       {resource.deadline && (
         <p className="mt-3 flex items-center gap-1.5 text-sm text-slate-600">
@@ -104,7 +127,9 @@ export function ResourceCard({
         <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Tags">
           {tags.map((tag) => (
             <li key={tag}>
-              <Badge variant="slate">{tag}</Badge>
+              <span className="rounded-full bg-black/5 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-white/10">
+                {tag}
+              </span>
             </li>
           ))}
         </ul>
@@ -118,7 +143,7 @@ export function ResourceCard({
       )}
 
       <div className="mt-auto pt-5">
-      <div className="flex flex-wrap items-center gap-2 border-t border-slate-200 pt-4">
+      <div className="flex flex-wrap items-center gap-2 border-t border-slate-300/70 pt-4">
         {listing ? (
           <a href={resource.url} target="_blank" rel="noopener noreferrer" className={primaryClasses}>
             View listing

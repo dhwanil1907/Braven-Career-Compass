@@ -25,3 +25,11 @@ export function toDisplayCase(title: string): string {
     })
     .join('');
 }
+
+/** Removes emoji and pictographs (and the variation selectors that follow them) from a title. */
+export function stripEmoji(title: string): string {
+  return title
+    .replace(/[\p{Extended_Pictographic}\u200D\uFE0F]/gu, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}

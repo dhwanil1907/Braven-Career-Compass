@@ -52,10 +52,13 @@ function RequireAccess() {
   return hasAccess ? <Outlet /> : <Navigate to="/login" replace />;
 }
 
-/** New visitors see the landing page; once onboarded, "/" is their personal journey. */
+/** Signed-out visitors see the landing page; signed-in ones get their journey (or onboarding first). */
 function HomeRoute() {
   const { profile } = useApp();
-  return profile.onboarded ? <JourneyPage /> : <HomePage />;
+  const { hasAccess, loading } = useAuth();
+  if (loading) return null;
+  if (!hasAccess) return <HomePage />;
+  return profile.onboarded ? <JourneyPage /> : <Navigate to="/start" replace />;
 }
 
 export default function App() {

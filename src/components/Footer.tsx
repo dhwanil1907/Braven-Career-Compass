@@ -1,5 +1,6 @@
 import { Compass } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/useAuth';
 
 const FOOTER_LINKS = [
   { label: 'My journey', to: '/' },
@@ -12,6 +13,7 @@ const FOOTER_LINKS = [
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const { hasAccess } = useAuth();
 
   return (
     <footer className="bg-deep text-deep-ink">
@@ -32,6 +34,7 @@ export function Footer() {
             </p>
           </div>
 
+          {hasAccess && (
           <nav aria-label="Footer">
             <ul className="grid grid-cols-2 gap-x-8 gap-y-1 text-sm md:gap-y-2">
               {FOOTER_LINKS.map((link) => (
@@ -43,6 +46,7 @@ export function Footer() {
               ))}
             </ul>
           </nav>
+          )}
         </div>
 
         <div className="mt-10 border-t border-deep-2 pt-6 text-[13px] text-deep-muted">

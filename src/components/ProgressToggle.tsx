@@ -1,5 +1,5 @@
-import { CheckCircle2, Circle } from 'lucide-react';
 import { useApp } from '../context/useApp';
+import { TickBox } from './TickBox';
 
 const COPY = {
   attended: { off: 'I attended', on: 'Attended' },
@@ -20,7 +20,6 @@ export function ProgressToggle({
 }) {
   const { isEventAttended, isResourceApplied, toggleAttended, toggleApplied } = useApp();
   const done = kind === 'attended' ? isEventAttended(id) : isResourceApplied(id);
-  const Icon = done ? CheckCircle2 : Circle;
 
   return (
     <button
@@ -36,7 +35,7 @@ export function ProgressToggle({
             : 'border-slate-300 bg-surface text-navy-900 hover:bg-navy-50'
         } ${className}`}
     >
-      <Icon className="h-4 w-4" aria-hidden="true" />
+      <TickBox checked={done} round size="h-5 w-5" />
       {!compact && (done ? COPY[kind].on : COPY[kind].off)}
     </button>
   );

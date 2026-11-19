@@ -3,6 +3,7 @@ import { createPortal } from 'react-dom';
 import { useApp } from '../context/useApp';
 import { useAuth } from '../context/useAuth';
 import type { CareerEvent } from '../types';
+import { TickBox } from './TickBox';
 
 const TOAST_MS = 2500;
 
@@ -41,7 +42,9 @@ export function ReminderCheckbox({
   return (
     <>
       <label
-        className={`inline-flex min-h-11 cursor-pointer items-center gap-2 text-sm text-slate-700 md:min-h-9 ${
+        className={`inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-md text-sm text-slate-700
+          has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2
+          has-[:focus-visible]:outline-ink md:min-h-9 ${
           compact ? 'min-w-11 justify-center md:min-w-9' : ''
         }`}
         title={label}
@@ -51,8 +54,9 @@ export function ReminderCheckbox({
           checked={checked}
           onChange={handleChange}
           onClick={(clickEvent) => clickEvent.stopPropagation()}
-          className="h-5 w-5 shrink-0 cursor-pointer rounded border-slate-300"
+          className="sr-only"
         />
+        <TickBox checked={checked} />
         <span className={compact ? 'sr-only' : ''}>{label}</span>
       </label>
       {toast &&

@@ -1,7 +1,7 @@
 import { CalendarDays, Clock, ExternalLink, MapPin, Users, Video } from 'lucide-react';
 import type { CareerEvent } from '../types';
 import { formatTimeRange } from '../lib/dates';
-import { toDisplayCase } from '../lib/text';
+import { stripEmoji, toDisplayCase } from '../lib/text';
 import { Badge, DemoBadge, MetaText } from './Badge';
 import { BookmarkButton } from './BookmarkButton';
 import { MatchBadge } from './MatchBadge';
@@ -53,8 +53,8 @@ export function EventCard({
   if (compact) {
     return (
       <article
-        className="flex items-center gap-3 rounded-2xl border border-slate-200/70 bg-surface p-3
-          shadow-card transition hover:-translate-y-0.5 hover:shadow-card-hover"
+        className="flex items-center gap-3 rounded-2xl bg-slate-100 p-3 transition
+          hover:-translate-y-0.5 dark:bg-surface"
       >
         <DateTile iso={event.start} compact />
         <div className="min-w-0 flex-1">
@@ -86,8 +86,8 @@ export function EventCard({
 
   return (
     <article
-      className="flex h-full flex-col rounded-xl border border-slate-200 bg-surface p-5
-        transition hover:border-navy-300 hover:shadow-card-hover"
+      className="flex h-full flex-col rounded-3xl bg-slate-100 p-6 transition
+        duration-300 hover:-translate-y-1 dark:bg-surface"
     >
       <div className="flex gap-4">
         <DateTile iso={event.start} compact={false} />
@@ -98,16 +98,19 @@ export function EventCard({
             {event.isFull && <Badge variant="amber">Full</Badge>}
             {event.isDemo && <DemoBadge />}
           </div>
-          <h3 className="mt-2 line-clamp-3 text-lg font-semibold leading-snug text-navy-900">
+          <h3
+            className="mt-2 line-clamp-2 font-display text-2xl font-semibold leading-[1.1]
+              tracking-[-0.03em] text-navy-900"
+            title={title}
+          >
             <span className="sr-only">{dateLabel}: </span>
-            {title}
+            {stripEmoji(title)}
           </h3>
         </div>
       </div>
 
-      <p className="mt-3 line-clamp-2 text-sm text-slate-600">{event.description}</p>
-
-      <ul className="mt-4 space-y-1.5 text-sm text-slate-600">
+      {/* When and where are what students scan for, so they sit together and read brighter. */}
+      <ul className="mt-4 space-y-1.5 text-base font-medium text-slate-700">
         <li className="flex items-center gap-2">
           <Clock className="h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
           {timeRange}
@@ -116,11 +119,13 @@ export function EventCard({
           <MapPin className="h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
           <span className="truncate">{event.location}</span>
         </li>
-        <li className="flex items-center gap-2">
-          <Users className="h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
-          <span className="truncate">Hosted by {event.host}</span>
-        </li>
       </ul>
+      <p className="mt-1.5 flex items-center gap-2 text-sm text-slate-600">
+        <Users className="h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
+        <span className="truncate">Hosted by {event.host}</span>
+      </p>
+
+      <p className="mt-3 line-clamp-2 text-sm text-slate-600">{stripEmoji(event.description)}</p>
 
       <div className="mt-auto pt-5">
         <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-slate-200 pt-4">
@@ -128,8 +133,8 @@ export function EventCard({
             <button
               type="button"
               onClick={() => onSelect(event)}
-              className="inline-flex h-11 items-center rounded-full bg-coral-600 px-5 text-sm
-                font-semibold text-white transition hover:bg-coral-700 focus-visible:outline-2
+              className="inline-flex h-11 items-center rounded-full bg-ink px-5 text-sm
+                font-semibold text-on-ink transition hover:opacity-85 focus-visible:outline-2
                 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
             >
               Details

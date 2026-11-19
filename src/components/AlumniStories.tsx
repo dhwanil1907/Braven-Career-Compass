@@ -39,7 +39,7 @@ function LinkedInAction({ alum }: { alum: AlumniProfile }) {
       type="button"
       disabled
       title={SAMPLE_NOTE}
-      className={`${ACTION_CLASS} cursor-not-allowed border-slate-200 text-slate-400`}
+      className={`${ACTION_CLASS} cursor-not-allowed border-slate-300 text-slate-600 opacity-70`}
     >
       <Link2 className="h-4 w-4" aria-hidden="true" />
       LinkedIn
@@ -55,7 +55,7 @@ function ScheduleAction({ alum }: { alum: AlumniProfile }) {
         href={alum.schedulingUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`${ACTION_CLASS} border-coral-600 bg-coral-600 text-white hover:bg-deep`}
+        className={`${ACTION_CLASS} border-ink bg-ink text-on-ink hover:opacity-85`}
       >
         <CalendarClock className="h-4 w-4" aria-hidden="true" />
         Schedule a call
@@ -68,7 +68,7 @@ function ScheduleAction({ alum }: { alum: AlumniProfile }) {
       type="button"
       disabled
       title={SAMPLE_NOTE}
-      className={`${ACTION_CLASS} cursor-not-allowed border-slate-200 text-slate-400`}
+      className={`${ACTION_CLASS} cursor-not-allowed border-slate-300 text-slate-600 opacity-70`}
     >
       <CalendarClock className="h-4 w-4" aria-hidden="true" />
       Schedule a call
@@ -80,45 +80,38 @@ function ScheduleAction({ alum }: { alum: AlumniProfile }) {
 /** One alum: who they are, what they can help with, and how to reach them. */
 export function AlumniCard({ alum, reasons = [] }: { alum: AlumniProfile; reasons?: string[] }) {
   return (
-    <article className="flex flex-col rounded-2xl border border-slate-200/70 bg-surface p-6 shadow-card">
+    <article className="flex flex-col rounded-3xl bg-slate-100 p-7 transition duration-300 hover:-translate-y-1 dark:bg-surface">
       <div className="flex items-start gap-4">
         <span
-          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-hero
-            font-display text-lg text-navy-950"
+          className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-teal-300
+            font-display text-lg text-sky-ink"
           aria-hidden="true"
         >
           {initials(alum.name)}
         </span>
         <div className="min-w-0">
-          <h3 className="font-display text-xl text-navy-900">{alum.name}</h3>
-          <p className="text-sm text-slate-600">
+          <h3 className="font-display text-2xl font-semibold tracking-[-0.02em] text-navy-900">{alum.name}</h3>
+          <p className="mt-0.5 text-base font-medium text-slate-700">
             {alum.role}
             {alum.employer ? `, ${alum.employer}` : ''}
           </p>
-          <p className="text-xs text-slate-500">
+          <p className="text-sm text-slate-600">
             {alum.major}, class of {alum.gradYear}
           </p>
         </div>
       </div>
 
-      {(alum.isSample || reasons.length > 0) && (
+      {reasons.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-2">
           {reasons.map((reason) => (
             <Badge key={reason} variant="teal">
               {reason}
             </Badge>
           ))}
-          {alum.isSample && <Badge variant="amber">Sample profile</Badge>}
         </div>
       )}
 
-      <blockquote className="mt-4 text-sm leading-relaxed text-slate-700">
-        &ldquo;{alum.quote}&rdquo;
-      </blockquote>
-
-      <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-        Ask them about
-      </p>
+      <p className="mt-5 text-sm font-semibold text-navy-900">Ask them about</p>
       <ul className="mt-2 flex flex-wrap gap-2">
         {alum.helpsWith.map((topic) => (
           <li key={topic}>
@@ -142,10 +135,12 @@ export function StoryMarquee() {
 
   return (
     <section aria-labelledby="marquee-heading">
-      <h2 id="marquee-heading" className="font-display text-3xl text-navy-900">
+      <h2
+        id="marquee-heading"
+        className="font-display text-3xl font-semibold tracking-[-0.03em] text-navy-900 sm:text-4xl"
+      >
         In their own words
       </h2>
-      <span className="mt-3 block h-1 w-12 bg-sky-300" aria-hidden="true" />
       <div className="group mt-6 overflow-hidden motion-reduce:overflow-x-auto">
         <ul
           className="flex w-max animate-marquee motion-reduce:animate-none
@@ -155,7 +150,7 @@ export function StoryMarquee() {
             <li
               key={`${alum.id}-${index}`}
               aria-hidden={index >= alumni.length}
-              className="mr-4 flex w-80 shrink-0 flex-col border border-slate-200/70 bg-surface p-6"
+              className="mr-4 flex w-80 shrink-0 flex-col rounded-3xl bg-slate-100 p-7 dark:bg-surface"
             >
               <blockquote className="font-display text-lg leading-snug text-navy-900">
                 &ldquo;{alum.quote}&rdquo;

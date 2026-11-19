@@ -13,11 +13,10 @@ export function SectionHeader({
   return (
     <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
       <div>
-        <h2 className="font-display text-3xl tracking-tight text-navy-900">
+        <h2 className="font-display text-3xl font-semibold tracking-[-0.03em] text-navy-900 sm:text-4xl">
           {title}
         </h2>
-        <span className="mt-3 block h-1 w-12 bg-sky-300" aria-hidden="true" />
-        {subtitle && <p className="mt-3 text-sm text-slate-500">{subtitle}</p>}
+        {subtitle && <p className="mt-2 text-base text-slate-600">{subtitle}</p>}
       </div>
       {action && (
         <Link

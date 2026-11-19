@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import type { MouseEvent } from 'react';
-import { Bookmark, BookmarkCheck } from 'lucide-react';
+import { Bookmark } from 'lucide-react';
 import { useApp } from '../context/useApp';
 
 export function BookmarkButton({
@@ -15,11 +16,13 @@ export function BookmarkButton({
 }) {
   const { isResourceSaved, isEventSaved, toggleResource, toggleEvent } = useApp();
   const saved = kind === 'resource' ? isResourceSaved(id) : isEventSaved(id);
-  const Icon = saved ? BookmarkCheck : Bookmark;
+  // Pop only when the student taps it, not when a saved card first renders.
+  const [popped, setPopped] = useState(false);
 
   const handleClick = (clickEvent: MouseEvent<HTMLButtonElement>) => {
     clickEvent.preventDefault();
     clickEvent.stopPropagation();
+    setPopped(true);
     if (kind === 'resource') {
       toggleResource(id);
     } else {
@@ -42,7 +45,11 @@ export function BookmarkButton({
       className={`inline-flex shrink-0 items-center rounded-full border transition
         ${stateClasses} ${sizeClasses} ${className}`}
     >
-      <Icon className="h-4 w-4" aria-hidden="true" />
+      <Bookmark
+        key={String(saved)}
+        className={`h-4 w-4 ${saved ? 'fill-current' : ''} ${popped ? 'animate-pop' : ''}`}
+        aria-hidden="true"
+      />
       {withLabel && <span>{saved ? 'Saved' : 'Save'}</span>}
     </button>
   );

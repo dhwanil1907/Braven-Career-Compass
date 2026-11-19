@@ -63,8 +63,8 @@ function TypingDots() {
         {[0, 1, 2].map((dot) => (
           <span
             key={dot}
-            style={{ animationDelay: `${dot * 150}ms` }}
-            className="h-2 w-2 rounded-full bg-slate-400 motion-safe:animate-pulse"
+            style={{ animationDelay: `${dot * 160}ms` }}
+            className="h-2 w-2 rounded-full bg-slate-500 motion-safe:animate-dot"
           />
         ))}
       </span>

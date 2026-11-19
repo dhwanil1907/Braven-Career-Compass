@@ -1,10 +1,17 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Check, ChevronDown, SearchX, SlidersHorizontal } from 'lucide-react';
+import {
+  Briefcase,
+  ChevronDown,
+  GraduationCap,
+  Search,
+  SearchX,
+  SlidersHorizontal,
+} from 'lucide-react';
 import { EmptyState } from '../components/EmptyState';
 import { FilterSelect } from '../components/FilterSelect';
-import { PageHeader } from '../components/PageHeader';
 import { usePageTitle } from '../hooks/usePageTitle';
+import { SlidingToggle } from '../components/SlidingToggle';
 import { ResourceCard } from '../components/ResourceCard';
 import { resources } from '../data/resources';
 import { INTEREST_GROUPS, INTERESTS, LOCATIONS, MAJOR_GROUPS, MAJORS } from '../data/taxonomy';
@@ -30,48 +37,6 @@ const SORTS: { sort: OpportunitySort; label: string }[] = [
 ];
 
 const PAGE_SIZE = 24;
-
-/** Segmented control: the selected option is filled, bold and carries a check, not colour alone. */
-function Segmented<T extends string>({
-  label,
-  options,
-  value,
-  onChange,
-}: {
-  label: string;
-  options: { value: T; label: string }[];
-  value: T;
-  onChange: (next: T) => void;
-}) {
-  return (
-    <div
-      role="group"
-      aria-label={label}
-      className="inline-flex gap-1 rounded-full border border-slate-300 bg-surface p-1"
-    >
-      {options.map((option) => {
-        const selected = option.value === value;
-        return (
-          <button
-            key={option.value}
-            type="button"
-            aria-pressed={selected}
-            onClick={() => onChange(option.value)}
-            className={`inline-flex min-h-10 items-center gap-1.5 rounded-full px-4 text-sm transition
-              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 ${
-                selected
-                  ? 'bg-ink font-bold text-on-ink'
-                  : 'font-medium text-slate-700 hover:bg-slate-100'
-              }`}
-          >
-            {selected && <Check className="h-4 w-4" aria-hidden="true" />}
-            {option.label}
-          </button>
-        );
-      })}
-    </div>
-  );
-}
 
 export function InternshipsPage() {
   usePageTitle('Internships');
@@ -133,20 +98,38 @@ export function InternshipsPage() {
 
   return (
     <div>
-      <PageHeader
-        title="Find your next opportunity"
-        description="Internship and job listings for SJSU students. Filter by major, career interest, and location, and sort by how well each one fits you."
-      />
+      <header className="relative overflow-hidden xl:min-h-[22rem]">
+        <div className="mx-auto max-w-[100rem] px-4 pb-8 pt-10 sm:px-8 sm:pb-10 sm:pt-16 lg:px-16">
+          <h1
+            className="max-w-[18ch] font-display text-[clamp(2.75rem,7vw,5rem)] font-semibold
+              leading-[0.92] tracking-[-0.04em] text-navy-900"
+          >
+            Find your next opportunity
+          </h1>
+          <p className="mt-6 max-w-[52ch] text-lg text-slate-600 sm:text-xl">
+            Internship and job listings for SJSU students. Filter by major, career interest, and
+            location, and sort by how well each one fits you.
+          </p>
+        </div>
+        <div
+          className="pointer-events-none absolute right-16 top-10 hidden h-72 w-[26rem] xl:block"
+          aria-hidden="true"
+        >
+          <span className="absolute left-0 top-12 flex h-36 w-36 rotate-[-8deg] items-center justify-center rounded-[2rem] bg-teal-300 text-sky-ink shadow-card">
+            <GraduationCap className="h-12 w-12" />
+          </span>
+          <span className="absolute left-40 top-0 flex h-32 w-32 rotate-[7deg] items-center justify-center rounded-[2rem] bg-sky-200 text-sky-ink shadow-card">
+            <Briefcase className="h-11 w-11" />
+          </span>
+          <span className="absolute left-24 top-40 flex h-32 w-32 rotate-[5deg] items-center justify-center rounded-[2rem] bg-coral-600 text-white shadow-card">
+            <Search className="h-11 w-11" />
+          </span>
+        </div>
+      </header>
       <div className="mx-auto max-w-[100rem] px-4 py-6 sm:px-8 lg:px-16">
-        <p className="max-w-[75ch] text-xs text-slate-600">
-          Listings come from the SJSU Career Center and from LinkedIn searches near San José. Each
-          one links to its original posting, so confirm it is still open before you apply.
-          They are not a live feed, so check each posting for current openings and deadlines.
-        </p>
-
         <section aria-label="Filters" className="mt-5">
           <div className="flex flex-wrap items-center gap-3">
-            <Segmented
+            <SlidingToggle
               label="Listing type"
               options={KINDS.map((entry) => ({ value: entry.kind, label: entry.label }))}
               value={kind}
@@ -157,8 +140,8 @@ export function InternshipsPage() {
               aria-expanded={filtersOpen}
               aria-controls="internship-filters"
               onClick={() => setFiltersOpen((open) => !open)}
-              className="inline-flex min-h-10 items-center gap-2 rounded-full border border-slate-300
-                bg-surface px-4 text-sm font-semibold text-navy-900 transition hover:bg-slate-100
+              className="inline-flex h-12 items-center gap-2 rounded-full border border-slate-300
+                bg-surface px-5 text-sm font-semibold text-navy-900 transition hover:bg-slate-100
                 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
             >
               <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
@@ -186,7 +169,7 @@ export function InternshipsPage() {
           {filtersOpen && (
             <div
               id="internship-filters"
-              className="mt-4 grid gap-4 rounded-xl border border-slate-200 bg-surface p-4 sm:grid-cols-2 lg:grid-cols-3"
+              className="mt-4 grid gap-4 rounded-3xl bg-slate-100 p-6 dark:bg-surface sm:grid-cols-2 lg:grid-cols-3"
             >
               <FilterSelect
                 id="internship-major"
@@ -250,7 +233,7 @@ export function InternshipsPage() {
               </>
             )}
           </p>
-          <Segmented
+          <SlidingToggle
             label="Sort by"
             options={SORTS.map((entry) => ({ value: entry.sort, label: entry.label }))}
             value={sort}
@@ -260,7 +243,7 @@ export function InternshipsPage() {
 
         {listings.length > 0 ? (
           <>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {visible.map((resource) => (
                 <ResourceCard
                   key={resource.id}
@@ -308,6 +291,12 @@ export function InternshipsPage() {
             />
           </div>
         )}
+
+        <p className="mt-12 max-w-[75ch] text-sm text-slate-600">
+          Listings come from the SJSU Career Center and from LinkedIn searches near San José. Each
+          one links to its original posting, so confirm it is still open before you apply.
+          They are not a live feed, so check each posting for current openings and deadlines.
+        </p>
       </div>
     </div>
   );

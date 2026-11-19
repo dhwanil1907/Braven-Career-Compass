@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { ChevronDown, SearchX, SlidersHorizontal, Sparkles, X } from 'lucide-react';
+import { BookOpen, Users, Wrench, ChevronDown, SearchX, SlidersHorizontal, Sparkles, X } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import { EmptyState } from '../components/EmptyState';
 import { FilterSelect } from '../components/FilterSelect';
@@ -18,6 +18,11 @@ import {
 } from '../data/taxonomy';
 import { useApp } from '../context/useApp';
 import { filterResources, hasActiveFilters } from '../lib/filters';
+
+// Jobs and internships live on the Internships page.
+const EXCLUDED_TYPES = ['Job', 'Internship'];
+const pool = resources.filter((item) => !EXCLUDED_TYPES.includes(item.resourceType));
+const typeOptions = RESOURCE_TYPES.filter((type) => !EXCLUDED_TYPES.includes(type));
 import { hasProfile, recommendResources } from '../lib/recommend';
 import type { ResourceFilters } from '../types';
 
@@ -41,7 +46,7 @@ export function ResourceExplorerPage() {
     () => ({
       major: pickValid(searchParams.get('major'), MAJORS),
       interest: pickValid(searchParams.get('interest'), INTERESTS),
-      resourceType: pickValid(searchParams.get('type'), RESOURCE_TYPES),
+      resourceType: pickValid(searchParams.get('type'), typeOptions),
       location: pickValid(searchParams.get('location'), LOCATIONS),
     }),
     [searchParams],
@@ -52,9 +57,9 @@ export function ResourceExplorerPage() {
   const recommendedOnly = canRecommend && searchParams.get('rec') === '1';
 
   const filtered = useMemo(() => {
-    const matches = filterResources(resources, query, filters);
+    const matches = filterResources(pool, query, filters);
     if (!recommendedOnly) return matches;
-    const rank = new Map(recommendResources(resources, profile).map((item, index) => [item.id, index]));
+    const rank = new Map(recommendResources(pool, profile).map((item, index) => [item.id, index]));
     return matches
       .filter((item) => rank.has(item.id))
       .sort((first, second) => (rank.get(first.id) ?? 0) - (rank.get(second.id) ?? 0));
@@ -98,6 +103,7 @@ export function ResourceExplorerPage() {
   return (
     <div>
       <PageHeader
+        icons={[BookOpen, Wrench, Users]}
         title="Career resources"
         description="Search guides, tools, workshops, and mentorship from Braven and the SJSU Career Center. Narrow results by your major, interests, and type."
       />
@@ -161,7 +167,7 @@ export function ResourceExplorerPage() {
         {filtersOpen && (
           <div
             id="resource-filters"
-            className="mt-4 grid gap-4 rounded-xl border border-slate-200 bg-surface p-4 sm:grid-cols-2 lg:grid-cols-4"
+            className="mt-4 grid gap-4 rounded-3xl bg-slate-100 p-6 dark:bg-surface sm:grid-cols-2 lg:grid-cols-4"
           >
             <FilterSelect
               id="filter-major"
@@ -185,7 +191,7 @@ export function ResourceExplorerPage() {
               id="filter-type"
               label="Resource type"
               value={filters.resourceType}
-              options={RESOURCE_TYPES}
+              options={typeOptions}
               onChange={(value) => updateParam('type', value)}
               allLabel="All types"
             />

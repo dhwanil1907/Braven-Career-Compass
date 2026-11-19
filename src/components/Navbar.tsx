@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Bookmark, Compass, LogOut, Menu, X } from 'lucide-react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useApp } from '../context/useApp';
@@ -16,6 +16,14 @@ const NAV_LINKS = [
   { label: 'Assistant', to: '/assistant' },
 ];
 
+/** Signed-out visitors only have the landing page, so their tabs jump to its sections. */
+const LANDING_LINKS = [
+  { label: 'How it works', href: '/#how-it-works' },
+  { label: 'Explore', href: '/#explore' },
+];
+
+const SECTION_IDS = ['how-it-works', 'explore'];
+
 function navLinkClasses({ isActive }: { isActive: boolean }): string {
   const base = 'rounded-full border px-4 py-1.5 text-sm font-medium transition';
   return isActive
@@ -25,14 +33,31 @@ function navLinkClasses({ isActive }: { isActive: boolean }): string {
 
 export function Navbar() {
   const { pathname } = useLocation();
-  const { savedResourceIds, savedEventIds, profile } = useApp();
+  const { savedResourceIds, savedEventIds } = useApp();
   const { user, hasAccess, signOut } = useAuth();
-  // Until a student has a plan, "/" is the landing page, so call it Home.
-  const navLinks = NAV_LINKS.map((link) =>
-    link.to === '/' && !profile.onboarded ? { ...link, label: 'Home' } : link,
-  );
+  const navLinks = hasAccess ? NAV_LINKS : [];
+  const landingLinks = hasAccess ? [] : LANDING_LINKS;
   const [menuOpenForPath, setMenuOpenForPath] = useState<string | null>(null);
   const menuOpen = menuOpenForPath === pathname;
+  // Which landing section is under the top bar; null means the hero.
+  const [section, setSection] = useState<string | null>(null);
+  const onLanding = !hasAccess && pathname === '/';
+
+  useEffect(() => {
+    if (!onLanding) return;
+    const update = () => {
+      const line = window.innerHeight * 0.35;
+      let current: string | null = null;
+      for (const id of SECTION_IDS) {
+        const element = document.getElementById(id);
+        if (element && element.getBoundingClientRect().top <= line) current = id;
+      }
+      setSection(current);
+    };
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+    return () => window.removeEventListener('scroll', update);
+  }, [onLanding]);
   // Ignore stale IDs (e.g. items removed from the catalog) so the badge matches the dashboard.
   const savedCount =
     savedResourceIds.filter((id) => getResourceById(id) !== undefined).length +
@@ -63,19 +88,38 @@ export function Navbar() {
               </NavLink>
             </li>
           ))}
+          {!hasAccess && (
+            <li>
+              <a href="/" className={navLinkClasses({ isActive: !onLanding || section === null })}>
+                Home
+              </a>
+            </li>
+          )}
+          {landingLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                className={navLinkClasses({ isActive: `/#${section}` === link.href })}
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
         </ul>
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <Link
-            to="/#saved"
-            aria-label={`Saved items: ${savedCount}`}
-            className="inline-flex h-11 items-center gap-1.5 rounded-full bg-coral-600 md:h-9 px-3.5
-              text-sm font-semibold text-white transition hover:bg-coral-700"
-          >
-            <Bookmark className="h-4 w-4" aria-hidden="true" />
-            <span>{savedCount}</span>
-          </Link>
+          {hasAccess && (
+            <Link
+              to="/#saved"
+              aria-label={`Saved items: ${savedCount}`}
+              className="inline-flex h-11 items-center gap-1.5 rounded-full bg-coral-600 md:h-9 px-3.5
+                text-sm font-semibold text-white transition hover:bg-coral-700"
+            >
+              <Bookmark className="h-4 w-4" aria-hidden="true" />
+              <span>{savedCount}</span>
+            </Link>
+          )}
           {hasAccess ? (
             <button
               type="button"
@@ -102,8 +146,8 @@ export function Navbar() {
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-white
-              transition hover:bg-white/10 md:hidden"
+            className={`inline-flex h-11 w-11 items-center justify-center rounded-full text-white
+              transition hover:bg-white/10 md:hidden`}
           >
             {menuOpen ? (
               <X className="h-5 w-5" aria-hidden="true" />
@@ -127,6 +171,32 @@ export function Navbar() {
                 >
                   {link.label}
                 </NavLink>
+              </li>
+            ))}
+            {!hasAccess && (
+              <li>
+                <a
+                  href="/"
+                  onClick={() => setMenuOpenForPath(null)}
+                  className={`flex min-h-11 items-center ${navLinkClasses({
+                    isActive: !onLanding || section === null,
+                  })}`}
+                >
+                  Home
+                </a>
+              </li>
+            )}
+            {landingLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  onClick={() => setMenuOpenForPath(null)}
+                  className={`flex min-h-11 items-center ${navLinkClasses({
+                    isActive: `/#${section}` === link.href,
+                  })}`}
+                >
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>
