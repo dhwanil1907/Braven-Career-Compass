@@ -1,11 +1,8 @@
-import { useEffect, useState } from 'react';
-import { createPortal } from 'react-dom';
 import { useApp } from '../context/useApp';
 import { useAuth } from '../context/useAuth';
 import type { CareerEvent } from '../types';
+import { showToast } from '../lib/toast';
 import { TickBox } from './TickBox';
-
-const TOAST_MS = 2500;
 
 /** Demo tickbox: ticking shows a confirmation that a reminder email was sent. No email is sent. */
 export function ReminderCheckbox({
@@ -17,14 +14,6 @@ export function ReminderCheckbox({
 }) {
   const { user } = useAuth();
   const { isReminderSet, toggleReminder } = useApp();
-  const [toast, setToast] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!toast) return;
-    const timer = window.setTimeout(() => setToast(null), TOAST_MS);
-    return () => window.clearTimeout(timer);
-  }, [toast]);
-
   if (new Date(event.start).getTime() <= Date.now()) return null;
 
   const checked = isReminderSet(event.id);
@@ -33,7 +22,7 @@ export function ReminderCheckbox({
   const handleChange = () => {
     toggleReminder(event.id);
     if (!checked) {
-      setToast(
+      showToast(
         `Reminder email sent to ${user?.email ?? 'your inbox'} for "${event.title}".`,
       );
     }
@@ -59,18 +48,6 @@ export function ReminderCheckbox({
         <TickBox checked={checked} />
         <span className={compact ? 'sr-only' : ''}>{label}</span>
       </label>
-      {toast &&
-        createPortal(
-          <div
-            role="status"
-            className="fixed left-1/2 top-[4.75rem] z-[60] max-w-[90vw] animate-toast-flow
-            rounded-xl bg-deep px-5 py-3 text-sm font-medium text-white shadow-lg
-            motion-reduce:-translate-x-1/2 motion-reduce:animate-none"
-          >
-            {toast}
-          </div>,
-          document.body,
-        )}
     </>
   );
 }

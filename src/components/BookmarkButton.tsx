@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { MouseEvent } from 'react';
 import { Bookmark } from 'lucide-react';
 import { useApp } from '../context/useApp';
+import { showToast } from '../lib/toast';
 
 export function BookmarkButton({
   kind,
@@ -23,6 +24,7 @@ export function BookmarkButton({
     clickEvent.preventDefault();
     clickEvent.stopPropagation();
     setPopped(true);
+    showToast(saved ? 'Removed from saved' : 'Saved. Find it in My journey.');
     if (kind === 'resource') {
       toggleResource(id);
     } else {

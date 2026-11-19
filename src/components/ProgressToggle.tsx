@@ -1,9 +1,15 @@
 import { useApp } from '../context/useApp';
+import { showToast } from '../lib/toast';
 import { TickBox } from './TickBox';
 
 const COPY = {
   attended: { off: 'I attended', on: 'Attended' },
   applied: { off: 'I applied', on: 'Applied' },
+} as const;
+
+const TOAST = {
+  attended: { on: 'Marked as attended', off: 'Attendance removed' },
+  applied: { on: 'Marked as applied. Track it in My journey.', off: 'Removed from your tracker' },
 } as const;
 
 /** Lets a student record that they went to an event or applied to a resource. */
@@ -24,7 +30,11 @@ export function ProgressToggle({
   return (
     <button
       type="button"
-      onClick={() => (kind === 'attended' ? toggleAttended(id) : toggleApplied(id))}
+      onClick={() => {
+        if (kind === 'attended') toggleAttended(id);
+        else toggleApplied(id);
+        showToast(TOAST[kind][done ? 'off' : 'on']);
+      }}
       aria-pressed={done}
       aria-label={compact ? COPY[kind].off : undefined}
       title={compact ? (done ? COPY[kind].on : COPY[kind].off) : undefined}

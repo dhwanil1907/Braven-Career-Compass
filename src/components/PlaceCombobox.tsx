@@ -95,7 +95,7 @@ export function PlaceCombobox({
           aria-activedescendant={open && suggestions[active] ? `${listId}-${active}` : undefined}
           autoComplete="off"
           value={text}
-          placeholder="Anywhere, or type a city or state"
+          placeholder="Anywhere, or type a city"
           onChange={(event) => {
             setText(event.target.value);
             setOpen(true);
