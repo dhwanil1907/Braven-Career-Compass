@@ -141,7 +141,7 @@ export function AssistantPage() {
 
   return (
     <div className="dark:bg-[#060d18]">
-    <div className="flex h-[calc(100dvh-4rem)] min-h-[32rem] w-full">
+    <div className="flex h-[calc(100dvh-4rem)] min-h-[16rem] w-full">
       <aside inert={drawerOpen} className="hidden w-64 shrink-0 bg-slate-100 p-3 lg:block">
         <ChatSidebar {...sidebarProps} />
       </aside>
