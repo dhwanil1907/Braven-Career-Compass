@@ -287,7 +287,7 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
       <form onSubmit={handleSubmit} className="pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2">
         <div
           className="focus-host group flex cursor-text items-end gap-2 rounded-full border
-            border-slate-400 bg-slate-100 py-0.5 pl-3 pr-0.5 transition hover:border-slate-500
+            border-slate-400 bg-slate-100 py-[3px] pl-4 pr-[3px] transition hover:border-slate-500
             focus-within:border-transparent focus-within:bg-white dark:focus-within:bg-surface"
         >
           <label htmlFor="chat-input" className="sr-only">
@@ -302,21 +302,21 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
             onChange={(event) => setDraft(event.target.value)}
             onKeyDown={handleKeyDown}
             placeholder="Ask about internships, events, resumes…"
-            className="max-h-40 min-h-6 flex-1 resize-none self-center bg-transparent py-0 text-[0.8125rem]
+            className="max-h-40 min-h-8 flex-1 resize-none self-center bg-transparent py-1.5 text-sm
               leading-5 text-navy-900 outline-none placeholder:text-slate-600"
           />
           <button
             type="submit"
             disabled={!streaming && !draft.trim()}
-            className={`relative inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full
+            className={`relative inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full
               bg-ink text-on-ink transition hover:opacity-85 disabled:cursor-not-allowed
               disabled:bg-slate-300 disabled:text-slate-600 disabled:opacity-100
-              before:absolute before:-inset-2 before:content-[''] ${focusRing}`}
+              before:absolute before:-inset-1.5 before:content-[''] ${focusRing}`}
           >
             {streaming ? (
-              <Square className="h-3 w-3 fill-current" aria-hidden="true" />
+              <Square className="h-3.5 w-3.5 fill-current" aria-hidden="true" />
             ) : (
-              <ArrowUp className="h-3 w-3" aria-hidden="true" />
+              <ArrowUp className="h-4 w-4" aria-hidden="true" />
             )}
             <span className="sr-only">{streaming ? 'Stop generating' : 'Send message'}</span>
           </button>
