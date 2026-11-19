@@ -11,6 +11,7 @@ import type {
 } from './types';
 
 export interface ChatOptions {
+  /** Perplexity API key. */
   apiKey?: string;
   model?: string;
   fetchFn?: typeof fetch;
@@ -33,8 +34,8 @@ export interface ChatContext {
   events: CareerEvent[];
 }
 
-const NVIDIA_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
-const DEFAULT_MODEL = 'nvidia/nemotron-3.5-lightning-30b-a3b';
+const UPSTREAM_URL = 'https://api.perplexity.ai/chat/completions';
+const DEFAULT_MODEL = 'sonar';
 const MAX_MESSAGES = 20;
 const MAX_TOKENS = 1200;
 const MAX_CONTENT = 800;
@@ -223,7 +224,11 @@ function formatDate(iso: string): string {
   return iso.slice(0, 10);
 }
 
-export function buildSystemPrompt(profile: ChatProfile | undefined, context: ChatContext): string {
+export function buildSystemPrompt(
+  profile: ChatProfile | undefined,
+  context: ChatContext,
+  webResults: string[] = [],
+): string {
   const resourceLines = context.resources.map(
     (item) => `- ${item.title} (${item.resourceType}, ${item.location}) ${item.url}`,
   );
@@ -240,21 +245,21 @@ export function buildSystemPrompt(profile: ChatProfile | undefined, context: Cha
   if (profile?.goal) profileLines.push(`Goal: ${profile.goal}`);
 
   return [
-    'You are "Career Compass Assistant", a warm, direct and knowledgeable career coach for SJSU students, built into a student capstone project site.',
+    'You are "Wayfinder", the AI career guide inside Career Compass: a warm, direct and knowledgeable career coach for SJSU students, built into a student capstone project site.',
     'Talk like a modern chat assistant: conversational, natural sentences, no stiff template. Remember the whole conversation and build on it. When it genuinely helps, ask one brief follow-up question.',
     '',
     'What you help with:',
     '- Braven, the nonprofit program. Only state Braven facts that appear in the context below; otherwise say you are not sure and suggest asking Braven staff.',
-    '- This website. Pages: My journey, Internships (internships and entry-level jobs from LinkedIn and the SJSU Career Center, with an "I applied" button and an application tracker), Resources, Events, Alumni, Assistant.',
+    '- This website. Pages: My journey, Internships (internships and entry-level jobs from LinkedIn and the SJSU Career Center, with an "I applied" button and an application tracker), Resources, Events, Alumni, Wayfinder (you).',
     "- Companies: answer from your general knowledge and be specific and useful: what the company does, typical intern and entry-level roles, the skills they value, and how to prepare. Add one short note that details can be out of date and are worth confirming on the company's careers page.",
     '- Anything in a student\'s career life: resumes, cover letters, LinkedIn and outreach messages, interview practice (you may run a mock interview, asking one question at a time), internship and job search strategy, networking, choosing a path, skills to learn, and offers and negotiation basics.',
     '- You may write and improve resume bullets, cover letters and outreach emails.',
     '',
     'Rules:',
-    '- Politely decline unrelated requests (homework answers, unrelated code, medical, legal or financial advice, anything harmful) in one friendly sentence, then steer back to careers.',
     '- Never invent listings, deadlines, links or Braven facts.',
     '- Recommend a listing only from the context below, and mention its exact title.',
     '- Use the student profile to personalize answers.',
+    '- Lead with the answer in one or two sentences, then give at most 3-5 short bullets. Do not use citation markers like [1]. End with one short follow-up question or next step.',
     '',
     'Formatting: Markdown is rendered, so use it naturally. Short paragraphs, **bold** for key terms, bullet or numbered lists, a heading only for long answers, code blocks only for code. No emoji unless the student uses them. Match length to the question: short for simple questions, thorough for planning or writing tasks, never padded. Do not repeat disclaimers; mention that you are an AI and can be wrong only once in a while, when stating company or career facts, not in every reply.',
     '',
@@ -263,6 +268,13 @@ export function buildSystemPrompt(profile: ChatProfile | undefined, context: Cha
     '',
     'Context items:',
     contextLines.length ? contextLines.join('\n') : 'None found for this question.',
+    '',
+    ...(webResults.length
+      ? [
+          'Web search results (current; use them for facts, news and anything time-sensitive, and name the source site when you rely on one):',
+          ...webResults,
+        ]
+      : []),
   ].join('\n');
 }
 
@@ -287,6 +299,8 @@ function extractContent(data: unknown): string {
 }
 
 interface PreparedRequest {
+  profile?: ChatProfile;
+  lastQuestion: string;
   messages: ChatMessage[];
   context: ChatContext;
   systemPrompt: string;
@@ -305,7 +319,13 @@ function prepareRequest(input: unknown, options: ChatOptions): PreparedRequest |
 
   const lastQuestion = valid.messages[valid.messages.length - 1].content;
   const context = retrieveContext(lastQuestion, valid.profile, now);
-  return { messages: valid.messages, context, systemPrompt: buildSystemPrompt(valid.profile, context) };
+  return {
+    profile: valid.profile,
+    lastQuestion,
+    messages: valid.messages,
+    context,
+    systemPrompt: buildSystemPrompt(valid.profile, context),
+  };
 }
 
 function upstreamInit(
@@ -327,7 +347,6 @@ function upstreamInit(
       top_p: 0.95,
       max_tokens: MAX_TOKENS,
       stream,
-      chat_template_kwargs: { enable_thinking: false },
     }),
     signal,
   };
@@ -341,7 +360,7 @@ export async function handleChatRequest(input: unknown, options: ChatOptions): P
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
   try {
-    const response = await fetchFn(NVIDIA_URL, upstreamInit(options, prepared, false, controller.signal));
+    const response = await fetchFn(UPSTREAM_URL, upstreamInit(options, prepared, false, controller.signal));
     if (!response.ok) return fail(502, UPSTREAM_ERROR);
     const reply = stripThinking(extractContent(await response.json()));
     if (!reply) return fail(502, UPSTREAM_ERROR);
@@ -435,7 +454,7 @@ async function* runStream(
 
   let reader: ReadableStreamDefaultReader<Uint8Array> | undefined;
   try {
-    const response = await fetchFn(NVIDIA_URL, upstreamInit(options, prepared, true, controller.signal));
+    const response = await fetchFn(UPSTREAM_URL, upstreamInit(options, prepared, true, controller.signal));
     if (!response.ok || !response.body) {
       yield { type: 'error', error: UPSTREAM_ERROR };
       return;

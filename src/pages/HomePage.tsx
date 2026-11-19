@@ -70,9 +70,9 @@ const EXPLORE: {
     featured: true,
   },
   {
-    title: 'Assistant',
+    title: 'Wayfinder',
     description:
-      'Ask anything about your career search and get answers drawn from the listings, events and resources on this site.',
+      'Your AI career guide. Ask anything about your search and get answers drawn from the listings, events and resources on this site.',
     icon: Bot,
     tone: 'lime',
     featured: true,

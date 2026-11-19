@@ -2,9 +2,9 @@ import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } fr
 import type { FormEvent, KeyboardEvent } from 'react';
 import {
   ArrowDown,
+  ArrowUpRight,
   ArrowUp,
   Check,
-  Compass,
   Copy,
   ExternalLink,
   RefreshCw,
@@ -42,17 +42,6 @@ function settleInitialMessages(messages: StoredMessage[]): DisplayMessage[] {
 
 function prefersReducedMotion(): boolean {
   return window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
-}
-
-function AssistantAvatar() {
-  return (
-    <span
-      aria-hidden="true"
-      className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-coral-600 text-white"
-    >
-      <Compass className="h-4 w-4" />
-    </span>
-  );
 }
 
 function TypingDots() {
@@ -126,6 +115,22 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
 
   useEffect(() => {
     inputRef.current?.focus({ preventScroll: true });
+  }, []);
+
+  // Pressing "/" anywhere on the page jumps to the message box, unless the student is typing.
+  useEffect(() => {
+    const onKeyDown = (event: globalThis.KeyboardEvent) => {
+      if (event.key !== '/' || event.metaKey || event.ctrlKey || event.altKey) return;
+      const { target } = event;
+      const typing =
+        target instanceof HTMLElement &&
+        target.matches('input, textarea, select, [contenteditable="true"]');
+      if (typing) return;
+      event.preventDefault();
+      inputRef.current?.focus();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
   useEffect(() => {
@@ -274,7 +279,50 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
   const lastAssistantIndex = messages.findLastIndex((message) => message.role === 'assistant');
   const lastMessage = messages.at(-1);
   const awaitingFirstToken = streaming && lastMessage?.role === 'assistant' && !lastMessage.content;
-  const statusText = streaming ? 'Assistant is responding' : finished ? 'Response complete' : '';
+  const statusText = streaming ? 'Wayfinder is responding' : finished ? 'Response complete' : '';
+
+  const empty = messages.length === 0;
+
+  const composer = (
+      <form onSubmit={handleSubmit} className="pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2">
+        <div
+          className="focus-host group flex cursor-text items-end gap-2 rounded-full border
+            border-slate-400 bg-slate-100 py-0.5 pl-3 pr-0.5 transition hover:border-slate-500
+            focus-within:border-transparent focus-within:bg-white dark:focus-within:bg-surface"
+        >
+          <label htmlFor="chat-input" className="sr-only">
+            Ask Wayfinder
+          </label>
+          <textarea
+            id="chat-input"
+            ref={inputRef}
+            rows={1}
+            value={draft}
+            maxLength={MAX_INPUT_LENGTH}
+            onChange={(event) => setDraft(event.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Ask about internships, events, resumes…"
+            className="max-h-40 min-h-6 flex-1 resize-none self-center bg-transparent py-0 text-[0.8125rem]
+              leading-5 text-navy-900 outline-none placeholder:text-slate-600"
+          />
+          <button
+            type="submit"
+            disabled={!streaming && !draft.trim()}
+            className={`relative inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full
+              bg-ink text-on-ink transition hover:opacity-85 disabled:cursor-not-allowed
+              disabled:bg-slate-300 disabled:text-slate-600 disabled:opacity-100
+              before:absolute before:-inset-2 before:content-[''] ${focusRing}`}
+          >
+            {streaming ? (
+              <Square className="h-3 w-3 fill-current" aria-hidden="true" />
+            ) : (
+              <ArrowUp className="h-3 w-3" aria-hidden="true" />
+            )}
+            <span className="sr-only">{streaming ? 'Stop generating' : 'Send message'}</span>
+          </button>
+        </div>
+      </form>
+  );
 
   return (
     <div data-conversation-id={conversationId} className="flex h-full min-h-0 flex-col">
@@ -282,6 +330,32 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
         {statusText}
       </p>
 
+      {empty ? (
+        <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-6 px-1 pb-10">
+          <h2 className="text-center font-display text-3xl font-semibold tracking-[-0.03em] text-navy-900 sm:text-4xl">
+            What are we working on today?
+          </h2>
+          <div className="w-full max-w-3xl">{composer}</div>
+          <ul className="w-full max-w-3xl">
+            {starters.map((starter) => (
+              <li key={starter}>
+                <button
+                  type="button"
+                  disabled={streaming}
+                  onClick={() => ask(starter)}
+                  className={`flex min-h-11 w-full items-center gap-3 rounded-xl px-4 text-left text-base
+                    text-slate-700 transition hover:bg-slate-100 hover:text-navy-900
+                    disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-slate-100 ${focusRing}`}
+                >
+                  <ArrowUpRight className="h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
+                  {starter}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <>
       <div className="relative min-h-0 flex-1">
         <div
           ref={listRef}
@@ -289,36 +363,15 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
           aria-label="Conversation"
           aria-live={streaming ? 'off' : 'polite'}
           onScroll={handleScroll}
-          className="h-full overflow-y-auto overflow-x-hidden py-4 pl-1 pr-4"
+          className="h-full overflow-y-auto overflow-x-hidden px-2 py-4"
         >
-          {messages.length === 0 ? (
-            <div className="flex min-h-full flex-col items-center justify-center gap-8 px-1 py-6">
-              <h2 className="text-center text-2xl font-semibold text-navy-900 sm:text-3xl">
-                How can I help with your career today?
-              </h2>
-              <div className="grid w-full auto-rows-fr gap-3 sm:grid-cols-2">
-                {starters.map((starter) => (
-                  <button
-                    key={starter}
-                    type="button"
-                    disabled={streaming}
-                    onClick={() => ask(starter)}
-                    className={`h-full min-h-16 rounded-2xl border border-slate-300 bg-surface px-4 py-3
-                      text-left text-sm text-navy-900 transition hover:border-slate-400
-                      hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50 ${focusRing}`}
-                  >
-                    {starter}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="space-y-8">
+          {messages.length > 0 && (
+            <div className="mx-auto max-w-3xl space-y-8">
               {messages.map((message, index) => {
                 if (message.role === 'user') {
                   return (
                     <div key={index} className="flex justify-end">
-                      <div className="max-w-[85%] whitespace-pre-wrap break-words rounded-3xl bg-slate-200 px-5 py-3 leading-relaxed text-navy-900">
+                      <div className="max-w-[85%] whitespace-pre-wrap break-words rounded-3xl bg-slate-100 px-5 py-3 leading-relaxed text-navy-900 dark:bg-surface">
                         {message.content}
                       </div>
                     </div>
@@ -327,9 +380,8 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
                 const isPending = streaming && index === messages.length - 1;
                 const isLast = index === lastAssistantIndex;
                 return (
-                  <div key={index} className="flex gap-3">
-                    <AssistantAvatar />
-                    <div className="min-w-0 flex-1 text-navy-900">
+                  <div key={index}>
+                    <div className="min-w-0 text-navy-900">
                       {isPending && awaitingFirstToken ? (
                         <TypingDots />
                       ) : (
@@ -343,9 +395,9 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
                                 href={source.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className={`inline-flex min-h-8 items-center gap-1 rounded-full border
-                                  border-slate-300 px-2.5 py-1 text-xs text-navy-900
-                                  hover:border-slate-400 hover:text-coral-ink ${focusRing}`}
+                                className={`inline-flex min-h-8 items-center gap-1 rounded-full bg-slate-100 px-3
+                                  py-1 text-xs text-navy-900 hover:bg-slate-200 dark:bg-surface
+                                  dark:hover:bg-raised ${focusRing}`}
                               >
                                 <span className="truncate">{source.title}</span>
                                 <ExternalLink className="h-3 w-3 shrink-0" aria-hidden="true" />
@@ -395,17 +447,15 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
               })}
 
               {error && !streaming && (
-                <div role="alert" className="flex gap-3">
-                  <AssistantAvatar />
-                  <div className="flex min-w-0 flex-1 flex-col items-start gap-2">
-                    <p className="rounded-2xl border border-coral-600 bg-surface px-3.5 py-2.5 text-sm text-navy-900">
-                      {error}
-                    </p>
+                <div role="alert">
+                  <div className="flex min-w-0 flex-col items-start gap-2">
+                    <p className="text-base text-coral-ink">{error}</p>
                     <button
                       type="button"
                       onClick={retry}
-                      className={`inline-flex min-h-10 items-center gap-1.5 rounded-full bg-coral-600 px-4
-                        text-sm font-semibold text-white transition hover:bg-coral-700 ${focusRing}`}
+                      className={`inline-flex min-h-11 items-center gap-1.5 rounded-full border border-slate-300
+                        px-4 text-sm font-semibold text-navy-900 transition hover:bg-slate-100
+                        dark:hover:bg-surface ${focusRing}`}
                     >
                       <RefreshCw className="h-4 w-4" aria-hidden="true" />
                       Retry
@@ -431,46 +481,11 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
         )}
       </div>
 
-      <form onSubmit={handleSubmit} className="pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2">
-        <div
-          className="flex items-end gap-2 rounded-3xl border border-slate-400 bg-surface py-2 pl-4 pr-2
-            shadow-card transition focus-within:border-ink focus-within:ring-2 focus-within:ring-ink/40"
-        >
-          <label htmlFor="chat-input" className="sr-only">
-            Ask the assistant
-          </label>
-          <textarea
-            id="chat-input"
-            ref={inputRef}
-            rows={1}
-            value={draft}
-            maxLength={MAX_INPUT_LENGTH}
-            onChange={(event) => setDraft(event.target.value)}
-            onKeyDown={handleKeyDown}
-            placeholder="Ask anything about your career search"
-            className="max-h-48 min-h-10 flex-1 resize-none self-center bg-transparent py-2 text-base
-              leading-6 text-navy-900 outline-none placeholder:text-slate-600"
-          />
-          <button
-            type="submit"
-            disabled={!streaming && !draft.trim()}
-            className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full
-              bg-coral-600 text-white transition hover:bg-coral-700 disabled:cursor-not-allowed
-              disabled:bg-slate-200 disabled:text-slate-600 disabled:hover:bg-slate-200 ${focusRing}`}
-          >
-            {streaming ? (
-              <Square className="h-4 w-4 fill-current" aria-hidden="true" />
-            ) : (
-              <ArrowUp className="h-5 w-5" aria-hidden="true" />
-            )}
-            <span className="sr-only">{streaming ? 'Stop generating' : 'Send message'}</span>
-          </button>
-        </div>
-        <p className="mt-2 text-center text-[0.8125rem] leading-snug text-slate-600">
-          AI can make mistakes. Check listings and company details.
-          {chatProfile ? ' Your major, interests, year and goal are sent with each question.' : ''}
-        </p>
-      </form>
+          <div className="mx-auto w-full max-w-3xl">{composer}</div>
+        </>
+      )}
+      <p className="pb-1 pt-2 text-center text-[0.8125rem] leading-snug text-slate-600">
+          Wayfinder is AI and can make mistakes. Check listings before you apply.      </p>
     </div>
   );
 }

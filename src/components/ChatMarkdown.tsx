@@ -53,11 +53,15 @@ const components: Components = {
 const remarkPlugins = [remarkGfm];
 
 /** Renders assistant markdown. Raw HTML is not enabled, so model output cannot inject markup. */
+/** Search-style `[1][2]` markers point at sources the UI does not list, so they are dropped. */
+const CITATION_MARKERS = /\s?\[\d{1,2}\](?:\[\d{1,2}\])*/g;
+
 export const ChatMarkdown = memo(function ChatMarkdown({ text }: { text: string }) {
+  const cleaned = text.replace(CITATION_MARKERS, '');
   return (
     <div className="break-words">
       <ReactMarkdown remarkPlugins={remarkPlugins} components={components}>
-        {text}
+        {cleaned}
       </ReactMarkdown>
     </div>
   );

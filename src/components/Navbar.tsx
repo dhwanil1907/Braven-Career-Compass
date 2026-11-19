@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { label: 'Resources', to: '/resources' },
   { label: 'Events', to: '/events' },
   { label: 'Alumni', to: '/alumni' },
-  { label: 'Assistant', to: '/assistant' },
+  { label: 'Wayfinder', to: '/assistant' },
 ];
 
 /** Signed-out visitors only have the landing page, so their tabs jump to its sections. */

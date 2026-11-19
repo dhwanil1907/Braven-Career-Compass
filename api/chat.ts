@@ -4,8 +4,8 @@
 import { handleChatRequest, streamChatRequest } from './_chat-server.mjs';
 
 /**
- * Vercel function behind the site's assistant chat. The NVIDIA key lives only in the server
- * environment (NVIDIA_API_KEY); the browser never sees it.
+ * Vercel function behind the site's assistant chat. The Perplexity key lives only in the server
+ * environment (PERPLEXITY_API_KEY); the browser never sees it.
  */
 export async function POST(request: Request): Promise<Response> {
   let input: unknown = null;
@@ -16,8 +16,8 @@ export async function POST(request: Request): Promise<Response> {
   }
   const forwardedFor = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim();
   const options = {
-    apiKey: process.env.NVIDIA_API_KEY,
-    model: process.env.NVIDIA_MODEL || undefined,
+    apiKey: process.env.PERPLEXITY_API_KEY,
+    model: process.env.PERPLEXITY_MODEL || undefined,
     clientId: forwardedFor || 'anon',
   };
 

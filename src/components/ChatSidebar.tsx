@@ -75,14 +75,11 @@ export function ChatSidebar({
 
   return (
     <nav aria-label="Saved chats" className="flex h-full min-h-0 flex-col">
-      <div className="flex min-h-12 items-center px-1 py-2">
-        <p className="text-base font-semibold text-navy-900">Chats</p>
-      </div>
       <button
         type="button"
         onClick={onNew}
-        className={`mb-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full
-          bg-coral-600 px-4 text-sm font-semibold text-white transition hover:bg-coral-700 ${focusRing}`}
+        className={`mb-4 inline-flex min-h-11 w-full items-center gap-2.5 rounded-full px-3 text-sm
+          font-semibold text-navy-900 transition hover:bg-white dark:hover:bg-surface ${focusRing}`}
       >
         <SquarePen className="h-4 w-4" aria-hidden="true" />
         New chat
@@ -94,7 +91,7 @@ export function ChatSidebar({
         ) : (
           groups.map((group) => (
             <section key={group.label} aria-label={group.label} className="mb-3">
-              <p className="px-2 pb-1 text-[0.8125rem] font-semibold uppercase tracking-wide text-slate-600">
+              <p className="px-3 pb-1 text-[0.8125rem] font-medium text-slate-600">
                 {group.label}
               </p>
               <ul className="space-y-0.5">
@@ -118,7 +115,7 @@ export function ChatSidebar({
                     <li
                       key={conversation.id}
                       className={`group relative flex items-center rounded-xl transition
-                        ${active ? 'bg-slate-200' : 'hover:bg-slate-100'}`}
+                        ${active ? 'bg-white dark:bg-surface' : 'hover:bg-white/70 dark:hover:bg-surface/70'}`}
                     >
                       <button
                         type="button"
@@ -126,7 +123,7 @@ export function ChatSidebar({
                         aria-current={active ? 'true' : undefined}
                         title={conversation.title}
                         className={`min-h-11 min-w-0 flex-1 rounded-xl py-2 pl-3 pr-12 text-left text-sm
-                          text-navy-900 ${active ? 'font-bold' : ''} ${focusRing}`}
+                          text-navy-900 ${active ? 'font-semibold' : ''} ${focusRing}`}
                       >
                         <span className="block truncate">{conversation.title}</span>
                       </button>
@@ -151,7 +148,7 @@ export function ChatSidebar({
       </div>
 
       {conversations.length > 0 && (
-        <div className="border-t border-slate-200 pt-2">
+        <div className="border-t border-slate-300 pt-2 dark:border-slate-300">
           {confirmingClear ? (
             <InlineConfirm
               message="Delete all chats?"

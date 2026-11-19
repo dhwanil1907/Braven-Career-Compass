@@ -7,18 +7,18 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## Assistant chat (NVIDIA)
+## Wayfinder chat (Perplexity)
 
-The Assistant tab (`/assistant`) calls `/api/chat`, a server function (`api/chat.ts`) that forwards questions to
-NVIDIA's OpenAI-compatible API together with matching listings from our catalog. The key never
+The Wayfinder tab (`/assistant`) calls `/api/chat`, a server function (`api/chat.ts`) that forwards questions to
+Perplexity's Sonar API (live web search built in) together with matching listings from our catalog. The key never
 reaches the browser.
 
 Set these as environment variables (never commit them):
 
 | Name | Required | Notes |
 | --- | --- | --- |
-| `NVIDIA_API_KEY` | yes | Key from build.nvidia.com. Without it the chat shows "not set up yet". |
-| `NVIDIA_MODEL` | no | Defaults to `nvidia/nemotron-3.5-lightning-30b-a3b`. |
+| `PERPLEXITY_API_KEY` | yes | Key from perplexity.ai/settings/api. Without it the chat shows "not set up yet". |
+| `PERPLEXITY_MODEL` | no | Defaults to `sonar`; `sonar-pro` is more accurate but slower. |
 
 - **Local:** put them in `.env` (gitignored) and run `npm run dev`; the dev server serves `/api/chat`.
 - **Vercel:** Project Settings, Environment Variables, then redeploy.

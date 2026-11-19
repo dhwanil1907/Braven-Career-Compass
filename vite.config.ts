@@ -38,8 +38,8 @@ function chatApiDev(env: Record<string, string>): Plugin {
         const input = await readJsonBody(request);
         const chat = await server.ssrLoadModule('/src/lib/chat/server.ts');
         const options = {
-          apiKey: env.NVIDIA_API_KEY,
-          model: env.NVIDIA_MODEL || undefined,
+          apiKey: env.PERPLEXITY_API_KEY,
+          model: env.PERPLEXITY_MODEL || undefined,
           clientId: request.socket.remoteAddress ?? 'dev',
         };
 

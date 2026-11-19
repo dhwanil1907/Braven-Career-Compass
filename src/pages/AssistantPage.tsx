@@ -46,7 +46,7 @@ function initialState(): { conversations: ChatConversation[]; activeId: string }
 }
 
 export function AssistantPage() {
-  usePageTitle('Assistant');
+  usePageTitle('Wayfinder');
   const [initial] = useState(initialState);
   const [conversations, setConversations] = useState(initial.conversations);
   const [activeId, setActiveId] = useState(initial.activeId);
@@ -140,13 +140,14 @@ export function AssistantPage() {
   const activeConversation = conversations.find((conversation) => conversation.id === activeId);
 
   return (
-    <div className="mx-auto flex h-[calc(100dvh-5rem)] min-h-[32rem] w-full max-w-[100rem] gap-6 px-4 sm:px-8 lg:px-16">
-      <aside className="hidden w-64 shrink-0 border-r border-slate-200 pb-3 pr-4 lg:block">
+    <div className="dark:bg-[#060d18]">
+    <div className="flex h-[calc(100dvh-4rem)] min-h-[32rem] w-full">
+      <aside inert={drawerOpen} className="hidden w-64 shrink-0 bg-slate-100 p-3 lg:block">
         <ChatSidebar {...sidebarProps} />
       </aside>
 
-      <div className="flex min-w-0 flex-1 flex-col">
-        <div className="flex min-h-12 items-center gap-2 py-2">
+      <div inert={drawerOpen} className="flex min-w-0 flex-1 flex-col px-4 py-3 sm:px-8">
+        <div className="flex min-h-12 items-center gap-2 py-2 lg:min-h-0 lg:py-0">
           <button
             ref={drawerButtonRef}
             type="button"
@@ -158,10 +159,9 @@ export function AssistantPage() {
             <History className="h-4 w-4" aria-hidden="true" />
             Chats
           </button>
-          <h1 className="text-base font-semibold text-navy-900">Career Compass Assistant</h1>
-          <span className="rounded-full bg-coral-600 px-2 py-0.5 text-[0.65rem] font-bold text-white">
-            AI
-          </span>
+          <h1 className="font-display text-xl font-semibold tracking-[-0.02em] text-navy-900 lg:sr-only">
+            Wayfinder
+          </h1>
         </div>
         <div className="min-h-0 flex-1">
           <ChatPanel
@@ -194,6 +194,7 @@ export function AssistantPage() {
           </div>
         </div>
       )}
+    </div>
     </div>
   );
 }

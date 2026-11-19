@@ -121,7 +121,7 @@ describe('handleChatRequest upstream call', () => {
     const fetchFn = fakeFetch('Sure.');
     await handleChatRequest(validInput, { apiKey: 'secret-key', model: 'test-model', fetchFn });
     const [url, init] = fetchFn.mock.calls[0] as [string, RequestInit];
-    expect(url).toBe('https://integrate.api.nvidia.com/v1/chat/completions');
+    expect(url).toBe('https://api.perplexity.ai/chat/completions');
     const headers = init.headers as Record<string, string>;
     expect(headers.Authorization).toBe('Bearer secret-key');
     expect(headers['Content-Type']).toBe('application/json');
@@ -129,9 +129,8 @@ describe('handleChatRequest upstream call', () => {
     expect(body.model).toBe('test-model');
     expect(body.stream).toBe(false);
     expect(body.max_tokens).toBe(1200);
-    expect(body.chat_template_kwargs).toEqual({ enable_thinking: false });
     expect(body.messages[0].role).toBe('system');
-    expect(body.messages[0].content).toContain('Career Compass Assistant');
+    expect(body.messages[0].content).toContain('Wayfinder');
     const first = retrieveContext('marketing internship tips').resources[0];
     expect(body.messages[0].content).toContain(first.title);
     expect(body.messages[1]).toEqual({ role: 'user', content: 'marketing internship tips' });
@@ -141,7 +140,7 @@ describe('handleChatRequest upstream call', () => {
     const fetchFn = fakeFetch('Sure.');
     await handleChatRequest(validInput, { apiKey: 'k', fetchFn });
     const body = JSON.parse((fetchFn.mock.calls[0][1] as RequestInit).body as string);
-    expect(body.model).toBe('nvidia/nemotron-3.5-lightning-30b-a3b');
+    expect(body.model).toBe('sonar');
   });
 
   it('strips <think> blocks from the reply', async () => {
