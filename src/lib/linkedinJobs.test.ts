@@ -39,6 +39,19 @@ describe('linkedinJobToResource', () => {
     );
   });
 
+  it('reads Remote or Hybrid from the title when no workplace type was scraped', () => {
+    const noType = { ...job, workplaceType: null };
+    expect(
+      linkedinJobToResource({ ...noType, title: 'Marketing Intern (Remote)' }, SCRAPED_AT).location,
+    ).toBe('Remote');
+    expect(
+      linkedinJobToResource({ ...noType, title: 'Hybrid Data Intern' }, SCRAPED_AT).location,
+    ).toBe('Hybrid');
+    expect(
+      linkedinJobToResource({ ...noType, title: 'Finance Intern' }, SCRAPED_AT).location,
+    ).toBe('In-Person');
+  });
+
   it('copes with a missing company and posting date', () => {
     const resource = linkedinJobToResource({ ...job, company: '', postedAt: null }, SCRAPED_AT);
     expect(resource.title).toBe('Software Engineering Intern');

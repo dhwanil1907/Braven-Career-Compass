@@ -1,7 +1,322 @@
 {
-  "scrapedAt": "2026-11-18T21:50:27.757Z",
+  "scrapedAt": "2026-11-19T02:32:58.140Z",
   "source": "LinkedIn",
   "jobs": [
+    {
+      "id": "4491347908",
+      "title": "Winter Software Engineering Intern",
+      "company": "Truveta",
+      "location": "Greater Seattle Area",
+      "url": "https://www.linkedin.com/jobs/view/winter-software-engineering-intern-at-truveta-4491347908",
+      "postedAt": "2026-11-19T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490907963",
+      "title": "AI Engineering Intern (Generative & Agentic AI)",
+      "company": "Boston Scientific",
+      "location": "Marlborough, MA",
+      "url": "https://www.linkedin.com/jobs/view/ai-engineering-intern-generative-agentic-ai-at-boston-scientific-4490907963",
+      "postedAt": "2026-11-19T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492228808",
+      "title": "Software Engineering Intern",
+      "company": "Sage",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-at-sage-4492228808",
+      "postedAt": "2026-11-19T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492001097",
+      "title": "Data & Analytics Spring Intern",
+      "company": "National Basketball Players Association (NBPA)",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/data-analytics-spring-intern-at-national-basketball-players-association-nbpa-4492001097",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492064687",
+      "title": "DIRECTV for Business Pricing, Offers & Profitability Intern",
+      "company": "DIRECTV",
+      "location": "El Segundo, CA",
+      "url": "https://www.linkedin.com/jobs/view/directv-for-business-pricing-offers-profitability-intern-at-directv-4492064687",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491868076",
+      "title": "Recruiting Intern-CLTI",
+      "company": "Career Launch Tech Initiative",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/recruiting-intern-clti-at-career-launch-tech-initiative-4491868076",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490354391",
+      "title": "Recruiting Internship",
+      "company": "Career Launch Tech Initiative",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/recruiting-internship-at-career-launch-tech-initiative-4490354391",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492098150",
+      "title": "Talent Acquisition Intern - paid",
+      "company": "American Plastics",
+      "location": "Greater Cleveland",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-intern-paid-at-american-plastics-4492098150",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491082721",
+      "title": "Grad Intern - Knowledge Graph Applications (Summer 2027)",
+      "company": "Amgen",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/grad-intern-knowledge-graph-applications-summer-2027-at-amgen-4491082721",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491404775",
+      "title": "Digital Marketing Intern",
+      "company": "Flourish By Sage",
+      "location": "East Orange, NJ",
+      "url": "https://www.linkedin.com/jobs/view/digital-marketing-intern-at-flourish-by-sage-4491404775",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458198950",
+      "title": "2027 BNY Summer Internship Program - Engineering (Developer) - Jersey City, NJ",
+      "company": "BNY",
+      "location": "Jersey City, NJ",
+      "url": "https://www.linkedin.com/jobs/view/2027-bny-summer-internship-program-engineering-developer-jersey-city-nj-at-bny-4458198950",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476539010",
+      "title": "Summer Internship - Customer Experience Analytics",
+      "company": "PACCAR Parts",
+      "location": "Renton, WA",
+      "url": "https://www.linkedin.com/jobs/view/summer-internship-customer-experience-analytics-at-paccar-parts-4476539010",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491888732",
+      "title": "2027 Internship - Software Engineer (AI/ML)",
+      "company": "Cirrus Logic",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/2027-internship-software-engineer-ai-ml-at-cirrus-logic-4491888732",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467790623",
+      "title": "Software Engineering Intern - ADG System R&D",
+      "company": "Emerson",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-adg-system-r-d-at-emerson-4467790623",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483766561",
+      "title": "Sales and Operations Planning Intern",
+      "company": "Emerson",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/sales-and-operations-planning-intern-at-emerson-4483766561",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458212073",
+      "title": "2027 BNY Summer Internship Program - Office of the CFO - Finance & Strategy (New York, NY)",
+      "company": "BNY",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/2027-bny-summer-internship-program-office-of-the-cfo-finance-strategy-new-york-ny-at-bny-4458212073",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491458223",
+      "title": "Offer Management Intern",
+      "company": "Schneider Electric",
+      "location": "Foxborough (Foxboro), MA",
+      "url": "https://www.linkedin.com/jobs/view/offer-management-intern-at-schneider-electric-4491458223",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492111233",
+      "title": "Intern, Corporate Communications: June-August 2027 (Hybrid)",
+      "company": "Insulet Corporation",
+      "location": "Acton, MA",
+      "url": "https://www.linkedin.com/jobs/view/intern-corporate-communications-june-august-2027-hybrid-at-insulet-corporation-4492111233",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492109244",
+      "title": "Digital AEO Intern",
+      "company": "Wilson Sporting Goods Co.",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/digital-aeo-intern-at-wilson-sporting-goods-co-4492109244",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490923246",
+      "title": "Product Data Analyst Intern",
+      "company": "Boston Scientific",
+      "location": "Marlborough, MA",
+      "url": "https://www.linkedin.com/jobs/view/product-data-analyst-intern-at-boston-scientific-4490923246",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491849861",
+      "title": "Marketing & Content Intern",
+      "company": "Evoq Technologies, Inc.",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-content-intern-at-evoq-technologies-inc-4491849861",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491870686",
+      "title": "Marketing Internship Program",
+      "company": "Schneider Electric",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-internship-program-at-schneider-electric-4491870686",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491896757",
+      "title": "Digital Marketing Intern",
+      "company": "Centric Brands",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/digital-marketing-intern-at-centric-brands-4491896757",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467270791",
+      "title": "Data Engineering Intern",
+      "company": "Ibotta",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/data-engineering-intern-at-ibotta-4467270791",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483817597",
+      "title": "2027 Software Engineering Intern",
+      "company": "Chatham Financial",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/2027-software-engineering-intern-at-chatham-financial-4483817597",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492068338",
+      "title": "Integrated Communications Intern",
+      "company": "The Shipyard",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/integrated-communications-intern-at-the-shipyard-4492068338",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492205265",
+      "title": "Intern, Influencer Marketing",
+      "company": "Avon",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-influencer-marketing-at-avon-4492205265",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491863674",
+      "title": "Operations AI Process Innovation Intern",
+      "company": "Revelyst",
+      "location": "Irvine, CA",
+      "url": "https://www.linkedin.com/jobs/view/operations-ai-process-innovation-intern-at-revelyst-4491863674",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476354109",
+      "title": "Robotics Software Engineer Intern",
+      "company": "Relativity Space",
+      "location": "Long Beach, CA",
+      "url": "https://www.linkedin.com/jobs/view/robotics-software-engineer-intern-at-relativity-space-4476354109",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4492069399",
+      "title": "Social Media Internship",
+      "company": "Families4Families",
+      "location": "Bethesda, MD",
+      "url": "https://www.linkedin.com/jobs/view/social-media-internship-at-families4families-4492069399",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460211028",
+      "title": "UPS Technology Group Summer 2027 Internship – GA",
+      "company": "UPS",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/ups-technology-group-summer-2027-internship-%E2%80%93-ga-at-ups-4460211028",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474619481",
+      "title": "Business Operations and Leadership Internship",
+      "company": "IDEMIA Public Security",
+      "location": "Reston, VA",
+      "url": "https://www.linkedin.com/jobs/view/business-operations-and-leadership-internship-at-idemia-public-security-4474619481",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491861966",
+      "title": "2027 Summer Intern, Media Coordinator (DC/MD/VA; NY)",
+      "company": "ICF",
+      "location": "Fairfax, VA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-media-coordinator-dc-md-va-ny-at-icf-4491861966",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467726049",
+      "title": "Summer 2027: Software Engineering Intern - Full Stack",
+      "company": "Intuit",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-software-engineering-intern-full-stack-at-intuit-4467726049",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474630193",
+      "title": "Business Development Internship",
+      "company": "IDEMIA Public Security",
+      "location": "Reston, VA",
+      "url": "https://www.linkedin.com/jobs/view/business-development-internship-at-idemia-public-security-4474630193",
+      "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
     {
       "id": "4467726052",
       "title": "Summer 2027: MS Fraud & Risk Intern",
@@ -225,6 +540,393 @@
       "location": "Mountain View, CA",
       "url": "https://www.linkedin.com/jobs/view/summer-2027-software-engineering-intern-cybersecurity-at-intuit-4467715984",
       "postedAt": "2026-11-18T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491180732",
+      "title": "Backend Developer Intern (Restaurant OS) — Fully Remote",
+      "company": "ZOVU",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/backend-developer-intern-restaurant-os-%E2%80%94-fully-remote-at-zovu-4491180732",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466120874",
+      "title": "2027 Summer Marketing Intern (Remote)",
+      "company": "Constellation",
+      "location": "Annapolis, MD",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-marketing-intern-remote-at-constellation-4466120874",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465457536",
+      "title": "Campaign Marketing Intern - Summer 2027",
+      "company": "Veeam Software",
+      "location": "Georgia, United States",
+      "url": "https://www.linkedin.com/jobs/view/campaign-marketing-intern-summer-2027-at-veeam-software-4465457536",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491577028",
+      "title": "Internship: Content Marketing Writing",
+      "company": "MCA",
+      "location": "North Canton, OH",
+      "url": "https://www.linkedin.com/jobs/view/internship-content-marketing-writing-at-mca-4491577028",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482115443",
+      "title": "Laneige Brand Marketing Intern",
+      "company": "AMOREPACIFIC",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/laneige-brand-marketing-intern-at-amorepacific-4482115443",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490197853",
+      "title": "Influencer & PR Intern (Then I Met You)",
+      "company": "Then I Met You",
+      "location": "Brooklyn, NY",
+      "url": "https://www.linkedin.com/jobs/view/influencer-pr-intern-then-i-met-you-at-then-i-met-you-4490197853",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458216043",
+      "title": "2027 BNY Summer Internship Program - Engineering (Developer) - New York, NY",
+      "company": "BNY",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/2027-bny-summer-internship-program-engineering-developer-new-york-ny-at-bny-4458216043",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491100584",
+      "title": "Intern",
+      "company": "NYSERDA",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/intern-at-nyserda-4491100584",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483717065",
+      "title": "Intern - Business Analyst",
+      "company": "TÜV SÜD",
+      "location": "Woodbridge, NJ",
+      "url": "https://www.linkedin.com/jobs/view/intern-business-analyst-at-t%C3%BCv-s%C3%BCd-4483717065",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491149233",
+      "title": "SHF - Internship - 2027",
+      "company": "Shee Atiká Government Services",
+      "location": "Sitka, AK",
+      "url": "https://www.linkedin.com/jobs/view/shf-internship-2027-at-shee-atik%C3%A1-government-services-4491149233",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490412374",
+      "title": "Security Specialist, Intern",
+      "company": "Filevine",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/security-specialist-intern-at-filevine-4490412374",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490804825",
+      "title": "Influencer Marketing Intern",
+      "company": "Bloom Nutrition",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/influencer-marketing-intern-at-bloom-nutrition-4490804825",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491110668",
+      "title": "Intern, Social Media Recruiting and Talent Analytics",
+      "company": "Holland America/Princess Alaska-Yukon Land Operations",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/intern-social-media-recruiting-and-talent-analytics-at-holland-america-princess-alaska-yukon-land-operations-4491110668",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491102951",
+      "title": "Intern, Content & Integrated Marketing (SBN)",
+      "company": "Seabourn Cruise Line",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/intern-content-integrated-marketing-sbn-at-seabourn-cruise-line-4491102951",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491121256",
+      "title": "Intern, Paid Social Media",
+      "company": "Holland America Line",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/intern-paid-social-media-at-holland-america-line-4491121256",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491712357",
+      "title": "Software Engineering Intern",
+      "company": "Emerson",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-at-emerson-4491712357",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491579225",
+      "title": "Marketing Intern",
+      "company": "Four Hands",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-four-hands-4491579225",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491756502",
+      "title": "ComEd Business Analyst (GIS) Intern",
+      "company": "Exelon",
+      "location": "Villa Park, IL",
+      "url": "https://www.linkedin.com/jobs/view/comed-business-analyst-gis-intern-at-exelon-4491756502",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483701145",
+      "title": "University - 2027 Summer Games Software Developer Intern - Lexington, MA",
+      "company": "Booz Allen Hamilton",
+      "location": "Lexington, MA",
+      "url": "https://www.linkedin.com/jobs/view/university-2027-summer-games-software-developer-intern-lexington-ma-at-booz-allen-hamilton-4483701145",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491716314",
+      "title": "2027 Summer Co op Scientific Data Support Analyst Vaccines Waltham MA",
+      "company": "Sanofi",
+      "location": "Waltham, MA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-co-op-scientific-data-support-analyst-vaccines-waltham-ma-at-sanofi-4491716314",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483700183",
+      "title": "University - 2027 Summer Games Data Scientist Intern - Lexington, MA",
+      "company": "Booz Allen Hamilton",
+      "location": "Lexington, MA",
+      "url": "https://www.linkedin.com/jobs/view/university-2027-summer-games-data-scientist-intern-lexington-ma-at-booz-allen-hamilton-4483700183",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491147756",
+      "title": "Demand Systems Analyst Intern",
+      "company": "Ahold Delhaize USA",
+      "location": "Quincy, MA",
+      "url": "https://www.linkedin.com/jobs/view/demand-systems-analyst-intern-at-ahold-delhaize-usa-4491147756",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491549444",
+      "title": "Digital Marketing Intern",
+      "company": "Sallie Mae",
+      "location": "Newton, MA",
+      "url": "https://www.linkedin.com/jobs/view/digital-marketing-intern-at-sallie-mae-4491549444",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485760628",
+      "title": "Energy Market Analyst Intern - EDA Official Posting",
+      "company": "East Daley Analytics",
+      "location": "Greenwood Village, CO",
+      "url": "https://www.linkedin.com/jobs/view/energy-market-analyst-intern-eda-official-posting-at-east-daley-analytics-4485760628",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490441278",
+      "title": "Embedded Software Development Intern - Summer 2027",
+      "company": "CACI International Inc",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/embedded-software-development-intern-summer-2027-at-caci-international-inc-4490441278",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491192528",
+      "title": "Marketing Intern",
+      "company": "EchoStar Corporation",
+      "location": "Englewood, CO",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-echostar-corporation-4491192528",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474611927",
+      "title": "Software Engineer Internship - Summer 2027",
+      "company": "IDEMIA Public Security",
+      "location": "Reston, VA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-internship-summer-2027-at-idemia-public-security-4474611927",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491434297",
+      "title": "Managed Application Services Consulting Intern - Summer 2027",
+      "company": "RSM US LLP",
+      "location": "Greenwood Village, CO",
+      "url": "https://www.linkedin.com/jobs/view/managed-application-services-consulting-intern-summer-2027-at-rsm-us-llp-4491434297",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491184732",
+      "title": "Business Administration Intern",
+      "company": "EchoStar Corporation",
+      "location": "Englewood, CO",
+      "url": "https://www.linkedin.com/jobs/view/business-administration-intern-at-echostar-corporation-4491184732",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491190700",
+      "title": "Intern, Digital Properties and Innovation - Digital Media (Summer 2027)",
+      "company": "Southern Poverty Law Center",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/intern-digital-properties-and-innovation-digital-media-summer-2027-at-southern-poverty-law-center-4491190700",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491403117",
+      "title": "PhD Data Visualization Intern - Summer 2027",
+      "company": "Epsilon",
+      "location": "Westminster, CO",
+      "url": "https://www.linkedin.com/jobs/view/phd-data-visualization-intern-summer-2027-at-epsilon-4491403117",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491434435",
+      "title": "Intern",
+      "company": "The Vertex Companies LLC",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/intern-at-the-vertex-companies-llc-4491434435",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491772383",
+      "title": "Firmware Development Engineer Intern, Cooper Lighting Solutions - Spring 2027",
+      "company": "Signify",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/firmware-development-engineer-intern-cooper-lighting-solutions-spring-2027-at-signify-4491772383",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491765649",
+      "title": "Firmware Development Engineer Intern, Cooper Lighting Solutions - Spring 2027",
+      "company": "Signify",
+      "location": "Peachtree City, GA",
+      "url": "https://www.linkedin.com/jobs/view/firmware-development-engineer-intern-cooper-lighting-solutions-spring-2027-at-signify-4491765649",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467725071",
+      "title": "Summer 2027: Software Engineering Intern - Full Stack",
+      "company": "Intuit",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-software-engineering-intern-full-stack-at-intuit-4467725071",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491742768",
+      "title": "CREATIVE CONTENT CREATOR INTERN - UNPAID",
+      "company": "EduBud International Inc.",
+      "location": "Atlanta Metropolitan Area",
+      "url": "https://www.linkedin.com/jobs/view/creative-content-creator-intern-unpaid-at-edubud-international-inc-4491742768",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483262291",
+      "title": "2027 Summer Intern - Brand Marketing",
+      "company": "Papa Johns",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-brand-marketing-at-papa-johns-4483262291",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474616692",
+      "title": "Marketing & Events Internship - Jan 2027",
+      "company": "IDEMIA Public Security",
+      "location": "Reston, VA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-events-internship-jan-2027-at-idemia-public-security-4474616692",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491410154",
+      "title": "Summer 2027 Data Analytics Intern",
+      "company": "Attain Partners",
+      "location": "McLean, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-data-analytics-intern-at-attain-partners-4491410154",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469373679",
+      "title": "2027 Summer Digital Marketing Intern (Baltimore, MD)",
+      "company": "Constellation",
+      "location": "Baltimore, MD",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-digital-marketing-intern-baltimore-md-at-constellation-4469373679",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491402449",
+      "title": "Summer 2027 Consulting Intern",
+      "company": "Attain Partners",
+      "location": "McLean, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-consulting-intern-at-attain-partners-4491402449",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4464101558",
+      "title": "2027 Summer Commercial Business Solutions Intern (Baltimore, MD)",
+      "company": "Constellation",
+      "location": "Baltimore, MD",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-commercial-business-solutions-intern-baltimore-md-at-constellation-4464101558",
+      "postedAt": "2026-11-17T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481382368",
+      "title": "2027 IT Development Intern - San Diego, CA",
+      "company": "Constellation",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-it-development-intern-san-diego-ca-at-constellation-4481382368",
+      "postedAt": "2026-11-17T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -606,6 +1308,159 @@
       "workplaceType": null
     },
     {
+      "id": "4489799173",
+      "title": "Front-End Developer Intern (Remote)",
+      "company": "WebstaurantStore",
+      "location": "Lititz, PA",
+      "url": "https://www.linkedin.com/jobs/view/front-end-developer-intern-remote-at-webstaurantstore-4489799173",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489790752",
+      "title": "Product Design Intern - Marketing Sites (Remote)",
+      "company": "WebstaurantStore",
+      "location": "Lititz, PA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-marketing-sites-remote-at-webstaurantstore-4489790752",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490107093",
+      "title": "Data Science Summer Intern",
+      "company": "WebstaurantStore",
+      "location": "Lititz, PA",
+      "url": "https://www.linkedin.com/jobs/view/data-science-summer-intern-at-webstaurantstore-4490107093",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465471495",
+      "title": "Talent Growth and Inclusion Intern- Summer 2027",
+      "company": "Veeam Software",
+      "location": "Washington, United States",
+      "url": "https://www.linkedin.com/jobs/view/talent-growth-and-inclusion-intern-summer-2027-at-veeam-software-4465471495",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490101284",
+      "title": "Outbound Logistics Summer Intern (Remote Friendly)",
+      "company": "WebstaurantStore",
+      "location": "Lititz, PA",
+      "url": "https://www.linkedin.com/jobs/view/outbound-logistics-summer-intern-remote-friendly-at-webstaurantstore-4490101284",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490530839",
+      "title": "Summer 2027 Data Product Internship",
+      "company": "T-Mobile",
+      "location": "Bellevue, WA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-data-product-internship-at-t-mobile-4490530839",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474506957",
+      "title": "Data Analyst, Intern",
+      "company": "Stripe",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/data-analyst-intern-at-stripe-4474506957",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490155323",
+      "title": "Focus Features Publicity & Marketing Internships – Summer 2027",
+      "company": "Focus Features",
+      "location": "Universal City, CA",
+      "url": "https://www.linkedin.com/jobs/view/focus-features-publicity-marketing-internships-%E2%80%93-summer-2027-at-focus-features-4490155323",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490952368",
+      "title": "Data Science & Analytics Intern",
+      "company": "EchoStar Corporation",
+      "location": "Englewood, CO",
+      "url": "https://www.linkedin.com/jobs/view/data-science-analytics-intern-at-echostar-corporation-4490952368",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490945725",
+      "title": "Software Engineering Intern",
+      "company": "EchoStar Corporation",
+      "location": "Englewood, CO",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-at-echostar-corporation-4490945725",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491102441",
+      "title": "Intern, Partnership Marketing & Media Sales",
+      "company": "Kroenke Sports & Entertainment",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/intern-partnership-marketing-media-sales-at-kroenke-sports-entertainment-4491102441",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490908300",
+      "title": "Universal Film Global Distribution Internships – Summer 2027",
+      "company": "NBCUniversal",
+      "location": "Universal City, CA",
+      "url": "https://www.linkedin.com/jobs/view/universal-film-global-distribution-internships-%E2%80%93-summer-2027-at-nbcuniversal-4490908300",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490906379",
+      "title": "Digital Transformation AR/VR Internships – Summer 2027",
+      "company": "NBCUniversal",
+      "location": "Universal City, CA",
+      "url": "https://www.linkedin.com/jobs/view/digital-transformation-ar-vr-internships-%E2%80%93-summer-2027-at-nbcuniversal-4490906379",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490101781",
+      "title": "Publicis Media Summer 2027 Internship - Los Angeles",
+      "company": "Publicis Media",
+      "location": "El Segundo, CA",
+      "url": "https://www.linkedin.com/jobs/view/publicis-media-summer-2027-internship-los-angeles-at-publicis-media-4490101781",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490942919",
+      "title": "Underwriting Intern - Summer 2027",
+      "company": "Elevance Health",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/underwriting-intern-summer-2027-at-elevance-health-4490942919",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490116116",
+      "title": "Publicis Media Summer 2027 Internship - Atlanta",
+      "company": "Publicis Media",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/publicis-media-summer-2027-internship-atlanta-at-publicis-media-4490116116",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465148333",
+      "title": "SAP iXp - Global Revenue Operations Intern - Project Management and Business Analysis",
+      "company": "SAP",
+      "location": "Alpharetta, GA",
+      "url": "https://www.linkedin.com/jobs/view/sap-ixp-global-revenue-operations-intern-project-management-and-business-analysis-at-sap-4465148333",
+      "postedAt": "2026-11-16T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4474524268",
       "title": "Data Analyst, Intern",
       "company": "Stripe",
@@ -786,6 +1641,114 @@
       "workplaceType": null
     },
     {
+      "id": "4465195532",
+      "title": "Data Analytics & Programs Intern - Summer 2027",
+      "company": "Veeam Software",
+      "location": "Georgia, United States",
+      "url": "https://www.linkedin.com/jobs/view/data-analytics-programs-intern-summer-2027-at-veeam-software-4465195532",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473144547",
+      "title": "Software Engineer Intern",
+      "company": "ShopBack",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-shopback-4473144547",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466321148",
+      "title": "Summer 2027 Finance Intern",
+      "company": "Voya Financial",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-finance-intern-at-voya-financial-4466321148",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489383087",
+      "title": "Equity Research Intern",
+      "company": "Wall Street Oasis",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/equity-research-intern-at-wall-street-oasis-4489383087",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489385672",
+      "title": "Investment Banking Intern",
+      "company": "Wall Street Oasis",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/investment-banking-intern-at-wall-street-oasis-4489385672",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491269327",
+      "title": "Content & Social Media Intern (NYC)",
+      "company": "Glowie By Her",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/content-social-media-intern-nyc-at-glowie-by-her-4491269327",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491268388",
+      "title": "SOC Analyst Internship Program - LSU Students Only",
+      "company": "C3",
+      "location": "Baton Rouge, LA",
+      "url": "https://www.linkedin.com/jobs/view/soc-analyst-internship-program-lsu-students-only-at-c3-4491268388",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475069915",
+      "title": "Marketing Intern",
+      "company": "Cboe Global Markets",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-cboe-global-markets-4475069915",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475086206",
+      "title": "Technical Business Analyst Intern",
+      "company": "Cboe Global Markets",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/technical-business-analyst-intern-at-cboe-global-markets-4475086206",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474572309",
+      "title": "Summer Intern – Credit Risk Management",
+      "company": "The Options Clearing Corporation (OCC)",
+      "location": "Greater Chicago Area",
+      "url": "https://www.linkedin.com/jobs/view/summer-intern-%E2%80%93-credit-risk-management-at-the-options-clearing-corporation-occ-4474572309",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466450020",
+      "title": "Software Engineer Intern",
+      "company": "Ibotta",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-ibotta-4466450020",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466366688",
+      "title": "D2C Marketing Intern",
+      "company": "Ibotta",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/d2c-marketing-intern-at-ibotta-4466366688",
+      "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4465698962",
       "title": "Data Analytics Intern (Spring 2027)",
       "company": "Zipline",
@@ -909,6 +1872,168 @@
       "location": "San Francisco County, CA",
       "url": "https://www.linkedin.com/jobs/view/data-science-intern-algorithms-summer-2027-sf-nyc-at-lyft-4466354432",
       "postedAt": "2026-11-15T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489842647",
+      "title": "Talent Acquisition Intern",
+      "company": "Rollins, Inc.",
+      "location": "Logan, UT",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-intern-at-rollins-inc-4489842647",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489370001",
+      "title": "Content Creation and Writing Intern (Spring & Summer 2027)",
+      "company": "Aegon",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/content-creation-and-writing-intern-spring-summer-2027-at-aegon-4489370001",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473140603",
+      "title": "Software Engineer Intern",
+      "company": "ShopBack",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-shopback-4473140603",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488993813",
+      "title": "Summer Marketing Internship",
+      "company": "Tapestry",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/summer-marketing-internship-at-tapestry-4488993813",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483125446",
+      "title": "2027 - Software Engineering Intern, AMER",
+      "company": "MongoDB",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/2027-software-engineering-intern-amer-at-mongodb-4483125446",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471171648",
+      "title": "Software Engineer - Internship",
+      "company": "SeatGeek",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-internship-at-seatgeek-4471171648",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491097775",
+      "title": "Cybersecurity Internship (Remote) – Summer 2027 (Undergraduate)",
+      "company": "Molina Healthcare",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/cybersecurity-internship-remote-%E2%80%93-summer-2027-undergraduate-at-molina-healthcare-4491097775",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491078734",
+      "title": "Marketing MBA Internship Opportunities, United States",
+      "company": "Microsoft",
+      "location": "Redmond, WA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-mba-internship-opportunities-united-states-at-microsoft-4491078734",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473373323",
+      "title": "Software Engineering Intern – Self-Service Directory Diagnostics",
+      "company": "Docusign",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-%E2%80%93-self-service-directory-diagnostics-at-docusign-4473373323",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474784663",
+      "title": "Business Operations Intern",
+      "company": "Emerson",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/business-operations-intern-at-emerson-4474784663",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491072553",
+      "title": "Housekeeping Operations and Analytics Intern",
+      "company": "Holland America Line",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/housekeeping-operations-and-analytics-intern-at-holland-america-line-4491072553",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491060934",
+      "title": "Intern, Maritime Business Data Analytics (HAL)",
+      "company": "Holland America Line",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/intern-maritime-business-data-analytics-hal-at-holland-america-line-4491060934",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491035097",
+      "title": "Internship - EUV Data Science and Analytics",
+      "company": "ASML",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/internship-euv-data-science-and-analytics-at-asml-4491035097",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474323820",
+      "title": "University - 2027 Summer Games Software Developer Intern - Annapolis Junction, MD",
+      "company": "Booz Allen Hamilton",
+      "location": "Annapolis Junction, MD",
+      "url": "https://www.linkedin.com/jobs/view/university-2027-summer-games-software-developer-intern-annapolis-junction-md-at-booz-allen-hamilton-4474323820",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489897350",
+      "title": "Artificial Intelligence Intern",
+      "company": "Aligned Recruitment Co.",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/artificial-intelligence-intern-at-aligned-recruitment-co-4489897350",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481925735",
+      "title": "2027 Summer Intern - FP&A",
+      "company": "Papa Johns",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-fp-a-at-papa-johns-4481925735",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474335088",
+      "title": "University - 2027 Summer Games Data Scientist Intern - Annapolis Junction, MD",
+      "company": "Booz Allen Hamilton",
+      "location": "Annapolis Junction, MD",
+      "url": "https://www.linkedin.com/jobs/view/university-2027-summer-games-data-scientist-intern-annapolis-junction-md-at-booz-allen-hamilton-4474335088",
+      "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473155559",
+      "title": "SAP iXp Intern - Digital Value Advisor",
+      "company": "SAP",
+      "location": "Alpharetta, GA",
+      "url": "https://www.linkedin.com/jobs/view/sap-ixp-intern-digital-value-advisor-at-sap-4473155559",
+      "postedAt": "2026-11-14T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -1071,6 +2196,321 @@
       "location": "San Francisco, CA",
       "url": "https://www.linkedin.com/jobs/view/phd-data-science-internship-2027-usa-at-pinterest-4474353778",
       "postedAt": "2026-11-14T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488960884",
+      "title": "AI Research Engineer Intern",
+      "company": "Lockheed Martin",
+      "location": "Jefferson County, AL",
+      "url": "https://www.linkedin.com/jobs/view/ai-research-engineer-intern-at-lockheed-martin-4488960884",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488979383",
+      "title": "Business Analyst- Intern",
+      "company": "Lockheed Martin",
+      "location": "Philadelphia, PA",
+      "url": "https://www.linkedin.com/jobs/view/business-analyst-intern-at-lockheed-martin-4488979383",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488979384",
+      "title": "Business Analyst- Intern",
+      "company": "Lockheed Martin",
+      "location": "Eighty Four, PA",
+      "url": "https://www.linkedin.com/jobs/view/business-analyst-intern-at-lockheed-martin-4488979384",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488970683",
+      "title": "AI Research Engineer Intern",
+      "company": "Lockheed Martin",
+      "location": "Mobile, AL",
+      "url": "https://www.linkedin.com/jobs/view/ai-research-engineer-intern-at-lockheed-martin-4488970683",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472626537",
+      "title": "AMS - Marketing Internship",
+      "company": "JAM Industries",
+      "location": "Berlin, CT",
+      "url": "https://www.linkedin.com/jobs/view/ams-marketing-internship-at-jam-industries-4472626537",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4446188624",
+      "title": "Intern: Corporate Development M&A",
+      "company": "EquipmentShare",
+      "location": "Columbia, MO",
+      "url": "https://www.linkedin.com/jobs/view/intern-corporate-development-m-a-at-equipmentshare-4446188624",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488978444",
+      "title": "Price Analysis (Finance) Supply Chain Intern",
+      "company": "Lockheed Martin",
+      "location": "Four Towns, MI",
+      "url": "https://www.linkedin.com/jobs/view/price-analysis-finance-supply-chain-intern-at-lockheed-martin-4488978444",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488982256",
+      "title": "Price Analysis (Finance) Supply Chain Intern",
+      "company": "Lockheed Martin",
+      "location": "Lansing, MI",
+      "url": "https://www.linkedin.com/jobs/view/price-analysis-finance-supply-chain-intern-at-lockheed-martin-4488982256",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490792308",
+      "title": "Talent Acquisition Intern",
+      "company": "Fox Pest Control",
+      "location": "Logan, UT",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-intern-at-fox-pest-control-4490792308",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488980775",
+      "title": "Intern, Human Resources",
+      "company": "USA Football",
+      "location": "Indianapolis, IN",
+      "url": "https://www.linkedin.com/jobs/view/intern-human-resources-at-usa-football-4488980775",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489828285",
+      "title": "Content Creation and Writing Intern (Spring & Summer 2027)",
+      "company": "Transamerica",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/content-creation-and-writing-intern-spring-summer-2027-at-transamerica-4489828285",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489824578",
+      "title": "Content Creation and Writing Intern (Spring & Summer 2027)",
+      "company": "Transamerica",
+      "location": "Philadelphia, PA",
+      "url": "https://www.linkedin.com/jobs/view/content-creation-and-writing-intern-spring-summer-2027-at-transamerica-4489824578",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472611818",
+      "title": "Summer 2027 Digital Banking Intern (Remote)",
+      "company": "SouthState Bank",
+      "location": "Winter Haven, FL",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-digital-banking-intern-remote-at-southstate-bank-4472611818",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465318343",
+      "title": "Summer Associate Internship (Product Security Engineer)",
+      "company": "Navy Federal Credit Union",
+      "location": "Vienna, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-associate-internship-product-security-engineer-at-navy-federal-credit-union-4465318343",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488986319",
+      "title": "Cyber Security Intern",
+      "company": "RegScale",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/cyber-security-intern-at-regscale-4488986319",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4425567572",
+      "title": "Campaign Operation Project Intern (TikTok Shop - Fashion) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/campaign-operation-project-intern-tiktok-shop-fashion-2026-start-bs-ms-at-tiktok-4425567572",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481640408",
+      "title": "Transportation Data Analyst Intern - Summer 2027",
+      "company": "WSP in the U.S.",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/transportation-data-analyst-intern-summer-2027-at-wsp-in-the-u-s-4481640408",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470983130",
+      "title": "Software Development Engineer (Seattle) - Internship 2027",
+      "company": "Qumulo",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-seattle-internship-2027-at-qumulo-4470983130",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491016265",
+      "title": "Life Sciences Marketing Intern",
+      "company": "Emerson",
+      "location": "Round Rock, TX",
+      "url": "https://www.linkedin.com/jobs/view/life-sciences-marketing-intern-at-emerson-4491016265",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490566553",
+      "title": "Operations - 2027 Summer Internship",
+      "company": "Motorola Solutions",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/operations-2027-summer-internship-at-motorola-solutions-4490566553",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465098956",
+      "title": "Financial Planning and Analysis Intern (F&II)",
+      "company": "Ingredion Incorporated",
+      "location": "Westchester, IL",
+      "url": "https://www.linkedin.com/jobs/view/financial-planning-and-analysis-intern-f-ii-at-ingredion-incorporated-4465098956",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489824169",
+      "title": "Summer Intern 2027, OSD Process Data Analytics",
+      "company": "Vertex Pharmaceuticals",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/summer-intern-2027-osd-process-data-analytics-at-vertex-pharmaceuticals-4489824169",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4464149013",
+      "title": "Application Software Engineering Intern",
+      "company": "Shure",
+      "location": "Niles, IL",
+      "url": "https://www.linkedin.com/jobs/view/application-software-engineering-intern-at-shure-4464149013",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489812494",
+      "title": "Consulting Bachelor's Intern",
+      "company": "Kaiser Permanente",
+      "location": "Pasadena, CA",
+      "url": "https://www.linkedin.com/jobs/view/consulting-bachelor-s-intern-at-kaiser-permanente-4489812494",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488957926",
+      "title": "Software Development Intern - Summer 2027",
+      "company": "Lockheed Martin",
+      "location": "Rockville, MD",
+      "url": "https://www.linkedin.com/jobs/view/software-development-intern-summer-2027-at-lockheed-martin-4488957926",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488970583",
+      "title": "Software Development Intern - Summer 2027",
+      "company": "Lockheed Martin",
+      "location": "Bethesda, MD",
+      "url": "https://www.linkedin.com/jobs/view/software-development-intern-summer-2027-at-lockheed-martin-4488970583",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489818347",
+      "title": "Consulting Master's Intern",
+      "company": "Kaiser Permanente",
+      "location": "Pasadena, CA",
+      "url": "https://www.linkedin.com/jobs/view/consulting-master-s-intern-at-kaiser-permanente-4489818347",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4450366952",
+      "title": "Business Analysis and Strategy Project Intern (TikTok Shop - Operations Center) - 2026 Start",
+      "company": "TikTok",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-analysis-and-strategy-project-intern-tiktok-shop-operations-center-2026-start-at-tiktok-4450366952",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474144835",
+      "title": "Summer 2027: Digital Procurement & AI Solutions Intern",
+      "company": "Intuit",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-digital-procurement-ai-solutions-intern-at-intuit-4474144835",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488975144",
+      "title": "Software Engineer (AMMM) - Intern",
+      "company": "Lockheed Martin",
+      "location": "Marietta, GA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-ammm-intern-at-lockheed-martin-4488975144",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465309419",
+      "title": "Summer Associate Internship (Consumer Lending Business Intelligence Analyst)",
+      "company": "Navy Federal Credit Union",
+      "location": "Vienna, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-associate-internship-consumer-lending-business-intelligence-analyst-at-navy-federal-credit-union-4465309419",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488110220",
+      "title": "Business Intelligence Intern — Reporting and QA",
+      "company": "Deltek",
+      "location": "Herndon, VA",
+      "url": "https://www.linkedin.com/jobs/view/business-intelligence-intern-%E2%80%94-reporting-and-qa-at-deltek-4488110220",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4441429705",
+      "title": "2027 Business Analyst Intern",
+      "company": "Solar Turbines",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-business-analyst-intern-at-solar-turbines-4441429705",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4491006333",
+      "title": "Summer 2027 - Software Engineer Intern",
+      "company": "Shield",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-software-engineer-intern-at-shield-4491006333",
+      "postedAt": "2026-11-13T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465309410",
+      "title": "Summer Associate Internship (Associate Business Intelligence Analyst)",
+      "company": "Navy Federal Credit Union",
+      "location": "Vienna, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-associate-internship-associate-business-intelligence-analyst-at-navy-federal-credit-union-4465309410",
+      "postedAt": "2026-11-13T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -1398,6 +2838,303 @@
       "workplaceType": null
     },
     {
+      "id": "4463802022",
+      "title": "Product Design Intern, 2027 Summer U.S.",
+      "company": "Atlassian",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-2027-summer-u-s-at-atlassian-4463802022",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4464908146",
+      "title": "Associate Product Manager Intern",
+      "company": "Coinbase",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/associate-product-manager-intern-at-coinbase-4464908146",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471788129",
+      "title": "Summer 2027 Quantitative Intern (Remote)",
+      "company": "SouthState Bank",
+      "location": "Winter Haven, FL",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-quantitative-intern-remote-at-southstate-bank-4471788129",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471785405",
+      "title": "Summer 2027 Loan Closing Intern (Remote)",
+      "company": "SouthState Bank",
+      "location": "Winter Haven, FL",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-loan-closing-intern-remote-at-southstate-bank-4471785405",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481140955",
+      "title": "Sales Operations Intern",
+      "company": "Trace3",
+      "location": "Grand Rapids, MI",
+      "url": "https://www.linkedin.com/jobs/view/sales-operations-intern-at-trace3-4481140955",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481153506",
+      "title": "Project Operations Specialist Intern",
+      "company": "Trace3",
+      "location": "Irvine, CA",
+      "url": "https://www.linkedin.com/jobs/view/project-operations-specialist-intern-at-trace3-4481153506",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482173865",
+      "title": "Communications Intern",
+      "company": "AARP",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/communications-intern-at-aarp-4482173865",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489294819",
+      "title": "Graduate Internship (Year-Round) - AI/Machine Learning Time Series Modeling",
+      "company": "National Laboratory of the Rockies",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/graduate-internship-year-round-ai-machine-learning-time-series-modeling-at-national-laboratory-of-the-rockies-4489294819",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488587191",
+      "title": "Spring Intern, Content Marketing & Partnerships - Part-Time",
+      "company": "SiriusXM",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/spring-intern-content-marketing-partnerships-part-time-at-siriusxm-4488587191",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488571948",
+      "title": "Spring Intern, Promotions & Events Marketing - Part Time",
+      "company": "SiriusXM",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/spring-intern-promotions-events-marketing-part-time-at-siriusxm-4488571948",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462573802",
+      "title": "Software Engineer Intern",
+      "company": "Cboe Global Markets",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-cboe-global-markets-4462573802",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490080784",
+      "title": "Software Engineer, Intern (Summer)",
+      "company": "Stripe",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-at-stripe-4490080784",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482165698",
+      "title": "Software Development Engineer - Intern",
+      "company": "Zillow",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-intern-at-zillow-4482165698",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473530994",
+      "title": "2027 Summer Marketing Internships",
+      "company": "Hasbro",
+      "location": "Renton, WA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-marketing-internships-at-hasbro-4473530994",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4445438581",
+      "title": "Product Solutions and Operations project Intern (Ads Interface and Platform Product ) - 2026 Start",
+      "company": "TikTok",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/product-solutions-and-operations-project-intern-ads-interface-and-platform-product-2026-start-at-tiktok-4445438581",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4464911743",
+      "title": "Credit Risk Intern",
+      "company": "Coinbase",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/credit-risk-intern-at-coinbase-4464911743",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484376774",
+      "title": "2027 Data Analytics & Business Operations Spring Co-Op or Summer Intern- Bachelor's/Master's (Austin, TX)",
+      "company": "Applied Materials",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/2027-data-analytics-business-operations-spring-co-op-or-summer-intern-bachelor-s-master-s-austin-tx-at-applied-materials-4484376774",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4382816786",
+      "title": "Seller Strategy Business Analyst Project Intern (TikTok Shop - US Operation) - 2025 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/seller-strategy-business-analyst-project-intern-tiktok-shop-us-operation-2025-start-bs-ms-at-tiktok-4382816786",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4463563356",
+      "title": "Software Engineering Internship - Summer 2027",
+      "company": "Epsilon",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-internship-summer-2027-at-epsilon-4463563356",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489069153",
+      "title": "Finance Intern",
+      "company": "Lenovo",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/finance-intern-at-lenovo-4489069153",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484382423",
+      "title": "Summer 2027 Data Scientist Intern -Bachelor's (Austin, TX)",
+      "company": "Applied Materials",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-data-scientist-intern-bachelor-s-austin-tx-at-applied-materials-4484382423",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482086533",
+      "title": "Newhouse LA Study Away Internship, Social Media - Spectrum News",
+      "company": "Spectrum News",
+      "location": "El Segundo, CA",
+      "url": "https://www.linkedin.com/jobs/view/newhouse-la-study-away-internship-social-media-spectrum-news-at-spectrum-news-4482086533",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4426933589",
+      "title": "Creator Growth Project Intern (TikTok Shop - US Operation) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/creator-growth-project-intern-tiktok-shop-us-operation-2026-start-bs-ms-at-tiktok-4426933589",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481150572",
+      "title": "Full Stack Software Engineering Internship",
+      "company": "IDEMIA Public Security",
+      "location": "Reston, VA",
+      "url": "https://www.linkedin.com/jobs/view/full-stack-software-engineering-internship-at-idemia-public-security-4481150572",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4455330026",
+      "title": "Implementation Intern",
+      "company": "Fast Enterprises, LLC",
+      "location": "Centennial, CO",
+      "url": "https://www.linkedin.com/jobs/view/implementation-intern-at-fast-enterprises-llc-4455330026",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481159273",
+      "title": "Social Media Intern - Spring 2027",
+      "company": "Golden Hippo®",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/social-media-intern-spring-2027-at-golden-hippo%C2%AE-4481159273",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4317752471",
+      "title": "Business Analyst Project Intern(TikTok- Operations) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-analyst-project-intern-tiktok-operations-2026-start-bs-ms-at-tiktok-4317752471",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469628255",
+      "title": "Software Engineer - Intern",
+      "company": "ZipRecruiter",
+      "location": "Santa Monica, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-ziprecruiter-4469628255",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465318336",
+      "title": "Summer Associate Internship (Member Associate - Navy Federal Investment Services)",
+      "company": "Navy Federal Credit Union",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-associate-internship-member-associate-navy-federal-investment-services-at-navy-federal-credit-union-4465318336",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465311416",
+      "title": "Summer Associate Internship (Social Media Strategist - Influencer Program)",
+      "company": "Navy Federal Credit Union",
+      "location": "Vienna, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-associate-internship-social-media-strategist-influencer-program-at-navy-federal-credit-union-4465311416",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465326295",
+      "title": "Summer Associate Internship (Business Intelligence Analyst)",
+      "company": "Navy Federal Credit Union",
+      "location": "Vienna, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-associate-internship-business-intelligence-analyst-at-navy-federal-credit-union-4465326295",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4452831608",
+      "title": "Asset Management Intern- Atlanta",
+      "company": "SitusAMC",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/asset-management-intern-atlanta-at-situsamc-4452831608",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465306463",
+      "title": "Summer Associate Internship (Product Strategist/Business Analyst)",
+      "company": "Navy Federal Credit Union",
+      "location": "Vienna, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-associate-internship-product-strategist-business-analyst-at-navy-federal-credit-union-4465306463",
+      "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4484390188",
       "title": "Summer 2027 Business Intelligence Analyst Intern- Master's (Santa Clara, CA)",
       "company": "Applied Materials",
@@ -1623,15 +3360,6 @@
       "workplaceType": null
     },
     {
-      "id": "4464908146",
-      "title": "Associate Product Manager Intern",
-      "company": "Coinbase",
-      "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/associate-product-manager-intern-at-coinbase-4464908146",
-      "postedAt": "2026-11-12T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
       "id": "4490320063",
       "title": "Summer 2027 Financial Analyst Internship",
       "company": "McGrath RentCorp",
@@ -1727,15 +3455,6 @@
       "company": "Applied Materials",
       "location": "Santa Clara, CA",
       "url": "https://www.linkedin.com/jobs/view/summer-2027-technical-project-program-management-intern-master-s-santa-clara-ca-at-applied-materials-4484692916",
-      "postedAt": "2026-11-12T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
-      "id": "4463802022",
-      "title": "Product Design Intern, 2027 Summer U.S.",
-      "company": "Atlassian",
-      "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/product-design-intern-2027-summer-u-s-at-atlassian-4463802022",
       "postedAt": "2026-11-12T00:00:00.000Z",
       "workplaceType": null
     },
@@ -1854,6 +3573,186 @@
       "location": "San Francisco, CA",
       "url": "https://www.linkedin.com/jobs/view/experience-design-intern-summer-2027-at-hp-iq-4490300141",
       "postedAt": "2026-11-12T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488248814",
+      "title": "Insights Analyst Intern, League of Legends - Summer 2027",
+      "company": "Riot Games",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/insights-analyst-intern-league-of-legends-summer-2027-at-riot-games-4488248814",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480756565",
+      "title": "Software Engineer Intern - Summer 2027",
+      "company": "Siemens",
+      "location": "Raleigh, NC",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2027-at-siemens-4480756565",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489987323",
+      "title": "Investment Intern - 2027 Spring Internship",
+      "company": "Globe Life",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/investment-intern-2027-spring-internship-at-globe-life-4489987323",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478192839",
+      "title": "Corporate Strategy Intern",
+      "company": "Arcesium",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/corporate-strategy-intern-at-arcesium-4478192839",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480769028",
+      "title": "Production Operations (ProdOps) Intern - Summer 2027",
+      "company": "Siemens",
+      "location": "Raleigh, NC",
+      "url": "https://www.linkedin.com/jobs/view/production-operations-prodops-intern-summer-2027-at-siemens-4480769028",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489644201",
+      "title": "Software Engineering Intern - Summer 2027",
+      "company": "Addepar",
+      "location": "New York City Metropolitan Area",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-summer-2027-at-addepar-4489644201",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4443723893",
+      "title": "Brand Campaign Project Intern (TikTok Shop - US Operation) - 2026 Start",
+      "company": "TikTok",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/brand-campaign-project-intern-tiktok-shop-us-operation-2026-start-at-tiktok-4443723893",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481768400",
+      "title": "Summer 2027 - Marketing Communications Intern",
+      "company": "Kenworth Truck Co.",
+      "location": "Kirkland, WA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-marketing-communications-intern-at-kenworth-truck-co-4481768400",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473041824",
+      "title": "Marketing Communications Intern",
+      "company": "Ingredion Incorporated",
+      "location": "Westchester, IL",
+      "url": "https://www.linkedin.com/jobs/view/marketing-communications-intern-at-ingredion-incorporated-4473041824",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488258386",
+      "title": "2027 Summer Intern: Business Analyst Intern RC&S",
+      "company": "UL Solutions",
+      "location": "Northbrook, IL",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-business-analyst-intern-rc-s-at-ul-solutions-4488258386",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470897619",
+      "title": "2027 Summer Intern: Marketing Intern",
+      "company": "UL Solutions",
+      "location": "Northbrook, IL",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-marketing-intern-at-ul-solutions-4470897619",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462576102",
+      "title": "Software Engineer Intern",
+      "company": "Cboe Global Markets",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-cboe-global-markets-4462576102",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4407666559",
+      "title": "Travel Demand Modeling Intern - Traffic & Planning",
+      "company": "DCCM",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/travel-demand-modeling-intern-traffic-planning-at-dccm-4407666559",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490029956",
+      "title": "Product Marketing Co-Op",
+      "company": "IANS",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/product-marketing-co-op-at-ians-4490029956",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4490049163",
+      "title": "Software Engineering Internships – Summer 2027",
+      "company": "NBCUniversal",
+      "location": "Universal City, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-internships-%E2%80%93-summer-2027-at-nbcuniversal-4490049163",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480720548",
+      "title": "Ratings Analytical Intern",
+      "company": "S&P Global",
+      "location": "Boulder, CO",
+      "url": "https://www.linkedin.com/jobs/view/ratings-analytical-intern-at-s-p-global-4480720548",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473598040",
+      "title": "Business Intelligence Intern",
+      "company": "Ibotta",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/business-intelligence-intern-at-ibotta-4473598040",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4437967967",
+      "title": "Category User Growth Project Intern (TikTok Shop - US Operation) - 2026 Start (BS/MS)",
+      "company": "TikTok",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/category-user-growth-project-intern-tiktok-shop-us-operation-2026-start-bs-ms-at-tiktok-4437967967",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480737389",
+      "title": "Research Intern",
+      "company": "FleishmanHillard",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/research-intern-at-fleishmanhillard-4480737389",
+      "postedAt": "2026-11-11T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481797579",
+      "title": "Marketing Intern",
+      "company": "Mativ",
+      "location": "Alpharetta, GA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-mativ-4481797579",
+      "postedAt": "2026-11-11T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -2154,6 +4053,294 @@
       "workplaceType": null
     },
     {
+      "id": "4480265998",
+      "title": "Summer 2027: Data Analytics Intern",
+      "company": "Amplify",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-data-analytics-intern-at-amplify-4480265998",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478611532",
+      "title": "Supply Chain Optimization Intern",
+      "company": "Foot Locker",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/supply-chain-optimization-intern-at-foot-locker-4478611532",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487845701",
+      "title": "Data Science Intern",
+      "company": "Enveda",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/data-science-intern-at-enveda-4487845701",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480279517",
+      "title": "Summer 2027: AI Scientist Intern",
+      "company": "Amplify",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-ai-scientist-intern-at-amplify-4480279517",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488649231",
+      "title": "Data Analytics Intern",
+      "company": "Arista Networks",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/data-analytics-intern-at-arista-networks-4488649231",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487808964",
+      "title": "Business Analytics Intern",
+      "company": "Stealth Startup",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/business-analytics-intern-at-stealth-startup-4487808964",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489498053",
+      "title": "UI/UX Design Intern",
+      "company": "DMS International",
+      "location": "Silver Spring, MD",
+      "url": "https://www.linkedin.com/jobs/view/ui-ux-design-intern-at-dms-international-4489498053",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489424436",
+      "title": "Product Design Intern (USA)",
+      "company": "Pinterest",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-usa-at-pinterest-4489424436",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480272826",
+      "title": "Summer 2027: Product Management Intern",
+      "company": "Amplify",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-product-management-intern-at-amplify-4480272826",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489417661",
+      "title": "Product Design Intern (USA)",
+      "company": "Pinterest",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-design-intern-usa-at-pinterest-4489417661",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480289027",
+      "title": "Summer 2027: Product Design Intern",
+      "company": "Amplify",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-product-design-intern-at-amplify-4480289027",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488302682",
+      "title": "INTERN",
+      "company": "Four Hundred",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/intern-at-four-hundred-4488302682",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481255972",
+      "title": "Social Media Intern",
+      "company": "David Yurman",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/social-media-intern-at-david-yurman-4481255972",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488608685",
+      "title": "AI Solutions Intern",
+      "company": "Judi Health",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/ai-solutions-intern-at-judi-health-4488608685",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481257526",
+      "title": "Summer Internship - Digital Marketing",
+      "company": "PACCAR Parts",
+      "location": "Renton, WA",
+      "url": "https://www.linkedin.com/jobs/view/summer-internship-digital-marketing-at-paccar-parts-4481257526",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4459992638",
+      "title": "Cloud Developer Intern - Storage - Austin, TX - 2027",
+      "company": "IBM",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/cloud-developer-intern-storage-austin-tx-2027-at-ibm-4459992638",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471230594",
+      "title": "Customer Experience & Operations Intern - Summer 2027",
+      "company": "Electronic Arts (EA)",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/customer-experience-operations-intern-summer-2027-at-electronic-arts-ea-4471230594",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481289565",
+      "title": "Intern - Localization Systems Analyst",
+      "company": "Nintendo",
+      "location": "Redmond, WA",
+      "url": "https://www.linkedin.com/jobs/view/intern-localization-systems-analyst-at-nintendo-4481289565",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489937510",
+      "title": "Business Analyst Intern - Summer 2027",
+      "company": "ACCA Careers",
+      "location": "Bellevue, WA",
+      "url": "https://www.linkedin.com/jobs/view/business-analyst-intern-summer-2027-at-acca-careers-4489937510",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489411516",
+      "title": "Application Development Intern",
+      "company": "MonoSol, A Kuraray Company",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/application-development-intern-at-monosol-a-kuraray-company-4489411516",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481245726",
+      "title": "Intern - Corporate Sustainability",
+      "company": "Akamai Technologies",
+      "location": "Cambridge, MA",
+      "url": "https://www.linkedin.com/jobs/view/intern-corporate-sustainability-at-akamai-technologies-4481245726",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488393995",
+      "title": "Software Engineer, Internship - Connectivity Platform and Product",
+      "company": "Palantir Technologies",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-internship-connectivity-platform-and-product-at-palantir-technologies-4488393995",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481523142",
+      "title": "Global Marketing Intern",
+      "company": "Prologis",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/global-marketing-intern-at-prologis-4481523142",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481246231",
+      "title": "Vehicle Software Engineer - Summer Internship 2027",
+      "company": "Inversion",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/vehicle-software-engineer-summer-internship-2027-at-inversion-4481246231",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488477536",
+      "title": "Summer Internship, Data Analytics",
+      "company": "Kestra Financial",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/summer-internship-data-analytics-at-kestra-financial-4488477536",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487835631",
+      "title": "Network Planning & Data Analytics Intern",
+      "company": "AstraZeneca",
+      "location": "California, MD",
+      "url": "https://www.linkedin.com/jobs/view/network-planning-data-analytics-intern-at-astrazeneca-4487835631",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480410143",
+      "title": "2027 Summer Intern - Growth Marketing",
+      "company": "Papa Johns",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-growth-marketing-at-papa-johns-4480410143",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488605137",
+      "title": "Intern, Analytics",
+      "company": "Weber Shandwick",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/intern-analytics-at-weber-shandwick-4488605137",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489185656",
+      "title": "Internship- Co-Op: AI Engineer",
+      "company": "ASML",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-co-op-ai-engineer-at-asml-4489185656",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480295707",
+      "title": "2027 Summer Intern - Revenue Management",
+      "company": "Papa Johns",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-revenue-management-at-papa-johns-4480295707",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471394790",
+      "title": "Data and AI Intern - Flexible",
+      "company": "Acuity",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/data-and-ai-intern-flexible-at-acuity-4471394790",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489198107",
+      "title": "Internship-Co-Op: AI Engineer",
+      "company": "ASML",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/internship-co-op-ai-engineer-at-asml-4489198107",
+      "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4480295835",
       "title": "Software Engineering Intern - Summer 2027",
       "company": "Patreon",
@@ -2271,15 +4458,6 @@
       "workplaceType": null
     },
     {
-      "id": "4489417661",
-      "title": "Product Design Intern (USA)",
-      "company": "Pinterest",
-      "location": "San Francisco, CA",
-      "url": "https://www.linkedin.com/jobs/view/product-design-intern-usa-at-pinterest-4489417661",
-      "postedAt": "2026-11-10T00:00:00.000Z",
-      "workplaceType": null
-    },
-    {
       "id": "4480281463",
       "title": "2027 Summer Intern, PhD, Research, Behavior Post-training",
       "company": "Waymo",
@@ -2322,6 +4500,177 @@
       "location": "San Jose, CA",
       "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-software-engineering-at-wd-4487824631",
       "postedAt": "2026-11-10T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487920962",
+      "title": "Logistics Data Analyst Intern (Remote Friendly)",
+      "company": "WebstaurantStore",
+      "location": "Lititz, PA",
+      "url": "https://www.linkedin.com/jobs/view/logistics-data-analyst-intern-remote-friendly-at-webstaurantstore-4487920962",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487932182",
+      "title": "UX Product Design Intern",
+      "company": "WebstaurantStore",
+      "location": "Lititz, PA",
+      "url": "https://www.linkedin.com/jobs/view/ux-product-design-intern-at-webstaurantstore-4487932182",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489103781",
+      "title": "Advertising & Partnerships: Ad Products Internships – Summer 2027",
+      "company": "NBCUniversal",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/advertising-partnerships-ad-products-internships-%E2%80%93-summer-2027-at-nbcuniversal-4489103781",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487961728",
+      "title": "Talent Acquisition Operations Intern - Spring 2027",
+      "company": "Thrivent",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-operations-intern-spring-2027-at-thrivent-4487961728",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487686750",
+      "title": "2027 Intern - Software Engineer",
+      "company": "Adobe",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/2027-intern-software-engineer-at-adobe-4487686750",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488897556",
+      "title": "Finance Internships – Summer 2027",
+      "company": "NBCUniversal",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/finance-internships-%E2%80%93-summer-2027-at-nbcuniversal-4488897556",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488798900",
+      "title": "Paid Summer Internship | Portfolio Management, Real Estate",
+      "company": "LIHTC Leaders",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/paid-summer-internship-portfolio-management-real-estate-at-lihtc-leaders-4488798900",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488885867",
+      "title": "Robotics Intern, Teleoperation and Spatial Computing",
+      "company": "Toyota Research Institute",
+      "location": "Cambridge, MA",
+      "url": "https://www.linkedin.com/jobs/view/robotics-intern-teleoperation-and-spatial-computing-at-toyota-research-institute-4488885867",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487119898",
+      "title": "Summer 2027 Intern Program: Data, Analytics & Technology - Waltham, MA",
+      "company": "National Grid",
+      "location": "Waltham, MA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-program-data-analytics-technology-waltham-ma-at-national-grid-4487119898",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488888389",
+      "title": "Media Tech: Data, AI & Machine Learning Internships – Summer 2027",
+      "company": "NBCUniversal",
+      "location": "Universal City, CA",
+      "url": "https://www.linkedin.com/jobs/view/media-tech-data-ai-machine-learning-internships-%E2%80%93-summer-2027-at-nbcuniversal-4488888389",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488883443",
+      "title": "Studio Operations, Data Analytics Internships – Summer 2027",
+      "company": "NBCUniversal",
+      "location": "Universal City, CA",
+      "url": "https://www.linkedin.com/jobs/view/studio-operations-data-analytics-internships-%E2%80%93-summer-2027-at-nbcuniversal-4488883443",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489104168",
+      "title": "Software Development & AI Internship (Undergrad/Graduate)",
+      "company": "Biodesix, Inc.",
+      "location": "Louisville, CO",
+      "url": "https://www.linkedin.com/jobs/view/software-development-ai-internship-undergrad-graduate-at-biodesix-inc-4489104168",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487320329",
+      "title": "2027 Summer Internship - Revenue Intelligence",
+      "company": "Vizient",
+      "location": "Centennial, CO",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-internship-revenue-intelligence-at-vizient-4487320329",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488832987",
+      "title": "Marketing Intern",
+      "company": "DUAL North America",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-dual-north-america-4488832987",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4489109068",
+      "title": "Data Analytics & Business Intelligence Internship (Undergrad/Graduate)",
+      "company": "Biodesix, Inc.",
+      "location": "Louisville, CO",
+      "url": "https://www.linkedin.com/jobs/view/data-analytics-business-intelligence-internship-undergrad-graduate-at-biodesix-inc-4489109068",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487958533",
+      "title": "Social Media Marketing Intern",
+      "company": "Komodo",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/social-media-marketing-intern-at-komodo-4487958533",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488876325",
+      "title": "Universal Television Entertainment Finance Transformation Internships – Summer 2027",
+      "company": "NBCUniversal",
+      "location": "Universal City, CA",
+      "url": "https://www.linkedin.com/jobs/view/universal-television-entertainment-finance-transformation-internships-%E2%80%93-summer-2027-at-nbcuniversal-4488876325",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487975542",
+      "title": "Pricing Development Intern",
+      "company": "Sompo",
+      "location": "Alpharetta, GA",
+      "url": "https://www.linkedin.com/jobs/view/pricing-development-intern-at-sompo-4487975542",
+      "postedAt": "2026-11-09T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480910192",
+      "title": "Underwriting Internship (Financial Lines)",
+      "company": "MSIG",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/underwriting-internship-financial-lines-at-msig-4480910192",
+      "postedAt": "2026-11-09T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -2433,6 +4782,33 @@
       "workplaceType": null
     },
     {
+      "id": "4451268814",
+      "title": "Delivery Consultant Intern - Entry Level Sales Program 2027",
+      "company": "IBM",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/delivery-consultant-intern-entry-level-sales-program-2027-at-ibm-4451268814",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472091649",
+      "title": "Relationship Marketing Intern",
+      "company": "LogRocket",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/relationship-marketing-intern-at-logrocket-4472091649",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4451280756",
+      "title": "Delivery Consultant Intern - Entry Level Sales Program 2027",
+      "company": "IBM",
+      "location": "Research Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/delivery-consultant-intern-entry-level-sales-program-2027-at-ibm-4451280756",
+      "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4470186728",
       "title": "Machine Learning Intern (Masters) - Summer 2027",
       "company": "DoorDash",
@@ -2484,6 +4860,69 @@
       "location": "Palo Alto, CA",
       "url": "https://www.linkedin.com/jobs/view/global-talent-sourcing-intern-at-tencent-4488747950",
       "postedAt": "2026-11-08T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479659558",
+      "title": "Intern Managed Care Analytics",
+      "company": "Ascension",
+      "location": "St Louis, MO",
+      "url": "https://www.linkedin.com/jobs/view/intern-managed-care-analytics-at-ascension-4479659558",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4463338673",
+      "title": "Software Development Engineer Intern/Co-Op, ROBOTICS - 2027",
+      "company": "Amazon",
+      "location": "Bellevue, WA",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-intern-co-op-robotics-2027-at-amazon-4463338673",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461378862",
+      "title": "Global Marketing Intern (Events & Content Small Scale)",
+      "company": "Shure",
+      "location": "Niles, IL",
+      "url": "https://www.linkedin.com/jobs/view/global-marketing-intern-events-content-small-scale-at-shure-4461378862",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480384767",
+      "title": "Business Intelligence Intern",
+      "company": "Wellness Pet Company",
+      "location": "Burlington, MA",
+      "url": "https://www.linkedin.com/jobs/view/business-intelligence-intern-at-wellness-pet-company-4480384767",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488704970",
+      "title": "2027 Summer Intern - Digital Media",
+      "company": "Charles River Laboratories",
+      "location": "Wilmington, MA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-digital-media-at-charles-river-laboratories-4488704970",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479643090",
+      "title": "Strategy Intern",
+      "company": "Epsilon",
+      "location": "Westminster, CO",
+      "url": "https://www.linkedin.com/jobs/view/strategy-intern-at-epsilon-4479643090",
+      "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488493166",
+      "title": "Business Analytics & Strategy Intern",
+      "company": "Johns Manville",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/business-analytics-strategy-intern-at-johns-manville-4488493166",
+      "postedAt": "2026-11-07T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -2691,6 +5130,285 @@
       "location": "San Jose, CA",
       "url": "https://www.linkedin.com/jobs/view/engineering-technical-sales-intern-at-ecolab-4480599985",
       "postedAt": "2026-11-07T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487305959",
+      "title": "Strategic Decision Support Summer Intern",
+      "company": "Penn Medicine, University of Pennsylvania Health System",
+      "location": "Philadelphia, PA",
+      "url": "https://www.linkedin.com/jobs/view/strategic-decision-support-summer-intern-at-penn-medicine-university-of-pennsylvania-health-system-4487305959",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488069423",
+      "title": "ServiceNow Business Systems Analyst Intern (Undergraduate Summer 2027)",
+      "company": "Centene Corporation",
+      "location": "Missouri, United States",
+      "url": "https://www.linkedin.com/jobs/view/servicenow-business-systems-analyst-intern-undergraduate-summer-2027-at-centene-corporation-4488069423",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477327358",
+      "title": "Product Management Intern, Aftermarket Parts",
+      "company": "Hillphoenix",
+      "location": "Conyers, GA",
+      "url": "https://www.linkedin.com/jobs/view/product-management-intern-aftermarket-parts-at-hillphoenix-4477327358",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487356492",
+      "title": "Intern, Editorial (Summer 2027)",
+      "company": "Southern Poverty Law Center",
+      "location": "Jackson, MS",
+      "url": "https://www.linkedin.com/jobs/view/intern-editorial-summer-2027-at-southern-poverty-law-center-4487356492",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487354531",
+      "title": "Intern, Editorial (Summer 2027)",
+      "company": "Southern Poverty Law Center",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/intern-editorial-summer-2027-at-southern-poverty-law-center-4487354531",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462718150",
+      "title": "Graduate Student Intern - Space Remote Sensing and Data Science",
+      "company": "Los Alamos National Laboratory",
+      "location": "Los Alamos, NM",
+      "url": "https://www.linkedin.com/jobs/view/graduate-student-intern-space-remote-sensing-and-data-science-at-los-alamos-national-laboratory-4462718150",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471188458",
+      "title": "Data Scientist Intern, 2027 Summer U.S.",
+      "company": "Atlassian",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/data-scientist-intern-2027-summer-u-s-at-atlassian-4471188458",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488169739",
+      "title": "Technology Summer Fintern",
+      "company": "Apex Fintech Solutions",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/technology-summer-fintern-at-apex-fintech-solutions-4488169739",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488438493",
+      "title": "AI Content Creator Intern – Generative AI & Digital Media",
+      "company": "MIRA Safety",
+      "location": "Cedar Park, TX",
+      "url": "https://www.linkedin.com/jobs/view/ai-content-creator-intern-%E2%80%93-generative-ai-digital-media-at-mira-safety-4488438493",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486288402",
+      "title": "Business and Technology Intern: Live and VIP Product",
+      "company": "Electronic Arts (EA)",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/business-and-technology-intern-live-and-vip-product-at-electronic-arts-ea-4486288402",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479723095",
+      "title": "Amplify Marketing Specialist I (Intern) - United States",
+      "company": "Cisco",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/amplify-marketing-specialist-i-intern-united-states-at-cisco-4479723095",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487362091",
+      "title": "2027 Summer Analyst Intern, Valuations & Opinions Group",
+      "company": "Lincoln International",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-analyst-intern-valuations-opinions-group-at-lincoln-international-4487362091",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461395376",
+      "title": "Global Marketing Intern – ShureCloud & Customer Value Streams",
+      "company": "Shure",
+      "location": "Niles, IL",
+      "url": "https://www.linkedin.com/jobs/view/global-marketing-intern-%E2%80%93-shurecloud-customer-value-streams-at-shure-4461395376",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470054970",
+      "title": "Marketing Intern",
+      "company": "Shorr Packaging Corp.",
+      "location": "Aurora, IL",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-shorr-packaging-corp-4470054970",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462429656",
+      "title": "Agile Software Intern",
+      "company": "Jacobs",
+      "location": "Nashua, NH",
+      "url": "https://www.linkedin.com/jobs/view/agile-software-intern-at-jacobs-4462429656",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477318749",
+      "title": "2027 Summer Internship - Finance",
+      "company": "Q2",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-internship-finance-at-q2-4477318749",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461388762",
+      "title": "Cloud Software Engineering Intern",
+      "company": "Shure",
+      "location": "Niles, IL",
+      "url": "https://www.linkedin.com/jobs/view/cloud-software-engineering-intern-at-shure-4461388762",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466571944",
+      "title": "2027 Summer Intern, MBA, Salesforce Product Owner",
+      "company": "Waymo",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-mba-salesforce-product-owner-at-waymo-4466571944",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488082918",
+      "title": "Denver – Regional Affairs Economics, Internship – Summer 2027",
+      "company": "Federal Reserve Bank of Kansas City",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/denver-%E2%80%93-regional-affairs-economics-internship-%E2%80%93-summer-2027-at-federal-reserve-bank-of-kansas-city-4488082918",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486229858",
+      "title": "Investments Technology Research Intern",
+      "company": "Janus Henderson Investors",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/investments-technology-research-intern-at-janus-henderson-investors-4486229858",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488193102",
+      "title": "Software Engineering Internship - San Francisco",
+      "company": "Samsara",
+      "location": "Alexandria, VA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-internship-san-francisco-at-samsara-4488193102",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460644806",
+      "title": "2027 Business Technology Advisory Consulting Intern",
+      "company": "Plante Moran",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/2027-business-technology-advisory-consulting-intern-at-plante-moran-4460644806",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486992627",
+      "title": "Product Marketing Intern",
+      "company": "Tinder",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-marketing-intern-at-tinder-4486992627",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486984762",
+      "title": "Social Marketing Intern",
+      "company": "Tinder",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/social-marketing-intern-at-tinder-4486984762",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4488176800",
+      "title": "Software Engineering Internship - San Francisco",
+      "company": "Samsara",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-internship-san-francisco-at-samsara-4488176800",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486986751",
+      "title": "Backend Engineer Intern",
+      "company": "Tinder",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/backend-engineer-intern-at-tinder-4486986751",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486903731",
+      "title": "2027 Summer Internship - Pharmacy Aggregation",
+      "company": "Vizient",
+      "location": "Alpharetta, GA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-internship-pharmacy-aggregation-at-vizient-4486903731",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487300422",
+      "title": "Android Engineer Intern",
+      "company": "Tinder",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/android-engineer-intern-at-tinder-4487300422",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487345866",
+      "title": "2027 Summer Analyst Intern, Valuations & Opinions Group",
+      "company": "Lincoln International",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-analyst-intern-valuations-opinions-group-at-lincoln-international-4487345866",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487315754",
+      "title": "Intern, Social & Influencer",
+      "company": "Weber Shandwick",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/intern-social-influencer-at-weber-shandwick-4487315754",
+      "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460424056",
+      "title": "Software Engineering Intern III, Summer 2027 (Onsite)",
+      "company": "BAE Systems, Inc.",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-iii-summer-2027-onsite-at-bae-systems-inc-4460424056",
+      "postedAt": "2026-11-06T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -2916,6 +5634,231 @@
       "location": "San Francisco Bay Area",
       "url": "https://www.linkedin.com/jobs/view/technical-project-management-intern-winter-2027-at-astranis-space-technologies-4469714450",
       "postedAt": "2026-11-06T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461388761",
+      "title": "Applied Research Science Intern",
+      "company": "Shure",
+      "location": "Niles, IL",
+      "url": "https://www.linkedin.com/jobs/view/applied-research-science-intern-at-shure-4461388761",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": "Remote"
+    },
+    {
+      "id": "4462091724",
+      "title": "Honeywell Aerospace IT Intern / Co-Op",
+      "company": "Honeywell Aerospace",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/honeywell-aerospace-it-intern-co-op-at-honeywell-aerospace-4462091724",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470676017",
+      "title": "Business Systems Analyst Internship Summer 2027",
+      "company": "Motorola Solutions",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/business-systems-analyst-internship-summer-2027-at-motorola-solutions-4470676017",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461387753",
+      "title": "User Experience Design (UX) Intern",
+      "company": "Shure",
+      "location": "Niles, IL",
+      "url": "https://www.linkedin.com/jobs/view/user-experience-design-ux-intern-at-shure-4461387753",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470639008",
+      "title": "Customer Engagement Marketing Intern, 2027 Summer U.S.",
+      "company": "Atlassian",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/customer-engagement-marketing-intern-2027-summer-u-s-at-atlassian-4470639008",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461397116",
+      "title": "Strategic Student Program: Search Marketing Intern (CMMK, Spring 2027)",
+      "company": "Siemens Digital Industries Software",
+      "location": "St Louis, MO",
+      "url": "https://www.linkedin.com/jobs/view/strategic-student-program-search-marketing-intern-cmmk-spring-2027-at-siemens-digital-industries-software-4461397116",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486755535",
+      "title": "Marketing & Digital Media Intern, Luxury Travel Brand (Remote)",
+      "company": "Estes Energetics",
+      "location": "Garden City, NY",
+      "url": "https://www.linkedin.com/jobs/view/marketing-digital-media-intern-luxury-travel-brand-remote-at-estes-energetics-4486755535",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462156518",
+      "title": "Product Management Intern, 2027 Summer U.S.",
+      "company": "Atlassian",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/product-management-intern-2027-summer-u-s-at-atlassian-4462156518",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486758988",
+      "title": "2027 Summer Intern, Human Resources",
+      "company": "Zimmer Biomet",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-human-resources-at-zimmer-biomet-4486758988",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478484226",
+      "title": "Intern - Software Engineer",
+      "company": "LSEG",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/intern-software-engineer-at-lseg-4478484226",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469645276",
+      "title": "Software Engineering Intern, iOS",
+      "company": "Ramp",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-ios-at-ramp-4469645276",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487716446",
+      "title": "Software Internship Roles - HP Solutions (HPS)",
+      "company": "HP",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/software-internship-roles-hp-solutions-hps-at-hp-4487716446",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487708562",
+      "title": "Software Engineer Intern - Summer 2027",
+      "company": "PayPal",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2027-at-paypal-4487708562",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4470991282",
+      "title": "C++ Software Intern",
+      "company": "Oceaneering",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/c%2B%2B-software-intern-at-oceaneering-4470991282",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487598915",
+      "title": "Mobile Engineer Intern - Summer 2027",
+      "company": "PayPal",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/mobile-engineer-intern-summer-2027-at-paypal-4487598915",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479556963",
+      "title": "Investment Management Internship",
+      "company": "Talcott Financial Group",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/investment-management-internship-at-talcott-financial-group-4479556963",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4462050887",
+      "title": "Intern – Product Analyst, Digital Commerce (Hybrid: Onsite & Remote)",
+      "company": "US Foods",
+      "location": "Rosemont, IL",
+      "url": "https://www.linkedin.com/jobs/view/intern-%E2%80%93-product-analyst-digital-commerce-hybrid-onsite-remote-at-us-foods-4462050887",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487700838",
+      "title": "Mobile Engineer Intern - Summer 2027",
+      "company": "PayPal",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/mobile-engineer-intern-summer-2027-at-paypal-4487700838",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487712243",
+      "title": "Software Engineer Intern - Summer 2027",
+      "company": "PayPal",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2027-at-paypal-4487712243",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487278811",
+      "title": "Pharmacy Growth and Innovation Corporate Internship – Summer 2027 (Graduate)",
+      "company": "CVS Health",
+      "location": "Woonsocket, RI",
+      "url": "https://www.linkedin.com/jobs/view/pharmacy-growth-and-innovation-corporate-internship-%E2%80%93-summer-2027-graduate-at-cvs-health-4487278811",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476685031",
+      "title": "Project Controls & Business Systems Intern",
+      "company": "Loenbro",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/project-controls-business-systems-intern-at-loenbro-4476685031",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471169696",
+      "title": "University Intern, Disputes & Economics",
+      "company": "Ankura",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/university-intern-disputes-economics-at-ankura-4471169696",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4473366513",
+      "title": "2027 Summer Internship (Technical)",
+      "company": "Palomar",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-internship-technical-at-palomar-4473366513",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487784382",
+      "title": "University, Digital Transformation Analyst - Summer Intern",
+      "company": "Booz Allen Hamilton",
+      "location": "Arlington, VA",
+      "url": "https://www.linkedin.com/jobs/view/university-digital-transformation-analyst-summer-intern-at-booz-allen-hamilton-4487784382",
+      "postedAt": "2026-11-05T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487794003",
+      "title": "University, Digital Transformation Analyst - Spring Intern",
+      "company": "Booz Allen Hamilton",
+      "location": "Arlington, VA",
+      "url": "https://www.linkedin.com/jobs/view/university-digital-transformation-analyst-spring-intern-at-booz-allen-hamilton-4487794003",
+      "postedAt": "2026-11-05T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -3207,6 +6150,141 @@
       "workplaceType": null
     },
     {
+      "id": "4483883877",
+      "title": "Intern - Business Systems Analyst",
+      "company": "Blue Cross & Blue Shield of Rhode Island",
+      "location": "Providence, RI",
+      "url": "https://www.linkedin.com/jobs/view/intern-business-systems-analyst-at-blue-cross-blue-shield-of-rhode-island-4483883877",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4468182726",
+      "title": "Applied Scientist Intern",
+      "company": "Upstart",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/applied-scientist-intern-at-upstart-4468182726",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487231037",
+      "title": "Pharmacy Operations Internship (Remote) – Summer 2027 (Undergraduate)",
+      "company": "Molina Healthcare",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/pharmacy-operations-internship-remote-%E2%80%93-summer-2027-undergraduate-at-molina-healthcare-4487231037",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4459534189",
+      "title": "Quote to Cash Intern 2027",
+      "company": "IBM",
+      "location": "Armonk, NY",
+      "url": "https://www.linkedin.com/jobs/view/quote-to-cash-intern-2027-at-ibm-4459534189",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460202618",
+      "title": "Software Engineer Intern (Summer 2027)",
+      "company": "Whatnot",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2027-at-whatnot-4460202618",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461513360",
+      "title": "Cyber Security Intern - Summer 2027",
+      "company": "Honeywell Aerospace",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/cyber-security-intern-summer-2027-at-honeywell-aerospace-4461513360",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487282725",
+      "title": "Software Engineer, Teamwork Experiences Internship Opportunities",
+      "company": "Microsoft",
+      "location": "Redmond, WA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-teamwork-experiences-internship-opportunities-at-microsoft-4487282725",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487576021",
+      "title": "Software Product Management Intern",
+      "company": "HP",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/software-product-management-intern-at-hp-4487576021",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478185702",
+      "title": "Business Operations & Growth Intern",
+      "company": "Electric Power Engineers",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/business-operations-growth-intern-at-electric-power-engineers-4478185702",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469990592",
+      "title": "Marketing Communications Intern",
+      "company": "Emerson",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/marketing-communications-intern-at-emerson-4469990592",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487544907",
+      "title": "Data Management Intern",
+      "company": "Texas Department of Transportation",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/data-management-intern-at-texas-department-of-transportation-4487544907",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485075956",
+      "title": "BI and Reporting Intern",
+      "company": "Janus Henderson Investors",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/bi-and-reporting-intern-at-janus-henderson-investors-4485075956",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467688913",
+      "title": "Summer 2027: Brand Management Intern, MBA",
+      "company": "Danone",
+      "location": "Louisville, CO",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-brand-management-intern-mba-at-danone-4467688913",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460652621",
+      "title": "2027 Business Analytics Consulting Intern",
+      "company": "Plante Moran",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/2027-business-analytics-consulting-intern-at-plante-moran-4460652621",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487294350",
+      "title": "Trade Marketing Intern",
+      "company": "InComm Payments",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/trade-marketing-intern-at-incomm-payments-4487294350",
+      "postedAt": "2026-11-04T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4459251666",
       "title": "Data Science - Intern (Summer 2027)",
       "company": "C3 AI",
@@ -3468,6 +6546,222 @@
       "workplaceType": null
     },
     {
+      "id": "4477961026",
+      "title": "System Office Integration Intern",
+      "company": "Ascension",
+      "location": "St Louis, MO",
+      "url": "https://www.linkedin.com/jobs/view/system-office-integration-intern-at-ascension-4477961026",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478707177",
+      "title": "Product Analyst Intern (Part Time)",
+      "company": "Valmont Industries, Inc.",
+      "location": "Nebraska, United States",
+      "url": "https://www.linkedin.com/jobs/view/product-analyst-intern-part-time-at-valmont-industries-inc-4478707177",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486812561",
+      "title": "Intern, Full Stack Engineer",
+      "company": "Constellation Brands",
+      "location": "Rochester, NY",
+      "url": "https://www.linkedin.com/jobs/view/intern-full-stack-engineer-at-constellation-brands-4486812561",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484622415",
+      "title": "Marketing Intern",
+      "company": "Establishment Labs",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-establishment-labs-4484622415",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477946741",
+      "title": "Deployment Intern",
+      "company": "Ascension",
+      "location": "St Louis, MO",
+      "url": "https://www.linkedin.com/jobs/view/deployment-intern-at-ascension-4477946741",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487067837",
+      "title": "Digital Asset Management (DAM) Operations Intern, 2027 Summer U.S.",
+      "company": "Atlassian",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/digital-asset-management-dam-operations-intern-2027-summer-u-s-at-atlassian-4487067837",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477949517",
+      "title": "Strategic Sourcing Contracting Operations Intern",
+      "company": "Ascension",
+      "location": "St Louis, MO",
+      "url": "https://www.linkedin.com/jobs/view/strategic-sourcing-contracting-operations-intern-at-ascension-4477949517",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478738296",
+      "title": "Student Intern, Administration and Communications",
+      "company": "Foundation for California Community Colleges",
+      "location": "California, United States",
+      "url": "https://www.linkedin.com/jobs/view/student-intern-administration-and-communications-at-foundation-for-california-community-colleges-4478738296",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486094721",
+      "title": "Sales & Marketing Communications Intern (Spring 2027)\nNew York City, NY",
+      "company": "GigFinesse",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/sales-marketing-communications-intern-spring-2027-%0Anew-york-city-ny-at-gigfinesse-4486094721",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "3605428329",
+      "title": "Editorial Intern, Military Times",
+      "company": "Sightline Media Group",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/editorial-intern-military-times-at-sightline-media-group-3605428329",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477963012",
+      "title": "Deployment Intern",
+      "company": "Ascension",
+      "location": "St Louis, MO",
+      "url": "https://www.linkedin.com/jobs/view/deployment-intern-at-ascension-4477963012",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486072275",
+      "title": "2028 Summer Analyst Intern | CAG",
+      "company": "Lincoln International",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/2028-summer-analyst-intern-cag-at-lincoln-international-4486072275",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487066662",
+      "title": "Marketing & Communications Intern",
+      "company": "Paradromics",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/marketing-communications-intern-at-paradromics-4487066662",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4461262076",
+      "title": "Procurement Tools & Systems Intern",
+      "company": "Ingredion Incorporated",
+      "location": "Westchester, IL",
+      "url": "https://www.linkedin.com/jobs/view/procurement-tools-systems-intern-at-ingredion-incorporated-4461262076",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486070278",
+      "title": "2028 Summer Analyst Intern | M&A",
+      "company": "Lincoln International",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/2028-summer-analyst-intern-m-a-at-lincoln-international-4486070278",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486069298",
+      "title": "2028 Summer Analyst Intern | CAG",
+      "company": "Lincoln International",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/2028-summer-analyst-intern-cag-at-lincoln-international-4486069298",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485040185",
+      "title": "Environmental Data Analyst Intern - Summer 2027",
+      "company": "Tepa Companies",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/environmental-data-analyst-intern-summer-2027-at-tepa-companies-4485040185",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481059137",
+      "title": "Cleared Software Engineer Intern - Summer 2027",
+      "company": "CACI International Inc",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/cleared-software-engineer-intern-summer-2027-at-caci-international-inc-4481059137",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486482936",
+      "title": "Intern",
+      "company": "Yardi",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/intern-at-yardi-4486482936",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460039007",
+      "title": "2027 Go-To-Market Intern",
+      "company": "Plante Moran",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/2027-go-to-market-intern-at-plante-moran-4460039007",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478725800",
+      "title": "Technology Intern - Multiple Opportunities",
+      "company": "Realty Income Corporation",
+      "location": "Del Mar, CA",
+      "url": "https://www.linkedin.com/jobs/view/technology-intern-multiple-opportunities-at-realty-income-corporation-4478725800",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487050400",
+      "title": "Marketing Intern",
+      "company": "butter LONDON",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-butter-london-4487050400",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478736488",
+      "title": "Commercial Real Estate Intern - Multiple Opportunities",
+      "company": "Realty Income Corporation",
+      "location": "Del Mar, CA",
+      "url": "https://www.linkedin.com/jobs/view/commercial-real-estate-intern-multiple-opportunities-at-realty-income-corporation-4478736488",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477922743",
+      "title": "SAP iXp Intern - Digital Value Advisory",
+      "company": "SAP",
+      "location": "Alpharetta, GA",
+      "url": "https://www.linkedin.com/jobs/view/sap-ixp-intern-digital-value-advisory-at-sap-4477922743",
+      "postedAt": "2026-11-03T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4470229482",
       "title": "Internal Audit Analytics Intern",
       "company": "Coinbase",
@@ -3576,6 +6870,132 @@
       "workplaceType": null
     },
     {
+      "id": "4485740616",
+      "title": "2027 Full Stack Development Summer Internship",
+      "company": "WebstaurantStore",
+      "location": "Lititz, PA",
+      "url": "https://www.linkedin.com/jobs/view/2027-full-stack-development-summer-internship-at-webstaurantstore-4485740616",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4486113980",
+      "title": "Summer Intern – Quality Systems & Business Processes",
+      "company": "BioSpace",
+      "location": "Bridgewater, NJ",
+      "url": "https://www.linkedin.com/jobs/view/summer-intern-%E2%80%93-quality-systems-business-processes-at-biospace-4486113980",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485737763",
+      "title": "SOC Intern",
+      "company": "WebstaurantStore",
+      "location": "Lancaster, PA",
+      "url": "https://www.linkedin.com/jobs/view/soc-intern-at-webstaurantstore-4485737763",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484374634",
+      "title": "SAP Concur iXp Intern - Data Strategy",
+      "company": "SAP",
+      "location": "Bellevue, WA",
+      "url": "https://www.linkedin.com/jobs/view/sap-concur-ixp-intern-data-strategy-at-sap-4484374634",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484602409",
+      "title": "Social Media/Content Creation Intern",
+      "company": "Chicago Union",
+      "location": "Elmhurst, IL",
+      "url": "https://www.linkedin.com/jobs/view/social-media-content-creation-intern-at-chicago-union-4484602409",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484619180",
+      "title": "IMA Advisors Intern - Summer 2027",
+      "company": "IMA Financial Group, Inc.",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/ima-advisors-intern-summer-2027-at-ima-financial-group-inc-4484619180",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482163544",
+      "title": "Digital Systems Internship (CO)",
+      "company": "Tetra Tech",
+      "location": "Denver, CO",
+      "url": "https://www.linkedin.com/jobs/view/digital-systems-internship-co-at-tetra-tech-4482163544",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460583665",
+      "title": "Supply Chain Data & Analytics Intern (2027 Summer Internship)",
+      "company": "Northwood",
+      "location": "Torrance, CA",
+      "url": "https://www.linkedin.com/jobs/view/supply-chain-data-analytics-intern-2027-summer-internship-at-northwood-4460583665",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467336508",
+      "title": "Early Interest Internship Application",
+      "company": "Cosm",
+      "location": "Los Angeles Metropolitan Area",
+      "url": "https://www.linkedin.com/jobs/view/early-interest-internship-application-at-cosm-4467336508",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4450736904",
+      "title": "Flight Software Internship - Spring 2027",
+      "company": "Varda Space Industries",
+      "location": "El Segundo, CA",
+      "url": "https://www.linkedin.com/jobs/view/flight-software-internship-spring-2027-at-varda-space-industries-4450736904",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4468087944",
+      "title": "Automotive Engineering Internship – Summer 2027",
+      "company": "Qualcomm",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/automotive-engineering-internship-%E2%80%93-summer-2027-at-qualcomm-4468087944",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474613537",
+      "title": "Patient Access Intern (Summer 2027)",
+      "company": "Travere Therapeutics",
+      "location": "San Diego Metropolitan Area",
+      "url": "https://www.linkedin.com/jobs/view/patient-access-intern-summer-2027-at-travere-therapeutics-4474613537",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474626005",
+      "title": "Commercial Insights & Operations Intern (Summer 2027)",
+      "company": "Travere Therapeutics",
+      "location": "San Diego Metropolitan Area",
+      "url": "https://www.linkedin.com/jobs/view/commercial-insights-operations-intern-summer-2027-at-travere-therapeutics-4474626005",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485729155",
+      "title": "Intern, Social Media & Digital Strategy",
+      "company": "FGS Global",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/intern-social-media-digital-strategy-at-fgs-global-4485729155",
+      "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4477296081",
       "title": "2027 Summer Civil Engineering Intern",
       "company": "BKF Engineers",
@@ -3636,6 +7056,114 @@
       "location": "San Francisco, CA",
       "url": "https://www.linkedin.com/jobs/view/summer-intern-city-design-at-skidmore-owings-merrill-som-4484615446",
       "postedAt": "2026-11-02T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485948000",
+      "title": "Customer Experience & Analytics Internship (Remote) – Summer 2027 (Undergraduate)",
+      "company": "Molina Healthcare",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/customer-experience-analytics-internship-remote-%E2%80%93-summer-2027-undergraduate-at-molina-healthcare-4485948000",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4391891329",
+      "title": "Talent Acquisition Intern",
+      "company": "DigiCert",
+      "location": "Lehi, UT",
+      "url": "https://www.linkedin.com/jobs/view/talent-acquisition-intern-at-digicert-4391891329",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485946230",
+      "title": "Provider Network  & Operations  Internship – Summer 2027 (Undergraduate)",
+      "company": "Molina Healthcare",
+      "location": "Wisconsin, United States",
+      "url": "https://www.linkedin.com/jobs/view/provider-network-operations-internship-%E2%80%93-summer-2027-undergraduate-at-molina-healthcare-4485946230",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472954448",
+      "title": "Intern - Merchandising Leadership Development Program",
+      "company": "Harbor Freight Tools",
+      "location": "Calabasas, CA",
+      "url": "https://www.linkedin.com/jobs/view/intern-merchandising-leadership-development-program-at-harbor-freight-tools-4472954448",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458991090",
+      "title": "2027 Data & Analytics Consulting Intern",
+      "company": "West Monroe",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/2027-data-analytics-consulting-intern-at-west-monroe-4458991090",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458975354",
+      "title": "2027 Platforms & Business Consulting Intern",
+      "company": "West Monroe",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/2027-platforms-business-consulting-intern-at-west-monroe-4458975354",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458979311",
+      "title": "2027 Platforms & Customer Strategy Consulting Intern",
+      "company": "West Monroe",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/2027-platforms-customer-strategy-consulting-intern-at-west-monroe-4458979311",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478069377",
+      "title": "2027 Summer Intern - Field Sales Operations Internship – District Manager, Parts & Service",
+      "company": "General Motors",
+      "location": "Westlake Village, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-field-sales-operations-internship-%E2%80%93-district-manager-parts-service-at-general-motors-4478069377",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458985180",
+      "title": "2027 Data & Analytics Consulting Intern",
+      "company": "West Monroe",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/2027-data-analytics-consulting-intern-at-west-monroe-4458985180",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478077168",
+      "title": "2027 Summer Intern - Field Sales Operations Internship – District Manager, Parts & Service",
+      "company": "General Motors",
+      "location": "Alpharetta, GA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-field-sales-operations-internship-%E2%80%93-district-manager-parts-service-at-general-motors-4478077168",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485959174",
+      "title": "Early Career Intern - Marketing (Email Team)",
+      "company": "Invesco",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/early-career-intern-marketing-email-team-at-invesco-4485959174",
+      "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4468085933",
+      "title": "Multimedia Engineering Internship – Summer 2027",
+      "company": "Qualcomm",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/multimedia-engineering-internship-%E2%80%93-summer-2027-at-qualcomm-4468085933",
+      "postedAt": "2026-11-01T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -3708,6 +7236,195 @@
       "location": "Oakland, CA",
       "url": "https://www.linkedin.com/jobs/view/2028-bachelor-s-master-s-graduates-accounting-business-finance-consulting-analyst-associate-intern-summer-2027-at-charles-river-associates-4458976511",
       "postedAt": "2026-11-01T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476888088",
+      "title": "IT Engineer Intern (Early Careers Summer 2027)",
+      "company": "Affirm",
+      "location": "San Francisco, CA",
+      "url": "https://www.linkedin.com/jobs/view/it-engineer-intern-early-careers-summer-2027-at-affirm-4476888088",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467584525",
+      "title": "Analytics Engineering Intern",
+      "company": "Greystar",
+      "location": "Georgia, United States",
+      "url": "https://www.linkedin.com/jobs/view/analytics-engineering-intern-at-greystar-4467584525",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4467582538",
+      "title": "Analytics Engineering Intern",
+      "company": "Greystar",
+      "location": "Michigan, United States",
+      "url": "https://www.linkedin.com/jobs/view/analytics-engineering-intern-at-greystar-4467582538",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478001273",
+      "title": "Software Product Management Intern",
+      "company": "SageSure",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/software-product-management-intern-at-sagesure-4478001273",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460142329",
+      "title": "Offering Management – Summer 2027 Intern",
+      "company": "Honeywell Technologies",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/offering-management-%E2%80%93-summer-2027-intern-at-honeywell-technologies-4460142329",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4468809382",
+      "title": "Year-Round Intern - CX",
+      "company": "The Options Clearing Corporation (OCC)",
+      "location": "Greater Chicago Area",
+      "url": "https://www.linkedin.com/jobs/view/year-round-intern-cx-at-the-options-clearing-corporation-occ-4468809382",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458986158",
+      "title": "2027 Platforms & Business Consulting Intern",
+      "company": "West Monroe",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/2027-platforms-business-consulting-intern-at-west-monroe-4458986158",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458981216",
+      "title": "2027 Platforms & Customer Strategy Consulting Intern",
+      "company": "West Monroe",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/2027-platforms-customer-strategy-consulting-intern-at-west-monroe-4458981216",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4478043627",
+      "title": "Business Analyst Intern – Summer 2027",
+      "company": "Amazon",
+      "location": "Bellevue, WA",
+      "url": "https://www.linkedin.com/jobs/view/business-analyst-intern-%E2%80%93-summer-2027-at-amazon-4478043627",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4468818169",
+      "title": "Summer Intern - Agile Management Solutions",
+      "company": "The Options Clearing Corporation (OCC)",
+      "location": "Greater Chicago Area",
+      "url": "https://www.linkedin.com/jobs/view/summer-intern-agile-management-solutions-at-the-options-clearing-corporation-occ-4468818169",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4468810353",
+      "title": "Year-Round Intern - Stress Testing & Liquidity Management",
+      "company": "The Options Clearing Corporation (OCC)",
+      "location": "Greater Chicago Area",
+      "url": "https://www.linkedin.com/jobs/view/year-round-intern-stress-testing-liquidity-management-at-the-options-clearing-corporation-occ-4468810353",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458990121",
+      "title": "2027 Insurance Consulting Intern",
+      "company": "West Monroe",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/2027-insurance-consulting-intern-at-west-monroe-4458990121",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458979312",
+      "title": "2027 Platforms & Business Consulting Intern",
+      "company": "West Monroe",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/2027-platforms-business-consulting-intern-at-west-monroe-4458979312",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4449900820",
+      "title": "Finance Intern",
+      "company": "Winland Foods",
+      "location": "Oak Brook, IL",
+      "url": "https://www.linkedin.com/jobs/view/finance-intern-at-winland-foods-4449900820",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485107857",
+      "title": "Impact Investments Intern - Summer 2027",
+      "company": "MacArthur Foundation",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/impact-investments-intern-summer-2027-at-macarthur-foundation-4485107857",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476852990",
+      "title": "Software Engineer Intern",
+      "company": "Docusign",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-docusign-4476852990",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485119817",
+      "title": "Financial Planning & Analysis Intern - Summer 2027",
+      "company": "MacArthur Foundation",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/financial-planning-analysis-intern-summer-2027-at-macarthur-foundation-4485119817",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4469179449",
+      "title": "Marketing, Creative & eCommerce Intern Summer Opportunities (May-Aug 2027)",
+      "company": "SharkNinja",
+      "location": "Needham, MA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-creative-ecommerce-intern-summer-opportunities-may-aug-2027-at-sharkninja-4469179449",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4460516339",
+      "title": "University - 2027 Summer Games Software Developer Intern - Atlanta, GA",
+      "company": "Booz Allen Hamilton",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/university-2027-summer-games-software-developer-intern-atlanta-ga-at-booz-allen-hamilton-4460516339",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476834599",
+      "title": "2027 Summer Intern - Digital Development",
+      "company": "Papa Johns",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-digital-development-at-papa-johns-4476834599",
+      "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4459829472",
+      "title": "University - 2027 Summer Games Software Developer Intern - San Diego, CA",
+      "company": "Booz Allen Hamilton",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/university-2027-summer-games-software-developer-intern-san-diego-ca-at-booz-allen-hamilton-4459829472",
+      "postedAt": "2026-10-31T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -3825,6 +7542,123 @@
       "location": "San Jose, CA",
       "url": "https://www.linkedin.com/jobs/view/talent-acquisition-project-intern-corporate-functions-2026-fall-at-tiktok-4458960045",
       "postedAt": "2026-10-31T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483098683",
+      "title": "UX Design Internship",
+      "company": "Biasly",
+      "location": "Salt Lake City, UT",
+      "url": "https://www.linkedin.com/jobs/view/ux-design-internship-at-biasly-4483098683",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485373088",
+      "title": "Product Management MBA Intern",
+      "company": "Teamworks",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/product-management-mba-intern-at-teamworks-4485373088",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479156382",
+      "title": "Digital Marketing Intern - Spring 2027",
+      "company": "Hamilton Beach Brands Inc.",
+      "location": "Glen Allen, VA",
+      "url": "https://www.linkedin.com/jobs/view/digital-marketing-intern-spring-2027-at-hamilton-beach-brands-inc-4479156382",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4459040052",
+      "title": "Software Engineer Intern - (Summer 2027)",
+      "company": "The Voleon Group",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-summer-2027-at-the-voleon-group-4459040052",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474865085",
+      "title": "Summer Intern – Quality Systems & Business Processes",
+      "company": "Insmed Incorporated",
+      "location": "Bridgewater, NJ",
+      "url": "https://www.linkedin.com/jobs/view/summer-intern-%E2%80%93-quality-systems-business-processes-at-insmed-incorporated-4474865085",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4487594033",
+      "title": "Communications Intern",
+      "company": "Equality Texas",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/communications-intern-at-equality-texas-4487594033",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4468676782",
+      "title": "2027 Quantitative Masters Internship Program - Investments - Global Capital Markets - New York",
+      "company": "BlackRock",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/2027-quantitative-masters-internship-program-investments-global-capital-markets-new-york-at-blackrock-4468676782",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4477443257",
+      "title": "Early Careers - Systems Analyst Intern",
+      "company": "Health Care Service Corporation",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/early-careers-systems-analyst-intern-at-health-care-service-corporation-4477443257",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485304461",
+      "title": "Winds & Strings Marketing Intern",
+      "company": "Yamaha Corporation",
+      "location": "Buena Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/winds-strings-marketing-intern-at-yamaha-corporation-4485304461",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485295751",
+      "title": "Drums and Percussion Marketing Intern",
+      "company": "Yamaha Corporation",
+      "location": "Buena Park, CA",
+      "url": "https://www.linkedin.com/jobs/view/drums-and-percussion-marketing-intern-at-yamaha-corporation-4485295751",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485616578",
+      "title": "Summer Internship Program - Marketing",
+      "company": "Tria Federal (Tria)",
+      "location": "Arlington, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-internship-program-marketing-at-tria-federal-tria-4485616578",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485387160",
+      "title": "Strada Education Foundation Internship: Clear Outcomes and Data Science Intern",
+      "company": "Strada Education Foundation",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/strada-education-foundation-internship-clear-outcomes-and-data-science-intern-at-strada-education-foundation-4485387160",
+      "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485621484",
+      "title": "Summer Internship Program - Defense Health Agency (DHA) Uniform Business Office (UBO)",
+      "company": "Tria Federal (Tria)",
+      "location": "Arlington, VA",
+      "url": "https://www.linkedin.com/jobs/view/summer-internship-program-defense-health-agency-dha-uniform-business-office-ubo-at-tria-federal-tria-4485621484",
+      "postedAt": "2026-10-30T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -3978,6 +7812,78 @@
       "location": "San Mateo, CA",
       "url": "https://www.linkedin.com/jobs/view/2027-data-scientist-phd-intern-at-roblox-4475979703",
       "postedAt": "2026-10-30T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484762855",
+      "title": "UI/UX Design Intern",
+      "company": "Sophinea Corporation",
+      "location": "Manassas, VA",
+      "url": "https://www.linkedin.com/jobs/view/ui-ux-design-intern-at-sophinea-corporation-4484762855",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": "Hybrid"
+    },
+    {
+      "id": "4475498976",
+      "title": "Software Engineer Intern",
+      "company": "Docusign",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-docusign-4475498976",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4485254844",
+      "title": "Quality & Customer Experience Intern",
+      "company": "Emerson",
+      "location": "Round Rock, TX",
+      "url": "https://www.linkedin.com/jobs/view/quality-customer-experience-intern-at-emerson-4485254844",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4459387129",
+      "title": "Data Science Intern - Summer 2027",
+      "company": "WhiteWater",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/data-science-intern-summer-2027-at-whitewater-4459387129",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4466595081",
+      "title": "2027 IT Business Systems Intern",
+      "company": "Mercury Systems",
+      "location": "Andover, MA",
+      "url": "https://www.linkedin.com/jobs/view/2027-it-business-systems-intern-at-mercury-systems-4466595081",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484990578",
+      "title": "Intern",
+      "company": "Children's Hospital Colorado",
+      "location": "Aurora, CO",
+      "url": "https://www.linkedin.com/jobs/view/intern-at-children-s-hospital-colorado-4484990578",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4468328071",
+      "title": "People Movement Intern - New York, Los Angeles, San Diego or Boston - Summer 2027",
+      "company": "Buro Happold",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/people-movement-intern-new-york-los-angeles-san-diego-or-boston-summer-2027-at-buro-happold-4468328071",
+      "postedAt": "2026-10-29T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475478800",
+      "title": "Communications Internship - Summer 2027",
+      "company": "IDEMIA Public Security",
+      "location": "Reston, VA",
+      "url": "https://www.linkedin.com/jobs/view/communications-internship-summer-2027-at-idemia-public-security-4475478800",
+      "postedAt": "2026-10-29T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -4143,6 +8049,141 @@
       "workplaceType": null
     },
     {
+      "id": "4484735894",
+      "title": "Marketing Intern (Advertising)",
+      "company": "CivicScience",
+      "location": "Pittsburgh, PA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-advertising-at-civicscience-4484735894",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476352320",
+      "title": "3d Subsea Simulator Software Intern",
+      "company": "Oceaneering",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/3d-subsea-simulator-software-intern-at-oceaneering-4476352320",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4471227448",
+      "title": "Software Engineer Intern (2027) - Austin, TX",
+      "company": "Cloudflare",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-2027-austin-tx-at-cloudflare-4471227448",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476531286",
+      "title": "Summer Internship - Customer Experience Analytics (Vehicle Support Center)",
+      "company": "PACCAR Parts",
+      "location": "Renton, WA",
+      "url": "https://www.linkedin.com/jobs/view/summer-internship-customer-experience-analytics-vehicle-support-center-at-paccar-parts-4476531286",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476385937",
+      "title": "Software Development Engineer Intern (Seattle, WA)",
+      "company": "F5",
+      "location": "Greater Seattle Area",
+      "url": "https://www.linkedin.com/jobs/view/software-development-engineer-intern-seattle-wa-at-f5-4476385937",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4465267296",
+      "title": "Technology Internship Program (Software Engineering)",
+      "company": "CNA Insurance",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/technology-internship-program-software-engineering-at-cna-insurance-4465267296",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484721542",
+      "title": "Early Careers - Customer Service Business Analyst Intern",
+      "company": "Health Care Service Corporation",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/early-careers-customer-service-business-analyst-intern-at-health-care-service-corporation-4484721542",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484487934",
+      "title": "Social Media Intern",
+      "company": "Walker Sands",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/social-media-intern-at-walker-sands-4484487934",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4458281408",
+      "title": "Android Applications Developer Intern - Summer 2027",
+      "company": "Motorola Solutions",
+      "location": "Chicago, IL",
+      "url": "https://www.linkedin.com/jobs/view/android-applications-developer-intern-summer-2027-at-motorola-solutions-4458281408",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484133861",
+      "title": "Marketing and Events Co-Op",
+      "company": "Cultural Care Au Pair",
+      "location": "Boston, MA",
+      "url": "https://www.linkedin.com/jobs/view/marketing-and-events-co-op-at-cultural-care-au-pair-4484133861",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484467851",
+      "title": "Software Engineer Intern",
+      "company": "Sedaro",
+      "location": "Arlington, VA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-sedaro-4484467851",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484485071",
+      "title": "Compiler Intern, Simulator",
+      "company": "Sedaro",
+      "location": "Arlington, VA",
+      "url": "https://www.linkedin.com/jobs/view/compiler-intern-simulator-at-sedaro-4484485071",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4476337648",
+      "title": "Software Engineer Intern",
+      "company": "Relativity Space",
+      "location": "Long Beach, CA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-relativity-space-4476337648",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482532306",
+      "title": "Business Analyst Intern",
+      "company": "Axos Bank",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/business-analyst-intern-at-axos-bank-4482532306",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484702707",
+      "title": "2027 Summer Intern - Commercial Banking",
+      "company": "CIBC US",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-commercial-banking-at-cibc-us-4484702707",
+      "postedAt": "2026-10-28T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4465267257",
       "title": "Software Engineer, Intern (Summer 2027) - US",
       "company": "DoorDash",
@@ -4233,12 +8274,138 @@
       "workplaceType": null
     },
     {
+      "id": "4482243949",
+      "title": "Organic Search (SEO & Content Marketing) Intern, Spring 2027",
+      "company": "Power Digital Marketing",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/organic-search-seo-content-marketing-intern-spring-2027-at-power-digital-marketing-4482243949",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": "Remote"
+    },
+    {
+      "id": "4484232754",
+      "title": "Security Specialist, Intern",
+      "company": "Filevine",
+      "location": "Salt Lake City, UT",
+      "url": "https://www.linkedin.com/jobs/view/security-specialist-intern-at-filevine-4484232754",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4475983653",
+      "title": "IT Cybersecurity Intern - Fort Huachuca, AZ",
+      "company": "Peraton",
+      "location": "United States",
+      "url": "https://www.linkedin.com/jobs/view/it-cybersecurity-intern-fort-huachuca-az-at-peraton-4475983653",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484012130",
+      "title": "Data Science Intern",
+      "company": "Zillow",
+      "location": "Seattle, WA",
+      "url": "https://www.linkedin.com/jobs/view/data-science-intern-at-zillow-4484012130",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484262283",
+      "title": "Investment Banking Summer Analyst",
+      "company": "MACA Advisors LLC",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/investment-banking-summer-analyst-at-maca-advisors-llc-4484262283",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483769932",
+      "title": "Retail Operations Strategy Corporate Internship (Graduate) - Summer 2027",
+      "company": "CVS Health",
+      "location": "Woonsocket, RI",
+      "url": "https://www.linkedin.com/jobs/view/retail-operations-strategy-corporate-internship-graduate-summer-2027-at-cvs-health-4483769932",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4484251939",
+      "title": "Software Engineering Intern",
+      "company": "Protagonist",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-at-protagonist-4484251939",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483769583",
+      "title": "Corporate Intern - Purchasing",
+      "company": "White Cap",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/corporate-intern-purchasing-at-white-cap-4483769583",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483761830",
+      "title": "Corporate Intern - Operations - Customer Delivery Hub",
+      "company": "White Cap",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/corporate-intern-operations-customer-delivery-hub-at-white-cap-4483761830",
+      "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4484057532",
       "title": "Industrial Design Internship",
       "company": "leManoosh",
       "location": "San Francisco, CA",
       "url": "https://www.linkedin.com/jobs/view/industrial-design-internship-at-lemanoosh-4484057532",
       "postedAt": "2026-10-27T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483736396",
+      "title": "Marketing Intern",
+      "company": "UtiliSave LLC",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/marketing-intern-at-utilisave-llc-4483736396",
+      "postedAt": "2026-10-26T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482923914",
+      "title": "Services Analytics Graduate Intern",
+      "company": "Dell Technologies",
+      "location": "Round Rock, TX",
+      "url": "https://www.linkedin.com/jobs/view/services-analytics-graduate-intern-at-dell-technologies-4482923914",
+      "postedAt": "2026-10-26T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479604396",
+      "title": "Business Analyst Intern - Atlanta, GA",
+      "company": "CarMax",
+      "location": "Kennesaw, GA",
+      "url": "https://www.linkedin.com/jobs/view/business-analyst-intern-atlanta-ga-at-carmax-4479604396",
+      "postedAt": "2026-10-26T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483389833",
+      "title": "Data Analyst Internship",
+      "company": "ConnectPrep",
+      "location": "Washington, DC",
+      "url": "https://www.linkedin.com/jobs/view/data-analyst-internship-at-connectprep-4483389833",
+      "postedAt": "2026-10-25T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4483174076",
+      "title": "Corporate Intern - Operations",
+      "company": "White Cap",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/corporate-intern-operations-at-white-cap-4483174076",
+      "postedAt": "2026-10-23T00:00:00.000Z",
       "workplaceType": null
     },
     {
@@ -4287,6 +8454,69 @@
       "workplaceType": null
     },
     {
+      "id": "4481370687",
+      "title": "Digital Marketing Internship (Fall 2026) - Remote",
+      "company": "Retensa Employee Retention",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/digital-marketing-internship-fall-2026-remote-at-retensa-employee-retention-4481370687",
+      "postedAt": "2026-10-22T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481386024",
+      "title": "AI Product Intern: Fall 2026",
+      "company": "Retensa Employee Retention",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/ai-product-intern-fall-2026-at-retensa-employee-retention-4481386024",
+      "postedAt": "2026-10-22T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481604823",
+      "title": "Intern, Marketing (multiple Hackensack Meridian locations)",
+      "company": "Hackensack Meridian Health",
+      "location": "Edison, NJ",
+      "url": "https://www.linkedin.com/jobs/view/intern-marketing-multiple-hackensack-meridian-locations-at-hackensack-meridian-health-4481604823",
+      "postedAt": "2026-10-22T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481631006",
+      "title": "IT Business Analyst Intern - 2027 Summer Intern",
+      "company": "Wilton Re",
+      "location": "Norwalk, CT",
+      "url": "https://www.linkedin.com/jobs/view/it-business-analyst-intern-2027-summer-intern-at-wilton-re-4481631006",
+      "postedAt": "2026-10-22T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481550778",
+      "title": "2027 Summer Human Resources & Workplace Experience Internship",
+      "company": "T-Mobile",
+      "location": "Bellevue, WA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-human-resources-workplace-experience-internship-at-t-mobile-4481550778",
+      "postedAt": "2026-10-22T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4474467659",
+      "title": "2027 Summer Intern- Equipment Finance",
+      "company": "Apple Bank",
+      "location": "Iselin, NJ",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-equipment-finance-at-apple-bank-4474467659",
+      "postedAt": "2026-10-22T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480069171",
+      "title": "Software Engineering AI Intern",
+      "company": "Vimo",
+      "location": "Atlanta, GA",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-ai-intern-at-vimo-4480069171",
+      "postedAt": "2026-10-22T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4482428476",
       "title": "Marketing & Video Intern",
       "company": "SemiAnalysis",
@@ -4305,12 +8535,93 @@
       "workplaceType": null
     },
     {
+      "id": "4481155534",
+      "title": "Full Stack Developer Internship (Restaurant OS) — Fully Remote",
+      "company": "ZOVU",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/full-stack-developer-internship-restaurant-os-%E2%80%94-fully-remote-at-zovu-4481155534",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481164128",
+      "title": "UI/UX Design Intern (Restaurant OS) Miami",
+      "company": "ZOVU",
+      "location": "Miami, FL",
+      "url": "https://www.linkedin.com/jobs/view/ui-ux-design-intern-restaurant-os-miami-at-zovu-4481164128",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481159413",
+      "title": "UI/UX Design Intern (Restaurant OS) LA",
+      "company": "ZOVU",
+      "location": "Los Angeles, CA",
+      "url": "https://www.linkedin.com/jobs/view/ui-ux-design-intern-restaurant-os-la-at-zovu-4481159413",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4479416695",
+      "title": "Copywriter Intern",
+      "company": "Hiebing",
+      "location": "Austin, TX",
+      "url": "https://www.linkedin.com/jobs/view/copywriter-intern-at-hiebing-4479416695",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482128805",
+      "title": "Fund Finance Summer Intern",
+      "company": "Sumitomo Mitsui Trust Bank Limited New York Branch",
+      "location": "New York, NY",
+      "url": "https://www.linkedin.com/jobs/view/fund-finance-summer-intern-at-sumitomo-mitsui-trust-bank-limited-new-york-branch-4482128805",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4481168470",
+      "title": "2027 Summer Intern, Outreach Enablement (Reston, VA; New York, NY)",
+      "company": "ICF",
+      "location": "Reston, VA",
+      "url": "https://www.linkedin.com/jobs/view/2027-summer-intern-outreach-enablement-reston-va-new-york-ny-at-icf-4481168470",
+      "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
       "id": "4482006869",
       "title": "Summer 2027 Intern - AI Research",
       "company": "Salesforce",
       "location": "Palo Alto, CA",
       "url": "https://www.linkedin.com/jobs/view/summer-2027-intern-ai-research-at-salesforce-4482006869",
       "postedAt": "2026-10-21T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4480704992",
+      "title": "Supply Chain Business Analytics Intern",
+      "company": "Advantage Solutions",
+      "location": "Greater St. Louis",
+      "url": "https://www.linkedin.com/jobs/view/supply-chain-business-analytics-intern-at-advantage-solutions-4480704992",
+      "postedAt": "2026-10-20T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4482004170",
+      "title": "HR Intern",
+      "company": "Surya Sangam",
+      "location": "Delhi, OH",
+      "url": "https://www.linkedin.com/jobs/view/hr-intern-at-surya-sangam-4482004170",
+      "postedAt": "2026-10-20T00:00:00.000Z",
+      "workplaceType": null
+    },
+    {
+      "id": "4472374328",
+      "title": "Summer 2027 Business Analyst Intern",
+      "company": "Peraton",
+      "location": "San Diego, CA",
+      "url": "https://www.linkedin.com/jobs/view/summer-2027-business-analyst-intern-at-peraton-4472374328",
+      "postedAt": "2026-10-20T00:00:00.000Z",
       "workplaceType": null
     },
     {

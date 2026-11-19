@@ -315,7 +315,7 @@ export function InternshipsPage() {
         )}
 
         <p className="mt-12 max-w-[75ch] text-sm text-slate-600">
-          Listings come from the SJSU Career Center and from LinkedIn searches near San José. Each
+          Listings come from the SJSU Career Center and from LinkedIn searches around San José and in other US cities. Each
           one links to its original posting, so confirm it is still open before you apply.
           They are not a live feed, so check each posting for current openings and deadlines.
         </p>

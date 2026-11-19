@@ -4,6 +4,8 @@
 //      APIFY_TOKEN='…' npm run scrape:linkedin:jobs     (entry-level full-time jobs)
 // Check the raw output first, without saving: add `-- --sample` to either command.
 // Pricing is per job returned ($1 to $2 per 1,000); MAX_CHARGE_USD caps a run.
+// `--regions` adds remote and hybrid listings from US metros (scripts/linkedin-region-searches.json)
+// and merges them into the saved file instead of replacing it.
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 
 const ACTOR = 'curious_coder~linkedin-jobs-scraper';
@@ -12,7 +14,18 @@ const JOBS_PER_SEARCH = 15;
 const SAMPLE_JOBS_PER_SEARCH = 2;
 const SAMPLE_SEARCHES = 2;
 const PAST_MONTH_SECONDS = 30 * 24 * 60 * 60;
-const MAX_CHARGE_USD = 1.5;
+const REGIONS_MODE = process.argv.includes('--regions');
+// `--max-charge=0.2` and `--limit=5` override the spending cap and listings per search.
+const argValue = (name) => {
+  const hit = process.argv.find((arg) => arg.startsWith(`--${name}=`));
+  const value = hit ? Number(hit.split('=')[1]) : NaN;
+  return Number.isFinite(value) && value > 0 ? value : null;
+};
+const MAX_CHARGE_USD = argValue('max-charge') ?? (REGIONS_MODE ? 1.0 : 1.5);
+const REGION_JOBS_PER_SEARCH = argValue('limit') ?? 10;
+// LinkedIn's workplace-type filter: 2 is remote, 3 is hybrid.
+const WORKPLACE_FILTER = { remote: '2', hybrid: '3' };
+const REGION_SEARCHES_URL = new URL('./linkedin-region-searches.json', import.meta.url);
 const FINISHED = new Set(['SUCCEEDED', 'FAILED', 'ABORTED', 'TIMED-OUT']);
 // `--jobs` collects entry-level full-time roles instead of internships.
 const JOBS_MODE = process.argv.includes('--jobs');
@@ -41,12 +54,13 @@ async function apify(path, token, init = {}) {
   return response.json();
 }
 
-function searchUrl(keywords, location) {
+function searchUrl(keywords, location, workplace) {
   const params = new URLSearchParams({
     keywords,
     location,
     f_TPR: `r${PAST_MONTH_SECONDS}`,
   });
+  if (workplace) params.set('f_WT', WORKPLACE_FILTER[workplace]);
   return `https://www.linkedin.com/jobs/search/?${params}`;
 }
 
@@ -64,7 +78,12 @@ async function runScraper(token, urls, limitPerSource) {
     console.log(`  status: ${run.status}`);
   }
   if (run.status !== 'SUCCEEDED') {
-    throw new Error(`Apify run ${run.id} ended with status ${run.status}`);
+    // A run stopped by the spending cap still has the listings it found, so keep those.
+    const hitCap = /charge|budget|limit/i.test(String(run.statusMessage ?? ''));
+    if (!(hitCap && run.defaultDatasetId)) {
+      throw new Error(`Apify run ${run.id} ended with status ${run.status}`);
+    }
+    console.log(`Run stopped early (${run.statusMessage}); keeping what it collected.`);
   }
   return apify(`/datasets/${run.defaultDatasetId}/items?clean=true&format=json`, token);
 }
@@ -75,10 +94,30 @@ function toIsoDate(value) {
   return Number.isNaN(date.getTime()) ? null : date.toISOString();
 }
 
+const FIELD_NAMES = ['workplaceTypes', 'workplaceType', 'workType', 'workArrangement'];
+
+/**
+ * LinkedIn rarely returns a workplace type, so fall back to what the listing itself says: the
+ * title, the place, and the start of the description. Only clear phrases count.
+ */
 function workplaceOf(item) {
-  const value = item.workplaceTypes;
-  if (Array.isArray(value)) return value.join(', ') || null;
-  return typeof value === 'string' && value ? value : null;
+  for (const name of FIELD_NAMES) {
+    const value = item[name];
+    if (Array.isArray(value) && value.length > 0) return value.join(', ');
+    if (typeof value === 'string' && value) return value;
+  }
+  if (item.workRemoteAllowed === true) return 'Remote';
+  const heading = `${item.title ?? ''} ${item.location ?? ''}`;
+  const body = String(item.descriptionText ?? item.description ?? '').slice(0, 4000);
+  if (/\bremote\b/i.test(heading)) return 'Remote';
+  if (/\bhybrid\b/i.test(heading)) return 'Hybrid';
+  if (/fully remote|100% remote|remote (position|role|opportunity|internship)|work remotely|remote-first/i.test(body)) {
+    return 'Remote';
+  }
+  if (/\bhybrid (schedule|work|role|position|model|environment)|days (a|per) week in (the )?office/i.test(body)) {
+    return 'Hybrid';
+  }
+  return null;
 }
 
 /** The actor's AI search can return non-internships, so keep only listings that say intern. */
@@ -132,10 +171,23 @@ async function main() {
   }
   const sample = process.argv.includes('--sample');
 
-  const { location, keywords } = JSON.parse(await readFile(SEARCHES_URL, 'utf8'));
-  const searches = sample ? keywords.slice(0, SAMPLE_SEARCHES) : keywords;
-  const urls = searches.map((term) => searchUrl(term, location));
-  const items = await runScraper(token, urls, sample ? SAMPLE_JOBS_PER_SEARCH : JOBS_PER_SEARCH);
+  let allUrls;
+  if (REGIONS_MODE) {
+    const { searches } = JSON.parse(await readFile(REGION_SEARCHES_URL, 'utf8'));
+    allUrls = searches.flatMap(({ location, workplace, keywords }) =>
+      keywords.map((term) => searchUrl(term, location, workplace)),
+    );
+  } else {
+    const { location, keywords } = JSON.parse(await readFile(SEARCHES_URL, 'utf8'));
+    allUrls = keywords.map((term) => searchUrl(term, location));
+  }
+  const urls = sample ? allUrls.slice(0, SAMPLE_SEARCHES) : allUrls;
+  const perSource = sample
+    ? SAMPLE_JOBS_PER_SEARCH
+    : REGIONS_MODE
+      ? REGION_JOBS_PER_SEARCH
+      : JOBS_PER_SEARCH;
+  const items = await runScraper(token, urls, perSource);
 
   if (sample) {
     console.log(`Got ${items.length} raw items. Nothing was saved. First item:`);
@@ -156,6 +208,15 @@ async function main() {
 
   if (byId.size === 0) {
     throw new Error(`No usable ${LISTING_NAME} in ${items.length} items; kept the existing file.`);
+  }
+  if (REGIONS_MODE) {
+    // Keep everything already saved; a listing that is already there is not replaced.
+    const saved = JSON.parse(await readFile(OUT_FILE, 'utf8').catch(() => '{"jobs":[]}')).jobs ?? [];
+    for (const job of saved) {
+      // Keep the saved copy, but take a workplace type from the fresh one if it had none.
+      const fresh = byId.get(job.id);
+      byId.set(job.id, { ...job, workplaceType: job.workplaceType ?? fresh?.workplaceType ?? null });
+    }
   }
   const jobs = [...byId.values()].sort(
     (a, b) => new Date(b.postedAt ?? 0).getTime() - new Date(a.postedAt ?? 0).getTime(),

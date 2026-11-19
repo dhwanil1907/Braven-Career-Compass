@@ -194,10 +194,14 @@ export function selectLinkedinJobs(jobs: LinkedinJob[]): LinkedinJob[] {
   });
 }
 
-function locationFormat(workplaceType: string | null): LocationFormat {
-  const text = (workplaceType ?? '').toLowerCase();
-  if (text.includes('remote')) return 'Remote';
-  if (text.includes('hybrid')) return 'Hybrid';
+/**
+ * The scraper rarely returns a workplace type, so a title that says "Remote" or "Hybrid" is used
+ * as the next-best evidence. Anything else stays In-Person.
+ */
+function locationFormat(workplaceType: string | null, title = ''): LocationFormat {
+  const text = `${workplaceType ?? ''} ${title}`.toLowerCase();
+  if (/\bremote\b/.test(text)) return 'Remote';
+  if (/\bhybrid\b/.test(text)) return 'Hybrid';
   return 'In-Person';
 }
 
@@ -228,7 +232,7 @@ export function linkedinJobToResource(
     url: job.url,
     majors,
     interests,
-    location: locationFormat(job.workplaceType),
+    location: locationFormat(job.workplaceType, job.title),
     place: job.location || undefined,
     tags: ['linkedin', kind.toLowerCase()],
     featured: false,

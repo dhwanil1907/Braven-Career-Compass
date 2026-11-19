@@ -1,0 +1,71 @@
+{
+  "note": "Targeted remote and hybrid internship searches. Keep this small: a run is capped by --max-charge.",
+  "searches": [
+    {
+      "location": "United States",
+      "workplace": "remote",
+      "keywords": [
+        "remote software engineer intern",
+        "remote data analyst intern",
+        "remote data science intern",
+        "remote business analyst intern",
+        "remote marketing intern",
+        "remote finance intern",
+        "remote product management intern",
+        "remote UX design intern",
+        "remote human resources intern",
+        "remote operations intern",
+        "remote content writing intern",
+        "remote cybersecurity intern"
+      ]
+    },
+    {
+      "location": "New York, NY",
+      "workplace": "hybrid",
+      "keywords": [
+        "hybrid software engineer intern",
+        "hybrid business analyst intern"
+      ]
+    },
+    {
+      "location": "Seattle, WA",
+      "workplace": "hybrid",
+      "keywords": [
+        "hybrid software engineer intern",
+        "hybrid business analyst intern"
+      ]
+    },
+    {
+      "location": "Austin, TX",
+      "workplace": "hybrid",
+      "keywords": [
+        "hybrid software engineer intern",
+        "hybrid business analyst intern"
+      ]
+    },
+    {
+      "location": "Chicago, IL",
+      "workplace": "hybrid",
+      "keywords": [
+        "hybrid software engineer intern",
+        "hybrid business analyst intern"
+      ]
+    },
+    {
+      "location": "Boston, MA",
+      "workplace": "hybrid",
+      "keywords": [
+        "hybrid software engineer intern",
+        "hybrid business analyst intern"
+      ]
+    },
+    {
+      "location": "Los Angeles, CA",
+      "workplace": "hybrid",
+      "keywords": [
+        "hybrid software engineer intern",
+        "hybrid business analyst intern"
+      ]
+    }
+  ]
+}

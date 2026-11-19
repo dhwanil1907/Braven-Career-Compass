@@ -1,8 +1,9 @@
 import { usePageTitle } from '../hooks/usePageTitle';
 import { useState } from 'react';
 import type { FormEvent } from 'react';
-import { ArrowRight, Info } from 'lucide-react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { ArrowRight, Briefcase, CalendarCheck, Compass, Info, Send } from 'lucide-react';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { SlidingToggle } from '../components/SlidingToggle';
 import { useAuth } from '../context/useAuth';
 
 type Mode = 'signin' | 'signup';
@@ -10,9 +11,18 @@ type Mode = 'signin' | 'signup';
 const MIN_PASSWORD_LENGTH = 6;
 
 const INPUT_CLASS =
-  'mt-1.5 h-12 w-full rounded-lg border border-slate-300 bg-surface px-3.5 text-base ' +
-  'text-navy-900 placeholder:text-slate-400 focus:border-navy-900 focus:outline-none ' +
-  'focus:ring-4 focus:ring-sky-300/50';
+  'mt-2 h-12 w-full rounded-[1rem] border border-slate-300 bg-surface px-4 text-base ' +
+  'text-navy-900 placeholder:text-slate-500 transition focus:border-ink';
+
+function Brand({ className = '' }: { className?: string }) {
+  return (
+    <Link to="/" className={`inline-flex min-h-11 items-center gap-2.5 ${className}`}>
+      <Compass className="h-6 w-6 text-coral-500" aria-hidden="true" />
+      <span className="text-sm font-semibold uppercase tracking-[0.22em]">Braven</span>
+      <span className="font-display text-lg text-teal-300">Career Compass</span>
+    </Link>
+  );
+}
 
 export function LoginPage() {
   usePageTitle('Sign in');
@@ -50,149 +60,165 @@ export function LoginPage() {
     }
   };
 
-  const tabClass = (value: Mode) =>
-    `flex-1 border-b-2 pb-3 text-sm font-semibold transition ${
-      mode === value
-        ? 'border-coral-600 text-navy-900'
-        : 'border-transparent text-slate-500 hover:text-navy-900'
-    }`;
-
   return (
     <div className="grid min-h-screen lg:grid-cols-2">
-      <section className="relative flex flex-col justify-between bg-hero p-8 text-navy-950 sm:p-12">
-        <div className="flex items-center justify-between">
-          <p className="text-sm font-semibold tracking-[0.3em]">
-            BRAVEN <span className="ml-1 tracking-normal">Career Compass</span>
-          </p>
-        </div>
-        <div className="py-16">
-          <h1 className="font-display text-5xl tracking-tight sm:text-6xl">
+      <section
+        className="relative hidden flex-col justify-between overflow-hidden bg-deep p-12 text-deep-ink
+          lg:flex"
+      >
+        <Brand className="text-white" />
+        <div className="relative z-10 max-w-lg py-16">
+          <h1
+            className="font-display text-6xl font-bold leading-[0.98] tracking-[-0.04em]"
+          >
             Find your next career move, faster.
           </h1>
-          <span className="mt-5 block h-1 w-12 bg-sky-300" aria-hidden="true" />
-          <p className="mt-5 max-w-md text-lg text-navy-800">
-            Resources and events from Braven, the SJSU Career Center, and student clubs, with a plan
+          <p className="mt-6 text-lg text-deep-muted">
+            Resources and events from Braven, the SJSU Career Center and student clubs, with a plan
             built around your major and goals.
           </p>
         </div>
-        <p className="text-sm text-navy-800">
+
+        <div className="relative z-10 flex items-end gap-4" aria-hidden="true">
+          <span className="flex h-28 w-28 -rotate-6 items-center justify-center rounded-[2rem] bg-teal-300 text-sky-ink shadow-card">
+            <Briefcase className="h-11 w-11" />
+          </span>
+          <span className="mb-6 flex h-24 w-24 rotate-6 items-center justify-center rounded-[2rem] bg-sky-200 text-sky-ink shadow-card">
+            <CalendarCheck className="h-10 w-10" />
+          </span>
+          <span className="flex h-28 w-28 -rotate-3 items-center justify-center rounded-[2rem] bg-coral-600 text-white shadow-card">
+            <Send className="h-11 w-11" />
+          </span>
+        </div>
+
+        <p className="relative z-10 mt-10 text-sm text-deep-muted">
           A student capstone prototype. Not an official Braven product.
         </p>
+        <div
+          className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-teal-300/10"
+          aria-hidden="true"
+        />
       </section>
 
-      <section className="flex flex-col justify-center bg-surface px-6 py-12 sm:px-12">
-        <div className="mx-auto w-full max-w-sm">
-          <div role="tablist" aria-label="Account" className="flex gap-4 border-b border-slate-200">
-            <button
-              type="button"
-              role="tab"
-              aria-selected={mode === 'signin'}
-              className={tabClass('signin')}
-              onClick={() => {
-                setMode('signin');
-                setError(null);
-              }}
-            >
-              Sign in
-            </button>
-            <button
-              type="button"
-              role="tab"
-              aria-selected={mode === 'signup'}
-              className={tabClass('signup')}
-              onClick={() => {
-                setMode('signup');
-                setError(null);
-              }}
-            >
-              Create account
-            </button>
-          </div>
-
-          {!isConfigured && (
-            <p className="mt-6 flex items-start gap-2 rounded-lg border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">
-              <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
-              Accounts are not connected on this copy of the site yet. You can still continue as a
-              guest below.
+      <section className="flex flex-col bg-page">
+        <div className="bg-nav px-4 lg:hidden">
+          <Brand className="text-white" />
+        </div>
+        <div className="flex flex-1 flex-col justify-center px-6 py-12 sm:px-12">
+          <div className="mx-auto w-full max-w-md">
+            <h2 className="font-display text-4xl font-semibold tracking-[-0.03em] text-navy-900 sm:text-5xl">
+              {mode === 'signin' ? 'Welcome back' : 'Create your account'}
+            </h2>
+            <p className="mt-3 text-lg text-slate-600">
+              {mode === 'signin'
+                ? 'Sign in to pick up your plan and saved listings.'
+                : 'Save your plan and pick it up on any device.'}
             </p>
-          )}
 
-          <form onSubmit={handleSubmit} className="mt-6 space-y-4" noValidate>
-            <div>
-              <label htmlFor="login-email" className="text-sm font-medium text-navy-900">
-                Email
-              </label>
-              <input
-                id="login-email"
-                type="email"
-                autoComplete="email"
-                required
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                placeholder="you@email.com"
-                className={INPUT_CLASS}
-              />
-            </div>
-            <div>
-              <label htmlFor="login-password" className="text-sm font-medium text-navy-900">
-                Password
-              </label>
-              <input
-                id="login-password"
-                type="password"
-                autoComplete={mode === 'signin' ? 'current-password' : 'new-password'}
-                required
-                value={password}
-                onChange={(event) => setPassword(event.target.value)}
-                className={INPUT_CLASS}
-              />
-            </div>
+            <SlidingToggle
+              className="mt-8 w-full [&>button]:flex-1 [&>button]:justify-center"
+              label="Account"
+              value={mode}
+              onChange={(next) => {
+                setMode(next);
+                setError(null);
+              }}
+              options={[
+                { value: 'signin', label: 'Sign in' },
+                { value: 'signup', label: 'Create account' },
+              ]}
+            />
 
-            {error && (
-              <p role="alert" className="text-sm font-medium text-red-600">
-                {error}
-              </p>
-            )}
-            {notice && (
-              <p role="status" className="text-sm font-medium text-navy-800">
-                {notice}
+            {!isConfigured && (
+              <p className="mt-6 flex items-start gap-2 rounded-[1rem] bg-slate-100 p-4 text-sm text-navy-900 dark:bg-surface">
+                <Info className="mt-0.5 h-4 w-4 shrink-0 text-coral-ink" aria-hidden="true" />
+                Accounts are not connected on this copy of the site yet. You can still continue as
+                a guest below.
               </p>
             )}
 
-            <button
-              type="submit"
-              disabled={submitting || !isConfigured || email.trim() === '' || password === ''}
-              className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full
-                bg-coral-600 text-base font-semibold text-white transition hover:bg-coral-700
-                disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {submitting ? 'Please wait…' : mode === 'signin' ? 'Sign in' : 'Create account'}
-              {!submitting && <ArrowRight className="h-5 w-5" aria-hidden="true" />}
-            </button>
-          </form>
+            <form onSubmit={handleSubmit} className="mt-6 space-y-5" noValidate>
+              <div>
+                <label htmlFor="login-email" className="text-sm font-semibold text-navy-900">
+                  Email
+                </label>
+                <input
+                  id="login-email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
+                  placeholder="you@email.com"
+                  className={INPUT_CLASS}
+                />
+              </div>
+              <div>
+                <label htmlFor="login-password" className="text-sm font-semibold text-navy-900">
+                  Password
+                </label>
+                <input
+                  id="login-password"
+                  type="password"
+                  autoComplete={mode === 'signin' ? 'current-password' : 'new-password'}
+                  required
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
+                  className={INPUT_CLASS}
+                />
+                {mode === 'signup' && (
+                  <p className="mt-2 text-sm text-slate-600">
+                    At least {MIN_PASSWORD_LENGTH} characters.
+                  </p>
+                )}
+              </div>
 
-          <div className="my-6 flex items-center gap-3 text-xs uppercase tracking-widest text-slate-400">
-            <span className="h-px flex-1 bg-slate-200" />
-            or
-            <span className="h-px flex-1 bg-slate-200" />
-          </div>
+              {error && (
+                <p role="alert" className="text-sm font-semibold text-coral-ink">
+                  {error}
+                </p>
+              )}
+              {notice && (
+                <p role="status" className="text-sm font-semibold text-navy-900">
+                  {notice}
+                </p>
+              )}
 
-          <div className="space-y-3">
+              <button
+                type="submit"
+                disabled={submitting || !isConfigured || email.trim() === '' || password === ''}
+                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full
+                  bg-ink text-base font-semibold text-on-ink transition hover:opacity-85
+                  disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                {submitting ? 'Please wait…' : mode === 'signin' ? 'Sign in' : 'Create account'}
+                {!submitting && <ArrowRight className="h-5 w-5" aria-hidden="true" />}
+              </button>
+            </form>
+
+            <div className="my-7 flex items-center gap-3 text-sm font-medium text-slate-600">
+              <span className="h-px flex-1 bg-slate-300" />
+              or
+              <span className="h-px flex-1 bg-slate-300" />
+            </div>
+
             <button
               type="button"
               onClick={() => {
                 continueAsGuest();
                 navigate('/', { replace: true });
               }}
-              className="inline-flex h-12 w-full items-center justify-center rounded-full border
-                border-navy-900 text-base font-semibold text-navy-900 transition hover:bg-navy-50"
+              className="inline-flex h-12 w-full items-center justify-center rounded-full bg-slate-100
+                text-base font-semibold text-navy-900 transition hover:bg-slate-200 dark:bg-surface
+                dark:hover:bg-raised"
             >
               Continue as a guest
             </button>
+            <p className="mt-5 text-sm text-slate-600">
+              Guests keep their plan in this browser only. An account lets you pick up where you
+              left off on another device.
+            </p>
           </div>
-          <p className="mt-6 text-xs text-slate-500">
-            Guests keep their plan in this browser only. An account lets you pick up where you left off on another device.
-          </p>
         </div>
       </section>
     </div>
