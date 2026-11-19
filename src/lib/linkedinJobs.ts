@@ -229,6 +229,7 @@ export function linkedinJobToResource(
     majors,
     interests,
     location: locationFormat(job.workplaceType),
+    place: job.location || undefined,
     tags: ['linkedin', kind.toLowerCase()],
     featured: false,
     isDemo: false,

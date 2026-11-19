@@ -82,6 +82,8 @@ export interface Resource {
   majors: Major[];
   interests: CareerInterest[];
   location: LocationFormat;
+  /** Where the job is, for example "San Jose, CA". Set for scraped listings only. */
+  place?: string;
   tags: string[];
   /** Editor flag: shown in the "Important" featured group. */
   featured: boolean;

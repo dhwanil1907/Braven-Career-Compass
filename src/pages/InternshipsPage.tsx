@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { EmptyState } from '../components/EmptyState';
 import { FilterSelect } from '../components/FilterSelect';
+import { PlaceCombobox } from '../components/PlaceCombobox';
 import { usePageTitle } from '../hooks/usePageTitle';
 import { SlidingToggle } from '../components/SlidingToggle';
 import { ResourceCard } from '../components/ResourceCard';
@@ -23,6 +24,7 @@ import {
   type OpportunityKind,
   type OpportunitySort,
 } from '../lib/internships';
+import { buildPlaceOptions, matchesPlace } from '../lib/places';
 import { hasProfile } from '../lib/recommend';
 import type { CareerInterest, LocationFormat, Major } from '../types';
 
@@ -47,6 +49,7 @@ export function InternshipsPage() {
   const [major, setMajor] = useState<Major | ''>('');
   const [interest, setInterest] = useState<CareerInterest | ''>('');
   const [location, setLocation] = useState<LocationFormat | ''>('');
+  const [place, setPlace] = useState('');
   const [showAll, setShowAll] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(
     () => typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches,
@@ -55,7 +58,14 @@ export function InternshipsPage() {
   const [chosenSort, setChosenSort] = useState<OpportunitySort | null>(null);
   const sort: OpportunitySort = chosenSort ?? (canMatch ? 'match' : 'deadline');
 
-  const filters = { major, interest, location };
+  const filters = { major, interest, location, place };
+  const placeOptions = useMemo(
+    () =>
+      buildPlaceOptions(
+        resources.filter((item) => item.resourceType === kind).map((item) => item.place),
+      ),
+    [kind],
+  );
   const { listings, appliedHiddenCount } = useMemo(() => {
     const all = getOpportunities(resources, {
       kind,
@@ -64,9 +74,10 @@ export function InternshipsPage() {
       profile,
     });
     const applied = new Set(appliedResourceIds);
-    const open = all.filter((item) => !applied.has(item.id));
-    return { listings: open, appliedHiddenCount: all.length - open.length };
-  }, [kind, major, interest, location, sort, profile, appliedResourceIds]);
+    const inPlace = all.filter((item) => matchesPlace(item.place, place));
+    const open = inPlace.filter((item) => !applied.has(item.id));
+    return { listings: open, appliedHiddenCount: inPlace.length - open.length };
+  }, [kind, major, interest, location, place, sort, profile, appliedResourceIds]);
 
   const active = KINDS.find((entry) => entry.kind === kind) ?? KINDS[0];
   const plural = (count: number) => `${count} ${count === 1 ? active.noun : `${active.noun}s`}`;
@@ -77,11 +88,11 @@ export function InternshipsPage() {
   const forYouIds = new Set(forYou.map((item) => item.id));
   const showingOnlyMatches = personalize && !showAll && forYou.length > 0;
   const shown = showingOnlyMatches ? forYou : listings;
-  const listKey = [kind, major, interest, location, sort, showAll].join('|');
+  const listKey = [kind, major, interest, location, place, sort, showAll].join('|');
   const visibleCount = loaded.key === listKey ? loaded.count : PAGE_SIZE;
   const visible = shown.slice(0, visibleCount);
   const loadMore = () => setLoaded({ key: listKey, count: visibleCount + PAGE_SIZE });
-  const activeFilterCount = [major, interest, location].filter(Boolean).length;
+  const activeFilterCount = [major, interest, location, place].filter(Boolean).length;
   const subject = [profile.major, profile.interests.length > 0 ? 'your interests' : null]
     .filter(Boolean)
     .join(' and ');
@@ -94,6 +105,7 @@ export function InternshipsPage() {
     setMajor('');
     setInterest('');
     setLocation('');
+    setPlace('');
   };
 
   return (
@@ -133,7 +145,10 @@ export function InternshipsPage() {
               label="Listing type"
               options={KINDS.map((entry) => ({ value: entry.kind, label: entry.label }))}
               value={kind}
-              onChange={setKind}
+              onChange={(next) => {
+                setKind(next);
+                setPlace('');
+              }}
             />
             <button
               type="button"
@@ -169,7 +184,7 @@ export function InternshipsPage() {
           {filtersOpen && (
             <div
               id="internship-filters"
-              className="mt-4 grid gap-4 rounded-3xl bg-slate-100 p-6 dark:bg-surface sm:grid-cols-2 lg:grid-cols-3"
+              className="mt-4 grid gap-4 rounded-3xl bg-slate-100 p-6 dark:bg-surface sm:grid-cols-2 lg:grid-cols-4"
             >
               <FilterSelect
                 id="internship-major"
@@ -189,13 +204,20 @@ export function InternshipsPage() {
                 onChange={setInterest}
                 allLabel="All interests"
               />
+              <PlaceCombobox
+                id="internship-place"
+                label="Location"
+                value={place}
+                options={placeOptions}
+                onChange={setPlace}
+              />
               <FilterSelect
                 id="internship-location"
-                label="Location"
+                label="Work type"
                 value={location}
                 options={LOCATIONS}
                 onChange={setLocation}
-                allLabel="All locations"
+                allLabel="Any work type"
               />
             </div>
           )}

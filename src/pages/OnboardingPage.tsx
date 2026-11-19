@@ -1,5 +1,6 @@
 import { usePageTitle } from '../hooks/usePageTitle';
 import { useState } from 'react';
+import type { ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useApp } from '../context/useApp';
@@ -21,7 +22,6 @@ import type {
   ReferralSource,
 } from '../types';
 
-const STEP_COUNT = 3;
 const MAX_INTERESTS = 3;
 
 interface ChipProps {
@@ -36,36 +36,17 @@ function Chip({ label, selected, onSelect }: ChipProps) {
       type="button"
       aria-pressed={selected}
       onClick={onSelect}
-      className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium
-        transition ${
+      className={`inline-flex min-h-11 items-center gap-1.5 rounded-full px-5 py-2.5 text-base
+        font-medium transition focus-visible:outline-2 focus-visible:outline-offset-2
+        focus-visible:outline-ink ${
           selected
-            ? 'border-navy-900 bg-ink text-on-ink'
-            : 'border-slate-200 bg-surface text-slate-700 hover:border-slate-300'
+            ? 'bg-ink text-on-ink'
+            : 'bg-slate-100 text-navy-900 hover:bg-slate-200 dark:bg-surface dark:hover:bg-raised'
         }`}
     >
-      {selected && <Check className="h-3.5 w-3.5" aria-hidden="true" />}
+      {selected && <Check className="h-4 w-4" aria-hidden="true" />}
       {label}
     </button>
-  );
-}
-
-function Question({
-  title,
-  hint,
-  grouped = false,
-  children,
-}: {
-  title: string;
-  hint?: string;
-  grouped?: boolean;
-  children: React.ReactNode;
-}) {
-  return (
-    <fieldset className="mt-8 first:mt-0">
-      <legend className="text-base font-semibold text-navy-900">{title}</legend>
-      {hint && <p className="mt-1 text-sm text-slate-500">{hint}</p>}
-      {grouped ? children : <div className="mt-3 flex flex-wrap gap-2">{children}</div>}
-    </fieldset>
   );
 }
 
@@ -80,12 +61,10 @@ function GroupedChips<T extends string>({
   onSelect: (option: T) => void;
 }) {
   return (
-    <div className="mt-3 w-full space-y-5">
+    <div className="space-y-6">
       {groups.map((group) => (
         <div key={group.label}>
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
-            {group.label}
-          </p>
+          <p className="text-sm font-semibold text-slate-600">{group.label}</p>
           <div className="mt-2 flex flex-wrap gap-2">
             {group.options.map((option) => (
               <Chip
@@ -100,6 +79,39 @@ function GroupedChips<T extends string>({
       ))}
     </div>
   );
+}
+
+function Options<T extends string>({
+  options,
+  isSelected,
+  onSelect,
+}: {
+  options: readonly T[];
+  isSelected: (option: T) => boolean;
+  onSelect: (option: T) => void;
+}) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {options.map((option) => (
+        <Chip
+          key={option}
+          label={option}
+          selected={isSelected(option)}
+          onSelect={() => onSelect(option)}
+        />
+      ))}
+    </div>
+  );
+}
+
+interface Step {
+  title: string;
+  hint?: string;
+  optional: boolean;
+  valid: boolean;
+  /** True when an optional question has no answer yet, so the button reads "Skip". */
+  empty: boolean;
+  body: ReactNode;
 }
 
 export function OnboardingPage() {
@@ -141,8 +153,121 @@ export function OnboardingPage() {
     setInterests((previous) => previous.filter((interest) => allowed.has(interest)));
   };
 
-  const canContinue = [major !== null && year !== null, goal !== null, challenge !== null][step];
-  const isLast = step === STEP_COUNT - 1;
+  // One question per screen, in the order the plan needs them.
+  const steps: Step[] = [
+    {
+      title: 'What is your major?',
+      optional: false,
+      valid: major !== null,
+      empty: false,
+      body: (
+        <GroupedChips
+          groups={MAJOR_GROUPS}
+          isSelected={(option) => major === option}
+          onSelect={handleMajorSelect}
+        />
+      ),
+    },
+    {
+      title: 'Do you have a minor?',
+      hint: 'Optional. Tap again to clear.',
+      optional: true,
+      valid: true,
+      empty: minor === null,
+      body: (
+        <GroupedChips
+          groups={MAJOR_GROUPS.filter((group) => group.label !== 'Other')}
+          isSelected={(option) => minor === option}
+          onSelect={handleMinorSelect}
+        />
+      ),
+    },
+    {
+      title: 'Where are you in school?',
+      optional: false,
+      valid: year !== null,
+      empty: false,
+      body: (
+        <Options
+          options={ACADEMIC_YEARS}
+          isSelected={(option) => year === option}
+          onSelect={setYear}
+        />
+      ),
+    },
+    {
+      title: 'What is your main goal right now?',
+      optional: false,
+      valid: goal !== null,
+      empty: false,
+      body: (
+        <Options
+          options={CAREER_GOALS}
+          isSelected={(option) => goal === option}
+          onSelect={setGoal}
+        />
+      ),
+    },
+    {
+      title: 'Which fields interest you?',
+      hint: `Optional. Pick up to ${MAX_INTERESTS}.${
+        isNarrowed ? ' Showing fields that fit your major.' : ''
+      }`,
+      optional: true,
+      valid: true,
+      empty: interests.length === 0,
+      body: (
+        <>
+          <GroupedChips
+            groups={interestGroups}
+            isSelected={(option) => interests.includes(option)}
+            onSelect={toggleInterest}
+          />
+          {(isNarrowed || showAllInterests) && (
+            <button
+              type="button"
+              onClick={() => setShowAllInterests(!showAllInterests)}
+              className="mt-5 min-h-11 text-sm font-semibold text-navy-900 underline underline-offset-4"
+            >
+              {showAllInterests ? 'Show only fields that fit my major' : 'Show all fields'}
+            </button>
+          )}
+        </>
+      ),
+    },
+    {
+      title: 'What is your biggest challenge?',
+      hint: 'We will put help for this first.',
+      optional: false,
+      valid: challenge !== null,
+      empty: false,
+      body: (
+        <Options
+          options={CHALLENGES}
+          isSelected={(option) => challenge === option}
+          onSelect={setChallenge}
+        />
+      ),
+    },
+    {
+      title: 'How did you hear about Career Compass?',
+      hint: 'Optional. Helps us see which outreach works. Stays in this browser.',
+      optional: true,
+      valid: true,
+      empty: referral === null,
+      body: (
+        <Options
+          options={REFERRAL_SOURCES}
+          isSelected={(option) => referral === option}
+          onSelect={(option) => setReferral(referral === option ? null : option)}
+        />
+      ),
+    },
+  ];
+
+  const current = steps[step];
+  const isLast = step === steps.length - 1;
+  const skipping = current.optional && current.empty && !isLast;
 
   const handleNext = () => {
     if (!isLast) {
@@ -155,133 +280,44 @@ export function OnboardingPage() {
   };
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-12 sm:px-6 sm:py-16">
-      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-navy-800">
-        Step {step + 1} of {STEP_COUNT}
-      </p>
-      <div
-        className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200"
-        role="progressbar"
-        aria-valuemin={1}
-        aria-valuemax={STEP_COUNT}
-        aria-valuenow={step + 1}
-        aria-label="Onboarding progress"
-      >
+    <div className="mx-auto max-w-3xl px-4 py-10 sm:px-8 sm:py-16">
+      <div className="flex items-center gap-4">
         <div
-          className="h-full rounded-full bg-coral-500 transition-all"
-          style={{ width: `${((step + 1) / STEP_COUNT) * 100}%` }}
-        />
+          className="h-2 flex-1 overflow-hidden rounded-full bg-slate-100 dark:bg-surface"
+          role="progressbar"
+          aria-valuemin={1}
+          aria-valuemax={steps.length}
+          aria-valuenow={step + 1}
+          aria-label="Plan questions progress"
+        >
+          <div
+            className="h-full rounded-full bg-ink transition-all duration-300"
+            style={{ width: `${((step + 1) / steps.length) * 100}%` }}
+          />
+        </div>
+        <p className="text-sm font-semibold text-slate-600">
+          {step + 1} of {steps.length}
+        </p>
       </div>
 
-      <h1 className="mt-6 text-3xl font-semibold text-navy-950 sm:text-4xl">
-        {['Tell us about you', 'Where do you want to go?', 'What is in your way?'][step]}
-      </h1>
-      <p className="mt-2 text-slate-600">
-        Three short steps, about a minute. At the end you get a 5-step plan with a real
-        resource or event for each step, plus alumni to talk to.
-      </p>
-
-      <div className="mt-8 rounded-2xl border border-slate-200/70 bg-surface p-6 shadow-card sm:p-8">
-        {step === 0 && (
-          <>
-            <Question title="What is your major?" grouped>
-              <GroupedChips
-                groups={MAJOR_GROUPS}
-                isSelected={(option) => major === option}
-                onSelect={handleMajorSelect}
-              />
-            </Question>
-            <Question title="Do you have a minor?" hint="Optional. Tap again to clear." grouped>
-              <GroupedChips
-                groups={MAJOR_GROUPS.filter((group) => group.label !== 'Other')}
-                isSelected={(option) => minor === option}
-                onSelect={handleMinorSelect}
-              />
-            </Question>
-            <Question title="Where are you in school?">
-              {ACADEMIC_YEARS.map((option) => (
-                <Chip
-                  key={option}
-                  label={option}
-                  selected={year === option}
-                  onSelect={() => setYear(option)}
-                />
-              ))}
-            </Question>
-          </>
-        )}
-        {step === 1 && (
-          <>
-            <Question title="What is your main goal right now?">
-              {CAREER_GOALS.map((option) => (
-                <Chip
-                  key={option}
-                  label={option}
-                  selected={goal === option}
-                  onSelect={() => setGoal(option)}
-                />
-              ))}
-            </Question>
-            <Question
-              title="Which fields interest you?"
-              hint={`Optional. Pick up to ${MAX_INTERESTS}.${
-                isNarrowed ? ' Showing fields that fit your major.' : ''
-              }`}
-              grouped
-            >
-              <GroupedChips
-                groups={interestGroups}
-                isSelected={(option) => interests.includes(option)}
-                onSelect={toggleInterest}
-              />
-              {(isNarrowed || showAllInterests) && (
-                <button
-                  type="button"
-                  onClick={() => setShowAllInterests(!showAllInterests)}
-                  className="mt-4 text-sm font-medium text-navy-800 underline underline-offset-2"
-                >
-                  {showAllInterests ? 'Show only fields that fit my major' : 'Show all fields'}
-                </button>
-              )}
-            </Question>
-          </>
-        )}
-        {step === 2 && (
-          <>
-            <Question title="What is your biggest challenge?" hint="We will put help for this first.">
-              {CHALLENGES.map((option) => (
-                <Chip
-                  key={option}
-                  label={option}
-                  selected={challenge === option}
-                  onSelect={() => setChallenge(option)}
-                />
-              ))}
-            </Question>
-            <Question
-              title="How did you hear about Career Compass?"
-              hint="Optional. Helps us see which outreach works. Stays in this browser."
-            >
-              {REFERRAL_SOURCES.map((option) => (
-                <Chip
-                  key={option}
-                  label={option}
-                  selected={referral === option}
-                  onSelect={() => setReferral(referral === option ? null : option)}
-                />
-              ))}
-            </Question>
-          </>
-        )}
+      <div key={step} className="animate-rise">
+        <h1
+          className="mt-10 font-display text-4xl font-semibold leading-[1.05] tracking-[-0.035em]
+            text-navy-900 sm:text-5xl"
+        >
+          {current.title}
+        </h1>
+        {current.hint && <p className="mt-3 text-lg text-slate-600">{current.hint}</p>}
+        <div className="mt-8">{current.body}</div>
       </div>
 
-      <div className="mt-6 flex items-center justify-between">
+      <div className="mt-10 flex items-center justify-between">
         <button
           type="button"
           onClick={() => setStep(step - 1)}
           disabled={step === 0}
-          className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium
-            text-slate-600 transition hover:text-navy-900 disabled:invisible"
+          className="inline-flex min-h-11 items-center gap-2 rounded-full px-4 text-base font-semibold
+            text-slate-700 transition hover:text-navy-900 disabled:invisible"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" />
           Back
@@ -289,12 +325,15 @@ export function OnboardingPage() {
         <button
           type="button"
           onClick={handleNext}
-          disabled={!canContinue}
-          className="inline-flex items-center gap-2 rounded-full bg-coral-600 px-6 py-2.5 text-sm
-            font-semibold text-white transition hover:bg-coral-700 disabled:cursor-not-allowed
-            disabled:opacity-40"
+          disabled={!current.valid}
+          className={`inline-flex h-12 items-center gap-2 rounded-full px-7 text-base font-semibold
+            transition disabled:cursor-not-allowed disabled:opacity-40 ${
+              skipping
+                ? 'border border-slate-400 bg-surface text-navy-900 hover:bg-slate-100'
+                : 'bg-ink text-on-ink hover:opacity-85'
+            }`}
         >
-          {isLast ? 'Build my plan' : 'Continue'}
+          {isLast ? 'Build my plan' : skipping ? 'Skip' : 'Continue'}
           <ArrowRight className="h-4 w-4" aria-hidden="true" />
         </button>
       </div>

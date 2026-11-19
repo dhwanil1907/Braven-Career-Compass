@@ -29,17 +29,17 @@ function Stat({
   const { card, chip } = TONES[tone];
   return (
     <div
-      className={`flex min-h-[12rem] flex-col justify-between rounded-3xl p-6 transition-transform
-        duration-300 hover:-translate-y-1 sm:p-7 ${card}`}
+      className={`flex items-center gap-4 rounded-3xl p-5 transition-transform duration-300
+        hover:-translate-y-1 ${card}`}
     >
-      <span className={`flex h-11 w-11 items-center justify-center rounded-full ${chip}`}>
+      <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full ${chip}`}>
         <Icon className="h-5 w-5" aria-hidden="true" />
       </span>
       <div>
-        <p className="font-display text-7xl font-semibold leading-none tracking-[-0.04em]">
+        <p className="font-display text-5xl font-semibold leading-none tracking-[-0.04em]">
           {value}
         </p>
-        <p className="mt-2 text-base font-medium">{label}</p>
+        <p className="mt-1 text-base font-medium">{label}</p>
       </div>
     </div>
   );
