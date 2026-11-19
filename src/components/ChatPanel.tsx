@@ -31,8 +31,8 @@ const BASE_STARTERS = [
 ];
 
 const focusRing =
-  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral-600';
-const iconButton = `inline-flex h-10 w-10 items-center justify-center rounded-full text-slate-600
+  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink';
+const iconButton = `inline-flex h-11 w-11 items-center justify-center rounded-full text-slate-600
   transition hover:bg-slate-100 hover:text-navy-900 ${focusRing}`;
 
 function settleInitialMessages(messages: StoredMessage[]): DisplayMessage[] {
@@ -289,23 +289,23 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
           aria-label="Conversation"
           aria-live={streaming ? 'off' : 'polite'}
           onScroll={handleScroll}
-          className="h-full overflow-y-auto overflow-x-hidden py-4"
+          className="h-full overflow-y-auto overflow-x-hidden py-4 pl-1 pr-4"
         >
           {messages.length === 0 ? (
             <div className="flex min-h-full flex-col items-center justify-center gap-8 px-1 py-6">
               <h2 className="text-center text-2xl font-semibold text-navy-900 sm:text-3xl">
                 How can I help with your career today?
               </h2>
-              <div className="grid w-full gap-3 sm:grid-cols-2">
+              <div className="grid w-full auto-rows-fr gap-3 sm:grid-cols-2">
                 {starters.map((starter) => (
                   <button
                     key={starter}
                     type="button"
                     disabled={streaming}
                     onClick={() => ask(starter)}
-                    className={`min-h-14 rounded-2xl border border-slate-300 bg-surface px-4 py-3
-                      text-left text-sm text-navy-900 transition hover:border-coral-600
-                      hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50 ${focusRing}`}
+                    className={`h-full min-h-16 rounded-2xl border border-slate-300 bg-surface px-4 py-3
+                      text-left text-sm text-navy-900 transition hover:border-slate-400
+                      hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50 ${focusRing}`}
                   >
                     {starter}
                   </button>
@@ -313,12 +313,12 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
               </div>
             </div>
           ) : (
-            <div className="space-y-6">
+            <div className="space-y-8">
               {messages.map((message, index) => {
                 if (message.role === 'user') {
                   return (
                     <div key={index} className="flex justify-end">
-                      <div className="max-w-[85%] whitespace-pre-wrap break-words rounded-3xl bg-slate-100 px-4 py-2.5 text-navy-900">
+                      <div className="max-w-[85%] whitespace-pre-wrap break-words rounded-3xl bg-slate-200 px-5 py-3 leading-relaxed text-navy-900">
                         {message.content}
                       </div>
                     </div>
@@ -345,7 +345,7 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
                                 rel="noopener noreferrer"
                                 className={`inline-flex min-h-8 items-center gap-1 rounded-full border
                                   border-slate-300 px-2.5 py-1 text-xs text-navy-900
-                                  hover:border-coral-600 hover:text-coral-ink ${focusRing}`}
+                                  hover:border-slate-400 hover:text-coral-ink ${focusRing}`}
                               >
                                 <span className="truncate">{source.title}</span>
                                 <ExternalLink className="h-3 w-3 shrink-0" aria-hidden="true" />
@@ -356,7 +356,7 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
                         </ul>
                       )}
                       {!isPending && message.content && (
-                        <div className="-ml-2 mt-1 flex items-center gap-0.5">
+                        <div className="-ml-3 mt-1 flex items-center gap-0.5">
                           <button
                             type="button"
                             onClick={() => void copy(index, message.content)}
@@ -423,7 +423,7 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
             onClick={scrollToLatest}
             className={`absolute bottom-3 left-1/2 flex h-10 w-10 -translate-x-1/2 items-center
               justify-center rounded-full border border-slate-300 bg-surface text-navy-900 shadow-card
-              transition hover:border-coral-600 ${focusRing}`}
+              transition hover:border-slate-400 ${focusRing}`}
           >
             <ArrowDown className="h-4 w-4" aria-hidden="true" />
             <span className="sr-only">Scroll to latest message</span>
@@ -431,10 +431,10 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
         )}
       </div>
 
-      <form onSubmit={handleSubmit} className="pb-2 pt-2">
+      <form onSubmit={handleSubmit} className="pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2">
         <div
-          className="flex items-end gap-2 rounded-3xl border border-slate-300 bg-surface py-2 pl-4 pr-2
-            shadow-card focus-within:border-coral-600"
+          className="flex items-end gap-2 rounded-3xl border border-slate-400 bg-surface py-2 pl-4 pr-2
+            shadow-card transition focus-within:border-ink focus-within:ring-2 focus-within:ring-ink/40"
         >
           <label htmlFor="chat-input" className="sr-only">
             Ask the assistant
@@ -449,14 +449,14 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
             onKeyDown={handleKeyDown}
             placeholder="Ask anything about your career search"
             className="max-h-48 min-h-10 flex-1 resize-none self-center bg-transparent py-2 text-base
-              leading-6 text-navy-900 outline-none placeholder:text-slate-500"
+              leading-6 text-navy-900 outline-none placeholder:text-slate-600"
           />
           <button
             type="submit"
             disabled={!streaming && !draft.trim()}
-            className={`inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full
+            className={`inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full
               bg-coral-600 text-white transition hover:bg-coral-700 disabled:cursor-not-allowed
-              disabled:opacity-40 ${focusRing}`}
+              disabled:bg-slate-200 disabled:text-slate-600 disabled:hover:bg-slate-200 ${focusRing}`}
           >
             {streaming ? (
               <Square className="h-4 w-4 fill-current" aria-hidden="true" />
@@ -466,7 +466,7 @@ export function ChatPanel({ conversationId, initialMessages, onPersist }: ChatPa
             <span className="sr-only">{streaming ? 'Stop generating' : 'Send message'}</span>
           </button>
         </div>
-        <p className="mt-2 text-center text-xs text-slate-600">
+        <p className="mt-2 text-center text-[0.8125rem] leading-snug text-slate-600">
           AI can make mistakes. Check listings and company details.
           {chatProfile ? ' Your major, interests, year and goal are sent with each question.' : ''}
         </p>

@@ -1,11 +1,10 @@
 import { useApp } from '../context/useApp';
 import { scoreMatch } from '../lib/matchScore';
 import type { CareerEvent, Resource } from '../types';
-import { Badge } from './Badge';
 import { CompassDial } from './CompassDial';
 
 /**
- * How well a listing fits the signed-in student, for example "Slightly matches what you do · 25%".
+ * How well a listing fits the signed-in student, shown as quiet "91% match" text with the dial.
  * Renders nothing without onboarding answers or when the listing is below the cutoff.
  */
 export function MatchBadge({ item }: { item: Resource | CareerEvent }) {
@@ -14,9 +13,12 @@ export function MatchBadge({ item }: { item: Resource | CareerEvent }) {
   if (label === null) return null;
 
   return (
-    <Badge variant="teal">
+    <span
+      className="inline-flex items-center gap-1 text-xs font-medium text-teal-700"
+      title={label}
+    >
       <CompassDial percent={percent} size={14} />
-      {label} · {percent}%
-    </Badge>
+      {percent}% match
+    </span>
   );
 }

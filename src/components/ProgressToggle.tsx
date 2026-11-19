@@ -30,7 +30,7 @@ export function ProgressToggle({
       aria-label={compact ? COPY[kind].off : undefined}
       title={compact ? (done ? COPY[kind].on : COPY[kind].off) : undefined}
       className={`inline-flex items-center justify-center gap-2 rounded-full border text-sm
-        font-semibold transition ${compact ? 'h-9 w-9' : 'h-10 px-4'} ${
+        font-semibold transition ${compact ? 'h-11 w-11 md:h-9 md:w-9' : 'h-11 px-4 md:h-10'} ${
           done
             ? 'border-teal-200 bg-teal-50 text-teal-700 hover:bg-teal-100'
             : 'border-slate-300 bg-surface text-navy-900 hover:bg-navy-50'

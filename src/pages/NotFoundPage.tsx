@@ -1,7 +1,9 @@
 import { ArrowLeft, Compass, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { usePageTitle } from '../hooks/usePageTitle';
 
 export function NotFoundPage() {
+  usePageTitle('Page not found');
   return (
     <div className="mx-auto flex max-w-7xl flex-col items-center px-4 py-24 text-center sm:px-6 lg:px-8">
       <div className="relative mb-8">

@@ -56,7 +56,12 @@
   --color-slate-700: #3a3c3f;
 
   /* Surfaces and fixed-dark tones; surface/hero/ink swap in dark mode, deep and nav never do */
+  /* Layers: page (body) < surface (cards) < raised (popovers, hover fills). Identical in light. */
+  --color-page: #ffffff;
   --color-surface: #ffffff;
+  --color-raised: #ffffff;
+  --color-deep-ink: #eef1f6; /* text on deep/nav, fixed in both themes: 13:1 on #142744 */
+  --color-deep-muted: #b9c2d3; /* secondary text on deep: 7.6:1 on #142744 */
   --color-hero: #dee465;
   --color-ink: #2b2e34;
   --color-on-ink: #ffffff;
@@ -124,7 +129,7 @@
   }
 
   body {
-    @apply bg-surface font-sans text-navy-900 antialiased;
+    @apply bg-page font-sans text-navy-900 antialiased;
   }
 
   h1,
@@ -140,13 +145,73 @@
     font-variant-numeric: tabular-nums;
   }
 
+  /* Fixed lime + charcoal in both themes (theme-flipping navy-950 would be unreadable on lime) */
   ::selection {
     background: var(--color-teal-300);
-    color: var(--color-navy-950);
+    color: var(--color-sky-ink);
+  }
+}
+
+/* Browser surfaces */
+:root {
+  --scroll-thumb: #6b6b67; /* 4.3:1 on track */
+  --scroll-track: #ebe9df;
+  --focus-ring: #142744; /* outer ring, 14:1 on white and on the lime hero */
+  --focus-halo: #ffffff; /* inner ring, 12:1 on ink fills, 4.6:1 on coral */
+  accent-color: var(--color-ink);
+  caret-color: var(--color-ink);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-thumb) var(--scroll-track);
+}
+
+/*
+ * One two-tone focus ring for every interactive element. It is deliberately unlayered so it
+ * beats Tailwind's layered utilities (focus:outline-none, outline-teal-500, text-white
+ * outline colours) without !important. The 2px halo fills the outline offset, so one tone
+ * always contrasts with the control fill and the other with the page behind it.
+ */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--focus-halo);
+}
+
+/* Always-dark chrome (nav, footer, deep panels): lime ring on charcoal halo, in both themes */
+.bg-nav :focus-visible,
+.bg-deep :focus-visible {
+  --focus-ring: #dee465;
+  --focus-halo: #1d1f23;
+}
+
+/* Composite widgets (e.g. search field) show the ring on the wrapper, not the inner input */
+.focus-host:focus-within {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--focus-halo);
+}
+.focus-host :focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Reduced motion: no travelling or scaling, colour feedback stays (and snaps in quickly) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  :focus-visible {
-    @apply outline-2 outline-offset-2 outline-teal-500;
+  .animate-rise,
+  .animate-marquee {
+    animation: none;
+  }
+
+  *,
+  ::before,
+  ::after {
+    transition-property: color, background-color, border-color, text-decoration-color, fill,
+      stroke, opacity;
+    transition-duration: 120ms;
+    transition-delay: 0s;
   }
 }
 
@@ -154,9 +219,9 @@
 :root.dark {
   color-scheme: dark;
 
-  --color-navy-50: #0e1b31;
-  --color-navy-100: #15263f;
-  --color-navy-200: #20375a;
+  --color-navy-50: #182b47;
+  --color-navy-100: #1f3556;
+  --color-navy-200: #2a4570;
   --color-navy-300: #3a5580;
   --color-navy-400: #6a82ab;
   --color-navy-500: #8fa3c5;
@@ -174,23 +239,30 @@
   --color-teal-800: #e4f5a0;
   --color-teal-900: #eef9c4;
 
-  --color-slate-50: #0a1424;
-  --color-slate-100: #111d33;
-  --color-slate-200: #22304a;
-  --color-slate-300: #34455f;
-  --color-slate-400: #7c8aa3;
+  --color-slate-50: #0b1727;
+  --color-slate-100: #0f1f35;
+  --color-slate-200: #2a3d5c;
+  --color-slate-300: #3b4f70;
+  --color-slate-400: #95a2b8;
   --color-slate-500: #9aa7bd;
   --color-slate-600: #b5c0d2;
   --color-slate-700: #cdd5e2;
 
-  --color-cream-100: #111d33;
-  --color-cream-200: #1b3050;
+  --color-cream-100: #0f1f35;
+  --color-cream-200: #1e3454;
 
-  --color-surface: #101f38;
-  --color-hero: #0b1a30;
+  --color-page: #0b1727;
+  --color-surface: #14263f;
+  --color-raised: #1e3454;
+  --color-hero: #112238;
   --color-ink: #dee465;
   --color-coral-ink: #f27f8c;
   --color-on-ink: #1d1f23;
+
+  --focus-ring: #dee465; /* 13:1 on page, 11:1 on surface */
+  --focus-halo: #0b1727; /* 12:1 on lime ink fills, 3.3:1 on coral */
+  --scroll-thumb: #95a2b8;
+  --scroll-track: #0f1f35;
 
   --color-amber-50: #2b2208;
   --color-amber-100: #3a2d0a;

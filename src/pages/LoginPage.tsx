@@ -1,3 +1,4 @@
+import { usePageTitle } from '../hooks/usePageTitle';
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 import { ArrowRight, Info } from 'lucide-react';
@@ -14,6 +15,7 @@ const INPUT_CLASS =
   'focus:ring-4 focus:ring-sky-300/50';
 
 export function LoginPage() {
+  usePageTitle('Sign in');
   const navigate = useNavigate();
   const { hasAccess, loading, isConfigured, signIn, signUp, continueAsGuest } = useAuth();
   const [mode, setMode] = useState<Mode>('signin');
@@ -161,7 +163,7 @@ export function LoginPage() {
               type="submit"
               disabled={submitting || !isConfigured || email.trim() === '' || password === ''}
               className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full
-                bg-coral-600 text-base font-semibold text-white transition hover:bg-deep
+                bg-coral-600 text-base font-semibold text-white transition hover:bg-coral-700
                 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {submitting ? 'Please wait…' : mode === 'signin' ? 'Sign in' : 'Create account'}

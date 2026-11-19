@@ -45,7 +45,7 @@ export function Navbar() {
         className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6
           lg:px-8"
       >
-        <Link to="/" className="flex items-center gap-2.5 rounded-lg">
+        <Link to="/" className="flex min-h-11 items-center gap-2.5 rounded-lg">
           <Compass className="h-6 w-6 text-coral-500" aria-hidden="true" />
           <span className="text-sm font-semibold uppercase tracking-[0.22em] text-white">
             Braven
@@ -70,7 +70,7 @@ export function Navbar() {
           <Link
             to="/#saved"
             aria-label={`Saved items: ${savedCount}`}
-            className="inline-flex h-9 items-center gap-1.5 rounded-full bg-coral-600 px-3.5
+            className="inline-flex h-11 items-center gap-1.5 rounded-full bg-coral-600 md:h-9 px-3.5
               text-sm font-semibold text-white transition hover:bg-coral-700"
           >
             <Bookmark className="h-4 w-4" aria-hidden="true" />
@@ -82,15 +82,15 @@ export function Navbar() {
               onClick={() => void signOut()}
               aria-label={user ? `Sign out ${user.email ?? ''}` : 'Leave guest mode'}
               title={user ? `Sign out (${user.email ?? ''})` : 'Leave guest mode'}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border
-                border-white/20 text-white transition hover:bg-white/10"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border
+                border-white/20 md:h-9 md:w-9 text-white transition hover:bg-white/10"
             >
               <LogOut className="h-4 w-4" aria-hidden="true" />
             </button>
           ) : (
             <Link
               to="/login"
-              className="inline-flex h-9 items-center rounded-full bg-white px-4 text-sm
+              className="inline-flex h-11 items-center rounded-full bg-white px-4 md:h-9 text-sm
                 font-semibold text-slate-900 transition hover:bg-white/90"
             >
               Sign in
@@ -102,7 +102,7 @@ export function Navbar() {
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full text-white
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full text-white
               transition hover:bg-white/10 md:hidden"
           >
             {menuOpen ? (
@@ -123,7 +123,7 @@ export function Navbar() {
                   to={link.to}
                   end={link.to === '/'}
                   onClick={() => setMenuOpenForPath(null)}
-                  className={(state) => `block ${navLinkClasses(state)}`}
+                  className={(state) => `flex min-h-11 items-center ${navLinkClasses(state)}`}
                 >
                   {link.label}
                 </NavLink>

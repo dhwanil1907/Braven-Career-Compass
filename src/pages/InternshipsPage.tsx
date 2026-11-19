@@ -1,9 +1,10 @@
 import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SearchX, SlidersHorizontal } from 'lucide-react';
+import { Check, ChevronDown, SearchX, SlidersHorizontal } from 'lucide-react';
 import { EmptyState } from '../components/EmptyState';
 import { FilterSelect } from '../components/FilterSelect';
 import { PageHeader } from '../components/PageHeader';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { ResourceCard } from '../components/ResourceCard';
 import { resources } from '../data/resources';
 import { INTEREST_GROUPS, INTERESTS, LOCATIONS, MAJOR_GROUPS, MAJORS } from '../data/taxonomy';
@@ -28,13 +29,52 @@ const SORTS: { sort: OpportunitySort; label: string }[] = [
   { sort: 'deadline', label: 'Deadline soonest' },
 ];
 
-const segmentClasses = (active: boolean) =>
-  `inline-flex min-h-11 items-center rounded-full px-5 text-sm font-semibold transition
-  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 ${
-    active ? 'bg-ink text-on-ink' : 'text-slate-700 hover:bg-slate-100'
-  }`;
+const PAGE_SIZE = 24;
+
+/** Segmented control: the selected option is filled, bold and carries a check, not colour alone. */
+function Segmented<T extends string>({
+  label,
+  options,
+  value,
+  onChange,
+}: {
+  label: string;
+  options: { value: T; label: string }[];
+  value: T;
+  onChange: (next: T) => void;
+}) {
+  return (
+    <div
+      role="group"
+      aria-label={label}
+      className="inline-flex gap-1 rounded-full border border-slate-300 bg-surface p-1"
+    >
+      {options.map((option) => {
+        const selected = option.value === value;
+        return (
+          <button
+            key={option.value}
+            type="button"
+            aria-pressed={selected}
+            onClick={() => onChange(option.value)}
+            className={`inline-flex min-h-10 items-center gap-1.5 rounded-full px-4 text-sm transition
+              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500 ${
+                selected
+                  ? 'bg-ink font-bold text-on-ink'
+                  : 'font-medium text-slate-700 hover:bg-slate-100'
+              }`}
+          >
+            {selected && <Check className="h-4 w-4" aria-hidden="true" />}
+            {option.label}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
 
 export function InternshipsPage() {
+  usePageTitle('Internships');
   const { profile, appliedResourceIds } = useApp();
   const canMatch = hasProfile(profile);
 
@@ -43,6 +83,10 @@ export function InternshipsPage() {
   const [interest, setInterest] = useState<CareerInterest | ''>('');
   const [location, setLocation] = useState<LocationFormat | ''>('');
   const [showAll, setShowAll] = useState(false);
+  const [filtersOpen, setFiltersOpen] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches,
+  );
+  const [loaded, setLoaded] = useState({ key: '', count: PAGE_SIZE });
   const [chosenSort, setChosenSort] = useState<OpportunitySort | null>(null);
   const sort: OpportunitySort = chosenSort ?? (canMatch ? 'match' : 'deadline');
 
@@ -67,7 +111,12 @@ export function InternshipsPage() {
   const { forYou } = useMemo(() => splitByFit(listings, profile), [listings, profile]);
   const forYouIds = new Set(forYou.map((item) => item.id));
   const showingOnlyMatches = personalize && !showAll && forYou.length > 0;
-  const visible = showingOnlyMatches ? forYou : listings;
+  const shown = showingOnlyMatches ? forYou : listings;
+  const listKey = [kind, major, interest, location, sort, showAll].join('|');
+  const visibleCount = loaded.key === listKey ? loaded.count : PAGE_SIZE;
+  const visible = shown.slice(0, visibleCount);
+  const loadMore = () => setLoaded({ key: listKey, count: visibleCount + PAGE_SIZE });
+  const activeFilterCount = [major, interest, location].filter(Boolean).length;
   const subject = [profile.major, profile.interests.length > 0 ? 'your interests' : null]
     .filter(Boolean)
     .join(' and ');
@@ -85,84 +134,91 @@ export function InternshipsPage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Internships & jobs"
         title="Find your next opportunity"
         description="Internship and job listings for SJSU students. Filter by major, career interest, and location, and sort by how well each one fits you."
       />
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <p className="text-sm text-slate-600">
+      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <p className="max-w-[75ch] text-xs text-slate-600">
           Listings come from the SJSU Career Center and from LinkedIn searches near San José. Each
           one links to its original posting, so confirm it is still open before you apply.
           They are not a live feed, so check each posting for current openings and deadlines.
         </p>
 
-        <section
-          aria-label="Filters"
-          className="mt-6 rounded-2xl border border-slate-200/70 bg-surface p-5 shadow-card sm:p-6"
-        >
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div
-              role="group"
-              aria-label="Listing type"
-              className="inline-flex gap-1 rounded-full border border-slate-200 bg-surface p-1"
+        <section aria-label="Filters" className="mt-5">
+          <div className="flex flex-wrap items-center gap-3">
+            <Segmented
+              label="Listing type"
+              options={KINDS.map((entry) => ({ value: entry.kind, label: entry.label }))}
+              value={kind}
+              onChange={setKind}
+            />
+            <button
+              type="button"
+              aria-expanded={filtersOpen}
+              aria-controls="internship-filters"
+              onClick={() => setFiltersOpen((open) => !open)}
+              className="inline-flex min-h-10 items-center gap-2 rounded-full border border-slate-300
+                bg-surface px-4 text-sm font-semibold text-navy-900 transition hover:bg-slate-100
+                focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
             >
-              {KINDS.map((entry) => (
-                <button
-                  key={entry.kind}
-                  type="button"
-                  aria-pressed={kind === entry.kind}
-                  onClick={() => setKind(entry.kind)}
-                  className={segmentClasses(kind === entry.kind)}
-                >
-                  {entry.label}
-                </button>
-              ))}
-            </div>
+              <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
+              Filters
+              {activeFilterCount > 0 && (
+                <span className="rounded-full bg-ink px-2 text-xs font-bold text-on-ink">
+                  {activeFilterCount}
+                </span>
+              )}
+              <ChevronDown
+                className={`h-4 w-4 transition ${filtersOpen ? 'rotate-180' : ''}`}
+                aria-hidden="true"
+              />
+            </button>
             {hasActiveFilters(filters) && (
               <button
                 type="button"
                 onClick={clearFilters}
-                className="text-sm font-medium text-teal-700 transition hover:text-teal-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+                className="min-h-10 text-sm font-medium text-teal-700 underline underline-offset-4 transition hover:text-teal-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
               >
                 Clear filters
               </button>
             )}
           </div>
-          <h2 className="mt-5 flex items-center gap-2 text-sm font-semibold text-navy-900">
-            <SlidersHorizontal className="h-4 w-4 text-teal-600" aria-hidden="true" />
-            Filters
-          </h2>
-          <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            <FilterSelect
-              id="internship-major"
-              label="Major"
-              value={major}
-              options={MAJORS}
-              groups={MAJOR_GROUPS}
-              onChange={setMajor}
-              allLabel="All majors"
-            />
-            <FilterSelect
-              id="internship-interest"
-              label="Career interest"
-              value={interest}
-              options={INTERESTS}
-              groups={INTEREST_GROUPS}
-              onChange={setInterest}
-              allLabel="All interests"
-            />
-            <FilterSelect
-              id="internship-location"
-              label="Location"
-              value={location}
-              options={LOCATIONS}
-              onChange={setLocation}
-              allLabel="All locations"
-            />
-          </div>
+          {filtersOpen && (
+            <div
+              id="internship-filters"
+              className="mt-4 grid gap-4 rounded-xl border border-slate-200 bg-surface p-4 sm:grid-cols-2 lg:grid-cols-3"
+            >
+              <FilterSelect
+                id="internship-major"
+                label="Major"
+                value={major}
+                options={MAJORS}
+                groups={MAJOR_GROUPS}
+                onChange={setMajor}
+                allLabel="All majors"
+              />
+              <FilterSelect
+                id="internship-interest"
+                label="Career interest"
+                value={interest}
+                options={INTERESTS}
+                groups={INTEREST_GROUPS}
+                onChange={setInterest}
+                allLabel="All interests"
+              />
+              <FilterSelect
+                id="internship-location"
+                label="Location"
+                value={location}
+                options={LOCATIONS}
+                onChange={setLocation}
+                allLabel="All locations"
+              />
+            </div>
+          )}
         </section>
 
-        <div className="mt-8 flex flex-wrap items-center justify-between gap-3">
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
           <p className="text-sm text-slate-600" aria-live="polite">
             <span className="font-semibold text-navy-900">
               {personalize && listings.length > 0 ? personalCount : countLabel}
@@ -194,36 +250,44 @@ export function InternshipsPage() {
               </>
             )}
           </p>
-          <div
-            role="group"
-            aria-label="Sort by"
-            className="inline-flex gap-1 rounded-full border border-slate-200 bg-surface p-1"
-          >
-            {SORTS.map((entry) => (
-              <button
-                key={entry.sort}
-                type="button"
-                aria-pressed={sort === entry.sort}
-                onClick={() => setChosenSort(entry.sort)}
-                className={segmentClasses(sort === entry.sort)}
-              >
-                {entry.label}
-              </button>
-            ))}
-          </div>
+          <Segmented
+            label="Sort by"
+            options={SORTS.map((entry) => ({ value: entry.sort, label: entry.label }))}
+            value={sort}
+            onChange={setChosenSort}
+          />
         </div>
 
         {listings.length > 0 ? (
-          <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {visible.map((resource) => (
-              <ResourceCard
-                key={resource.id}
-                resource={resource}
-                showMatch={!personalize || forYouIds.has(resource.id)}
-                listing
-              />
-            ))}
-          </div>
+          <>
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {visible.map((resource) => (
+                <ResourceCard
+                  key={resource.id}
+                  resource={resource}
+                  showMatch={!personalize || forYouIds.has(resource.id)}
+                  listing
+                />
+              ))}
+            </div>
+            <div className="mt-8 flex flex-col items-center gap-3">
+              <p className="text-sm text-slate-600" aria-live="polite">
+                Showing {visible.length} of {shown.length}
+              </p>
+              {visible.length < shown.length && (
+                <button
+                  type="button"
+                  onClick={loadMore}
+                  className="inline-flex min-h-11 items-center justify-center rounded-full border
+                    border-slate-300 bg-surface px-6 text-sm font-semibold text-navy-900 transition
+                    hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2
+                    focus-visible:outline-teal-500"
+                >
+                  Load {Math.min(PAGE_SIZE, shown.length - visible.length)} more
+                </button>
+              )}
+            </div>
+          </>
         ) : (
           <div className="mt-6">
             <EmptyState
@@ -235,7 +299,7 @@ export function InternshipsPage() {
                   <button
                     type="button"
                     onClick={clearFilters}
-                    className="inline-flex items-center gap-2 rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+                    className="inline-flex items-center gap-2 rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-coral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
                   >
                     Clear filters
                   </button>

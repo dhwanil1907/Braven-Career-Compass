@@ -31,7 +31,7 @@ export function SearchBar({
     <form role="search" onSubmit={handleSubmit} className="w-full">
       <div
         className={`flex items-center gap-3 border border-slate-200 bg-surface transition
-          focus-within:border-teal-400 focus-within:ring-4 focus-within:ring-teal-100
+          focus-host focus-within:border-navy-900
           ${containerClasses}`}
       >
         <Search
@@ -54,7 +54,7 @@ export function SearchBar({
             type="button"
             onClick={() => onChange('')}
             aria-label="Clear search"
-            className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full
+            className="inline-flex h-11 w-11 shrink-0 md:h-8 md:w-8 items-center justify-center rounded-full
               text-slate-400 transition hover:bg-slate-100 hover:text-slate-600"
           >
             <X className="h-4 w-4" aria-hidden="true" />
@@ -64,7 +64,7 @@ export function SearchBar({
           <button
             type="submit"
             className={`shrink-0 rounded-full bg-coral-600 font-semibold text-white transition
-              hover:bg-deep ${isLarge ? 'h-12 px-6 text-base' : 'h-9 px-4 text-sm'}`}
+              hover:bg-deep ${isLarge ? 'h-12 px-6 text-base' : 'h-11 px-4 text-sm md:h-9'}`}
           >
             Search
           </button>

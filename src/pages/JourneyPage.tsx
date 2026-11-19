@@ -6,7 +6,9 @@ import { EmptyState } from '../components/EmptyState';
 import { EventCard } from '../components/EventCard';
 import { EventDetailsModal } from '../components/EventDetailsModal';
 import { MomentumSection } from '../components/MomentumSection';
+import { PageHeader } from '../components/PageHeader';
 import { ResourceCard } from '../components/ResourceCard';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { useApp } from '../context/useApp';
 import { getEventById } from '../data/events';
 import { getResourceById } from '../data/resources';
@@ -20,6 +22,7 @@ function isDefined<T>(value: T | undefined): value is T {
 }
 
 export function JourneyPage() {
+  usePageTitle('My journey');
   const { profile, savedResourceIds, savedEventIds, clearSaved } = useApp();
   const [selectedEvent, setSelectedEvent] = useState<CareerEvent | null>(null);
   const [savedTab, setSavedTab] = useState<SavedTab>('resources');
@@ -46,63 +49,60 @@ export function JourneyPage() {
 
   const tabClass = (tab: SavedTab) =>
     `inline-flex items-center gap-2 rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-      savedTab === tab ? 'bg-surface text-navy-900 shadow-sm' : 'text-slate-600 hover:text-navy-900'
+      savedTab === tab
+        ? 'bg-surface font-bold text-navy-900 shadow-sm ring-1 ring-slate-300'
+        : 'text-slate-600 hover:text-navy-900'
     }`;
 
   const summary = [profile.major, profile.year, profile.goal].filter(Boolean);
 
   return (
     <div className="pb-16">
-      <section className="bg-hero text-navy-950">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
+      <PageHeader
+        title="My journey"
+        description="Find opportunities that fit your profile, then keep track of what you apply to and attend."
+      >
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
           <div className="flex flex-wrap items-center gap-2 text-sm">
-            <span className="font-medium text-navy-800">Your profile:</span>
+            <span className="font-medium text-slate-600">Your profile:</span>
             {summary.map((item) => (
               <span
                 key={item}
-                className="rounded-full border border-navy-950/15 bg-surface/50 px-3 py-1 font-medium"
+                className="rounded-full border border-slate-300 bg-slate-50 px-3 py-1 font-medium text-navy-900"
               >
                 {item}
               </span>
             ))}
             <Link
               to="/start"
-              className="inline-flex items-center gap-1 font-semibold text-navy-900 underline-offset-4
-                hover:underline"
+              className="inline-flex min-h-11 items-center gap-1 px-1 font-semibold text-navy-900
+                underline underline-offset-4 hover:text-coral-ink"
             >
               <Pencil className="h-3.5 w-3.5" aria-hidden="true" />
               Edit
             </Link>
           </div>
-
-          <div className="mt-8 max-w-3xl">
-            <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">My journey</h1>
-            <p className="mt-4 text-lg text-navy-800">
-              Find opportunities that fit your profile, then keep track of what you apply to and
-              attend.
-            </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <Link
-                to="/internships"
-                className="inline-flex h-12 items-center gap-2 rounded-full bg-coral-600 px-6 text-base
-                  font-semibold text-white transition hover:bg-deep"
-              >
-                Find internships
-                <ArrowRight className="h-5 w-5" aria-hidden="true" />
-              </Link>
-              <Link
-                to="/events"
-                className="inline-flex h-12 items-center rounded-full border border-navy-950/25
-                  bg-surface/50 px-6 text-base font-semibold transition hover:bg-surface/80"
-              >
-                Browse events
-              </Link>
-            </div>
+          <div className="flex flex-wrap items-center gap-3 sm:ml-auto">
+            <Link
+              to="/internships"
+              className="inline-flex h-11 items-center gap-2 rounded-full bg-coral-600 px-5 text-sm
+                font-semibold text-white transition hover:bg-coral-700"
+            >
+              Find internships
+              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+            </Link>
+            <Link
+              to="/events"
+              className="inline-flex h-11 items-center rounded-full border border-slate-300
+                bg-surface px-5 text-sm font-semibold text-navy-900 transition hover:bg-slate-100"
+            >
+              Browse events
+            </Link>
           </div>
         </div>
-      </section>
+      </PageHeader>
 
-      <div className="mx-auto max-w-7xl space-y-14 px-4 pt-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl space-y-10 px-4 pt-8 sm:px-6 lg:px-8">
         <DueSoonBanner />
         <MomentumSection />
         <section id="saved" className="scroll-mt-24" aria-labelledby="saved-heading">
@@ -173,8 +173,8 @@ export function JourneyPage() {
                 action={
                   <Link
                     to="/resources"
-                    className="inline-flex items-center gap-1 rounded-full bg-coral-600 px-4 py-2
-                      text-sm font-semibold text-white transition hover:bg-deep"
+                    className="inline-flex min-h-11 items-center gap-1 rounded-full bg-coral-600 px-4 py-2
+                      text-sm font-semibold text-white transition hover:bg-coral-700"
                   >
                     Browse resources
                   </Link>
@@ -195,8 +195,8 @@ export function JourneyPage() {
               action={
                 <Link
                   to="/events"
-                  className="inline-flex items-center gap-1 rounded-full bg-coral-600 px-4 py-2
-                    text-sm font-semibold text-white transition hover:bg-deep"
+                  className="inline-flex min-h-11 items-center gap-1 rounded-full bg-coral-600 px-4 py-2
+                    text-sm font-semibold text-white transition hover:bg-coral-700"
                 >
                   Browse events
                 </Link>

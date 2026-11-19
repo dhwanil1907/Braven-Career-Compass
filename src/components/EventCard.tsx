@@ -1,7 +1,8 @@
-import { Clock, ExternalLink, MapPin, Users } from 'lucide-react';
+import { CalendarDays, Clock, ExternalLink, MapPin, Users, Video } from 'lucide-react';
 import type { CareerEvent } from '../types';
 import { formatTimeRange } from '../lib/dates';
-import { Badge, DemoBadge } from './Badge';
+import { toDisplayCase } from '../lib/text';
+import { Badge, DemoBadge, MetaText } from './Badge';
 import { BookmarkButton } from './BookmarkButton';
 import { MatchBadge } from './MatchBadge';
 import { ProgressToggle } from './ProgressToggle';
@@ -41,6 +42,7 @@ export function EventCard({
   onSelect?: (event: CareerEvent) => void;
   compact?: boolean;
 }) {
+  const title = toDisplayCase(event.title);
   const timeRange = formatTimeRange(event.start, event.end);
   const dateLabel = new Date(event.start).toLocaleDateString('en-US', {
     weekday: 'long',
@@ -63,10 +65,10 @@ export function EventCard({
                 onClick={() => onSelect(event)}
                 className="max-w-full truncate rounded text-left transition hover:text-teal-700"
               >
-                {event.title}
+                {title}
               </button>
             ) : (
-              event.title
+              title
             )}
           </h3>
           <p className="mt-0.5 flex items-center gap-1 truncate text-xs text-slate-500">
@@ -84,51 +86,51 @@ export function EventCard({
 
   return (
     <article
-      className="flex h-full flex-col rounded-2xl border border-slate-200/70 bg-surface p-5
-        shadow-card transition hover:-translate-y-0.5 hover:shadow-card-hover"
+      className="flex h-full flex-col rounded-xl border border-slate-200 bg-surface p-5
+        transition hover:border-navy-300 hover:shadow-card-hover"
     >
       <div className="flex gap-4">
         <DateTile iso={event.start} compact={false} />
         <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-1.5">
-            <Badge variant="teal">{event.eventType}</Badge>
-            <Badge variant="outline">{event.format}</Badge>
+          <div className="flex min-h-5 flex-wrap items-center gap-x-3 gap-y-1">
+            <MetaText icon={CalendarDays}>{event.eventType}</MetaText>
+            <MetaText icon={event.format === 'Virtual' ? Video : MapPin}>{event.format}</MetaText>
             {event.isFull && <Badge variant="amber">Full</Badge>}
             {event.isDemo && <DemoBadge />}
-            <MatchBadge item={event} />
           </div>
-          <h3 className="mt-2 font-semibold leading-snug text-navy-900">
+          <h3 className="mt-2 line-clamp-3 text-lg font-semibold leading-snug text-navy-900">
             <span className="sr-only">{dateLabel}: </span>
-            {event.title}
+            {title}
           </h3>
         </div>
       </div>
 
       <p className="mt-3 line-clamp-2 text-sm text-slate-600">{event.description}</p>
 
-      <ul className="mt-4 space-y-1.5 text-sm text-slate-500">
+      <ul className="mt-4 space-y-1.5 text-sm text-slate-600">
         <li className="flex items-center gap-2">
-          <Clock className="h-4 w-4 shrink-0 text-slate-400" aria-hidden="true" />
+          <Clock className="h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
           {timeRange}
         </li>
         <li className="flex items-center gap-2">
-          <MapPin className="h-4 w-4 shrink-0 text-slate-400" aria-hidden="true" />
+          <MapPin className="h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
           <span className="truncate">{event.location}</span>
         </li>
         <li className="flex items-center gap-2">
-          <Users className="h-4 w-4 shrink-0 text-slate-400" aria-hidden="true" />
+          <Users className="h-4 w-4 shrink-0 text-slate-500" aria-hidden="true" />
           <span className="truncate">Hosted by {event.host}</span>
         </li>
       </ul>
 
-      <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-5">
-        <div className="flex items-center gap-2">
+      <div className="mt-auto pt-5">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-slate-200 pt-4">
           {onSelect && (
             <button
               type="button"
               onClick={() => onSelect(event)}
-              className="inline-flex h-9 items-center rounded-full bg-coral-600 px-4 text-sm
-                font-semibold text-white transition hover:bg-deep"
+              className="inline-flex h-11 items-center rounded-full bg-coral-600 px-5 text-sm
+                font-semibold text-white transition hover:bg-coral-700 focus-visible:outline-2
+                focus-visible:outline-offset-2 focus-visible:outline-teal-500"
             >
               Details
             </button>
@@ -137,18 +139,20 @@ export function EventCard({
             href={event.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-9 items-center gap-1.5 rounded-full border border-slate-200
-              px-3.5 text-sm font-medium text-navy-800 transition hover:border-navy-200
-              hover:bg-navy-50"
+            className="inline-flex min-h-11 items-center gap-1 text-sm font-medium text-navy-800
+              underline underline-offset-4 transition hover:text-coral-ink"
           >
             Source
             <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
             <span className="sr-only">(opens in a new tab)</span>
           </a>
+          <div className="ml-auto flex flex-wrap items-center gap-2">
+            <MatchBadge item={event} />
+            <ReminderCheckbox event={event} />
+            {hasStarted(event) && <ProgressToggle kind="attended" id={event.id} />}
+            <BookmarkButton kind="event" id={event.id} className="min-h-11 min-w-11" />
+          </div>
         </div>
-        <ReminderCheckbox event={event} />
-        {hasStarted(event) && <ProgressToggle kind="attended" id={event.id} />}
-        <BookmarkButton kind="event" id={event.id} />
       </div>
     </article>
   );

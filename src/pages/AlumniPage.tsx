@@ -5,6 +5,7 @@ import { AlumniCard, StoryMarquee } from '../components/AlumniStories';
 import { EmptyState } from '../components/EmptyState';
 import { FilterSelect } from '../components/FilterSelect';
 import { PageHeader } from '../components/PageHeader';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { SectionHeader } from '../components/SectionHeader';
 import { useApp } from '../context/useApp';
 import { alumni } from '../data/stories';
@@ -14,11 +15,14 @@ import type { CareerInterest, Major } from '../types';
 
 const MATCH_COUNT = 3;
 const PAGE_SIZE = 15;
-const PAGE_BUTTON =
-  'inline-flex h-10 items-center justify-center rounded-full border border-slate-300 bg-surface ' +
-  'px-4 text-sm font-semibold text-navy-900 transition hover:bg-navy-50';
+const PAGE_BUTTON_BASE =
+  'inline-flex h-11 items-center justify-center rounded-full border px-4 text-sm font-semibold ' +
+  'transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500';
+const PAGE_BUTTON = `${PAGE_BUTTON_BASE} border-slate-300 bg-surface text-navy-900 hover:bg-navy-50`;
+const PAGE_BUTTON_ACTIVE = `${PAGE_BUTTON_BASE} border-ink bg-ink text-on-ink`;
 
 export function AlumniPage() {
+  usePageTitle('Alumni');
   const { profile } = useApp();
   const [major, setMajor] = useState<Major | ''>('');
   const [interest, setInterest] = useState<CareerInterest | ''>('');
@@ -49,14 +53,13 @@ export function AlumniPage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Alumni"
         title="Talk to someone who has done it"
         description="Find alumni who studied what you study or work in the field you want, read what they would tell you, and book a call."
       >
         {hasSamples && (
           <div
-            className="flex max-w-2xl items-start gap-2 rounded-xl border border-amber-200 bg-amber-50
-              px-4 py-3 text-sm text-amber-900"
+            className="flex max-w-[75ch] items-start gap-2 rounded-lg border border-amber-200 bg-amber-50
+              px-3 py-2 text-sm text-amber-900"
           >
             <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
             <p>
@@ -77,7 +80,7 @@ export function AlumniPage() {
           />
         </div>
       ) : (
-        <div className="mx-auto max-w-7xl space-y-16 px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl space-y-12 px-4 py-8 sm:px-6 lg:px-8">
           <section aria-labelledby="matches-heading">
             <SectionHeader
               title="Matched for you"
@@ -92,7 +95,7 @@ export function AlumniPage() {
                 action={
                   <Link
                     to="/start"
-                    className="rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-deep"
+                    className="rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-coral-700"
                   >
                     Build my plan
                   </Link>
@@ -177,9 +180,7 @@ export function AlumniPage() {
                     onClick={() => goToPage(number)}
                     aria-label={`Page ${number}`}
                     aria-current={number === currentPage ? 'page' : undefined}
-                    className={`${PAGE_BUTTON} min-w-10 ${
-                      number === currentPage ? 'border-ink bg-ink text-on-ink' : ''
-                    }`}
+                    className={`${number === currentPage ? PAGE_BUTTON_ACTIVE : PAGE_BUTTON} min-w-10`}
                   >
                     {number}
                   </button>

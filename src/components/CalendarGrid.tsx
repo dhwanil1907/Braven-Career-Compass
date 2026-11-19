@@ -77,7 +77,7 @@ function WeekView({
             className="flex min-h-24 flex-col gap-2 bg-surface p-2.5 sm:min-h-72"
           >
             <header className="flex items-center gap-2 sm:flex-col sm:items-start sm:gap-0.5">
-              <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              <span className="text-[13px] font-semibold uppercase tracking-wide text-slate-500">
                 {WEEKDAYS[day.getDay()]}
               </span>
               <span
@@ -92,7 +92,7 @@ function WeekView({
               </span>
             </header>
             {dayEvents.length === 0 ? (
-              <p className="text-xs text-slate-400">No events</p>
+              <p className="text-[13px] text-slate-500">No events</p>
             ) : (
               <ul className="flex flex-col gap-1.5">
                 {dayEvents.map((event) => (
@@ -103,10 +103,10 @@ function WeekView({
                       className={`w-full rounded-lg px-2 py-1.5 text-left transition
                         ${CHIP_CLASSES[event.eventType]}`}
                     >
-                      <span className="block text-[11px] font-semibold opacity-80">
+                      <span className="block text-xs font-semibold">
                         {formatTime(event.start)}
                       </span>
-                      <span className="block text-xs font-medium leading-snug">{event.title}</span>
+                      <span className="block text-[13px] font-medium leading-snug">{event.title}</span>
                     </button>
                   </li>
                 ))}
@@ -237,7 +237,7 @@ export function CalendarGrid({
         {WEEKDAYS.map((weekday) => (
           <div
             key={weekday}
-            className="text-center text-xs font-semibold uppercase tracking-wide text-slate-500"
+            className="text-center text-[13px] font-semibold uppercase tracking-wide text-slate-500"
           >
             {weekday}
           </div>
@@ -286,7 +286,7 @@ export function CalendarGrid({
                     aria-label={`${event.title}, ${formatDate(event.start)} at ${formatTime(
                       event.start,
                     )}`}
-                    className={`w-full truncate rounded-md px-1.5 py-0.5 text-left text-[11px]
+                    className={`w-full truncate rounded-md px-1.5 py-0.5 text-left text-[13px]
                       font-medium transition ${CHIP_CLASSES[event.eventType]}`}
                   >
                     {event.title}
@@ -299,7 +299,7 @@ export function CalendarGrid({
                     aria-label={`${hiddenEvents.length} more events on ${formatDate(
                       day.toISOString(),
                     )}`}
-                    className="w-full rounded-md px-1.5 py-0.5 text-left text-[11px] font-semibold
+                    className="w-full rounded-md px-1.5 py-0.5 text-left text-xs font-semibold
                       text-slate-500 transition hover:bg-slate-100 hover:text-navy-800"
                   >
                     +{hiddenEvents.length} more
@@ -333,7 +333,7 @@ export function CalendarGrid({
                     <span className="block truncate text-sm font-medium text-navy-900">
                       {event.title}
                     </span>
-                    <span className="block text-xs text-slate-500">
+                    <span className="block text-[13px] text-slate-500">
                       {formatDate(event.start)} · {formatTime(event.start)}
                     </span>
                   </span>

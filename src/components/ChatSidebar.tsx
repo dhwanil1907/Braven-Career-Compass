@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { KeyboardEvent } from 'react';
-import { SquarePen, Trash2 } from 'lucide-react';
+import { Eraser, SquarePen, Trash2 } from 'lucide-react';
 import { groupByRecency } from '../lib/chat/history';
 import type { ChatConversation } from '../lib/chat/history';
 
@@ -14,8 +14,8 @@ interface ChatSidebarProps {
 }
 
 const focusRing =
-  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral-600';
-const confirmButtons = `inline-flex min-h-10 items-center rounded-full px-3 text-sm font-semibold
+  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink';
+const confirmButtons = `inline-flex min-h-11 items-center rounded-full px-3 text-sm font-semibold
   transition ${focusRing}`;
 
 interface ConfirmProps {
@@ -75,13 +75,13 @@ export function ChatSidebar({
 
   return (
     <nav aria-label="Saved chats" className="flex h-full min-h-0 flex-col">
-      <div className="flex items-center justify-between px-1 pb-3">
-        <h2 className="text-sm font-semibold text-navy-900">Chats</h2>
+      <div className="flex min-h-12 items-center px-1 py-2">
+        <p className="text-base font-semibold text-navy-900">Chats</p>
       </div>
       <button
         type="button"
         onClick={onNew}
-        className={`mb-3 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-full
+        className={`mb-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-full
           bg-coral-600 px-4 text-sm font-semibold text-white transition hover:bg-coral-700 ${focusRing}`}
       >
         <SquarePen className="h-4 w-4" aria-hidden="true" />
@@ -94,9 +94,9 @@ export function ChatSidebar({
         ) : (
           groups.map((group) => (
             <section key={group.label} aria-label={group.label} className="mb-3">
-              <h3 className="px-2 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-600">
+              <p className="px-2 pb-1 text-[0.8125rem] font-semibold uppercase tracking-wide text-slate-600">
                 {group.label}
-              </h3>
+              </p>
               <ul className="space-y-0.5">
                 {group.items.map((conversation) => {
                   const active = conversation.id === activeId;
@@ -117,16 +117,16 @@ export function ChatSidebar({
                   return (
                     <li
                       key={conversation.id}
-                      className={`group relative flex items-center rounded-xl border-l-4 transition
-                        ${active ? 'border-coral-600 bg-slate-100' : 'border-transparent hover:bg-slate-50'}`}
+                      className={`group relative flex items-center rounded-xl transition
+                        ${active ? 'bg-slate-200' : 'hover:bg-slate-100'}`}
                     >
                       <button
                         type="button"
                         onClick={() => onSelect(conversation.id)}
                         aria-current={active ? 'true' : undefined}
                         title={conversation.title}
-                        className={`min-h-10 min-w-0 flex-1 rounded-xl py-2 pl-2 pr-12 text-left text-sm
-                          text-navy-900 ${focusRing}`}
+                        className={`min-h-11 min-w-0 flex-1 rounded-xl py-2 pl-3 pr-12 text-left text-sm
+                          text-navy-900 ${active ? 'font-bold' : ''} ${focusRing}`}
                       >
                         <span className="block truncate">{conversation.title}</span>
                       </button>
@@ -134,7 +134,7 @@ export function ChatSidebar({
                         type="button"
                         aria-label={`Delete chat: ${conversation.title}`}
                         onClick={() => setPendingDeleteId(conversation.id)}
-                        className={`absolute right-1 inline-flex h-10 w-10 items-center justify-center
+                        className={`absolute right-0 inline-flex h-11 w-11 items-center justify-center
                           rounded-full text-slate-600 transition hover:text-coral-ink
                           opacity-100 lg:opacity-0 lg:group-hover:opacity-100 focus-visible:opacity-100
                           ${focusRing}`}
@@ -165,9 +165,11 @@ export function ChatSidebar({
             <button
               type="button"
               onClick={() => setConfirmingClear(true)}
-              className={`min-h-10 rounded-full px-3 text-sm text-slate-600 transition
-                hover:text-coral-ink ${focusRing}`}
+              className={`inline-flex min-h-11 items-center gap-2 rounded-full px-3 text-sm font-medium
+                text-slate-600 underline-offset-2 transition hover:bg-slate-100 hover:text-navy-900
+                hover:underline ${focusRing}`}
             >
+              <Eraser className="h-4 w-4" aria-hidden="true" />
               Clear all chats
             </button>
           )}

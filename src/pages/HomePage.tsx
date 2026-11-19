@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { ArrowRight, ArrowUpRight, Info } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Badge } from '../components/Badge';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { CompassDial } from '../components/CompassDial';
 import { EventDetailsModal } from '../components/EventDetailsModal';
 import { FeaturedShowcase } from '../components/FeaturedShowcase';
@@ -48,7 +49,7 @@ const QUICK_LINKS = [
     title: 'Resume & interviews',
     description: 'Resume reviews, templates, and interview practice.',
     to: '/resources?q=resume',
-    tone: 'bg-deep text-white',
+    tone: 'bg-deep text-white ring-1 ring-inset ring-white/25',
   },
   {
     title: 'Talk to alumni',
@@ -59,6 +60,7 @@ const QUICK_LINKS = [
 ];
 
 export function HomePage() {
+  usePageTitle('Career Compass');
   const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const [selectedEvent, setSelectedEvent] = useState<CareerEvent | null>(null);
@@ -137,7 +139,7 @@ export function HomePage() {
               <Link
                 to="/start"
                 className="inline-flex h-12 items-center gap-2 rounded-full bg-coral-600 px-6
-                  text-base font-semibold text-white transition hover:bg-navy-950"
+                  text-base font-semibold text-white transition hover:bg-coral-700"
               >
                 Build my plan
                 <ArrowRight className="h-5 w-5" aria-hidden="true" />
@@ -269,14 +271,14 @@ export function HomePage() {
             sm:divide-dotted sm:divide-coral-400"
         >
           {stats.map((stat) => (
-            <div key={stat.label} className="flex flex-col-reverse px-8 py-7">
+            <div key={stat.label} className="flex flex-col px-8 py-7">
               <dt
-                className="mt-3 text-xs font-semibold uppercase tracking-[0.14em]
-                  text-slate-500"
+                className="mt-3 min-h-10 text-xs font-semibold uppercase tracking-[0.14em]
+                  text-slate-600"
               >
                 {stat.label}
               </dt>
-              <dd className="font-display text-6xl leading-none text-navy-900">{stat.value}</dd>
+              <dd className="order-first font-display text-6xl leading-none text-navy-900">{stat.value}</dd>
             </div>
           ))}
         </dl>
@@ -364,7 +366,7 @@ export function HomePage() {
 
       <div className="mx-auto max-w-7xl space-y-20 px-4 py-20 sm:px-6 lg:px-8">
         <aside
-          className="flex items-start gap-3 border-l-4 border-coral-500 bg-slate-50 px-5 py-4
+          className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 px-5 py-4
             text-sm text-navy-900"
         >
           <Info className="mt-0.5 h-4 w-4 shrink-0 text-coral-ink" aria-hidden="true" />

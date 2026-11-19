@@ -1,3 +1,4 @@
+import { usePageTitle } from '../hooks/usePageTitle';
 import { useState } from 'react';
 import { ArrowLeft, ArrowRight, Check } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -102,6 +103,7 @@ function GroupedChips<T extends string>({
 }
 
 export function OnboardingPage() {
+  usePageTitle('Build my plan');
   const navigate = useNavigate();
   const { profile, updateProfile, referralSource, setReferralSource } = useApp();
   const [step, setStep] = useState(0);
@@ -289,7 +291,7 @@ export function OnboardingPage() {
           onClick={handleNext}
           disabled={!canContinue}
           className="inline-flex items-center gap-2 rounded-full bg-coral-600 px-6 py-2.5 text-sm
-            font-semibold text-white transition hover:bg-deep disabled:cursor-not-allowed
+            font-semibold text-white transition hover:bg-coral-700 disabled:cursor-not-allowed
             disabled:opacity-40"
         >
           {isLast ? 'Build my plan' : 'Continue'}

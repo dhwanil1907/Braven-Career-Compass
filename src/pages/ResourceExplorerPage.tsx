@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react';
-import { SearchX, SlidersHorizontal, Sparkles, X } from 'lucide-react';
+import { ChevronDown, SearchX, SlidersHorizontal, Sparkles, X } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import { EmptyState } from '../components/EmptyState';
 import { FilterSelect } from '../components/FilterSelect';
 import { ResourceCard } from '../components/ResourceCard';
 import { PageHeader } from '../components/PageHeader';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { SearchBar } from '../components/SearchBar';
 import { resources } from '../data/resources';
 import {
@@ -29,6 +30,10 @@ function pickValid<T extends string>(value: string | null, allowed: readonly T[]
 }
 
 export function ResourceExplorerPage() {
+  usePageTitle('Resources');
+  const [filtersOpen, setFiltersOpen] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(min-width: 1024px)').matches,
+  );
   const [searchParams, setSearchParams] = useSearchParams();
 
   const query = searchParams.get('q') ?? '';
@@ -93,38 +98,51 @@ export function ResourceExplorerPage() {
   return (
     <div>
       <PageHeader
-        eyebrow="Resources"
         title="Career resources"
         description="Search guides, tools, workshops, and mentorship from Braven and the SJSU Career Center. Narrow results by your major, interests, and type."
       />
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
 
-      <section
-        aria-label="Search and filters"
-        className="mt-8 rounded-2xl border border-slate-200/70 bg-surface p-5 shadow-card sm:p-6"
-      >
+      <section aria-label="Search and filters">
         <SearchBar
           value={query}
           onChange={(value) => updateParam('q', value)}
           placeholder="Search by title, organization, or keyword…"
         />
-        <div className="mt-5 flex items-center justify-between gap-4">
-          <h2 className="flex items-center gap-2 text-sm font-semibold text-navy-900">
-            <SlidersHorizontal className="h-4 w-4 text-teal-600" aria-hidden="true" />
+        <div className="mt-4 flex flex-wrap items-center gap-3">
+          <button
+            type="button"
+            aria-expanded={filtersOpen}
+            aria-controls="resource-filters"
+            onClick={() => setFiltersOpen((open) => !open)}
+            className="inline-flex min-h-10 items-center gap-2 rounded-full border border-slate-300
+              bg-surface px-4 text-sm font-semibold text-navy-900 transition hover:bg-slate-100
+              focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+          >
+            <SlidersHorizontal className="h-4 w-4" aria-hidden="true" />
             Filters
-          </h2>
+            {activeChips.length > 0 && (
+              <span className="rounded-full bg-ink px-2 text-xs font-bold text-on-ink">
+                {activeChips.length}
+              </span>
+            )}
+            <ChevronDown
+              className={`h-4 w-4 transition ${filtersOpen ? 'rotate-180' : ''}`}
+              aria-hidden="true"
+            />
+          </button>
           <button
             type="button"
             aria-pressed={recommendedOnly}
             disabled={!canRecommend}
             title={canRecommend ? undefined : 'Answer the three quick questions to unlock this'}
             onClick={() => updateParam('rec', recommendedOnly ? '' : '1')}
-            className={`ml-auto inline-flex min-h-11 items-center gap-1.5 rounded-xl border px-3.5 text-sm font-medium transition
+            className={`inline-flex min-h-10 items-center gap-1.5 rounded-full border px-4 text-sm transition
               focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500
               disabled:cursor-not-allowed disabled:opacity-50 ${
                 recommendedOnly
-                  ? 'border-teal-600 bg-teal-50 text-teal-800'
-                  : 'border-slate-200 bg-surface text-slate-700 hover:border-slate-300'
+                  ? 'border-ink bg-ink font-bold text-on-ink'
+                  : 'border-slate-300 bg-surface font-medium text-slate-700 hover:bg-slate-100'
               }`}
           >
             <Sparkles className="h-4 w-4" aria-hidden="true" />
@@ -134,51 +152,56 @@ export function ResourceExplorerPage() {
             <button
               type="button"
               onClick={clearFilters}
-              className="text-sm font-medium text-teal-700 transition hover:text-teal-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+              className="min-h-10 text-sm font-medium text-teal-700 underline underline-offset-4 transition hover:text-teal-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
             >
               Clear filters
             </button>
           )}
         </div>
-        <div className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <FilterSelect
-            id="filter-major"
-            label="Major"
-            value={filters.major}
-            options={MAJORS}
-            groups={MAJOR_GROUPS}
-            onChange={(value) => updateParam('major', value)}
-            allLabel="All majors"
-          />
-          <FilterSelect
-            id="filter-interest"
-            label="Career interest"
-            value={filters.interest}
-            options={INTERESTS}
-            groups={INTEREST_GROUPS}
-            onChange={(value) => updateParam('interest', value)}
-            allLabel="All interests"
-          />
-          <FilterSelect
-            id="filter-type"
-            label="Resource type"
-            value={filters.resourceType}
-            options={RESOURCE_TYPES}
-            onChange={(value) => updateParam('type', value)}
-            allLabel="All types"
-          />
-          <FilterSelect
-            id="filter-location"
-            label="Location"
-            value={filters.location}
-            options={LOCATIONS}
-            onChange={(value) => updateParam('location', value)}
-            allLabel="All locations"
-          />
-        </div>
+        {filtersOpen && (
+          <div
+            id="resource-filters"
+            className="mt-4 grid gap-4 rounded-xl border border-slate-200 bg-surface p-4 sm:grid-cols-2 lg:grid-cols-4"
+          >
+            <FilterSelect
+              id="filter-major"
+              label="Major"
+              value={filters.major}
+              options={MAJORS}
+              groups={MAJOR_GROUPS}
+              onChange={(value) => updateParam('major', value)}
+              allLabel="All majors"
+            />
+            <FilterSelect
+              id="filter-interest"
+              label="Career interest"
+              value={filters.interest}
+              options={INTERESTS}
+              groups={INTEREST_GROUPS}
+              onChange={(value) => updateParam('interest', value)}
+              allLabel="All interests"
+            />
+            <FilterSelect
+              id="filter-type"
+              label="Resource type"
+              value={filters.resourceType}
+              options={RESOURCE_TYPES}
+              onChange={(value) => updateParam('type', value)}
+              allLabel="All types"
+            />
+            <FilterSelect
+              id="filter-location"
+              label="Location"
+              value={filters.location}
+              options={LOCATIONS}
+              onChange={(value) => updateParam('location', value)}
+              allLabel="All locations"
+            />
+          </div>
+        )}
       </section>
 
-      <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-slate-600" aria-live="polite">
           Showing <span className="font-semibold text-navy-900">{visible.length}</span> of{' '}
           <span className="font-semibold text-navy-900">{filtered.length}</span> resources
@@ -220,7 +243,7 @@ export function ResourceExplorerPage() {
                 <button
                   type="button"
                   onClick={clearAll}
-                  className="inline-flex items-center gap-2 rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+                  className="inline-flex items-center gap-2 rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-coral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
                 >
                   Clear all filters
                 </button>

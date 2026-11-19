@@ -13,9 +13,10 @@ import {
   X,
 } from 'lucide-react';
 import type { CareerEvent } from '../types';
+import { toDisplayCase } from '../lib/text';
 import { formatDate, formatTimeRange, relativeDayLabel } from '../lib/dates';
 import { downloadIcs, googleCalendarUrl, prepTipsFor } from '../lib/calendar';
-import { Badge, DemoBadge } from './Badge';
+import { Badge, DemoBadge, MetaText } from './Badge';
 import { BookmarkButton } from './BookmarkButton';
 import { ReminderCheckbox } from './ReminderCheckbox';
 import { ProgressToggle } from './ProgressToggle';
@@ -101,13 +102,14 @@ export function EventDetailsModal({
         </button>
 
         <div className="flex flex-wrap items-center gap-1.5 pr-10">
-          <Badge variant="teal">{event.eventType}</Badge>
-          <Badge variant="outline">{event.format}</Badge>
+          <MetaText>{event.eventType}</MetaText>
+          <span aria-hidden="true" className="text-slate-400">·</span>
+          <MetaText>{event.format}</MetaText>
           {event.isFull && <Badge variant="amber">Full</Badge>}
           {event.isDemo && <DemoBadge />}
         </div>
         <h2 id={titleId} className="mt-3 pr-8 text-xl font-bold leading-snug text-navy-900">
-          {event.title}
+          {toDisplayCase(event.title)}
         </h2>
         <p className="mt-3 text-sm leading-relaxed text-slate-600">{event.description}</p>
 

@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { History } from 'lucide-react';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { ChatPanel } from '../components/ChatPanel';
 import { ChatSidebar } from '../components/ChatSidebar';
 import {
@@ -16,7 +17,7 @@ import type { ChatConversation, StoredMessage } from '../lib/chat/history';
 const ACTIVE_KEY = 'bcc:chatActive';
 
 const focusRing =
-  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-coral-600';
+  'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink';
 
 function readActiveId(): string | null {
   try {
@@ -45,6 +46,7 @@ function initialState(): { conversations: ChatConversation[]; activeId: string }
 }
 
 export function AssistantPage() {
+  usePageTitle('Assistant');
   const [initial] = useState(initialState);
   const [conversations, setConversations] = useState(initial.conversations);
   const [activeId, setActiveId] = useState(initial.activeId);
@@ -139,7 +141,7 @@ export function AssistantPage() {
 
   return (
     <div className="mx-auto flex h-[calc(100dvh-5rem)] min-h-[32rem] w-full max-w-6xl gap-6 px-4 sm:px-6">
-      <aside className="hidden w-64 shrink-0 border-r border-slate-200 py-3 pr-4 lg:block">
+      <aside className="hidden w-64 shrink-0 border-r border-slate-200 pb-3 pr-4 lg:block">
         <ChatSidebar {...sidebarProps} />
       </aside>
 
@@ -150,8 +152,8 @@ export function AssistantPage() {
             type="button"
             aria-expanded={drawerOpen}
             onClick={() => setDrawerOpen(true)}
-            className={`inline-flex min-h-10 items-center gap-1.5 rounded-full border border-slate-300 px-3
-              text-sm font-semibold text-navy-900 transition hover:border-coral-600 lg:hidden ${focusRing}`}
+            className={`inline-flex min-h-11 items-center gap-1.5 rounded-full border border-slate-400 px-4
+              text-sm font-semibold text-navy-900 transition hover:bg-slate-100 lg:hidden ${focusRing}`}
           >
             <History className="h-4 w-4" aria-hidden="true" />
             Chats
@@ -186,7 +188,7 @@ export function AssistantPage() {
             aria-modal="true"
             aria-label="Saved chats"
             tabIndex={-1}
-            className="absolute inset-y-0 left-0 w-72 max-w-[85vw] bg-surface p-4 shadow-card outline-none"
+            className="absolute inset-y-0 left-0 w-72 max-w-[85vw] bg-surface p-4 pb-[max(1rem,env(safe-area-inset-bottom))] shadow-card outline-none"
           >
             <ChatSidebar {...sidebarProps} />
           </div>

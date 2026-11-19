@@ -22,7 +22,7 @@ export function FilterSelect<T extends string>({
     <div className="flex min-w-0 flex-col gap-1.5">
       <label
         htmlFor={id}
-        className="text-xs font-semibold uppercase tracking-wide text-slate-500"
+        className="text-[13px] font-semibold uppercase tracking-wide text-slate-500"
       >
         {label}
       </label>
@@ -33,8 +33,7 @@ export function FilterSelect<T extends string>({
           onChange={(changeEvent) => onChange(changeEvent.target.value as T | '')}
           className="h-11 w-full cursor-pointer appearance-none rounded-xl border border-slate-200
             bg-surface pl-3.5 pr-10 text-sm text-navy-900 shadow-card transition
-            hover:border-slate-300 focus:border-teal-400 focus:outline-none focus:ring-4
-            focus:ring-teal-100"
+            hover:border-slate-300 focus-visible:border-navy-900"
         >
           <option value="">{allLabel}</option>
           {groups

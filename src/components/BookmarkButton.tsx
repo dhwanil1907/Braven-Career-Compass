@@ -30,7 +30,7 @@ export function BookmarkButton({
   const stateClasses = saved
     ? 'border-teal-200 bg-teal-50 text-teal-700 hover:bg-teal-100'
     : 'border-slate-200 bg-surface text-slate-500 hover:border-navy-200 hover:text-navy-800';
-  const sizeClasses = withLabel ? 'h-10 gap-2 px-4 text-sm font-medium' : 'h-9 w-9 justify-center';
+  const sizeClasses = withLabel ? 'h-11 gap-2 px-4 text-sm font-medium md:h-10' : 'h-11 w-11 justify-center md:h-9 md:w-9';
 
   return (
     <button

@@ -1,28 +1,28 @@
 import type { ReactNode } from 'react';
 
 /**
- * Shared opening band for inner pages. Matches the lime hero on the landing page and My Journey
- * so every page starts the same way.
+ * Calm, slim title bar for inner pages. The loud lime treatment lives only on the landing page.
+ * `eyebrow` is accepted for backwards compatibility but is no longer rendered.
  */
 export function PageHeader({
-  eyebrow,
   title,
   description,
   children,
 }: {
-  eyebrow: string;
+  /** @deprecated No longer rendered. */
+  eyebrow?: string;
   title: string;
   description?: ReactNode;
   children?: ReactNode;
 }) {
   return (
-    <header className="bg-hero text-navy-950">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-14 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-navy-800">{eyebrow}</p>
-        <h1 className="mt-3 font-display text-4xl tracking-tight sm:text-5xl">{title}</h1>
-        <span className="mt-4 block h-1 w-12 bg-sky-300" aria-hidden="true" />
-        {description && <p className="mt-4 max-w-2xl text-lg text-navy-800">{description}</p>}
-        {children && <div className="mt-6">{children}</div>}
+    <header className="border-b border-slate-200 bg-surface">
+      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+        <h1 className="font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-[2rem]">
+          {title}
+        </h1>
+        {description && <p className="mt-2 max-w-[70ch] text-base text-slate-600">{description}</p>}
+        {children && <div className="mt-4">{children}</div>}
       </div>
     </header>
   );

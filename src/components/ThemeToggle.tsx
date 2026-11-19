@@ -28,7 +28,7 @@ export function ThemeToggle() {
       type="button"
       onClick={handleToggle}
       aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-      className="inline-flex h-9 w-9 items-center justify-center rounded-full border
+      className="inline-flex h-11 w-11 items-center md:h-9 md:w-9 justify-center rounded-full border
         border-white/25 text-white transition hover:border-white hover:bg-white/10"
     >
       <Icon className="h-4 w-4" aria-hidden="true" />

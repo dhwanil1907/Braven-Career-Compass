@@ -29,6 +29,7 @@ import { MultiFilterSelect } from '../components/MultiFilterSelect';
 import { EventCard } from '../components/EventCard';
 import { EventDetailsModal } from '../components/EventDetailsModal';
 import { PageHeader } from '../components/PageHeader';
+import { usePageTitle } from '../hooks/usePageTitle';
 import { CalendarGrid } from '../components/CalendarGrid';
 import { EmptyState } from '../components/EmptyState';
 
@@ -78,6 +79,7 @@ function initialMonth(): Date {
 }
 
 export function EventsPage() {
+  usePageTitle('Events');
   const { isEventSaved, profile } = useApp();
   const canRecommend = hasProfile(profile);
   const [recommendedOnly, setRecommendedOnly] = useState(false);
@@ -143,26 +145,20 @@ export function EventsPage() {
   return (
     <div className="pb-16">
       <PageHeader
-        eyebrow="Events"
         title="Career events calendar"
         description="Workshops, networking nights, career fairs, and info sessions from the SJSU Career Center and student clubs."
       >
-          <div
-            className={
-              'flex max-w-2xl items-start gap-2 rounded-xl border border-amber-200 ' +
-              'bg-amber-50 px-4 py-3 text-sm text-amber-900'
-            }
-          >
-            <Info className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
-            <p>
+          <p className="flex max-w-[75ch] items-start gap-2 text-xs text-slate-600">
+            <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+            <span>
               These events are collected from the SJSU Career Center website and SJSU club
               Instagram posts. Confirm times and registration on the original page before you go.
-            </p>
-          </div>
+            </span>
+          </p>
       </PageHeader>
 
       <div className="mx-auto max-w-7xl px-4 pt-8 sm:px-6 lg:px-8">
-        <div className="rounded-2xl border border-slate-200/70 bg-surface p-4 shadow-card sm:p-5">
+        <div className="rounded-xl border border-slate-200 bg-surface p-4 sm:p-5">
           <SearchBar value={query} onChange={setQuery} placeholder="Search events..." />
           <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end">
             <div className="grid flex-1 gap-4 sm:grid-cols-3">
@@ -308,7 +304,7 @@ export function EventsPage() {
                     onClick={clearFilters}
                     className={
                       'rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white ' +
-                      'transition hover:bg-deep'
+                      'transition hover:bg-coral-700'
                     }
                   >
                     Clear filters

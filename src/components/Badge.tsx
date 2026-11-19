@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react';
+import type { LucideIcon } from 'lucide-react';
 
 type BadgeVariant = 'navy' | 'teal' | 'slate' | 'amber' | 'outline';
 
@@ -33,6 +34,24 @@ export function DemoBadge() {
   return (
     <span title="Fictional sample for prototype purposes" className="inline-flex">
       <Badge variant="amber">Demo data</Badge>
+    </span>
+  );
+}
+
+/** Plain-text metadata (type, format) with a small icon. Deliberately not a pill. */
+export function MetaText({
+  icon: Icon,
+  children,
+  className = '',
+}: {
+  icon?: LucideIcon;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <span className={`inline-flex items-center gap-1.5 text-xs font-medium text-slate-600 ${className}`}>
+      {Icon && <Icon className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />}
+      {children}
     </span>
   );
 }

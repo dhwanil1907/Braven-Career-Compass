@@ -42,15 +42,15 @@ export function ApplicationTracker() {
           action={
             <Link
               to="/internships"
-              className="inline-flex items-center gap-1 rounded-full bg-coral-600 px-4 py-2
-                text-sm font-semibold text-white transition hover:bg-deep"
+              className="inline-flex min-h-11 items-center gap-1 rounded-full bg-coral-600 px-4 py-2
+                text-sm font-semibold text-white transition hover:bg-coral-700"
             >
               Browse internships
             </Link>
           }
         />
       ) : (
-        <div className="overflow-x-auto rounded-2xl border border-slate-200/70 bg-surface shadow-card">
+        <div className="overflow-x-auto rounded-xl border border-slate-200 bg-surface">
           <table className="w-full min-w-[40rem] text-left text-sm">
             <caption className="sr-only">Internships and jobs you have applied to</caption>
             <thead className="border-b border-slate-200">

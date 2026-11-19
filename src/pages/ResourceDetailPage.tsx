@@ -1,3 +1,4 @@
+import { usePageTitle } from '../hooks/usePageTitle';
 import { useMemo } from 'react';
 import type { ReactNode } from 'react';
 import {
@@ -65,6 +66,7 @@ function MetaItem({ icon, label, children }: MetaItemProps) {
 export function ResourceDetailPage() {
   const { id } = useParams<{ id: string }>();
   const resource = id ? getResourceById(id) : undefined;
+  usePageTitle(resource?.title ?? 'Resource');
   const related = useMemo(() => (resource ? getRelatedResources(resource) : []), [resource]);
   const { profile } = useApp();
   const reasons = resource ? getMatchReasons(resource, profile) : [];
@@ -79,7 +81,7 @@ export function ResourceDetailPage() {
           action={
             <Link
               to="/resources"
-              className="inline-flex items-center gap-2 rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-deep"
+              className="inline-flex items-center gap-2 rounded-full bg-coral-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-coral-700"
             >
               Back to Resources
             </Link>
@@ -262,7 +264,7 @@ export function ResourceDetailPage() {
               href={resource.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-coral-600 px-4 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-deep focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-coral-600 px-4 py-3 text-sm font-semibold text-white shadow-card transition hover:bg-coral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-500"
             >
               Open original page
               <ExternalLink className="h-4 w-4" aria-hidden="true" />

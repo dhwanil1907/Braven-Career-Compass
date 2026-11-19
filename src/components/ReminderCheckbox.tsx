@@ -41,7 +41,9 @@ export function ReminderCheckbox({
   return (
     <>
       <label
-        className="inline-flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+        className={`inline-flex min-h-11 cursor-pointer items-center gap-2 text-sm text-slate-700 md:min-h-9 ${
+          compact ? 'min-w-11 justify-center md:min-w-9' : ''
+        }`}
         title={label}
       >
         <input
@@ -49,7 +51,7 @@ export function ReminderCheckbox({
           checked={checked}
           onChange={handleChange}
           onClick={(clickEvent) => clickEvent.stopPropagation()}
-          className="h-4 w-4 rounded border-slate-300 accent-teal-600"
+          className="h-5 w-5 shrink-0 cursor-pointer rounded border-slate-300"
         />
         <span className={compact ? 'sr-only' : ''}>{label}</span>
       </label>
