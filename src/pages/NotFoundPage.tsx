@@ -5,7 +5,7 @@ import { usePageTitle } from '../hooks/usePageTitle';
 export function NotFoundPage() {
   usePageTitle('Page not found');
   return (
-    <div className="mx-auto flex max-w-none flex-col items-center px-4 py-24 text-center sm:px-6 lg:px-8">
+    <div className="mx-auto flex max-w-[100rem] flex-col items-center px-4 py-24 text-center sm:px-8 lg:px-16">
       <div className="relative mb-8">
         <div className="absolute inset-0 rounded-full bg-teal-400/20 blur-2xl" aria-hidden="true" />
         <div className="relative flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br from-deep to-deep-2 text-teal-300 shadow-card">

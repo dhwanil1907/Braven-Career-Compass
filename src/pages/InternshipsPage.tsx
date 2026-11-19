@@ -137,7 +137,7 @@ export function InternshipsPage() {
         title="Find your next opportunity"
         description="Internship and job listings for SJSU students. Filter by major, career interest, and location, and sort by how well each one fits you."
       />
-      <div className="mx-auto max-w-none px-4 py-6 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[100rem] px-4 py-6 sm:px-8 lg:px-16">
         <p className="max-w-[75ch] text-xs text-slate-600">
           Listings come from the SJSU Career Center and from LinkedIn searches near San José. Each
           one links to its original posting, so confirm it is still open before you apply.

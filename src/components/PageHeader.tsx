@@ -17,7 +17,7 @@ export function PageHeader({
 }) {
   return (
     <header className="border-b border-slate-200 bg-surface">
-      <div className="mx-auto max-w-none px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+      <div className="mx-auto max-w-[100rem] px-4 py-6 sm:px-8 sm:py-8 lg:px-16">
         <h1 className="font-display text-3xl font-semibold tracking-tight text-navy-900 sm:text-[2rem]">
           {title}
         </h1>

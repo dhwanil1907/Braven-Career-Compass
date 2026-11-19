@@ -102,7 +102,7 @@ export function JourneyPage() {
         </div>
       </PageHeader>
 
-      <div className="mx-auto max-w-none space-y-10 px-4 pt-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[100rem] space-y-10 px-4 pt-8 sm:px-8 lg:px-16">
         <DueSoonBanner />
         <MomentumSection />
         <section id="saved" className="scroll-mt-24" aria-labelledby="saved-heading">

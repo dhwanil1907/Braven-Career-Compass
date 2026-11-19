@@ -157,7 +157,7 @@ export function EventsPage() {
           </p>
       </PageHeader>
 
-      <div className="mx-auto max-w-none px-4 pt-8 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[100rem] px-4 pt-8 sm:px-8 lg:px-16">
         <div className="rounded-xl border border-slate-200 bg-surface p-4 sm:p-5">
           <SearchBar value={query} onChange={setQuery} placeholder="Search events..." />
           <div className="mt-4 flex flex-col gap-4 lg:flex-row lg:items-end">

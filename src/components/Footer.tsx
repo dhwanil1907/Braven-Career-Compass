@@ -15,7 +15,7 @@ export function Footer() {
 
   return (
     <footer className="bg-deep text-deep-ink">
-      <div className="mx-auto max-w-none px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[100rem] px-4 py-12 sm:px-8 lg:px-16">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm">
             <Link to="/" className="inline-flex min-h-11 items-center gap-2.5 rounded-lg">
