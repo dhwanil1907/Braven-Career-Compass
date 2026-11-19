@@ -101,7 +101,7 @@ export function ResourceExplorerPage() {
         title="Career resources"
         description="Search guides, tools, workshops, and mentorship from Braven and the SJSU Career Center. Narrow results by your major, interests, and type."
       />
-      <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-none px-4 py-6 sm:px-6 lg:px-8">
 
       <section aria-label="Search and filters">
         <SearchBar

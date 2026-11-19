@@ -119,7 +119,7 @@ export function HomePage() {
     <div>
       <section className="relative overflow-hidden bg-hero text-navy-950">
         <div
-          className="mx-auto grid max-w-7xl gap-12 px-4 pb-32 pt-16 sm:px-6 lg:grid-cols-12
+          className="mx-auto grid max-w-none gap-12 px-4 pb-32 pt-16 sm:px-6 lg:grid-cols-12
             lg:gap-8 lg:px-8 lg:pb-40 lg:pt-20"
         >
           <div className="animate-rise lg:col-span-7">
@@ -265,7 +265,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <div className="relative z-10 mx-auto -mt-20 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto -mt-20 max-w-none px-4 sm:px-6 lg:px-8">
         <dl
           className="grid border border-navy-900 bg-surface sm:grid-cols-3 sm:divide-x-2
             sm:divide-dotted sm:divide-coral-400"
@@ -286,7 +286,7 @@ export function HomePage() {
 
       <section
         aria-labelledby="how-heading"
-        className="mx-auto max-w-7xl px-4 pt-20 sm:px-6 lg:px-8"
+        className="mx-auto max-w-none px-4 pt-20 sm:px-6 lg:px-8"
       >
         <h2 id="how-heading" className="font-display text-3xl text-navy-900">
           How it works
@@ -325,7 +325,7 @@ export function HomePage() {
 
       <section
         aria-labelledby="quick-access-heading"
-        className="mx-auto max-w-7xl px-4 pt-20 sm:px-6 lg:px-8"
+        className="mx-auto max-w-none px-4 pt-20 sm:px-6 lg:px-8"
       >
         <h2 id="quick-access-heading" className="sr-only">
           Quick access
@@ -353,7 +353,7 @@ export function HomePage() {
 
       {featuredResources.length > 0 && (
         <section className="mt-20 bg-cream-200 py-16">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-none px-4 sm:px-6 lg:px-8">
             <SectionHeader
               title="Featured career resources"
               subtitle="Hand-picked by the Career Compass team."
@@ -364,7 +364,7 @@ export function HomePage() {
         </section>
       )}
 
-      <div className="mx-auto max-w-7xl space-y-20 px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-none space-y-20 px-4 py-20 sm:px-6 lg:px-8">
         <aside
           className="flex items-start gap-3 rounded-lg border border-slate-200 bg-slate-50 px-5 py-4
             text-sm text-navy-900"

@@ -140,12 +140,12 @@ export function AssistantPage() {
   const activeConversation = conversations.find((conversation) => conversation.id === activeId);
 
   return (
-    <div className="mx-auto flex h-[calc(100dvh-5rem)] min-h-[32rem] w-full max-w-6xl gap-6 px-4 sm:px-6">
+    <div className="mx-auto flex h-[calc(100dvh-5rem)] min-h-[32rem] w-full max-w-none gap-6 px-4 sm:px-6">
       <aside className="hidden w-64 shrink-0 border-r border-slate-200 pb-3 pr-4 lg:block">
         <ChatSidebar {...sidebarProps} />
       </aside>
 
-      <div className="mx-auto flex min-w-0 max-w-3xl flex-1 flex-col">
+      <div className="flex min-w-0 flex-1 flex-col">
         <div className="flex min-h-12 items-center gap-2 py-2">
           <button
             ref={drawerButtonRef}

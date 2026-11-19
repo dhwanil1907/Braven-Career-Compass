@@ -55,7 +55,7 @@ const remarkPlugins = [remarkGfm];
 /** Renders assistant markdown. Raw HTML is not enabled, so model output cannot inject markup. */
 export const ChatMarkdown = memo(function ChatMarkdown({ text }: { text: string }) {
   return (
-    <div className="max-w-[70ch] break-words">
+    <div className="break-words">
       <ReactMarkdown remarkPlugins={remarkPlugins} components={components}>
         {text}
       </ReactMarkdown>

@@ -73,7 +73,7 @@ export function ResourceDetailPage() {
 
   if (!resource) {
     return (
-      <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-none px-4 py-20 sm:px-6 lg:px-8">
         <EmptyState
           icon={FileQuestion}
           title="Resource not found"
@@ -94,7 +94,7 @@ export function ResourceDetailPage() {
   return (
     <div>
       <div className="bg-hero text-navy-950">
-        <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+        <div className="mx-auto max-w-none px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
       <nav aria-label="Breadcrumb" className="text-sm">
         <ol className="flex flex-wrap items-center gap-1.5 text-navy-800">
           <li>
@@ -155,7 +155,7 @@ export function ResourceDetailPage() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-none px-4 py-10 sm:px-6 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-3">
         <div className="space-y-8 lg:col-span-2">
           <section className={CARD_CLASS}>

@@ -42,7 +42,7 @@ export function Navbar() {
     <header className="sticky top-0 z-40 bg-nav">
       <nav
         aria-label="Main"
-        className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6
+        className="mx-auto flex h-16 max-w-none items-center justify-between gap-4 px-4 sm:px-6
           lg:px-8"
       >
         <Link to="/" className="flex min-h-11 items-center gap-2.5 rounded-lg">
@@ -116,7 +116,7 @@ export function Navbar() {
 
       {menuOpen && (
         <div id="mobile-nav" className="border-t border-white/10 bg-nav md:hidden">
-          <ul className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3 sm:px-6">
+          <ul className="mx-auto flex max-w-none flex-col gap-1 px-4 py-3 sm:px-6">
             {navLinks.map((link) => (
               <li key={link.to}>
                 <NavLink

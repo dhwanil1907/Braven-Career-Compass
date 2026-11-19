@@ -72,7 +72,7 @@ export function AlumniPage() {
       </PageHeader>
 
       {alumni.length === 0 ? (
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-none px-4 py-10 sm:px-6 lg:px-8">
           <EmptyState
             icon={Users}
             title="Alumni are on the way"
@@ -80,7 +80,7 @@ export function AlumniPage() {
           />
         </div>
       ) : (
-        <div className="mx-auto max-w-7xl space-y-12 px-4 py-8 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-none space-y-12 px-4 py-8 sm:px-6 lg:px-8">
           <section aria-labelledby="matches-heading">
             <SectionHeader
               title="Matched for you"

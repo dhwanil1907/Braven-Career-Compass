@@ -23,7 +23,7 @@ const ResourceExplorerPage = lazy(() => import('./pages/ResourceExplorerPage').t
 function PageSkeleton() {
   return (
     <div
-      className="mx-auto min-h-[60vh] max-w-7xl px-4 py-16 sm:px-6 lg:px-8"
+      className="mx-auto min-h-[60vh] max-w-none px-4 py-16 sm:px-6 lg:px-8"
       role="status"
       aria-label="Loading page"
     >
