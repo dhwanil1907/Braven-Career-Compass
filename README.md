@@ -1,8 +1,8 @@
 # Braven Career Compass
 
-A career site for SJSU students in the [Braven](https://bebraven.org) Post-Accelerator Fellowship. It brings internships, jobs, career resources, events and alumni into one place, ranks them by how well they fit a student's major, interests and goal, and adds an AI assistant that can search the web.
+A career site for SJSU students in the [Braven](https://bebraven.org) Post-Accelerator Fellowship. The hard part for students isn't a lack of opportunities, it's that internships, events, resources and alumni are scattered across a dozen sites. This pulls them into one place, ranks them by fit with the student's major, interests and goal, and includes an assistant that can search the web.
 
-Built for the Braven Capstone Challenge. This is a prototype: listings are scraped samples and alumni profiles are fictional.
+I built it for the Braven Capstone Challenge. It's a prototype: listings are scraped samples and alumni profiles are fictional.
 
 **Live demo:** https://braven-career-compass.vercel.app/
 
@@ -87,6 +87,17 @@ The browser posts the conversation and the student's profile (major, interests, 
 ## Matching
 
 Scores come from weighted rules in `src/lib/matchRules.ts` and `src/lib/matchScore.ts`: major, interests, goal, challenge and year. A listing must fit topically to score at all, skipped questions never lower a score, and anything below 35% is not recommended. Bands: 80+ Excellent, 60+ Strong, 50+ Partly matches, 35+ Possible.
+
+## How it was built
+
+This was a time-constrained project: I had almost two weeks to go from idea to a working, deployed prototype for the Capstone Challenge. To fit that, I built it with Claude Code as my coding partner. I set the product direction, decided what the site should do for Braven students, and iterated on the results.
+
+- **Frontend:** handled by Claude Code. It built the React pages, components, styling and theming from my direction.
+- **Backend:** my part was reviewing it. Claude Code drafted the chat API, the scrapers and the Supabase sync, and I went through that code, checking how requests are handled, where the API key lives, the rate limits and how the data is stored.
+
+Because of the deadline, I prioritized a complete end-to-end experience over polish. Listings are scraped samples rather than a live feed, and alumni profiles are fictional.
+
+The match score is deliberately rule-based rather than AI, so a student can see exactly why a listing ranked where it did. The assistant is the only AI feature in the product.
 
 ## Deployment
 
